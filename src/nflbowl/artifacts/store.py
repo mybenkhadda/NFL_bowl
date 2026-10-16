@@ -8,9 +8,11 @@
         data/features/     engineered (F0) features (Parquet)
         embeddings/        <model>__<tag>__<hash>.parquet + .json sidecar (ids, domain, fold, split role, signature)
         evaluation/        records/*.json (immutable) → metrics.csv, probes.csv, identity_null.csv, inductive_retrieval.csv,
-                           transfer.csv, training_curves.csv, retrieval_results.parquet (views rebuilt from records)
-        figures/           png/ svg/ pdf/ source/ (the plotted data as CSV)
-        reports/           REPORT.md
+                           transfer.csv, training_curves.csv, retrieval_results.parquet (views rebuilt from records);
+                           paired_inductive_comparison.csv, athlete_retrieval_scores.parquet, position_subgroup_results.csv,
+                           domain_diagnostics.csv, inductive_coverage.csv (views of records/inductive_comparison__<hash>.*)
+        figures/           png/ svg/ pdf/ source/ (the plotted data as CSV); inductive_*.png / domain_separation.png at top level
+        reports/           REPORT.md, INDUCTIVE_RETRIEVAL_REVIEW.md
         logs/              experiment.log
         exports/           zip archives from Experiment.export()
 

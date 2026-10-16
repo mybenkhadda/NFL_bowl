@@ -57,6 +57,32 @@ exp.evaluate("F4", regime="inductive")
 exp.transfer()                                     # NFL ladder on the 12C target
 ```
 
+## Paired F0 / F2 / F4 comparison on held-out athletes (Colab)
+
+```python
+# Session 1 (GPU): one inductive encoder per outer fold; finished folds are restored, not retrained.
+exp.train("F2", regime="inductive")
+exp.train("F4", regime="inductive")
+
+res = exp.compare_inductive(models=["F0", "F2", "F4"], reference="F0", bootstrap=2000, reuse=True)
+res.summary()            # mean athlete AUC ± CI and paired Δ AUC vs F0 (positive = better than F0)
+res.coverage             # held-out / scored / excluded athletes per model × fold
+res.subgroups            # per position; 'insufficient' / 'exploratory' rows are not findings
+res.paths                # evaluation/*.csv, figures/*.png, reports/INDUCTIVE_RETRIEVAL_REVIEW.md
+
+# Session 2 (CPU is enough): reopen and read the saved result, nothing is recomputed.
+from nflbowl import Experiment
+exp = Experiment.open("/content/drive/MyDrive/NFLBowl/experiments/f4_main")
+res = exp.load_inductive_comparison(models=["F2", "F4"], reference="F0")
+
+from IPython.display import Image, Markdown
+Image(str(exp.root / "figures" / "inductive_delta_auc.png"))
+Markdown((exp.root / "reports" / "INDUCTIVE_RETRIEVAL_REVIEW.md").read_text())
+```
+
+Only some folds trained so far? `compare_inductive(on_missing="skip")` (the default) keeps going. Folds without an encoder show up in
+`res.coverage` and `folds_unavailable`, and their athletes leave the paired set. Use `on_missing="raise"` to stop instead.
+
 ## Identity-null experiment
 
 ```python

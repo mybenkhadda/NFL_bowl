@@ -7,6 +7,7 @@ Phases are independent and artifact-backed; each can run in a fresh session from
     embed()     embeddings from the saved best weights (or a baseline) → Parquet with ids, domain, fold, split role
     evaluate()  quick / standard / full label-free evaluation → immutable JSON records + CSV views
     transfer()  inductive NFL-transfer ladder on the 12C frozen target (needs athletes.parquet with the target)
+    compare_inductive()  paired athlete-level held-out retrieval (F0 / F2 / F4 …), position subgroups, domain diagnostics
     plot() · report() · export() · compare() · list_models() · list_artifacts() · resume()
 
 An experiment directory is bound to ONE data bundle (fingerprint) and ONE science configuration (hash). Runtime
@@ -536,6 +537,261 @@ class Experiment:
         if trf.height:
             self.store.write_csv(trf, self.store.evaluation / "transfer.csv")
         return trf
+
+    # ================================================================== paired inductive comparison
+    def _inductive_representation(self, name: str, fold: int, held_out: np.ndarray) -> tuple[np.ndarray, str] | None:
+        """(E, embedding id) of the fold-``fold`` inductive representation, or None when its encoder was never trained.
+        Refuses transductive / other-fold checkpoints and embedding tables whose held-out rows do not match the split."""
+        import polars as pl
+
+        from .evaluation.paired_inductive import verify_held_out_roles
+
+        s = reg.spec(name)
+        if s.kind == "external":
+            raise ValueError(f"{name} is an external athlete-level representation; it has no sequence embeddings to rank")
+        if name == reg.ENGINEERED:
+            return self._E0, f"{name}:features"                    # fixed per-sequence statistics: nothing is fitted, no fold dependence
+        tag = _tag(INDUCTIVE, fold=fold)
+        if s.trainable:
+            rec = self.manifest.find("training", f"{name}__{tag}")
+            if rec is None:
+                return None
+            if rec["deps"].get("regime") != INDUCTIVE or rec["deps"].get("tag") != tag or (rec.get("fold") is not None and int(rec["fold"]) != int(fold)):
+                raise ConfigError(f"the {name} checkpoint registered as {tag} is not the inductive encoder of fold {fold}; refusing to mix regimes")
+        E = self._embed_one(name, tag, fold, reuse=True)
+        emb = self.manifest.find("embeddings", f"{name}__{tag}")
+        roles = pl.read_parquet(self.manifest.resolve(emb), columns=["split_role"])["split_role"].to_list()
+        verify_held_out_roles(roles, held_out, fold)
+        return E, emb["id"]
+
+    def compare_inductive(self, models: Sequence[str] = ("F0", "F2", "F4"), reference: str = "F0", bootstrap: int | None = None, reuse: bool = True,
+                          folds: Iterable[int] | None = None, stratify: str | None = "fold", min_subgroup: int = 10, adequate_n: int = 30, ci: float = 0.95,
+                          on_missing: str = "skip", diagnostics: bool = True, save: bool = True) -> Any:
+        """Paired athlete-level retrieval comparison on athletes excluded from encoder training (inductive regime only).
+
+        For every outer fold, each representation is scored on the SAME held-out athletes against the SAME same-position
+        candidate pools (Combine mean → own vs other athletes' NFL means). Paired Δ AUC versus ``reference`` with a
+        percentile interval from ``bootstrap`` athlete resamples (stratified by fold, identical draws for every
+        representation, pools fixed). Also: per-position subgroups (labelled insufficient / exploratory / adequate),
+        domain-leakage diagnostics on the held-out rows, and positive-pair coverage of the training rows.
+
+        ``on_missing='skip'``: a (model, fold) whose inductive encoder was not trained is reported in the coverage table
+        and its athletes drop out of the paired set (complete cases); ``'raise'`` stops instead. Returns an
+        ``InductiveComparison``; with ``save=True`` writes the evaluation / figure / report views listed in docs/nflbowl/API.md."""
+        import polars as pl
+
+        from .evaluation import domain_diagnostics as dd
+        from .evaluation import paired_inductive as pi
+
+        if on_missing not in ("skip", "raise"):
+            raise ValueError("on_missing must be 'skip' or 'raise'")
+        sci = self.cfg.science
+        n_boot = int(sci.n_boot if bootstrap is None else bootstrap)
+        ref = reg.resolve(reference)
+        names = list(dict.fromkeys([ref, *(reg.resolve(m) for m in models)]))
+        b = self._require()
+        fl = self._fold_list(folds)
+        splits: dict[int, tuple[np.ndarray, np.ndarray]] = {}
+        for f in fl:
+            tr, va, ho = self._splits(f)
+            pi.assert_fold_isolation(b.meta, self._folds, ho, f, tr, va)
+            splits[f] = (tr, ho)
+        reps: dict[tuple[str, int], tuple[np.ndarray, str]] = {}
+        unavailable: dict[str, list[int]] = {}
+        for n in names:
+            for f in fl:
+                got = self._inductive_representation(n, f, splits[f][1])
+                if got is None:
+                    if on_missing == "raise":
+                        raise FileNotFoundError(f"{n} has no inductive encoder for fold {f}: call train('{n}', regime='inductive', folds=[{f}])")
+                    unavailable.setdefault(n, []).append(f)
+                else:
+                    reps[(n, f)] = got
+        if len(unavailable.get(ref, [])) == len(fl):
+            raise FileNotFoundError(f"reference {ref} is unavailable for every requested fold")
+        for n, fs in unavailable.items():
+            log.warning("compare_inductive: %s has no inductive encoder for fold(s) %s — those athletes leave the paired set", n, fs)
+        deps = self._deps(analysis="paired_inductive_v1", models=names, reference=ref, folds=fl, embeddings=sorted(f"{n}|{f}|{v[1]}" for (n, f), v in reps.items()),
+                          n_boot=n_boot, stratify=stratify, min_subgroup=min_subgroup, adequate_n=adequate_n, ci=ci, diagnostics=diagnostics, seed=sci.seed,
+                          val_share=sci.val_share, outer_folds=sci.outer_folds)
+        key = f"paired__{'+'.join(names)}__ref_{ref}"
+        if reuse and (hit := self.manifest.find("inductive_comparison", key, deps)) is not None:
+            res = self._load_comparison_record(hit)
+            if save:
+                self._write_inductive_views(res)
+            return res
+
+        parts, dparts = [], []
+        for (n, f), (E, _eid) in reps.items():
+            ho = splits[f][1]
+            parts.append(pi.athlete_retrieval_scores(n, E, b.meta, ho, f))
+            if diagnostics:
+                dparts.append(dd.domain_diagnostics(n, E, b.meta, ho, f, seed=sci.seed))
+        scores = pl.concat(parts, how="vertical")
+        if diagnostics:
+            cov_rows = []
+            for f in fl:
+                for lname, lab in (("state", self._derived.state), ("category", self._derived.cat)):
+                    cov_rows += [{"representation": "training_split", "fold": f, **r} for r in dd.positive_pair_coverage(lab, b.meta, splits[f][0], lname)]
+            dparts.append(pl.DataFrame(cov_rows, infer_schema_length=None).select(*dparts[0].columns) if dparts else pl.DataFrame(cov_rows, infer_schema_length=None))
+        domain = pl.concat(dparts, how="diagonal_relaxed") if dparts else pl.DataFrame()
+        kw = {"n_boot": n_boot, "seed": sci.seed, "stratify": stratify, "min_n": min_subgroup, "adequate_n": adequate_n, "ci": ci}
+        comp = pl.concat([pi.paired_bootstrap(scores, names, ref, metric=m, **kw) for m in ("auc", "top5")], how="diagonal_relaxed")
+        unav = pl.DataFrame({"representation": names, "folds_requested": [len(fl)] * len(names),
+                             "folds_unavailable": [",".join(str(f) for f in unavailable.get(n, [])) for n in names]})
+        comp = comp.join(unav, on="representation", how="left").with_columns(pl.lit(self.id).alias("experiment_id"), pl.lit(INDUCTIVE).alias("training_regime"))
+        sub = pi.paired_bootstrap(scores, names, ref, metric="auc", by="position_group", **kw).with_columns(pl.lit(self.id).alias("experiment_id"))
+        coverage = pi.coverage_table(scores, names, fl, unavailable)
+        meta = {"experiment_id": self.id, "created_at": utc_now(), "config": self.cfg.to_dict(), "science_hash": self.cfg.science_hash(),
+                "bundle_fingerprint": b.fingerprint, "seed": sci.seed, "n_boot": n_boot, "ci": ci, "stratify": stratify, "models": names, "reference": ref,
+                "folds": fl, "unavailable": unavailable, "resampling": pi.RESAMPLING, "min_subgroup": min_subgroup, "adequate_n": adequate_n,
+                "training_regime": INDUCTIVE, "code_version": code_version(), "deps": deps}
+        h = deps_hash(deps)
+        sp_path = self.store.records / f"inductive_comparison__{h}__scores.parquet"
+        self.store.write_parquet(scores, sp_path, overwrite=True)
+        rp = self.store.records / f"inductive_comparison__{h}.json"
+        atomic_json({"kind": "inductive_comparison", "meta": meta, "comparison": comp.to_dicts(), "subgroups": sub.to_dicts(), "domain": domain.to_dicts(),
+                     "coverage": coverage.to_dicts(), "scores": self.store.rel(sp_path), "written_at": utc_now()}, rp, overwrite=True)
+        self.manifest.register("inductive_comparison", key, rp, deps, {"scores": self.store.rel(sp_path), "models": names, "reference": ref})
+        res = pi.InductiveComparison(comp, sub, scores, domain, coverage, meta)
+        if save:
+            self._write_inductive_views(res)
+        return res
+
+    def load_inductive_comparison(self, models: Sequence[str] | None = None, reference: str | None = None) -> Any:
+        """The latest saved ``compare_inductive`` result of this experiment (current bundle + science), no recomputation."""
+        names = [reg.resolve(m) for m in models] if models else None
+        ref = reg.resolve(reference) if reference else None
+        fp = self._saved.get("bundle_fingerprint")
+        cands = [a for a in self.manifest.artifacts("inductive_comparison") if a["deps"].get("science") == self.cfg.science_hash()
+                 and (fp is None or a["deps"].get("bundle") == fp) and (ref is None or a["deps"].get("reference") == ref)
+                 and (names is None or set(names) <= set(a["deps"].get("models", []))) and self.manifest.resolve(a).is_file()]
+        if not cands:
+            raise FileNotFoundError(f"no saved inductive comparison in experiment {self.id}; call compare_inductive() first")
+        return self._load_comparison_record(max(cands, key=lambda a: a["created_at"]))
+
+    def _load_comparison_record(self, rec: dict[str, Any]) -> Any:
+        import polars as pl
+
+        from .evaluation.paired_inductive import InductiveComparison
+
+        d = json.loads(self.manifest.resolve(rec).read_text(encoding="utf-8"))
+        frame = (lambda rows: pl.DataFrame(rows, infer_schema_length=None) if rows else pl.DataFrame())     # noqa: E731
+        scores = pl.read_parquet(self.root / d["scores"])
+        return InductiveComparison(frame(d["comparison"]), frame(d["subgroups"]), scores, frame(d["domain"]), frame(d["coverage"]), d["meta"])
+
+    def _write_inductive_views(self, res: Any) -> dict[str, str]:
+        """evaluation/{paired_inductive_comparison,position_subgroup_results,domain_diagnostics,inductive_coverage}.csv,
+        evaluation/athlete_retrieval_scores.parquet, three figures and reports/INDUCTIVE_RETRIEVAL_REVIEW.md (views of the
+        immutable record; replaced by the next comparison)."""
+        import polars as pl
+
+        from .visualization import plots as pv
+
+        st, ev = self.store, self.store.evaluation
+        paths = {"comparison": st.write_csv(res.comparison, ev / "paired_inductive_comparison.csv"),
+                 "scores": st.write_parquet(res.scores, ev / "athlete_retrieval_scores.parquet", overwrite=True),
+                 "subgroups": st.write_csv(res.subgroups, ev / "position_subgroup_results.csv"),
+                 "domain": st.write_csv(res.domain, ev / "domain_diagnostics.csv"),
+                 "coverage": st.write_csv(res.coverage, ev / "inductive_coverage.csv")}
+        ref = res.meta.get("reference")
+        c = res.comparison.filter((pl.col("metric") == "auc") & (pl.col("status") == "ok")) if res.comparison.height else res.comparison
+        figs: dict[str, tuple[Any, dict[str, Any]]] = {}
+        if c.height:
+            d1 = c.with_columns((pl.col("representation") + " (n=" + pl.col("n_athletes").cast(pl.String) + ")").alias("label"))
+            figs["inductive_model_comparison"] = (pv.forest(d1, "label", "mean", "mean_lo", "mean_hi", "Held-out athlete retrieval (inductive, paired athletes)",
+                                                            "mean athlete AUC (0.5 = chance)", ref=0.5, ref_label="chance"), {"comparison": d1})
+            s = res.subgroups
+            dd_ = [c.filter(pl.col("representation") != ref).with_columns(pl.lit("overall").alias("_g"))]
+            if s.height:
+                dd_.append(s.filter((pl.col("representation") != ref) & (pl.col("status") == "ok") & (pl.col("reliability") != "insufficient"))
+                           .with_columns(pl.col("position_group").alias("_g")))
+            d2 = pl.concat(dd_, how="diagonal_relaxed").filter(pl.col("delta").is_not_null() & pl.col("delta").is_not_nan())
+            d2 = d2.with_columns((pl.col("representation") + " − " + pl.lit(str(ref)) + " · " + pl.col("_g") + " (n=" + pl.col("n_athletes").cast(pl.String)
+                                  + ", " + pl.col("reliability") + ")").alias("label"))
+            figs["inductive_delta_auc"] = (pv.forest(d2, "label", "delta", "delta_lo", "delta_hi", "Paired Δ AUC vs reference (held-out athletes)",
+                                                     "Δ mean athlete AUC (positive = model better)", ref=0.0, ref_label="no difference", color_by="reliability"),
+                                           {"delta": d2})
+        if res.domain.height:
+            dm = (res.domain.filter((pl.col("metric") == "domain_auc") & pl.col("value").is_not_nan())
+                  .group_by("representation", "position_group", maintain_order=True).agg(pl.col("value").mean()))
+            figs["domain_separation"] = (pv.heatmap(dm, "representation", "position_group", "value",
+                                                    "Held-out domain separability (athlete-grouped ridge AUC, mean over folds)", vmin=0.5, vmax=1.0), {"domain_auc": dm})
+        for name, (fig, src) in figs.items():
+            st.save_figure(fig, name, ("png", "svg", "pdf"), src)
+            p = st.figures / f"{name}.png"
+            atomic_write(p, lambda t, _fig=fig: _fig.savefig(t, format="png", dpi=200, bbox_inches="tight"))
+            paths[f"figure:{name}"] = p
+        paths["report"] = self._inductive_review(res)
+        res.paths = {k: st.rel(v) for k, v in paths.items()}
+        return res.paths
+
+    def _inductive_review(self, res: Any) -> Path:
+        import polars as pl
+
+        m = res.meta
+        ref = m.get("reference")
+        comp, sub, cov, dom = res.comparison, res.subgroups, res.coverage, res.domain
+        auc = comp.filter(pl.col("metric") == "auc") if comp.height else comp
+        t5 = comp.filter(pl.col("metric") == "top5") if comp.height else comp
+        cols = ["representation", "n_athletes", "n_folds", "n_excluded_incomplete", "mean", "mean_lo", "mean_hi", "delta", "delta_lo", "delta_hi",
+                "p_boot_delta_le_0", "reliability", "folds_unavailable"]
+        dsum = pl.DataFrame()
+        if dom.height:
+            keep = ["domain_auc", "alignment_gap_raw", "alignment_gap_centered", "standardized_mean_gap_rms", "norm_ratio_nfl_over_combine"]
+            d = dom.filter((pl.col("position_group") == "ALL") & (pl.col("domain") == "both") & pl.col("metric").is_in(keep) & pl.col("value").is_not_nan())
+            col = dom.filter((pl.col("position_group") == "ALL") & (pl.col("domain") == "both") & pl.col("metric").is_in(["effective_rank", "pc1_share", "n_dead_dims"]))
+            dsum = (pl.concat([d, col], how="vertical").group_by("representation", "metric", maintain_order=True).agg(pl.col("value").mean().alias("mean_over_folds"),
+                    pl.col("value").min().alias("min"), pl.col("value").max().alias("max")) if d.height or col.height else pl.DataFrame())
+            ppc = dom.filter(pl.col("metric").str.starts_with("positive_pair_coverage") & (pl.col("position_group") == "ALL"))
+            ppc = ppc.group_by("metric", "domain", maintain_order=True).agg(pl.col("value").mean().alias("mean_over_folds"), pl.col("n").sum().alias("n_rows")) if ppc.height else ppc
+        else:
+            ppc = pl.DataFrame()
+        flagged = sub.filter(pl.col("reliability") != "adequate").height if sub.height else 0
+        md = [f"# Inductive retrieval review — experiment {self.id}", "",
+              f"_Generated {utc_now()} from the saved comparison record. Nothing here is computed by hand._", "",
+              "## Setup", "",
+              f"- Representations: {', '.join(f'`{x}`' for x in m.get('models', []))}; reference `{ref}`; outer folds {m.get('folds')}",
+              f"- Bundle `{m.get('bundle_fingerprint')}` · science hash `{m.get('science_hash')}` · seed {m.get('seed')} · preset `{m.get('config', {}).get('preset')}`",
+              f"- Bootstrap: {m.get('n_boot')} replicates, {int(100 * float(m.get('ci', 0.95)))}% percentile interval; stratified by `{m.get('stratify')}`",
+              f"- Unavailable (model → folds): `{json.dumps(m.get('unavailable', {}))}`", "",
+              "## Method", "",
+              "- **Population.** For outer fold f, only athletes of fold f are queries and candidates; their embeddings come from the encoder of fold f, "
+              "which was trained without any of their sequences (Combine or NFL). F0 is a fixed per-sequence summary with nothing fitted.",
+              "- **Query and candidate pool.** Query = athlete's mean Combine embedding. Candidates = NFL mean embeddings of the other held-out athletes of the "
+              "same fold and the same `position_group`. Pools depend only on metadata and the split, so every representation sees the same pools; each "
+              "athlete row stores `pool_hash` and the comparison refuses mismatched pools.",
+              "- **Athlete AUC.** Share of candidates ranked strictly below the athlete's own NFL mean (0.5 = chance; higher is better). "
+              "Δ = mean AUC(model) − mean AUC(reference): positive means the model retrieves the right athlete more often.",
+              f"- **Uncertainty.** {m.get('resampling')}. Percentile interval of the paired replicate differences; `p_boot_delta_le_0` = share of "
+              "replicates with Δ ≤ 0 (not a p-value). The interval is conditional on the realised candidate pools.",
+              "- **Exclusions.** Athletes without both domains, in a position with fewer than 3 held-out athletes, with non-finite embeddings, or missing from "
+              "any representation (complete cases) are excluded and counted below; nothing is imputed.",
+              "- **No outcome leakage.** No NFL outcome is read; retrieval has no fitted or tuned parameter; held-out athletes never enter encoder training "
+              "or validation (checked per fold).", "",
+              "## Coverage and exclusions", "", _md_table(cov),
+              "## Overall paired comparison — athlete AUC", "", _md_table(auc, cols),
+              "## Overall paired comparison — top-5 hit rate", "", _md_table(t5, cols),
+              "## Position subgroups (AUC)", "",
+              f"Subgroups with fewer than {m.get('min_subgroup')} paired athletes report no interval (`insufficient`); below {m.get('adequate_n')} they are "
+              f"`exploratory`. {flagged} subgroup row(s) are not `adequate`: treat them as hypotheses, not findings. Multiple positions are compared without "
+              "multiplicity correction.", "",
+              _md_table(sub, ["position_group", "representation", "n_athletes", "mean", "mean_lo", "mean_hi", "delta", "delta_lo", "delta_hi", "reliability"]),
+              "## Domain diagnostics on held-out rows (overall, mean over folds)", "",
+              "Domain AUC from an athlete-grouped ridge discriminant (0.5 = not separable). Domain separability is not failure on its own: Combine drills and "
+              "NFL windows are different tasks. `alignment_gap` = own-athlete cosine minus other same-position athletes (raw and after removing domain means). "
+              "Collapse indicators: effective rank, PC1 variance share, near-constant dimensions.", "",
+              _md_table(dsum), "### Positive-pair coverage of the training rows (alignment labels)", "",
+              "Share of training sequences with at least one other-domain training sequence sharing the alignment label (set-level upper bound; "
+              "per-batch coverage is lower).", "", _md_table(ppc),
+              "## Figures", "", "- figures/inductive_model_comparison.png", "- figures/inductive_delta_auc.png", "- figures/domain_separation.png", "",
+              "## Limitations", "",
+              "- Candidate pools are small within a fold × position; athlete AUCs are coarse (steps of 1 / pool size) and the bootstrap does not re-draw pools.",
+              "- Folds are pooled after per-fold scoring; encoders differ by fold, so absolute AUCs mix five models per family.",
+              "- Subgroup results are descriptive; only the overall paired Δ was planned as the primary comparison.", ""]
+        p = self.store.reports / "INDUCTIVE_RETRIEVAL_REVIEW.md"
+        atomic_text("\n".join(md), p)
+        return p
 
     # ================================================================== comparison / tables
     def metrics(self, include_quick: bool = True) -> Any:
