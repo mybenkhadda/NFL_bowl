@@ -30,7 +30,19 @@ bundle/
   tcn_representations.parquet    optional: Milestone 06 TCN-B fold representations
 ```
 
-Build it on the research machine: run `notebooks/nflbowl/01_data_preparation.ipynb`, which calls `nflbowl.data.export.export_research_bundle(store, D, out_dir)`. Prerequisites: 12.0 executed and the 12F sequence store built in FULL mode (12F Part 3); 12C as well, if you want the transfer ladder. Upload the folder to Drive or a Kaggle dataset.
+Build it on the research machine from the files already in the warehouse; nothing is recomputed:
+
+```bash
+python -m nflbowl.data.builder --repo-root . --output bundles/m12f_v1 --zip
+```
+
+`notebooks/nflbowl/01_data_preparation.ipynb` runs the same steps cell by cell.
+
+- Prerequisites: 12.0 executed and the 12F sequence store built in FULL mode (12F Part 3); 12C too, if you want the transfer ladder.
+- Upload `bundles/m12f_v1.zip` (or the folder) to Drive or as a Kaggle dataset.
+- Discovery, checks, outputs and upload: `BUNDLE_BUILD_GUIDE.md`. Errors: `BUNDLE_TROUBLESHOOTING.md`.
+
+If you already have the research objects open in a session, `nflbowl.data.export.export_research_bundle(store, D, out_dir)` also works.
 
 From other data: `nflbowl.data.export.write_bundle(out_dir, X, M, meta, folds, athletes=None)`, where `meta` row *i* must describe `X[i]`.
 

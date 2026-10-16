@@ -48,6 +48,7 @@ class SequenceBundle:
     tcn: Any = None
     staged_from: Path | None = None
     extras: dict[str, Any] = field(default_factory=dict)
+    verified: bool = False              # True: every file re-hashed against bundle.json (open_bundle(verify=True))
 
     @property
     def fingerprint(self) -> str:
@@ -59,11 +60,35 @@ class SequenceBundle:
         return int(self.X.shape[0])
 
     def summary(self) -> dict[str, Any]:
+        """JSON-ready description: sizes, domains, athletes, valid lengths, fold coverage, optional data, integrity."""
         dom = self.meta["domain"].to_numpy()
+        ids = self.meta["nfl_id"].to_numpy()
+        a_c, a_n = set(ids[dom == "combine"].tolist()), set(ids[dom == "nfl"].tolist())
+        lens = np.zeros(self.n_sequences, np.int64)
+        for s in range(0, self.n_sequences, 65_536):              # chunked: M stays memory-mapped
+            lens[s: s + 65_536] = np.asarray(self.M[s: s + 65_536]).sum(1)
+        fold_of = dict(zip(*self.folds.select("nfl_id", "fold").to_dict(as_series=False).values()))
+        athletes = a_c | a_n
+        with_fold = {i for i in athletes if fold_of.get(int(i)) is not None}
+        per_fold: dict[str, int] = {}
+        for i in with_fold:
+            per_fold[str(fold_of[int(i)])] = per_fold.get(str(fold_of[int(i)]), 0) + 1
+        files = self.info.get("files", {})
+        target = self.athletes is not None and "nfl.q90_shared" in self.athletes.columns
         return {"n_sequences": self.n_sequences, "n_combine": int((dom == "combine").sum()), "n_nfl": int((dom == "nfl").sum()),
-                "n_athletes": int(self.meta["nfl_id"].n_unique()), "frames": int(self.X.shape[1]), "channels": int(self.X.shape[2]),
-                "has_athletes": self.athletes is not None, "has_tcn": self.tcn is not None, "fingerprint": self.fingerprint,
-                "root": str(self.root), "staged_from": str(self.staged_from) if self.staged_from else None}
+                "n_athletes": int(self.meta["nfl_id"].n_unique()), "n_athletes_combine": len(a_c), "n_athletes_nfl": len(a_n),
+                "n_athletes_both_domains": len(a_c & a_n), "frames": int(self.X.shape[1]), "channels": int(self.X.shape[2]),
+                "channel_names": list(self.info.get("channels", [])),
+                "valid_frames": {"min": int(lens.min()) if lens.size else 0, "median": float(np.median(lens)) if lens.size else 0.0,
+                                 "mean": float(lens.mean()) if lens.size else 0.0, "max": int(lens.max()) if lens.size else 0,
+                                 "n_empty": int((lens == 0).sum())},
+                "folds": {"manifest_athletes": int(self.folds.height), "athletes_with_manifest_fold": len(with_fold),
+                          "athletes_fallback_fold": len(athletes - with_fold), "athletes_per_fold": dict(sorted(per_fold.items()))},
+                "has_athletes": self.athletes is not None, "has_transfer_target": bool(target), "has_tcn": self.tcn is not None,
+                "store_key": self.info.get("store_key"), "run_mode": self.info.get("run_mode"), "created_at": self.info.get("created_at"),
+                "n_files": len(files), "total_bytes": int(sum(int(v.get("bytes") or 0) for v in files.values())),
+                "integrity": "sha256 verified (every file)" if self.verified else "sizes checked; sha256 of parquet/json files checked",
+                "fingerprint": self.fingerprint, "root": str(self.root), "staged_from": str(self.staged_from) if self.staged_from else None}
 
 
 def bundle_fingerprint(info: dict[str, Any]) -> str:
@@ -71,13 +96,36 @@ def bundle_fingerprint(info: dict[str, Any]) -> str:
     return stable_hash({k: v.get("sha256") for k, v in sorted(files.items())}, 16)
 
 
+def _missing_hint(d: Path) -> str:
+    """Why ``d`` is not a bundle, and what to do (raw store, ZIP not extracted, folder one level too high, …)."""
+    build = (" Build one on the research machine with `python -m nflbowl.data.builder --repo-root . --output bundles/m12f_v1` "
+             "(or `nflbowl.data.export.export_research_bundle(store, D, out_dir)`), then upload the folder or its ZIP.")
+    if d.suffix.lower() == ".zip" and d.is_file():
+        return (f" {d.name} is a ZIP archive: extract it first, e.g. `from nflbowl.data.builder import extract_bundle_zip; "
+                f"data_dir = extract_bundle_zip('{d}', '{d.parent}')`.")
+    if not d.exists():
+        z = d.with_name(d.name + ".zip")
+        if z.is_file():
+            return f" The directory does not exist, but {z} does: `extract_bundle_zip('{z}', '{d.parent}')` (nflbowl.data.builder)."
+        return f" The directory {d} does not exist (Drive not mounted, or the bundle was uploaded elsewhere).{build}"
+    if (d / "COMPLETE.json").is_file():
+        return " It looks like a raw nflbdb SequenceStore directory, not a bundle." + build
+    nested = sorted(p.parent for p in d.glob(f"*/{BUNDLE_FILE}"))
+    if nested:
+        return f" A bundle exists one level down: use data_dir={str(nested[0])!r}."
+    zips = sorted(d.glob("*.zip"))
+    if zips:
+        return f" ZIP archive(s) found here ({', '.join(z.name for z in zips[:3])}): extract with nflbowl.data.builder.extract_bundle_zip."
+    if (d / STORE_DIR).is_dir():
+        return " sequence_store/ is present but bundle.json is not: the upload or the build is incomplete (re-upload the whole folder)."
+    return build
+
+
 def read_info(data_dir: Path) -> dict[str, Any]:
     p = Path(data_dir) / BUNDLE_FILE
     if not p.is_file():
-        raw = Path(data_dir) / "COMPLETE.json"
-        hint = (" It looks like a raw nflbdb SequenceStore directory: build a bundle with "
-                "`nflbowl.data.export.export_research_bundle(store, D, out_dir)` on the research machine.") if raw.is_file() else ""
-        raise FileNotFoundError(f"{p} not found: data_dir must be an nflbowl data bundle.{hint} See docs/nflbowl/INSTALL.md § Data bundle.")
+        raise FileNotFoundError(f"{p} not found: data_dir must be an nflbowl data bundle.{_missing_hint(Path(data_dir))} "
+                                "See docs/nflbowl/BUNDLE_BUILD_GUIDE.md.")
     info = json.loads(p.read_text(encoding="utf-8"))
     if int(info.get("format_version", 0)) != BUNDLE_VERSION:
         raise SchemaError(f"bundle format_version {info.get('format_version')} is not supported (expected {BUNDLE_VERSION})")
@@ -139,7 +187,7 @@ def open_bundle(data_dir: Path | str, stage_dir: Path | str | None = None, verif
     if athletes is not None:
         validate_athletes(athletes)
     tcn = pl.read_parquet(root / "tcn_representations.parquet") if (root / "tcn_representations.parquet").is_file() else None
-    return SequenceBundle(root, X, M, meta, folds, info, athletes, tcn, staged_from=src if stage_dir else None)
+    return SequenceBundle(root, X, M, meta, folds, info, athletes, tcn, staged_from=src if stage_dir else None, verified=bool(verify))
 
 
 __all__ = ["BUNDLE_FILE", "BUNDLE_VERSION", "STORE_DIR", "SequenceBundle", "bundle_fingerprint", "open_bundle", "read_info"]

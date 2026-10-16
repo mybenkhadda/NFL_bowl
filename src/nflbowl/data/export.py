@@ -27,14 +27,29 @@ log = get_logger(__name__)
 
 
 def _finish(out: Path, source: dict[str, Any], extra: dict[str, Any] | None = None) -> Path:
+    """Write ``bundle.json`` from the files actually present under ``out`` (sizes + sha256 of every non-hidden file)."""
     files = {}
     for p in sorted(out.rglob("*")):
         if p.is_file() and p.name != BUNDLE_FILE and not p.name.startswith("."):
+            log.info("sha256 %s (%.1f MB)", p.relative_to(out).as_posix(), p.stat().st_size / 2 ** 20)
             files[p.relative_to(out).as_posix()] = {"bytes": p.stat().st_size, "sha256": sha256_file(p)}
     info = {"format_version": BUNDLE_VERSION, "created_at": utc_now(), "source": source, "channels": list(CHANNELS), "files": files, **(extra or {})}
     atomic_json(info, out / BUNDLE_FILE, overwrite=True)
     log.info("bundle written: %s (%d files, %.1f MB)", out, len(files), sum(v["bytes"] for v in files.values()) / 2 ** 20)
     return out / BUNDLE_FILE
+
+
+def athletes_table(officials: Any, registry: Any, targets: Any = None) -> Any:
+    """``athletes.parquet``: 11.0 officials (position, M1 columns) + 12.0 ``linked`` flag (+ 12C ``nfl.q90_shared``).
+
+    One construction for both writers (``export_research_bundle`` and ``builder.build_bundle_from_repo``)."""
+    import polars as pl
+
+    ath = officials.select([c for c in ("nfl_id", "position_group", *M1_COLS) if c in officials.columns]).join(
+        registry.select("nfl_id", "linked"), on="nfl_id", how="left")
+    if targets is not None:
+        ath = ath.join(targets.select("nfl_id", TRANSFER_TARGET), on="nfl_id", how="left")
+    return ath.with_columns(pl.col("linked").fill_null(False))
 
 
 def _save_npy(path: Path, arr: np.ndarray) -> None:
@@ -101,16 +116,13 @@ def export_research_bundle(store: Any, D: Any, out_dir: Path | str, include_tran
     extra: dict[str, Any] = {"store_key": key, "run_mode": getattr(store.controls, "run_mode", None)}
     if include_transfer:
         try:
-            off = D.officials()
-            reg = D.m12("m12_cohort_registry").select("nfl_id", "linked")
-            ath = off.select([c for c in ("nfl_id", "position_group", *M1_COLS) if c in off.columns]).join(reg, on="nfl_id", how="left")
+            tg = None
             if store.has("m12c_targets"):
-                tg = store.read_frame("m12c_targets", fd.NB["12C"]).select("nfl_id", TRANSFER_TARGET)
-                ath = ath.join(tg, on="nfl_id", how="left")
+                tg = store.read_frame("m12c_targets", fd.NB["12C"])
                 extra["transfer_target"] = TRANSFER_TARGET
             else:
                 log.warning("12C targets not found: athletes.parquet is written without %s (transfer ladder unavailable)", TRANSFER_TARGET)
-            ath = ath.with_columns(pl.col("linked").fill_null(False))
+            ath = athletes_table(D.officials(), D.m12("m12_cohort_registry"), tg)
             atomic_write(out / "athletes.parquet", lambda p: ath.write_parquet(p))
         except Exception as e:                                       # noqa: BLE001 — optional part of the bundle
             log.warning("athletes.parquet not written (%s: %s)", type(e).__name__, e)
@@ -124,4 +136,4 @@ def export_research_bundle(store: Any, D: Any, out_dir: Path | str, include_tran
                    extra)
 
 
-__all__ = ["export_research_bundle", "write_bundle"]
+__all__ = ["athletes_table", "export_research_bundle", "write_bundle"]
