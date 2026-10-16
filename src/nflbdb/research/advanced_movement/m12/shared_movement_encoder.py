@@ -24,6 +24,7 @@ Domain differences may be real task differences: alignment that collapses domain
 
 from __future__ import annotations
 
+import contextlib
 import math
 import time
 from dataclasses import asdict, dataclass, replace
@@ -216,32 +217,62 @@ if TORCH:
                     pt.mul_(self.e.ema).add_(po.detach(), alpha=1 - self.e.ema)
 
 
+def _fp32(t: "torch.Tensor") -> Any:
+    """Autocast-DISABLED region on ``t``'s device, for the numerically sensitive loss terms only (the network itself stays
+    under the caller's mixed precision). Inside it ``.float()`` inputs give fp32 matmuls / softmaxes; without disabling
+    autocast a matmul of fp32 tensors would be cast straight back to fp16. Devices without autocast support → no-op."""
+    try:
+        return torch.autocast(device_type=t.device.type, enabled=False)
+    except (RuntimeError, ValueError):
+        return contextlib.nullcontext()
+
+
 def _supcon(z: "torch.Tensor", labels: "torch.Tensor", domain: "torch.Tensor", temperature: float) -> "torch.Tensor":
     """Supervised contrastive loss whose POSITIVES are sequences of the OTHER domain with the same label (state or
-    category). Anchors without a cross-domain positive in the batch are skipped."""
-    z = F.normalize(z, dim=-1)
-    sim = z @ z.T / temperature
-    eye = torch.eye(z.shape[0], dtype=torch.bool, device=z.device)
-    pos = (labels[:, None] == labels[None, :]) & (domain[:, None] != domain[None, :]) & (labels[:, None] >= 0) & ~eye
-    has = pos.any(1)
-    if not has.any():
-        return z.sum() * 0.0
-    logp = sim.masked_fill(eye, -1e9).log_softmax(1)
-    return -(logp * pos.float()).sum(1)[has].div(pos.float().sum(1)[has]).mean()
+    category). Anchors without a cross-domain positive in the batch are skipped.
+
+    Computed in fp32 even under CUDA autocast: the self-similarity mask constant -1e9 is not representable in fp16
+    (``masked_fill`` raised "value cannot be converted to type c10::Half without overflow"), and fp16 logits of up to
+    1/temperature lose resolution before the log-softmax. In fp32 this is the original formulation bit for bit."""
+    with _fp32(z):
+        z = F.normalize(z.float(), dim=-1)
+        sim = (z @ z.T) / temperature
+        eye = torch.eye(z.shape[0], dtype=torch.bool, device=z.device)
+        pos = (labels[:, None] == labels[None, :]) & (domain[:, None] != domain[None, :]) & (labels[:, None] >= 0) & ~eye
+        has = pos.any(1)
+        if not has.any():
+            return z.sum() * 0.0
+        logp = sim.masked_fill(eye, -1e9).log_softmax(1)
+        return -(logp * pos.float()).sum(1)[has].div(pos.float().sum(1)[has]).mean()
+
+
+def _infonce(z1: "torch.Tensor", z2: "torch.Tensor", temperature: float) -> "torch.Tensor":
+    """Symmetric InfoNCE between two views (row i of z1 ↔ row i of z2). fp32 for the same reason as ``_supcon``: the
+    logits and cross-entropy are the precision-sensitive part; the projections feeding them stay mixed precision."""
+    with _fp32(z1):
+        z1, z2 = F.normalize(z1.float(), dim=-1), F.normalize(z2.float(), dim=-1)
+        lg = (z1 @ z2.T) / temperature
+        lab = torch.arange(z1.shape[0], device=z1.device)
+        return 0.5 * (F.cross_entropy(lg, lab) + F.cross_entropy(lg.T, lab))
 
 
 def _mmd(a: "torch.Tensor", b: "torch.Tensor") -> "torch.Tensor":
     if a.shape[0] < 2 or b.shape[0] < 2:
         return a.sum() * 0.0
-    x = torch.cat([a, b])
-    d = torch.cdist(x, x) ** 2
-    h = d.detach().median().clamp_min(1e-6)
-    k = torch.exp(-d / h)
-    n = a.shape[0]
-    return k[:n, :n].mean() + k[n:, n:].mean() - 2 * k[:n, n:].mean()
+    # fp32: squared distances, the median bandwidth (clamped at 1e-6) and exp(-d / h) underflow / lose precision in fp16
+    with _fp32(a):
+        x = torch.cat([a, b]).float()
+        d = torch.cdist(x, x) ** 2
+        h = d.detach().median().clamp_min(1e-6)
+        k = torch.exp(-d / h)
+        n = a.shape[0]
+        return k[:n, :n].mean() + k[n:, n:].mean() - 2 * k[:n, n:].mean()
 
 
 def batch_loss(model: Any, x, m, phys, phys_ok, state, cat, dom, gen, grl: float = 1.0) -> tuple["torch.Tensor", dict[str, float]]:
+    """Weighted 12F loss. Under autocast the network runs in mixed precision; every loss TERM is reduced in fp32:
+    contrastive / MMD / JEPA terms through ``_fp32`` regions, the squared-error terms because fp16 head outputs minus the
+    fp32 targets / inputs promote to fp32, and BCE-with-logits because autocast already runs it in fp32."""
     e = model.e
     parts: dict[str, "torch.Tensor"] = {}
     seq, emb = model.enc(x, m)
@@ -256,16 +287,14 @@ def batch_loss(model: Any, x, m, phys, phys_ok, state, cat, dom, gen, grl: float
         parts["phys"] = (((p - phys) ** 2) * okf).sum() / okf.sum().clamp_min(1.0)
     if e.lambda_temp > 0 and e.temporal == "contrastive":
         (x1, m1), (x2, m2) = rep._crop(x, m, 0.8, gen), rep._crop(x, m, 0.8, gen)
-        z1, z2 = F.normalize(model.proj(model.embed(x1, m1)), dim=-1), F.normalize(model.proj(model.embed(x2, m2)), dim=-1)
-        lg = z1 @ z2.T / e.temperature
-        lab = torch.arange(x.shape[0], device=x.device)
-        parts["temp"] = 0.5 * (F.cross_entropy(lg, lab) + F.cross_entropy(lg.T, lab))
+        parts["temp"] = _infonce(model.proj(model.embed(x1, m1)), model.proj(model.embed(x2, m2)), e.temperature)
     elif e.lambda_temp > 0 and e.temporal == "jepa":
         hid = rep._span_mask(m, 0.3, e.span, gen)
         ctx = model.pred(model.embed(x, m & ~hid))
         with torch.no_grad():
             tgt = model.enc(x, m, target=True)[1]
-        parts["temp"] = (2 - 2 * F.cosine_similarity(ctx, tgt, dim=-1)).mean()
+        with _fp32(ctx):                         # cosine of fp16 vectors: norms in fp32 (no-op in fp32 training)
+            parts["temp"] = (2 - 2 * F.cosine_similarity(ctx.float(), tgt.float(), dim=-1)).mean()
     if e.lambda_align > 0 and e.align != "none":
         if e.align == "matched_state":
             parts["align"] = _supcon(model.proj(emb), state, dom, e.temperature)

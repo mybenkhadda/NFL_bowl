@@ -7,7 +7,8 @@ Notebook: `notebooks/nflbowl/00_colab_quickstart.ipynb`. Upload it via *File →
 3. Run the cells:
 
 ```python
-%pip install -q "git+https://github.com/YOUR_USERNAME/YOUR_REPO.git"
+%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"
+%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"
 from nflbowl import Experiment
 Experiment.device_info()
 from google.colab import drive; drive.mount("/content/drive")
@@ -27,7 +28,8 @@ exp.export()
 ## Reconnect after a runtime reset
 
 ```python
-%pip install -q "git+https://github.com/YOUR_USERNAME/YOUR_REPO.git"
+%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"
+%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"
 from google.colab import drive; drive.mount("/content/drive")
 from nflbowl import Experiment
 exp = Experiment.open("/content/drive/MyDrive/NFLBowl/experiments/f4_main",
@@ -42,5 +44,15 @@ Re-running the original `Experiment(..., name="f4_main")` cell also reopens the 
 ## Colab-specific notes
 
 - A T4 has no bf16: keep `precision: auto` (fp16 autocast + GradScaler, the notebook's numerics).
+- The second `%pip` line forces the latest `main` over a cached build of the same version; torch is never touched (`--no-deps`, and torch is not a dependency). If `nflbowl` was imported earlier in the runtime, *Runtime → Restart session* first. `nflbowl.__version__` should print `0.2.1` or later.
+
+## Mixed precision
+
+- **Original failure (≤ 0.2.0):** `RuntimeError: value cannot be converted to type c10::Half without overflow` in `se._supcon`. Under fp16 autocast the contrastive similarity matrix was fp16, and its self-mask `masked_fill(eye, -1e9)` is not representable in fp16 (max ≈ 65504).
+- **Since 0.2.1:** the supervised contrastive, temporal InfoNCE, MMD and JEPA-cosine terms are computed in an autocast-disabled fp32 region. Their logits, log-softmaxes, exponentials and divisions are precision-sensitive, while they cost almost nothing next to the encoder. The encoder and heads stay fp16 + GradScaler, which is where mixed precision saves time and memory. In fp32 the losses are unchanged operation for operation.
+- **Checkpoints:** signatures and state-dict keys are unchanged, so `resume=True` finds existing checkpoints. F4-type fp16 runs never got past batch 0, so no checkpoint of theirs exists to be inconsistent with.
+- **Nonfinite loss:** training stops with `FloatingPointError` naming the loss term, epoch and batch instead of silently skipping steps. Earlier epoch checkpoints stay valid. To diagnose, rerun with `Experiment(..., overrides={"runtime.precision": "fp32"})`; precision is part of the checkpoint signature, so this gets its own checkpoint directory.
+
+**Resume an interrupted F4 run:** restart the runtime, run the two `%pip` lines, mount Drive, recreate `Experiment(..., name="f4_main")` with the same arguments (or `Experiment.open(...)`), `exp.prepare()`, then `exp.train("F4", resume=True)`.
 - Session limits: training checkpoints after every epoch (`checkpoint_every: 1`). In the worst case a disconnect loses one epoch.
 - The `max_minutes` wall-clock cap (90 min per encoder) counts from the start of the current session. A capped run is flagged `time_capped` in its signature.

@@ -1,6 +1,6 @@
 # nflbowl — implementation state
 
-_Updated 2026-10-16 (second session: data-bundle builder). Authored by static analysis only: in this session no script, test, notebook or shell command was executed._
+_Updated 2026-10-16 (third session: fp16 overflow fix in the 12F contrastive loss). Authored by static analysis only: no script, test, notebook or training was executed._
 
 ## Existing architecture (unchanged)
 
@@ -11,7 +11,7 @@ _Updated 2026-10-16 (second session: data-bundle builder). Authored by static an
 ## Decisions
 
 1. **Wrap, don't move.** `nflbdb` is untouched. The new package `src/nflbowl/` imports the scientific definitions (`nflbowl/_backend.py`).
-2. **One distribution, two import packages** (`nflbdb`, version 0.2.0).
+2. **One distribution, two import packages** (`nflbdb`, `nflbowl`; version 0.2.1).
 3. **Portable data bundle** on GPU machines (format version 1, unchanged).
    - Session 2: it is built from the warehouse **files** by `nflbowl.data.builder`. This needs no nflbdb config stack and no `ResearchStore` object.
    - `export_research_bundle(store, D, out)` still works. Both writers share `export.athletes_table` and `export._finish`.
@@ -47,9 +47,19 @@ Session 2 (bundle builder):
   - `notebooks/nflbowl/02–04`: repo URL; `Experiment.open(..., data_dir=...)`.
   - `docs/nflbowl/INSTALL.md` § 2.
 
+Session 3 (GPU mixed-precision fix, package 0.2.1):
+
+- **Bug:** first Colab GPU run of `exp.train("F4")` crashed in `se._supcon` with `RuntimeError: value cannot be converted to type c10::Half without overflow`. Under fp16 autocast the projection output is fp16, so the similarity matrix was fp16 and `masked_fill(eye, -1e9)` cannot represent -1e9 (fp16 max ≈ 65504). Every config with `align ∈ {matched_state, category}` (F4, F6, most F4 ablations) failed on its first batch.
+- **Fix (`m12/shared_movement_encoder.py`):** new `_fp32(t)` = autocast-disabled region on the tensor's device. Inside it, with `.float()` inputs: `_supcon` (whole loss), new `_infonce` (the temporal InfoNCE, previously inline in `batch_loss`), `_mmd`, and the JEPA cosine. The encoder / heads stay under autocast; fp16 autocast + GradScaler remain the default. In fp32 every term is the original formulation operation for operation (same -1e9 mask, positives, anchor rule, temperature, normalisation). Physics / masked-reconstruction MSE already promote to fp32 (fp16 head output − fp32 target); BCE-with-logits is fp32 under autocast. No objective, weight, architecture or config change.
+- **Trainer (`nflbowl/training/trainer.py`):** `check_finite_loss` raises `FloatingPointError` naming the term(s), model, tag, epoch, batch and precision for a nonfinite train or validation loss (uses the already-synchronised `parts` floats: no extra sync). Nonfinite gradients with a finite loss stay the GradScaler's business.
+- **Tests:** `tests/nflbowl/test_nflbowl_amp_losses.py` — fp32 parity with the pre-fix formulas, CPU bf16, CUDA fp16 / bf16 (explicit skips), GradScaler gradients, empty-positive / single-domain / invalid / repeated labels, temperature 0.01, batches 256 / 1024, full `batch_loss` for F4/F5/F6/F4_mmd/F4_adv/F4_category, and a test documenting the original overflow.
+- **Notebooks:** `00_colab_quickstart` and `02_train_gpu`: force-reinstall from `@main`, version / fix check, GPU check, bundle candidates incl. `MyDrive/nfl-big-data-bowl-2027/bundles/m12f_v1`, `training_table = exp.train(...)`. No monkey-patching of `_supcon` needed.
+- **Version:** 0.2.0 → 0.2.1 (`pyproject.toml`, `nflbowl.__version__`; recorded in `code_version` only, not in any hash). Science config and hashes unchanged.
+- **Checkpoint compatibility:** checkpoint signatures do not include code, so existing epoch shards / `best.pt` are still found and load (state-dict keys unchanged). fp32 / CPU checkpoints: identical numerics. fp16 F4-type checkpoints cannot exist (the crash hit batch 0). Configs that did train under fp16 before (F5, F4_noalign, F4_mmd, F4_adv) resume with slightly different (more precise) loss numerics after the resume point; same objective. Use a new experiment `name` if a run must have uniform numerics. F2 / F3 are unaffected.
+
 ## Installation
 
-- Colab / Kaggle: `pip install "git+https://github.com/mybenkhadda/NFL_bowl.git"`.
+- Colab / Kaggle: `%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` then `%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` (restart the session if nflbowl was already imported). Torch is never installed.
 - Local: `pip install -e ".[dev]"`.
 - Bundle: `python -m nflbowl.data.builder --repo-root . --output bundles/m12f_v1 --zip`.
 
@@ -67,7 +77,7 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
 
 ## Known limitations / unverified
 
-- **Nothing executed** in either session: imports, tests, notebooks, CLI, GPU code.
+- **Nothing executed** in any session: imports, tests, notebooks, CLI, GPU code. Session 3 specifically unverified: the fp16 F4 run end to end, whether other fp16 overflows exist inside the encoders (none found statically: pooling divides in fp32, the transformer uses PyTorch's own padding mask), the CUDA tests in `test_nflbowl_amp_losses.py`, and the `torch.autocast(..., enabled=False)` fallback on MPS.
 - Builder-specific points that are unverified:
   - Whether the recomputed fold signature equals the stored one (it is only a warning).
   - Polars details: `read_csv(n_rows=0)`, `scan_parquet().collect_schema()`.
@@ -77,7 +87,7 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
 
 ## Pending work / exact next steps
 
-1. User: `python -m nflbowl.data.builder --repo-root . --discover-only`, then `python -m nflbowl.data.builder --repo-root . --output bundles/m12f_v1 --verify --zip`. Send back the output, or `bundles/m12f_v1.reports/BUILD_REPORT.md` on failure.
-2. User: `pytest tests/nflbowl -q`.
-3. User: upload `bundles/m12f_v1.zip` to `MyDrive/NFLBowl/`, then run `00_colab_quickstart.ipynb`.
+1. Done by the user: bundle built and validated; Colab training starts (then hit the fp16 overflow fixed in session 3).
+2. User (Colab): restart the runtime, reinstall from `@main` (Cell 1), check `nflbowl.__version__ == "0.2.1"`, rerun with the same `name="f4_main"` and `exp.train("F4", resume=True)`.
+3. User: `pytest tests/nflbowl -q` locally, and `pytest tests/nflbowl/test_nflbowl_amp_losses.py -q` on the Colab GPU (the CUDA cases skip elsewhere).
 4. Claude: fix the failures that come back.

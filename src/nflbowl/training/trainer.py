@@ -19,6 +19,7 @@ What changes is only WHERE the data lives and what is saved:
 
 from __future__ import annotations
 
+import math
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -115,6 +116,19 @@ class DeviceData:
         self.t = []
 
 
+def check_finite_loss(parts: dict[str, float], total: float | None, where: str) -> None:
+    """Raise on a nonfinite loss instead of letting the GradScaler silently skip steps (a run that keeps going on NaN
+    losses would still write curves and checkpoints that look valid). ``parts`` are the already-synchronised floats from
+    ``se.batch_loss``, so this adds no extra device sync. Nonfinite GRADIENTS with a finite loss are the GradScaler's
+    normal fp16 overflow handling and are left to it. Earlier epoch checkpoints stay intact for ``resume=True``."""
+    bad = {k: v for k, v in parts.items() if not math.isfinite(v)}
+    if total is not None and not math.isfinite(total):
+        bad.setdefault("total", total)
+    if bad:
+        raise FloatingPointError(f"nonfinite loss at {where}: {bad} (all terms: {parts}). The last saved epoch checkpoint is untouched; "
+                                 f"rerun with overrides={{'runtime.precision': 'fp32'}} to tell a mixed-precision overflow from a data / model problem.")
+
+
 @dataclass
 class TrainResult:
     model: Any
@@ -209,6 +223,7 @@ def train_encoder(e: Any, data: DeviceData, P: np.ndarray, tr: np.ndarray, va: n
             with autocast(device, prec):
                 loss, parts = se.batch_loss(model, x, m, p, pk, s_, ca, d_, gen)
                 loss = loss / c.accum_steps
+            check_finite_loss(parts, None, f"{e.name} {tag} epoch {epoch} train batch {k} ({prec.name})")
             (scaler.scale(loss) if scaler else loss).backward()
             if (k + 1) % c.accum_steps == 0:
                 if scaler:
@@ -227,8 +242,10 @@ def train_encoder(e: Any, data: DeviceData, P: np.ndarray, tr: np.ndarray, va: n
         with torch.no_grad():
             for ix in se._balanced_batches(va, dom, c.batch, np.random.default_rng(seed + 2))[: c.max_val_batches]:
                 x, m, p, pk, s_, ca, d_ = data.take(ix, extra)
-                l_, _ = se.batch_loss(model, x, m, p, pk, s_, ca, d_, vgen)
-                vl += float(l_)
+                l_, vparts = se.batch_loss(model, x, m, p, pk, s_, ca, d_, vgen)
+                lv = float(l_)
+                check_finite_loss(vparts, lv, f"{e.name} {tag} epoch {epoch} validation batch {vn}")
+                vl += lv
                 vn += 1
         val = vl / max(vn, 1)
         elapsed = (time.perf_counter() - t_start) / 60
@@ -286,4 +303,4 @@ def random_frozen(e: Any, device: str, seed: int) -> Any:
     return _backend.se().random_frozen(e, device, seed)
 
 
-__all__ = ["DeviceData", "TrainResult", "embed", "random_frozen", "resolve_placement", "train_encoder"]
+__all__ = ["DeviceData", "TrainResult", "check_finite_loss", "embed", "random_frozen", "resolve_placement", "train_encoder"]
