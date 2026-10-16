@@ -50,14 +50,21 @@ def _unit(X: np.ndarray) -> np.ndarray:
 def basic_geometry(E: np.ndarray, meta: Any, rows: np.ndarray, seed: int, max_rows: int = 3000, k_nn: int = 10) -> tuple[dict[str, Any], dict[str, np.ndarray]]:
     """Scalar summaries + arrays for distributions (spectrum shares, per-dim variance, pairwise cosines, NN distances,
     same-domain share of k nearest neighbours)."""
-    from ..evaluation import domain_diagnostics as dd
+    # import the function from the submodule: ``nflbowl.evaluation`` re-exports the name ``domain_diagnostics`` as a
+    # function, which shadows the submodule attribute, so a module-style import of that name binds the function
+    from ..evaluation.domain_diagnostics import collapse_indicators
 
-    rows = rows[np.isfinite(E[rows]).all(1)]
+    rows = np.asarray(rows, np.int64)
+    rows = rows[np.isfinite(E[rows]).all(1)] if rows.size else rows
     Z = E[rows].astype(float)
     dom = meta["domain"].to_numpy()[rows]
     rng = np.random.default_rng(seed)
-    out: dict[str, Any] = {"dims": int(Z.shape[1]), "n_rows": int(Z.shape[0])}
-    out.update(dd.collapse_indicators(E, rows, seed=seed))
+    out: dict[str, Any] = {"dims": int(E.shape[1]), "n_rows": int(Z.shape[0])}
+    out.update(collapse_indicators(E, rows, seed=seed))
+    if Z.shape[0] < 3:                                   # too few held-out rows for any geometry: dims / n_rows only, empty arrays
+        empty = np.zeros(0)
+        return out, {"spectrum_share": empty, "dim_variance": empty, "cosines": empty, "nn_distance": empty, "norms": empty,
+                     "norm_domain": np.zeros(0, dtype=object)}
     var = Z.var(0)
     out["max_abs_dim_corr"] = NAN
     if Z.shape[0] > 3 and Z.shape[1] > 1:
@@ -97,9 +104,9 @@ def domain_geometry(name: str, E: np.ndarray, meta: Any, rows: np.ndarray, fold:
     import polars as pl
 
     from .. import _backend
-    from ..evaluation import domain_diagnostics as dd
+    from ..evaluation.domain_diagnostics import domain_diagnostics
 
-    long = dd.domain_diagnostics(name, E, meta, rows, fold, seed=seed)
+    long = domain_diagnostics(name, E, meta, rows, fold, seed=seed)
     sub = meta[rows]
     ds = _backend.rep().domain_shift(E[rows], sub, seed=seed)
     pos = long.filter((pl.col("metric") == "domain_auc") & (pl.col("position_group") != "ALL") & pl.col("value").is_not_nan())
@@ -148,9 +155,11 @@ def run_geometry(exp: Any, models_folds: dict[str, list[int]], seed: int) -> dic
             long, dg = domain_geometry(name, E, meta, rows, f, seed)
             for k, v in {**g, **dg}.items():
                 summ.append({"representation": name, "fold": int(f), "metric": k, "value": NAN if v is None else float(v)})
-            spec.append(pl.DataFrame({"representation": name, "fold": int(f), "component": np.arange(1, arr["spectrum_share"].size + 1),
-                                      "variance_share": arr["spectrum_share"]}))
-            norms.append(pl.DataFrame({"representation": name, "fold": int(f), "domain": arr["norm_domain"].astype(str), "norm": arr["norms"]}))
+            if arr["spectrum_share"].size:
+                spec.append(pl.DataFrame({"representation": name, "fold": int(f), "component": np.arange(1, arr["spectrum_share"].size + 1),
+                                          "variance_share": arr["spectrum_share"]}))
+            if arr["norms"].size:
+                norms.append(pl.DataFrame({"representation": name, "fold": int(f), "domain": arr["norm_domain"].astype(str), "norm": arr["norms"]}))
             pp = athlete_pair_similarity(E, meta, rows)
             if pp.height:
                 pairs.append(pp.with_columns(pl.lit(name).alias("representation"), pl.lit(int(f)).alias("fold")))
@@ -177,36 +186,64 @@ def collapse_flags(summary: Any) -> Any:
         ((pl.col("effective_rank") < 2) | (pl.col("n_dead_dims") > 0.2 * pl.col("dims")) | (pl.col("mean_pairwise_cosine") > 0.9)).alias("collapse_flag"))
 
 
-def projection_coordinates(exp: Any, name: str, fold: int, seed: int, max_points: int = 6000, use_umap: bool = True) -> Any:
-    """2-D PCA (and UMAP when importable) coordinates of a stratified (domain-balanced) seeded sample of the held-out rows
-    of ``fold``; the transform is fitted on exactly the plotted sample (stated in the table)."""
+PROJECTION_META = ("idx", "nfl_id", "domain", "kind", "position_group")
+UMAP_NEIGHBORS = 30
+MIN_PROJECTION_ROWS = 3
+
+
+def projection_frame(E: np.ndarray, meta: Any, rows: np.ndarray, name: str, fold: int, seed: int, max_points: int = 6000, use_umap: bool = True) -> Any:
+    """Coordinates table behind ``projection_coordinates`` for an explicit embedding matrix / row set.
+
+    Columns: the ``PROJECTION_META`` columns (dtypes as in ``meta``), ``x`` / ``y`` (always Float64 — UMAP returns float32,
+    the PCA path float64, and a strict vertical concat refuses the mix), ``method`` (pca / umap), ``representation``,
+    ``fold`` (Int64), ``fit_scope``. Fewer than ``MIN_PROJECTION_ROWS`` finite sampled rows → an empty frame with the same
+    schema. UMAP is fitted only when importable and the sample has more than ``UMAP_NEIGHBORS`` rows (its settings are
+    unchanged; a smaller sample cannot support 30 neighbours)."""
     import polars as pl
 
-    meta = exp.bundle.meta
-    E = inductive_matrix(exp, name, fold)
-    rows = held_out_rows(exp, fold)
-    rows = rows[np.isfinite(E[rows]).all(1)]
+    cols = [c for c in PROJECTION_META if c in meta.columns]
+    rows = np.asarray(rows, np.int64)
+    rows = rows[np.isfinite(E[rows]).all(1)] if rows.size else rows
     dom = meta["domain"].to_numpy()[rows]
     rng = np.random.default_rng(seed)
-    pick = np.concatenate([rng.choice(rows[dom == d], min(max_points // 2, int((dom == d).sum())), replace=False) for d in ("combine", "nfl") if (dom == d).any()])
-    pick = np.sort(pick)
-    Z = E[pick].astype(float)
+    parts = [rng.choice(rows[dom == d], min(max_points // 2, int((dom == d).sum())), replace=False) for d in ("combine", "nfl") if (dom == d).any()]
+    pick = np.sort(np.concatenate(parts)).astype(np.int64) if parts else np.zeros(0, np.int64)
+    scope = f"fit on this seeded domain-balanced sample of fold-{fold} held-out rows (seed {seed}), z-scored"
+
+    def frame(sub: Any, x: np.ndarray, y: np.ndarray, method: str) -> Any:
+        return sub.with_columns(pl.Series("x", np.asarray(x, np.float64), dtype=pl.Float64), pl.Series("y", np.asarray(y, np.float64), dtype=pl.Float64),
+                                pl.lit(method, dtype=pl.String).alias("method"))
+
+    def finish(df: Any) -> Any:
+        return df.with_columns(pl.lit(name, dtype=pl.String).alias("representation"), pl.lit(int(fold), dtype=pl.Int64).alias("fold"),
+                               pl.lit(scope, dtype=pl.String).alias("fit_scope"))
+
+    if pick.size < MIN_PROJECTION_ROWS:
+        return finish(frame(meta.select(cols).head(0), np.zeros(0), np.zeros(0), "pca"))
+    Z = E[pick].astype(np.float64)
     Z = (Z - Z.mean(0)) / np.maximum(Z.std(0), 1e-9)
     _, _, vt = np.linalg.svd(Z, full_matrices=False)
-    P = Z @ vt[:2].T
-    sub = meta[pick].select("idx", "nfl_id", "domain", "kind", "position_group")
-    out = [sub.with_columns(pl.Series("x", P[:, 0]), pl.Series("y", P[:, 1]), pl.lit("pca").alias("method"))]
-    if use_umap:
+    P = np.zeros((Z.shape[0], 2), np.float64)
+    k = min(2, vt.shape[0])
+    P[:, :k] = Z @ vt[:k].T                              # a 1-D embedding leaves y = 0
+    sub = meta[pick].select(cols)
+    out = [frame(sub, P[:, 0], P[:, 1], "pca")]
+    if use_umap and pick.size > UMAP_NEIGHBORS:
         try:
             import umap  # type: ignore[import-not-found]
 
-            U = umap.UMAP(n_components=2, random_state=seed, n_neighbors=30, min_dist=0.2).fit_transform(Z)
-            out.append(sub.with_columns(pl.Series("x", U[:, 0]), pl.Series("y", U[:, 1]), pl.lit("umap").alias("method")))
+            U = np.asarray(umap.UMAP(n_components=2, random_state=seed, n_neighbors=UMAP_NEIGHBORS, min_dist=0.2).fit_transform(Z), np.float64)
+            out.append(frame(sub, U[:, 0], U[:, 1], "umap"))
         except ImportError:
             pass
-    return pl.concat(out, how="vertical").with_columns(pl.lit(name).alias("representation"), pl.lit(int(fold)).alias("fold"),
-                                                       pl.lit(f"fit on this seeded domain-balanced sample of fold-{fold} held-out rows (seed {seed}), z-scored").alias("fit_scope"))
+    return finish(pl.concat(out, how="vertical"))
+
+
+def projection_coordinates(exp: Any, name: str, fold: int, seed: int, max_points: int = 6000, use_umap: bool = True) -> Any:
+    """2-D PCA (and UMAP when importable) coordinates of a stratified (domain-balanced) seeded sample of the held-out rows
+    of ``fold``; the transform is fitted on exactly the plotted sample (stated in the table). See ``projection_frame``."""
+    return projection_frame(inductive_matrix(exp, name, fold), exp.bundle.meta, held_out_rows(exp, fold), name, fold, seed, max_points, use_umap)
 
 
 __all__ = ["athlete_pair_similarity", "basic_geometry", "collapse_flags", "domain_geometry", "held_out_rows", "inductive_matrix", "projection_coordinates",
-           "run_geometry"]
+           "projection_frame", "run_geometry"]

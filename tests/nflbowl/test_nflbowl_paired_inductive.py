@@ -5,13 +5,17 @@ encoders and needs PyTorch."""
 
 from __future__ import annotations
 
+import importlib
+
 import numpy as np
 import polars as pl
 import pytest
 
 from nflbowl.data.splits import HELD_OUT, SplitLeakError, fold_map, split_indices, split_roles
-from nflbowl.evaluation import domain_diagnostics as dd
 from nflbowl.evaluation import paired_inductive as pi
+
+# the submodule: ``from nflbowl.evaluation import domain_diagnostics`` binds the re-exported FUNCTION of that name
+dd = importlib.import_module("nflbowl.evaluation.domain_diagnostics")
 
 
 def _oracle(meta: pl.DataFrame, noise: float = 0.05, dim: int = 8, seed: int = 0) -> np.ndarray:

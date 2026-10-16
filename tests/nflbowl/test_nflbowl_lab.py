@@ -3,11 +3,17 @@ session — run with ``pytest tests/nflbowl/test_nflbowl_lab.py -q``. Synthetic 
 
 from __future__ import annotations
 
+import importlib
+import re
+import sys
+import types
+from pathlib import Path
+
 import numpy as np
 import polars as pl
 import pytest
 
-from nflbowl.lab import biomech, registry, retrieval_lab, stats, synthesis, transfer_lab
+from nflbowl.lab import biomech, geometry, registry, retrieval_lab, stats, synthesis, transfer_lab
 from nflbowl.lab import config as labconfig
 from nflbowl.lab.store import LabRun, StageSkipped
 
@@ -211,3 +217,206 @@ def test_gate3_pilot_is_inconclusive():
 def test_describe_interval_never_claims_no_effect():
     s = synthesis.describe_interval("x", 0.01, -0.02, 0.04)
     assert "inconclusive" in s and "no effect" not in s.replace("not evidence of no effect", "")
+
+
+# ---------------------------------------------------------------------- import shape (C1 / D3 first-run failures)
+def test_no_module_style_import_of_a_reexported_function():
+    """A subpackage that re-exports a function under its submodule's name (``nflbowl.evaluation.domain_diagnostics``)
+    shadows the submodule, so ``from ..evaluation import domain_diagnostics as dd`` binds the function. No package
+    module may import such a name module-style."""
+    import nflbowl
+
+    root = Path(nflbowl.__file__).parent
+    shadowed: list[tuple[str, str]] = []
+    for init in root.rglob("__init__.py"):
+        pkg_dir = init.parent
+        if pkg_dir == root:
+            continue
+        try:
+            mod = importlib.import_module("nflbowl." + ".".join(pkg_dir.relative_to(root).parts))
+        except ImportError:                                                      # optional-dependency subpackage: nothing to inspect here
+            continue
+        shadowed += [(pkg_dir.name, n) for n in vars(mod) if (pkg_dir / f"{n}.py").is_file() and not isinstance(getattr(mod, n), types.ModuleType)]
+    assert ("evaluation", "domain_diagnostics") in shadowed                  # the public export shape is unchanged
+    assert callable(importlib.import_module("nflbowl.evaluation").domain_diagnostics)
+    bad = []
+    for py in root.rglob("*.py"):
+        src = py.read_text(encoding="utf-8")
+        for pkg, name in shadowed:
+            if re.search(rf"from\s+[\w.]*\b{pkg}\s+import\s+{name}\s+as\s+\w+", src):
+                bad.append(f"{py.relative_to(root)}: {pkg}.{name}")
+    assert not bad, bad
+
+
+# ---------------------------------------------------------------------- geometry (C1 / C4)
+def _held_out(meta: pl.DataFrame, folds: pl.DataFrame, fold: int) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    from nflbowl.data.splits import fold_map, split_indices
+
+    return split_indices(meta, fold_map(meta, folds, 5), fold, 0.1, 0)
+
+
+def _emb(meta: pl.DataFrame, dim: int = 8, seed: int = 0, dtype: type = np.float32) -> np.ndarray:
+    return np.random.default_rng(seed).normal(size=(meta.height, dim)).astype(dtype)
+
+
+def test_basic_geometry_on_held_out_fold(arrays):
+    _, _, meta, folds, _ = arrays
+    _, _, ho = _held_out(meta, folds, 0)
+    E = _emb(meta)
+    E[ho[0]] = np.nan                                                            # non-finite rows are dropped, not propagated
+    g, arr = geometry.basic_geometry(E, meta, np.sort(ho), seed=0)
+    assert g["n_rows"] == ho.size - 1 and g["dims"] == 8
+    assert {"effective_rank", "pc1_share", "mean_pairwise_cosine", "knn_same_domain_share", "cosine_mean", "norm_median"} <= set(g)
+    assert all(np.isfinite(v) for k, v in g.items() if k in ("effective_rank", "cosine_mean", "norm_median"))
+    assert arr["norms"].size == ho.size - 1 and arr["spectrum_share"].sum() == pytest.approx(1.0)
+
+
+@pytest.mark.parametrize("n_rows", [0, 2])
+def test_basic_geometry_zero_and_low_sample(arrays, n_rows):
+    _, _, meta, _, _ = arrays
+    g, arr = geometry.basic_geometry(_emb(meta), meta, np.arange(n_rows, dtype=np.int64), seed=0)
+    assert g["n_rows"] == n_rows and g["dims"] == 8
+    assert all(a.size == 0 for a in arr.values())
+
+
+def test_domain_geometry_long_table_and_scalars(arrays):
+    _, _, meta, _, _ = arrays
+    rows = np.arange(meta.height, dtype=np.int64)
+    E = _emb(meta, seed=3)
+    E[(meta["domain"] == "nfl").to_numpy(), 0] += 4.0                            # planted domain shift
+    long, d = geometry.domain_geometry("toy", E, meta, rows, fold=0, seed=0)
+    assert long.columns == ["representation", "fold", "position_group", "domain", "metric", "value", "n"]
+    assert set(long["representation"].to_list()) == {"toy"} and long["fold"].dtype == pl.Int64
+    assert set(d) == {"domain_auc_grouped", "domain_auc_m11", "mmd2", "position_adjusted_domain_auc"}
+    assert d["domain_auc_grouped"] > 0.9 and np.isfinite(d["mmd2"])
+
+
+def test_domain_geometry_low_sample_is_nan_not_error(arrays):
+    _, _, meta, _, _ = arrays
+    long, d = geometry.domain_geometry("toy", _emb(meta), meta, np.arange(5, dtype=np.int64), fold=0, seed=0)
+    assert long.height and np.isnan(d["domain_auc_grouped"]) and np.isnan(d["mmd2"])
+
+
+def _fake_umap(monkeypatch) -> None:
+    """A stand-in ``umap`` module whose UMAP returns float32 like the real one (no numba / umap-learn needed)."""
+    class UMAP:
+        def __init__(self, **kw):
+            self.kw = kw
+
+        def fit_transform(self, Z):
+            return np.asarray(Z[:, :2], dtype=np.float32) * 0.5
+
+    monkeypatch.setitem(sys.modules, "umap", types.SimpleNamespace(UMAP=UMAP))
+
+
+def _check_projection_schema(co: pl.DataFrame, meta: pl.DataFrame) -> None:
+    assert co.columns == [*geometry.PROJECTION_META, "x", "y", "method", "representation", "fold", "fit_scope"]
+    assert co["x"].dtype == pl.Float64 and co["y"].dtype == pl.Float64 and co["fold"].dtype == pl.Int64 and co["method"].dtype == pl.String
+    for c in geometry.PROJECTION_META:
+        assert co[c].dtype == meta[c].dtype, c                                  # metadata dtypes come from the bundle meta unchanged
+
+
+def test_projection_frame_pca_and_umap_have_one_schema(arrays, monkeypatch):
+    _, _, meta, _, _ = arrays
+    rows = np.arange(meta.height, dtype=np.int64)
+    E = _emb(meta, dtype=np.float32)
+    pca = geometry.projection_frame(E, meta, rows, "toy", 0, seed=0, use_umap=False)
+    assert set(pca["method"].to_list()) == {"pca"} and pca.height == meta.height
+    _check_projection_schema(pca, meta)
+    _fake_umap(monkeypatch)
+    both = geometry.projection_frame(E, meta, rows, "toy", 0, seed=0, use_umap=True)   # float64 PCA + float32 UMAP: the C4 SchemaError
+    assert both["method"].value_counts().sort("method")["count"].to_list() == [meta.height, meta.height]
+    _check_projection_schema(both, meta)
+    assert pl.concat([pca, both], how="vertical").height == 3 * meta.height     # frames from different calls stack strictly
+    bal = geometry.projection_frame(E, meta, rows, "toy", 0, seed=0, max_points=40, use_umap=False)
+    assert bal["domain"].value_counts().sort("domain")["count"].to_list() == [20, 20]   # domain-balanced sample
+
+
+@pytest.mark.parametrize("n_rows", [0, 2])
+def test_projection_frame_zero_and_low_sample(arrays, monkeypatch, n_rows):
+    _, _, meta, _, _ = arrays
+    _fake_umap(monkeypatch)
+    co = geometry.projection_frame(_emb(meta), meta, np.arange(n_rows, dtype=np.int64), "toy", 0, seed=0, use_umap=True)
+    assert co.height == 0
+    _check_projection_schema(co, meta)
+
+
+def test_projection_frame_small_sample_skips_umap_and_handles_1d(arrays, monkeypatch):
+    _, _, meta, _, _ = arrays
+    _fake_umap(monkeypatch)
+    small = geometry.projection_frame(_emb(meta), meta, np.arange(20, dtype=np.int64), "toy", 0, seed=0, use_umap=True)
+    assert set(small["method"].to_list()) == {"pca"} and small.height == 20      # ≤ UMAP_NEIGHBORS rows: PCA only
+    one_d = geometry.projection_frame(_emb(meta, dim=1), meta, np.arange(meta.height, dtype=np.int64), "toy", 0, seed=0, use_umap=False)
+    assert (one_d["y"] == 0.0).all()
+    _check_projection_schema(one_d, meta)
+
+
+def test_projection_coordinates_reads_held_out_rows_of_the_fold(arrays, monkeypatch):
+    _, _, meta, folds, _ = arrays
+    E = _emb(meta, dim=17, dtype=np.float64)
+    split = {f: _held_out(meta, folds, f) for f in range(5)}
+    exp = types.SimpleNamespace(bundle=types.SimpleNamespace(meta=meta), features=lambda: E, splits=lambda f: split[f])
+    _fake_umap(monkeypatch)
+    co = geometry.projection_coordinates(exp, "F0", 1, seed=0, use_umap=True)
+    _check_projection_schema(co, meta)
+    assert set(co["idx"].to_list()) <= set(meta["idx"].to_numpy()[split[1][2]].tolist())
+    assert co["fit_scope"][0].startswith("fit on this seeded domain-balanced sample of fold-1")
+
+
+# ---------------------------------------------------------------------- Experiment.compare_inductive (D3), no training, no GPU
+@pytest.fixture()
+def cpu_experiment(bundle_dir, tmp_path):
+    from nflbowl import Experiment
+
+    tiny = {"science.n_boot": 20, "runtime.device": "cpu", "runtime.progress": False}
+    exp = Experiment(data_dir=bundle_dir, output_dir=tmp_path, overrides=tiny, name="lab_d3")
+    exp.prepare()
+    return exp
+
+
+def test_compare_inductive_all_encoders_missing(cpu_experiment):
+    from nflbowl.models import registry as reg
+
+    exp = cpu_experiment
+    F0, F2, F4 = reg.resolve("F0"), reg.resolve("F2"), reg.resolve("F4")
+    res = exp.compare_inductive(models=["F0", "F2", "F4"], reference="F0", bootstrap=20, folds=[0, 1], reuse=False, save=False)
+    assert res.meta["unavailable"] == {F2: [0, 1], F4: [0, 1]}
+    auc = res.comparison.filter(pl.col("metric") == "auc")
+    st = dict(zip(auc["representation"].to_list(), auc["status"].to_list()))
+    assert st[F2] == "missing" and st[F4] == "missing"
+    assert set(res.scores["representation"].unique().to_list()) == {F0}
+    reps = set(res.domain["representation"].unique().to_list())
+    assert reps == {F0, "training_split"}                                       # F0 diagnostics + positive-pair coverage rows
+    assert res.domain.filter(pl.col("metric").str.starts_with("positive_pair_coverage_")).height > 0
+    with pytest.raises(FileNotFoundError):
+        exp.compare_inductive(models=["F0", "F4"], folds=[0], on_missing="raise", reuse=False, save=False)
+    with pytest.raises(FileNotFoundError):
+        exp.compare_inductive(models=["F4"], reference="F4", folds=[0], reuse=False, save=False)   # reference missing everywhere
+
+
+def test_compare_inductive_partial_encoder_coverage(cpu_experiment, monkeypatch):
+    """A synthetic F4 'encoder' available for fold 0 only (stands in for a trained checkpoint): its diagnostics run,
+    fold 1 is reported unavailable, and the paired set keeps fold-0 athletes only."""
+    from nflbowl.models import registry as reg
+
+    exp = cpu_experiment
+    F0, F4 = reg.resolve("F0"), reg.resolve("F4")
+    real = exp._inductive_representation
+    E4 = np.random.default_rng(7).normal(size=(exp.bundle.meta.height, 8)).astype(np.float32)
+
+    def fake(name, fold, held_out):
+        if name == F4:
+            return (E4, f"{F4}:synthetic_f{fold}") if fold == 0 else None
+        return real(name, fold, held_out)
+
+    monkeypatch.setattr(exp, "_inductive_representation", fake)
+    res = exp.compare_inductive(models=["F0", "F4"], reference="F0", bootstrap=20, folds=[0, 1], reuse=False, save=False)
+    assert res.meta["unavailable"] == {F4: [1]}
+    f4 = res.scores.filter(pl.col("representation") == F4)
+    assert set(f4["fold"].unique().to_list()) == {0}
+    row = res.comparison.filter((pl.col("metric") == "auc") & (pl.col("representation") == F4)).row(0, named=True)
+    assert row["status"] == "ok" and row["n_folds"] == 1
+    dom = res.domain.filter(pl.col("representation") == F4)
+    assert set(dom["fold"].unique().to_list()) == {0} and "domain_auc" in set(dom["metric"].to_list())
+    cov = res.coverage.filter((pl.col("representation") == F4) & (pl.col("fold") == 1)).row(0, named=True)
+    assert cov["available"] is False

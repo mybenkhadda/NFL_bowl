@@ -649,8 +649,9 @@ class Experiment:
         ``InductiveComparison``; with ``save=True`` writes the evaluation / figure / report views listed in docs/nflbowl/API.md."""
         import polars as pl
 
-        from .evaluation import domain_diagnostics as dd
+        # the functions, not ``from .evaluation import domain_diagnostics``: the package re-exports that name as a function
         from .evaluation import paired_inductive as pi
+        from .evaluation.domain_diagnostics import domain_diagnostics, positive_pair_coverage
 
         if on_missing not in ("skip", "raise"):
             raise ValueError("on_missing must be 'skip' or 'raise'")
@@ -695,13 +696,13 @@ class Experiment:
             ho = splits[f][1]
             parts.append(pi.athlete_retrieval_scores(n, E, b.meta, ho, f))
             if diagnostics:
-                dparts.append(dd.domain_diagnostics(n, E, b.meta, ho, f, seed=sci.seed))
+                dparts.append(domain_diagnostics(n, E, b.meta, ho, f, seed=sci.seed))
         scores = pl.concat(parts, how="vertical")
         if diagnostics:
             cov_rows = []
             for f in fl:
                 for lname, lab in (("state", self._derived.state), ("category", self._derived.cat)):
-                    cov_rows += [{"representation": "training_split", "fold": f, **r} for r in dd.positive_pair_coverage(lab, b.meta, splits[f][0], lname)]
+                    cov_rows += [{"representation": "training_split", "fold": f, **r} for r in positive_pair_coverage(lab, b.meta, splits[f][0], lname)]
             dparts.append(pl.DataFrame(cov_rows, infer_schema_length=None).select(*dparts[0].columns) if dparts else pl.DataFrame(cov_rows, infer_schema_length=None))
         domain = pl.concat(dparts, how="diagonal_relaxed") if dparts else pl.DataFrame()
         kw = {"n_boot": n_boot, "seed": sci.seed, "stratify": stratify, "min_n": min_subgroup, "adequate_n": adequate_n, "ci": ci}
