@@ -1,22 +1,35 @@
-# Next session — nflbowl package (start here)
+# Next session — nflbowl package + unified Milestone 12 notebook (start here)
 
 **Rules:** code authoring only; the user runs everything. Read this file, then only the module you need to fix.
 
-**State (2026-10-16, end of session 3):**
-- The bundle `m12f_v1` is built and validated; Colab GPU training starts.
-- Session 3 fixed the fp16 crash `value cannot be converted to type c10::Half without overflow` in `se._supcon` (F4 batch 0). The contrastive / MMD / JEPA loss terms now run in autocast-disabled fp32 regions (`se._fp32`); the network stays fp16 autocast + GradScaler. The trainer raises `FloatingPointError` naming the term / epoch / batch on a nonfinite loss. Package 0.2.1; science config and hashes unchanged.
-- **Never executed:** the fix, the new tests (`tests/nflbowl/test_nflbowl_amp_losses.py`), the notebooks. Details and checkpoint compatibility: `docs/IMPLEMENTATION_STATE.md` § Session 3.
+**State (2026-10-16, end of session 4):**
+- Package 0.3.0. New: `src/nflbowl/research/` and `notebooks/nflbowl/M12_UNIFIED_COLAB_RESEARCH.ipynb`, the one Colab notebook for 12.0 and 12A–12G.
+- Docs: `docs/nflbowl/M12_MERGE_MATRIX.md` (what was merged and why) and `docs/nflbowl/M12_COLAB_EXECUTION_GUIDE.md` (how to run it, the CFG keys, the Drive layout).
+- Session 3's fp16 fix (`se._fp32`) is unchanged. The notebook checks it statically (`colab.fixed_losses_check`) and defaults to fp32.
+- **Never executed:** anything from sessions 1–4. Details: `docs/IMPLEMENTATION_STATE.md` § Session 4 and § Known limitations.
 
-**Map** (all under `src/nflbowl/`):
-- `api.py`: `Experiment`.
-- `config.py` + `configs/*.yaml`.
-- `data/loading.py`, `data/discovery.py`, `data/builder.py`, `data/export.py`, `data/splits.py`.
-- `training/trainer.py` (`train_encoder`, `check_finite_loss`), `training/checkpoints.py`, `evaluation/`, `artifacts/`, `visualization/`.
-- Research code it wraps: `nflbdb/research/advanced_movement/m12/shared_movement_encoder.py` (`se`: `batch_loss`, `_supcon`, `_infonce`, `_mmd`, `_fp32`) and `m11/representation.py` (`rep`).
+**Map** (all under `src/nflbowl/research/`):
+- `config.py`: `CFG` → `UnifiedConfig`.
+- `artifacts.py`: `ResearchRun`, the RUN_DIR writers.
+- `data_access.py`: input gates (`REQUIREMENTS`), bundle checks, the stage plan.
+- `warehouse.py`: `WarehouseContext`, `MirroredResearchStore`.
+- `stages/base.py`: gate, reuse, `@step`, finish.
+- `stages/s12_0 | s12c | s12b | s12a | s12d | s12e | s12g.py`: track runners ported from the notebooks. `s12e.py` is re-authored on the module API.
+- `encoder.py`: 12F through `nflbowl.Experiment`.
+- `eda.py`, `evaluation.py` (Part 11), `reporting.py` (reports, decision matrix).
+- Wrapped research code: `nflbdb/research/advanced_movement/m12/*`, unchanged.
 
 **Waiting on the user (Colab):**
-1. Runtime → Restart session; Cell 1 of `00_colab_quickstart.ipynb` (install + force-reinstall from `@main`); Cell 2 prints `nflbowl 0.2.1`.
-2. Same `name="f4_main"` → `training_table = exp.train("F4", resume=True)`; then `exp.embed("F4", reuse=True)`, `exp.evaluate("F4", level="standard", reuse=True)`, `exp.export()`.
-3. Optional: `pytest tests/nflbowl/test_nflbowl_amp_losses.py -q` on the GPU runtime.
+1. Part 1.1 install → restart → Part 1.2 must print `nflbowl 0.3.0` and the fix check `True`.
+2. First pass: `run_mode = 'debug'` with the bundle only (warehouse stages skip themselves). Then `fast` with `research_root` on Drive.
+3. Send back the failing cell, `logs/<stage>_traceback.txt`, `manifests/stages.json` and `diagnostics/stage_plan.csv`.
+4. Locally: `pytest tests/nflbowl -q`.
 
-**Likely next failures:** another fp16 issue inside the encoders (none found statically), a `FloatingPointError` from the new check (rerun with `overrides={"runtime.precision": "fp32"}` (own checkpoint directory: precision is in the signature) to separate AMP from data problems), PyTorch / Polars API details.
+**Likely next failures:**
+- Polars API details in the new glue (`map_elements` in `ResearchRun.save_table`, `replace_strict` in the EDA, `diagonal_relaxed` concats of empty frames).
+- Matplotlib `get_layout_engine().set(rect=…)` on old versions.
+- Mismatched column names in the 12E orchestration (`mt.own_distance_ci` output, `m12_combine_quality.attempt_order`).
+- `Phase01Config.load(project_root=research_root)` with a `configs/phase01.toml` that points elsewhere.
+- Drive FUSE renames inside `atomic_write`.
+
+**Fix strategy:** a failing stage is isolated (`continue_on_error`). Fix the module, reinstall from `@main`, and rerun with the same `experiment_name`. Finished stages are reused.

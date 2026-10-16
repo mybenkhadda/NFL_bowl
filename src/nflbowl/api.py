@@ -371,6 +371,20 @@ class Experiment:
         self.manifest.register("embeddings", key, p, deps, {"fold": fold, "dims": int(E.shape[1])})
         return E
 
+    @property
+    def bundle(self) -> Any:
+        """The opened (staged, validated) data bundle; ``prepare()`` is called on first access."""
+        return self._require()
+
+    def inductive_athlete_embeddings(self, model: str = "F4", folds: Iterable[int] | None = None) -> dict[int, Any]:
+        """{fold: athlete-mean Combine forty embedding table} of the inductive encoder of each outer fold (``se.athlete_mean_embedding``,
+        exactly the 12F notebook's ``BYF[name][f]``) — the input of ``se.embedding_block`` in the 12F / 12G ladders. Uses the saved
+        embeddings (``embed(..., regime='inductive')`` runs first when they are missing)."""
+        se = _backend.se()
+        b = self._require()
+        name = reg.resolve(model)
+        return {f: se.athlete_mean_embedding(self._embed_one(name, _tag(INDUCTIVE, fold=f), f, reuse=True), b.meta) for f in self._fold_list(folds)}
+
     def load_embeddings(self, model: str, regime: str = TRANSDUCTIVE, fold: int | None = None, nfl_fraction: float = 1.0) -> Any:
         """The saved embedding table (polars) — ids, domain, fold, split role, e0…; no recomputation."""
         import polars as pl

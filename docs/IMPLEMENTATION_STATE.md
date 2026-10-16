@@ -1,6 +1,6 @@
 # nflbowl — implementation state
 
-_Updated 2026-10-16 (third session: fp16 overflow fix in the 12F contrastive loss). Authored by static analysis only: no script, test, notebook or training was executed._
+_Updated 2026-10-16 (fourth session: unified Milestone 12 Colab notebook + `nflbowl.research`, package 0.3.0). Authored by static analysis only: no script, test, notebook or training was executed in any session._
 
 ## Existing architecture (unchanged)
 
@@ -57,6 +57,33 @@ Session 3 (GPU mixed-precision fix, package 0.2.1):
 - **Version:** 0.2.0 → 0.2.1 (`pyproject.toml`, `nflbowl.__version__`; recorded in `code_version` only, not in any hash). Science config and hashes unchanged.
 - **Checkpoint compatibility:** checkpoint signatures do not include code, so existing epoch shards / `best.pt` are still found and load (state-dict keys unchanged). fp32 / CPU checkpoints: identical numerics. fp16 F4-type checkpoints cannot exist (the crash hit batch 0). Configs that did train under fp16 before (F5, F4_noalign, F4_mmd, F4_adv) resume with slightly different (more precise) loss numerics after the resume point; same objective. Use a new experiment `name` if a run must have uniform numerics. F2 / F3 are unaffected.
 
+Session 4 (unified Milestone 12 notebook, package 0.3.0):
+
+- **Goal:** turn the eight Milestone 12 notebooks into one Colab GPU notebook. Ideas are merged, not cells concatenated. Decision record: `docs/nflbowl/M12_MERGE_MATRIX.md` (per-notebook matrix, decisions D1–D12, per-section input requirements).
+- **Created:**
+  - `notebooks/nflbowl/M12_UNIFIED_COLAB_RESEARCH.ipynb`: Parts 0–13. The method parts follow dependency order: 12C (Part 5) → 12B → 12A → 12D → 12E (Part 9).
+  - `src/nflbowl/research/`:
+    - `config.py`: `resolve(CFG)` → frozen `UnifiedConfig`; run-mode option defaults; unknown keys are errors.
+    - `artifacts.py`: `ResearchRun` with the RUN_DIR layout and `save_figure / save_table / save_markdown / save_processed_dataset / save_model_metadata / save_json / copy_in`, plus manifest, stage records, inventory and ZIP export.
+    - `colab.py`: Drive mounting, runtime report, version check, `fixed_losses_check`.
+    - `data_access.py`: Mode A / B discovery, `bundle_checks`, `REQUIREMENTS` / `PRODUCES`, `check_stage`, `plan`, `warehouse_inventory`.
+    - `warehouse.py`: `WarehouseContext` (the exact objects each notebook built, with `Phase01Config.load(project_root=research_root)`) and `MirroredResearchStore` (a `ResearchStore` subclass that copies tables, figures and JSON into RUN_DIR).
+    - `stages/`: base (gate · reuse · `@step` · finish · `run_guarded` · `run_software_checks`), `s12_0`, `s12c`, `s12b`, `s12a`, `s12d`, `s12e`, `s12g`.
+    - `encoder.py`: the 12F section on `Experiment`, which publishes `m12f_*` and the run manifest for 12G.
+    - `eda.py`: exact chunked statistics and 16:9 figures in the reference palette.
+    - `evaluation.py`: Part 11 classification and families.
+    - `reporting.py`: stage / EDA / evaluation / final reports and the decision matrix.
+  - `tests/nflbowl/test_nflbowl_unified_research.py`.
+  - `docs/nflbowl/M12_MERGE_MATRIX.md` and `docs/nflbowl/M12_COLAB_EXECUTION_GUIDE.md`.
+- **Modified:**
+  - `src/nflbowl/api.py`: `Experiment.bundle` and `Experiment.inductive_athlete_embeddings(model)`. Both are additions; backward compatible.
+  - `pyproject.toml` and `nflbowl.__version__`: 0.2.1 → 0.3.0.
+- **Stage orchestration:** ported line for line from the notebooks into step methods. The algorithms in `nflbdb…m12` are untouched.
+- **12E deviation found and corrected.** The committed 12E notebook had swapped the module definitions for inline ones: E5 weighted by pooled speed mass and E0 on histogram moments, flagged "needs reconciliation". It also dropped consistency, bootstrap and downstream. `stages/s12e.py` uses the declared module definitions and analyses. Its run manifest records `definitions = module_v1`, and earlier 12E outputs are never reused. The uniform-mass control is implemented as uniform mass on each distribution's observed cells. That is an interpretation of the declared control `uniform-mass control`, and the docstring says so.
+- **Reuse rule:** a warehouse stage is reused when `m12_run_<track>.json` has an executed status with the same run mode and the same `M12Config` hash (12E additionally needs `definitions = module_v1`). 12G is reused only if no track was re-executed in this run.
+- **Dropped:** the 12.0 debugging cell, the "Send back" prints, and the 12E inline definitions.
+- **Colours:** the dataviz reference palette in fixed order (Combine = slot 1, NFL = slot 2). The palette validator (`node scripts/validate_palette.js`) was NOT run, because no execution is allowed. The reference palette is documented there as validated.
+
 ## Installation
 
 - Colab / Kaggle: `%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` then `%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` (restart the session if nflbowl was already imported). Torch is never installed.
@@ -85,7 +112,16 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
 - An existing bundle written by `export_research_bundle` has no `build_signature`, so the builder refuses to treat it as up to date; use `--overwrite`.
 - The session-1 limitations remain (PyTorch / Polars API details, single GPU, `se.batch_loss` sync points).
 
+- Session 4, all of it unverified:
+  - Every `nflbowl.research` module and the unified notebook.
+  - The polars / matplotlib API details used by the new glue: `map_elements` in the CSV writer, `get_layout_engine().set(rect=...)`, `diagonal_relaxed` concats.
+  - The new 12E orchestration (consistency, twins ranking, the controls, the ε grid, downstream).
+  - 12G with the encoder block from `Experiment.inductive_athlete_embeddings`.
+  - The behaviour of `ResearchStore` with `project_root` on a Drive mount (FUSE renames).
+
 ## Pending work / exact next steps
+
+0. Session 4 (user, Colab): open `notebooks/nflbowl/M12_UNIFIED_COLAB_RESEARCH.ipynb`. Do a first pass with `run_mode = 'debug'` and the bundle only, then `fast` with the research root on Drive. Send back the failing cell, the traceback (`logs/<stage>_traceback.txt`) and `manifests/stages.json`. Locally: `pytest tests/nflbowl/test_nflbowl_unified_research.py -q`.
 
 1. Done by the user: bundle built and validated; Colab training starts (then hit the fp16 overflow fixed in session 3).
 2. User (Colab): restart the runtime, reinstall from `@main` (Cell 1), check `nflbowl.__version__ == "0.2.1"`, rerun with the same `name="f4_main"` and `exp.train("F4", resume=True)`.
