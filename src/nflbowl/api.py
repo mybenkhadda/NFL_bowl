@@ -377,6 +377,23 @@ class Experiment:
         """The opened (staged, validated) data bundle; ``prepare()`` is called on first access."""
         return self._require()
 
+    @property
+    def derived(self) -> Any:
+        """Per-sequence derived arrays (``data.preprocessing.Derived``: physics targets P, state / category / domain ids,
+        probe scalars); ``prepare()`` is called on first access."""
+        self._require()
+        return self._derived
+
+    @property
+    def folds_by_athlete(self) -> dict[int, int]:
+        """``{nfl_id: outer fold}`` used by every split (manifest fold, ``nfl_id % outer_folds`` fallback)."""
+        self._require()
+        return dict(self._folds)
+
+    def splits(self, held_out: int | None) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+        """(train, validation, held-out) sequence indices of outer fold ``held_out`` (None = transductive), integrity-checked."""
+        return self._splits(held_out)
+
     def inductive_athlete_embeddings(self, model: str = "F4", folds: Iterable[int] | None = None) -> dict[int, Any]:
         """{fold: athlete-mean Combine forty embedding table} of the inductive encoder of each outer fold (``se.athlete_mean_embedding``,
         exactly the 12F notebook's ``BYF[name][f]``) — the input of ``se.embedding_block`` in the 12F / 12G ladders. Uses the saved
@@ -497,36 +514,15 @@ class Experiment:
         fold embeddings, ≤ 8 training-fold PCA dims). Paired athlete-bootstrap Δ RMSE; never mixed with transductive tables."""
         import polars as pl
 
-        from .data.validation import TRANSFER_TARGET, validate_athletes
+        from .data.validation import TRANSFER_TARGET
 
-        b = self._require()
-        if b.athletes is None:
-            raise FileNotFoundError("the bundle has no athletes.parquet: the NFL-transfer ladder is unavailable (re-export with include_transfer=True)")
-        validate_athletes(b.athletes, require_target=True)
-        ae, rep, se = _backend.ae(), _backend.rep(), _backend.se()
+        ae = _backend.ae()
         sci = self.cfg.science
         C = sci.to_m12config()
-        names = [reg.resolve(m) for m in (models or sci.inductive_configs)]
-        byf: dict[str, dict[int, Any]] = {}
-        emb_ids = []
-        for n in names:
-            byf[n] = {}
-            for f in self._fold_list(None):
-                tag = _tag(INDUCTIVE, fold=f)
-                E = self._embed_one(n, tag, f, reuse=True)
-                emb_ids.append(self.manifest.find("embeddings", f"{n}__{tag}")["id"])
-                byf[n][f] = se.athlete_mean_embedding(E, b.meta)
-        deps = self._deps(models=names, embeddings=sorted(emb_ids), tcn=b.tcn is not None, n_boot=sci.n_boot, seed=sci.seed)
+        names, byf, deps, data, mods = self._ladder_inputs(models)
+        b = self._require()
         if reuse and (hit := self.manifest.find("transfer", "ladder", deps)) is not None:
             return pl.DataFrame(json.loads(self.manifest.resolve(hit).read_text(encoding="utf-8"))["rows"], infer_schema_length=None)
-        e0a = rep.athlete_embedding_table(self._E0, b.meta, "combine", ["forty"], prefix="eng")
-        data = (b.athletes.filter(pl.col("linked").fill_null(False)).filter(pl.col(TRANSFER_TARGET).is_not_null())
-                .join(e0a, on="nfl_id", how="left").join(b.folds.select("nfl_id", "fold"), on="nfl_id", how="inner").sort("nfl_id"))
-        mods = {"M1": ae.Model(list(ae.M1_COLS)), "M1+F0": ae.Model([*ae.M1_COLS, *[c for c in e0a.columns if c != "nfl_id"]])}
-        for n, bf in byf.items():
-            mods[f"M1+{n}"] = ae.Model(list(ae.M1_COLS), factory=lambda a, _b=bf: se.embedding_block(a, self._folds, _b))
-        if b.tcn is not None:
-            mods["M1+F1_TCN"] = ae.Model(list(ae.M1_COLS), factory=lambda a, _b=se.tcn_by_fold(b.tcn): se.embedding_block(a, self._folds, _b))
         res = ae.oof_ladder(data, TRANSFER_TARGET, mods, C, C.seed)
         comps = [(m, "M1") for m in mods if m != "M1"] + [(f"M1+{n}", "M1+F0") for n in byf]
         trf = ae.compare(res, comps, C, C.seed, target=TRANSFER_TARGET, training_regime=INDUCTIVE)
@@ -537,6 +533,79 @@ class Experiment:
         if trf.height:
             self.store.write_csv(trf, self.store.evaluation / "transfer.csv")
         return trf
+
+    def _ladder_inputs(self, models: Sequence[str] | None, allow_empty: bool = False) -> tuple[list[str], dict[str, dict[int, Any]], dict[str, Any], Any, dict[str, Any]]:
+        """(encoder names, {name: {fold: athlete-mean Combine-forty table}}, deps, analysis frame, ladder models) of the
+        inductive NFL-transfer ladder — one construction shared by ``transfer`` and ``transfer_predictions``.
+        ``models=None`` (or an empty list without ``allow_empty``) = the science config's inductive encoders;
+        ``[]`` with ``allow_empty`` = no encoder (M1 · M1+F0 · M1+F1 TCN only)."""
+        import polars as pl
+
+        from .data.validation import TRANSFER_TARGET, validate_athletes
+
+        b = self._require()
+        if b.athletes is None:
+            raise FileNotFoundError("the bundle has no athletes.parquet: the NFL-transfer ladder is unavailable (re-export with include_transfer=True)")
+        validate_athletes(b.athletes, require_target=True)
+        ae, rep, se = _backend.ae(), _backend.rep(), _backend.se()
+        sci = self.cfg.science
+        chosen = models if (models is not None and (len(models) or allow_empty)) else sci.inductive_configs
+        names = [reg.resolve(m) for m in chosen]
+        byf: dict[str, dict[int, Any]] = {}
+        emb_ids = []
+        for n in names:
+            byf[n] = {}
+            for f in self._fold_list(None):
+                tag = _tag(INDUCTIVE, fold=f)
+                E = self._embed_one(n, tag, f, reuse=True)
+                emb_ids.append(self.manifest.find("embeddings", f"{n}__{tag}")["id"])
+                byf[n][f] = se.athlete_mean_embedding(E, b.meta)
+        deps = self._deps(models=names, embeddings=sorted(emb_ids), tcn=b.tcn is not None, n_boot=sci.n_boot, seed=sci.seed)
+        e0a = rep.athlete_embedding_table(self._E0, b.meta, "combine", ["forty"], prefix="eng")
+        data = (b.athletes.filter(pl.col("linked").fill_null(False)).filter(pl.col(TRANSFER_TARGET).is_not_null())
+                .join(e0a, on="nfl_id", how="left").join(b.folds.select("nfl_id", "fold"), on="nfl_id", how="inner").sort("nfl_id"))
+        mods = {"M1": ae.Model(list(ae.M1_COLS)), "M1+F0": ae.Model([*ae.M1_COLS, *[c for c in e0a.columns if c != "nfl_id"]])}
+        for n, bf in byf.items():
+            mods[f"M1+{n}"] = ae.Model(list(ae.M1_COLS), factory=lambda a, _b=bf: se.embedding_block(a, self._folds, _b))
+        if b.tcn is not None:
+            mods["M1+F1_TCN"] = ae.Model(list(ae.M1_COLS), factory=lambda a, _b=se.tcn_by_fold(b.tcn): se.embedding_block(a, self._folds, _b))
+        return names, byf, deps, data, mods
+
+    def transfer_predictions(self, models: Sequence[str] | None = None, reuse: bool = True) -> Any:
+        """Out-of-fold predictions of the SAME ladder as ``transfer()`` (same analysis rows, models, folds, seed), one row per
+        athlete: nfl_id, position_group, fold, y, pred_<model>…, plus ``has_<encoder>`` (the athlete has a real, non-imputed
+        inductive embedding in its held-out fold) and the per-fold ladder log. Saved as an immutable Parquet record; the
+        statistics of Part E are computed from these saved predictions only."""
+        import polars as pl
+
+        from .data.validation import TRANSFER_TARGET
+
+        ae = _backend.ae()
+        C = self.cfg.science.to_m12config()
+        names, byf, deps, data, mods = self._ladder_inputs(models, allow_empty=models is not None)
+        deps = {**deps, "analysis": "transfer_oof_v1"}
+        if reuse and (hit := self.manifest.find("transfer_oof", "ladder", deps)) is not None:
+            return pl.read_parquet(self.manifest.resolve(hit))
+        res = ae.oof_ladder(data, TRANSFER_TARGET, mods, C, C.seed)
+        oof = res.oof_frame()
+        fold_of = dict(zip(oof["nfl_id"].to_list(), oof["fold"].to_list()))
+        flags = []
+        for n, bf in byf.items():
+            have = {f: set(t["nfl_id"].to_list()) for f, t in bf.items()}
+            flags.append(pl.Series(f"has_{n}", [int(i) in have.get(int(fold_of[i]), set()) for i in oof["nfl_id"].to_list()], dtype=pl.Boolean))
+        b = self._require()
+        if b.tcn is not None:
+            tb = _backend.se().tcn_by_fold(b.tcn)
+            have = {f: set(t["nfl_id"].to_list()) for f, t in tb.items()}
+            flags.append(pl.Series("has_F1_TCN", [int(i) in have.get(int(fold_of[i]), set()) for i in oof["nfl_id"].to_list()], dtype=pl.Boolean))
+        oof = oof.with_columns(flags) if flags else oof
+        oof = oof.join(data.select("nfl_id", *[c for c in ae.M1_COLS if c in data.columns]), on="nfl_id", how="left")
+        p = self.store.records / f"transfer_oof__{deps_hash(deps)}.parquet"
+        self.store.write_parquet(oof, p, overwrite=True)
+        atomic_json({"kind": "transfer_oof", "ladder_log": res.log, "models": list(mods), "target": TRANSFER_TARGET, "deps": deps, "written_at": utc_now()},
+                    p.with_suffix(".json"), overwrite=True)
+        self.manifest.register("transfer_oof", "ladder", p, deps, {"models": list(mods)})
+        return oof
 
     # ================================================================== paired inductive comparison
     def _inductive_representation(self, name: str, fold: int, held_out: np.ndarray) -> tuple[np.ndarray, str] | None:

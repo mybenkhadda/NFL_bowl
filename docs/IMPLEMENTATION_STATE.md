@@ -84,6 +84,25 @@ Session 4 (unified Milestone 12 notebook, package 0.3.0):
 - **Dropped:** the 12.0 debugging cell, the "Send back" prints, and the 12E inline definitions.
 - **Colours:** the dataviz reference palette in fixed order (Combine = slot 1, NFL = slot 2). The palette validator (`node scripts/validate_palette.js`) was NOT run, because no execution is allowed. The reference palette is documented there as validated.
 
+Session 5 (comprehensive experimental lab, package 0.4.0). All authoring was static; nothing was executed.
+
+- **Goal:** one Colab GPU notebook, `notebooks/nflbowl/M12_COMPREHENSIVE_EXPERIMENTAL_LAB_COLAB.ipynb`, covering Parts A–K: audit, geometry, inductive retrieval, NFL transfer, ablations, robustness, biomechanics, interpretability, gates and the final report. It runs on the cleaned bundle `m12f_v1_clean` (fingerprint `4867be08f8191b3a`). RUN_DIR is `MyDrive/NFLBowl/experimental_lab/m12_comprehensive_lab_v1/`.
+- **Created:**
+  - `src/nflbowl/lab/`: `config`, `store` (LabRun ⊂ ResearchRun; `run_stage` ledger), `registry`, `environment` (bundle checks, precision lock, read-only discovery and adoption of compatible checkpoints), `audit`, `geometry`, `retrieval_lab`, `transfer_lab`, `ablations`, `robustness`, `biomech`, `interpret`, `synthesis` (gates, integrated comparison, report), `figures`, `stats`.
+  - Tests: `tests/nflbowl/test_nflbowl_lab.py`.
+  - Docs: `docs/nflbowl/M12_EXPERIMENTAL_LAB_API_AUDIT.md`, `M12_EXPERIMENT_MATRIX.md`, `M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md`.
+- **Modified:**
+  - `src/nflbowl/api.py`: added `Experiment.derived`, `folds_by_athlete`, `splits(f)` and `transfer_predictions(models, reuse)` (an immutable OOF-prediction record of the exact `transfer()` ladder). `_ladder_inputs` is shared and `transfer()` is unchanged in behaviour.
+  - `pyproject.toml` and `nflbowl.__version__`: 0.3.0 → 0.4.0; extra `lab`.
+- **Decisions:**
+  - The CFG `seed` (42) is the lab seed only; the science seed stays the preset's, so checkpoints can be reused.
+  - Earlier experiments are never written. Checkpoint adoption requires an equal bundle fingerprint and science hash.
+  - Precision is locked per lab.
+  - Inductive learning curves are not supported by the API, so G2 is transductive and labelled as a diagnostic.
+  - NFL-window metrics (`nfl__*`) never enter predictor frames.
+  - Gates follow declared rules, and missing evidence is `not_evaluated`.
+- **Not found in the repo:** `M12_UNIFIED_COLAB_RESEARCH_CLEAN_GPU.ipynb` and `M12_NEXT_STEP_INDUCTIVE_GPU_COLAB.ipynb` (Drive-only). Their outputs are discovered generically.
+
 ## Installation
 
 - Colab / Kaggle: `%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` then `%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` (restart the session if nflbowl was already imported). Torch is never installed.
@@ -119,7 +138,11 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
   - 12G with the encoder block from `Experiment.inductive_athlete_embeddings`.
   - The behaviour of `ResearchStore` with `project_root` on a Drive mount (FUSE renames).
 
+- Session 5, all of it unverified: every `nflbowl.lab` module, the lab notebook, `transfer_predictions`, and the polars / matplotlib API details listed in `docs/nflbowl/M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md` § 6.
+
 ## Pending work / exact next steps
+
+00. Session 5 (user, Colab): run the lab notebook in `pilot` mode with `run_training=False`. Send back `manifests/stages.json` and every `logs/*_traceback.txt`. Locally: `pytest tests/nflbowl/test_nflbowl_lab.py -q`.
 
 0. Session 4 (user, Colab): open `notebooks/nflbowl/M12_UNIFIED_COLAB_RESEARCH.ipynb`. Do a first pass with `run_mode = 'debug'` and the bundle only, then `fast` with the research root on Drive. Send back the failing cell, the traceback (`logs/<stage>_traceback.txt`) and `manifests/stages.json`. Locally: `pytest tests/nflbowl/test_nflbowl_unified_research.py -q`.
 

@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 #   nflbdb   — the research code (unchanged, notebooks keep importing it)
 #   nflbowl  — the high-level, GPU-ready experiment API built on top of it
 name = "nflbdb"
-version = "0.3.0"
+version = "0.4.0"
 description = "NFL Big Data Bowl 2027 — research code (nflbdb) and a GPU-ready experiment API (nflbowl) for Combine/NFL movement representations"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -26,6 +26,8 @@ dependencies = [
 # Use this extra only on a machine without PyTorch (local CPU, or after installing the CUDA wheel you want yourself).
 torch = ["torch>=2.1"]
 dev = ["pytest>=8", "ipykernel"]
+# optional extras of the comprehensive lab notebook (UMAP projections, HTML reports)
+lab = ["umap-learn>=0.5", "markdown>=3.5"]
 all = ["torch>=2.1", "pytest>=8", "ipykernel"]
 
 [tool.setuptools.packages.find]

@@ -1,35 +1,34 @@
-# Next session — nflbowl package + unified Milestone 12 notebook (start here)
+# Next session: M12 comprehensive experimental lab (start here)
 
 **Rules:** code authoring only; the user runs everything. Read this file, then only the module you need to fix.
 
-**State (2026-10-16, end of session 4):**
-- Package 0.3.0. New: `src/nflbowl/research/` and `notebooks/nflbowl/M12_UNIFIED_COLAB_RESEARCH.ipynb`, the one Colab notebook for 12.0 and 12A–12G.
-- Docs: `docs/nflbowl/M12_MERGE_MATRIX.md` (what was merged and why) and `docs/nflbowl/M12_COLAB_EXECUTION_GUIDE.md` (how to run it, the CFG keys, the Drive layout).
-- Session 3's fp16 fix (`se._fp32`) is unchanged. The notebook checks it statically (`colab.fixed_losses_check`) and defaults to fp32.
-- **Never executed:** anything from sessions 1–4. Details: `docs/IMPLEMENTATION_STATE.md` § Session 4 and § Known limitations.
+**State (2026-10-16, end of session 5):**
+- Package 0.4.0. New: `src/nflbowl/lab/` and `notebooks/nflbowl/M12_COMPREHENSIVE_EXPERIMENTAL_LAB_COLAB.ipynb` (Parts A–K).
+- API additions: `Experiment.derived`, `folds_by_athlete`, `splits(f)`, `transfer_predictions()`.
+- Docs: `docs/nflbowl/M12_EXPERIMENTAL_LAB_API_AUDIT.md`, `M12_EXPERIMENT_MATRIX.md`, `M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md`.
+- **Never executed:** anything from sessions 1–5.
 
-**Map** (all under `src/nflbowl/research/`):
-- `config.py`: `CFG` → `UnifiedConfig`.
-- `artifacts.py`: `ResearchRun`, the RUN_DIR writers.
-- `data_access.py`: input gates (`REQUIREMENTS`), bundle checks, the stage plan.
-- `warehouse.py`: `WarehouseContext`, `MirroredResearchStore`.
-- `stages/base.py`: gate, reuse, `@step`, finish.
-- `stages/s12_0 | s12c | s12b | s12a | s12d | s12e | s12g.py`: track runners ported from the notebooks. `s12e.py` is re-authored on the module API.
-- `encoder.py`: 12F through `nflbowl.Experiment`.
-- `eda.py`, `evaluation.py` (Part 11), `reporting.py` (reports, decision matrix).
-- Wrapped research code: `nflbdb/research/advanced_movement/m12/*`, unchanged.
+**Map** (`src/nflbowl/lab/`):
+- `config`: CFG → LabConfig.
+- `store`: LabRun, `run_stage`, `table`, `figure`, `data_file`.
+- `registry`: SPECS and status.
+- `environment`: setup, adoption, training plan.
+- `audit` (B), `geometry` (C), `retrieval_lab` (D/G3–G5), `transfer_lab` (E), `ablations` (F), `robustness` (G1/G2), `biomech` (H), `interpret` (I), `synthesis` (J/K).
+- `figures`, `stats`.
+
+**Notebook stage ids:** SETUP, A2, P2, B1–B4, D2, C1/C3, C4, D1, D3/D4, D5, E2, E5/E7, E_perm, F1, G3, G4, G5, G1, G2, H1, I1, J1, K.
 
 **Waiting on the user (Colab):**
-1. Part 1.1 install → restart → Part 1.2 must print `nflbowl 0.3.0` and the fix check `True`.
-2. First pass: `run_mode = 'debug'` with the bundle only (warehouse stages skip themselves). Then `fast` with `research_root` on Drive.
-3. Send back the failing cell, `logs/<stage>_traceback.txt`, `manifests/stages.json` and `diagnostics/stage_plan.csv`.
-4. Locally: `pytest tests/nflbowl -q`.
+1. Setup 2 must print `nflbowl 0.4.0`.
+2. First pass: `run_mode='pilot'`, `run_training=False`.
+3. Send back the failing cells, `logs/<stage>_traceback.txt`, `manifests/stages.json`, and the P2 adoption table, to confirm whether `f4_main_clean` shares the science hash.
+4. Locally: `pytest tests/nflbowl/test_nflbowl_lab.py -q`.
 
 **Likely next failures:**
-- Polars API details in the new glue (`map_elements` in `ResearchRun.save_table`, `replace_strict` in the EDA, `diagonal_relaxed` concats of empty frames).
-- Matplotlib `get_layout_engine().set(rect=…)` on old versions.
-- Mismatched column names in the 12E orchestration (`mt.own_distance_ci` output, `m12_combine_quality.attempt_order`).
-- `Phase01Config.load(project_root=research_root)` with a `configs/phase01.toml` that points elsewhere.
-- Drive FUSE renames inside `atomic_write`.
+- Polars details: `unpivot` / `pivot`, `replace_strict(default=)`, `rank('ordinal')` UInt arithmetic, `concat_list().list.eval`.
+- Frames built from lists of dicts with missing keys.
+- The `violinplot` orientation fallback.
+- `ae._alpha` private-call signature in `interpret`.
+- Ladder runtime when `transfer_predictions(models=[])`.
 
-**Fix strategy:** a failing stage is isolated (`continue_on_error`). Fix the module, reinstall from `@main`, and rerun with the same `experiment_name`. Finished stages are reused.
+**Fix strategy:** each section is isolated by `run_stage`. Fix the module, reinstall from `@main`, restart, and rerun with the same `experiment_name`. Saved artifacts are reused.
