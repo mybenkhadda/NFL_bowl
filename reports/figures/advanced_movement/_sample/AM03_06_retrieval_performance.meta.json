@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_06_retrieval_performance",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "37 confirm athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T22:56:18Z",
+  "seed": 20261011,
+  "source": "repr_repeatability"
+}

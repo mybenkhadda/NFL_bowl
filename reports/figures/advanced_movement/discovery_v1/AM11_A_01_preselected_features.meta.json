@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_A_01_preselected_features",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T22:12:01Z",
+  "seed": 20261011,
+  "source": "m11_athlete_features"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_02_missingness_eligibility_map",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "418 tracked athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T00:59:45Z",
+  "seed": 20261011,
+  "source": "atlas_coverage, atlas_feature_status"
+}

@@ -1,0 +1,6 @@
+definition,label,complexity,status,n_athletes_eligible,share_athletes_retained,n_positions,reliability,ci_lower,ci_upper,min_position_reliability,spearman_with_c0,feasible,reason
+C0,raw athlete aggregate (Milestone 05 statistic),0,reference_frozen_m05,336,1.0,5,0.9224130891464598,0.914057713809306,0.9555633556038431,0.792139441600593,1.0,true,""
+C1,position-standardised athlete value,1,exploratory,336,1.0,5,0.8842114431964957,0.8704814183561073,0.9350183395345912,0.7904116800804233,0.9815669427343993,true,""
+C2,starting-speed-conditioned (position × starting-speed band),2,exploratory,336,1.0,5,0.9148874680116613,0.8974974370474549,0.9523984225634815,0.7855275392000778,0.9728866266378999,true,""
+C3,position × alignment conditioned,3,exploratory,334,0.9940476190476191,5,0.8193952414508137,0.7727919353395243,0.8844183597708651,0.635697003250421,0.7244314114811925,true,""
+C4,hierarchical context-adjusted athlete effect (shrunk),4,exploratory,336,1.0,5,0.8292796720544017,0.8229563758457282,0.8869548492631824,0.7878230011352081,0.6408609770140395,true,""

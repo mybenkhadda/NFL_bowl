@@ -1,0 +1,112 @@
+step,started_at,seconds,rss_start_mb,rss_peak_mb,rss_end_mb,rows_in,rows_out,bytes_in,bytes_out,artifacts,warnings,status,error,run_id
+env [discovery],2026-10-07T23:40:04Z,0.347,23.64453125,41.4,49.9,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\00_environment_report.md,"",OK,"",20261007_234004_0b4d57
+inventory [discovery],2026-10-07T23:40:04Z,4.036,49.9375,341.3,332.5,,9,2306804135,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\01_data_inventory.md,"",OK,"",20261007_234004_0b4d57
+schema [discovery],2026-10-07T23:40:08Z,0.631,332.53125,332.5,338.4,,,,,"","",FAILED,"ComputeError: could not parse `FALSE` as dtype `f64` at column 'recovered_fumble' (column number 59)
+
+The current offset in the file is 23797 bytes.
+
+You might want to try:
+- increasing `infer_schema_length` (e.g. `infer_schema_length=10000`),
+- increasing `infer_schema_files` (e.g. `infer_schema_files=50`),
+- specifying correct dtype with the `schema_overrides` argument
+- setting `ignore_errors` to `True`,
+- adding `FALSE` to the `null_values` list.
+
+Original error: ```invalid primitive value found during CSV parsing```",20261007_234004_0b4d57
+bronze [discovery],2026-10-07T23:40:10Z,10.101,58.6875,1713.4,495.8,,,,,"","",FAILED,"ComputeError: could not parse `FALSE` as dtype `f64` at column 'recovered_fumble' (column number 59)
+
+The current offset in the file is 23797 bytes.
+
+You might want to try:
+- increasing `infer_schema_length` (e.g. `infer_schema_length=10000`),
+- increasing `infer_schema_files` (e.g. `infer_schema_files=50`),
+- specifying correct dtype with the `schema_overrides` argument
+- setting `ignore_errors` to `True`,
+- adding `FALSE` to the `null_values` list.
+
+Original error: ```invalid primitive value found during CSV parsing```",20261007_234009_56c8e5
+profile [discovery],2026-10-07T23:40:20Z,1.12,23.48828125,100.2,91.2,,,,,"","",FAILED,"ParserException: Parser Error: syntax error at or near ""GROUP""
+
+LINE 1: ... true, union_by_name = true) USING SAMPLE 2.0% (bernoulli, 42) GROUP BY 1 ORDER BY n DESC LIMIT 15
+                                                                          ^",20261007_234020_f3939f
+silver [discovery],2026-10-07T23:40:22Z,0.223,60.1953125,90.8,90.8,,,,,"","",FAILED,SilverIntegrityError: build silver.plays before game tracking (play_direction needed),20261007_234022_c933c8
+env [discovery],2026-10-07T23:43:56Z,0.065,84.08984375,90.6,91.3,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\00_environment_report.md,"",OK,"",20261007_234354_15b4a4
+env [discovery],2026-10-07T23:46:09Z,0.046,98.2578125,98.3,98.7,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\00_environment_report.md,"",OK,"",20261007_234606_5a5d3e
+inventory [discovery],2026-10-07T23:46:19Z,3.735,99.0703125,359.3,359.8,,9,2306804135,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\01_data_inventory.md,"",OK,"",20261007_234606_5a5d3e
+schema [discovery],2026-10-07T23:46:31Z,0.657,248.92578125,308.3,347.8,,,,,"","",FAILED,"ComputeError: could not parse `FALSE` as dtype `f64` at column 'recovered_fumble' (column number 59)
+
+The current offset in the file is 23797 bytes.
+
+You might want to try:
+- increasing `infer_schema_length` (e.g. `infer_schema_length=10000`),
+- increasing `infer_schema_files` (e.g. `infer_schema_files=50`),
+- specifying correct dtype with the `schema_overrides` argument
+- setting `ignore_errors` to `True`,
+- adding `FALSE` to the `null_values` list.
+
+Original error: ```invalid primitive value found during CSV parsing```",20261007_234606_5a5d3e
+schema [discovery],2026-10-07T23:47:13Z,0.685,271.0234375,356.5,356.8,220574,134,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\02_schema_dictionary.md,"",OK,"",20261007_234606_5a5d3e
+profile [discovery],2026-10-07T23:47:29Z,0.285,335.45703125,350.7,355.3,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+profile [discovery],2026-10-07T23:49:32Z,0.017,247.1953125,247.3,245.7,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+profile [discovery],2026-10-08T00:08:46Z,0.044,89.0703125,89.1,89.3,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+profile [discovery],2026-10-08T00:09:03Z,0.025,69.5703125,69.6,70.5,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+profile [discovery],2026-10-08T00:09:17Z,0.025,73.2109375,73.2,72.2,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+profile [discovery],2026-10-08T00:09:33Z,0.019,73.84375,73.9,73.9,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261007_234606_5a5d3e
+env [discovery],2026-10-08T00:23:59Z,0.379,21.6953125,41.6,48.5,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\00_environment_report.md,"",OK,"",20261008_002359_9edd3c
+inventory [discovery],2026-10-08T00:23:59Z,3.484,48.5390625,298.2,291.4,,9,2306804135,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\01_data_inventory.md,"",OK,"",20261008_002359_9edd3c
+schema [discovery],2026-10-08T00:24:03Z,0.662,291.34765625,346.2,347.3,220574,134,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\02_schema_dictionary.md,"",OK,"",20261008_002359_9edd3c
+bronze [discovery],2026-10-08T00:24:03Z,10.778,355.1484375,1773.8,851.8,,23434208,2306804135,481414423,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\warehouse\bronze,"",OK,"",20261008_002359_9edd3c
+schema [discovery],2026-10-08T00:25:16Z,1.065,21.56640625,214.8,212.2,224422,134,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\02_schema_dictionary.md,"",OK,"",20261008_002516_679aa0
+profile [discovery],2026-10-08T00:25:24Z,10.859,21.64453125,225.6,173.9,,142,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_test_participation.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_drill_coverage.png,"",OK,"",20261008_002524_5a37da
+tracking_qc [discovery],2026-10-08T00:25:35Z,8.069,173.890625,369.8,274.6,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_game.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_combine.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_tracking_sampling_intervals.png,"",OK,"",20261008_002524_5a37da
+validate [discovery],2026-10-08T00:25:43Z,13.627,274.578125,571.5,414.9,,47,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\03_data_quality.md,"MEDIUM Key uniqueness combine_tracking.event_id, nfl_id, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys); CRITICAL Key uniqueness combine_tracking.event_id, nfl_id, attempt, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys); HIGH Referential integrity game_tracking.(game_id,play_id) → player_play(game_id,play_id): 150 of 104,545 distinct child keys have no parent (0.14%); MEDIUM Referential integrity game_tracking.(game_id,play_id,nfl_id) → player_play(game_id,play_id,nfl_id): 1,879 of 237,177 distinct child keys have no parent (0.79%)",FAILED,"DataIntegrityError: 1 critical data-quality failure(s): Key uniqueness combine_tracking.event_id, nfl_id, attempt, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys)",20261008_002524_5a37da
+profile [discovery],2026-10-08T00:26:52Z,11.526,21.58984375,241.0,174.1,,142,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_test_participation.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_drill_coverage.png,"",OK,"",20261008_002652_473867
+tracking_qc [discovery],2026-10-08T00:27:03Z,8.407,174.05859375,384.1,274.5,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_game.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_combine.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_tracking_sampling_intervals.png,"",OK,"",20261008_002652_473867
+validate [discovery],2026-10-08T00:27:12Z,13.462,274.5078125,571.9,419.9,,47,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\03_data_quality.md,"MEDIUM Key uniqueness combine_tracking.event_id, nfl_id, attempt, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys); HIGH Referential integrity game_tracking.(game_id,play_id) → player_play(game_id,play_id): 150 of 104,545 distinct child keys have no parent (0.14%); MEDIUM Referential integrity game_tracking.(game_id,play_id,nfl_id) → player_play(game_id,play_id,nfl_id): 1,879 of 237,177 distinct child keys have no parent (0.79%)",OK_WITH_WARNINGS,"",20261008_002652_473867
+relationships [discovery],2026-10-08T00:27:25Z,2.041,419.94921875,488.4,447.2,,510,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\04_relationship_analysis.md,"",OK,"",20261008_002652_473867
+silver [discovery],2026-10-08T00:27:37Z,66.387,60.22265625,3682.4,308.4,23748405,23549162,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\warehouse\silver,"",OK,"",20261008_002736_60f0e5
+gold [discovery],2026-10-08T00:28:43Z,12.062,309.296875,3068.2,149.5,,444263,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\warehouse\gold,"",OK,"",20261008_002736_60f0e5
+catalog [discovery],2026-10-08T00:28:55Z,0.347,149.46484375,154.9,155.6,,27,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\warehouse\catalog\bdb27.duckdb,"",OK,"",20261008_002736_60f0e5
+benchmark [discovery],2026-10-08T00:29:06Z,20.801,60.109375,201.1,149.5,,16,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\07_performance_benchmarks.md,"",OK,"",20261008_002906_d2e252
+feasibility [discovery],2026-10-08T00:29:27Z,0.798,149.51953125,212.9,195.2,,5,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\08_research_feasibility.md,"",OK,"",20261008_002906_d2e252
+benchmark [discovery],2026-10-08T00:30:55Z,18.793,60.3984375,200.9,149.4,,16,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\07_performance_benchmarks.md,"",OK,"",20261008_003054_0fd142
+env [discovery],2026-10-08T00:32:58Z,0.218,24.76171875,34.4,35.7,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\00_environment_report.md,"",OK,"",20261008_003258_3d32af
+inventory [discovery],2026-10-08T00:32:58Z,3.073,44.80078125,322.9,323.5,,9,2306804135,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\file_inventory.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\01_data_inventory.md,"",OK,"",20261008_003258_3d32af
+schema [discovery],2026-10-08T00:33:01Z,0.815,191.01171875,301.5,302.4,220574,134,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.parquet; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\tables\schema_catalog.csv; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\02_schema_dictionary.md,"",OK,"",20261008_003258_3d32af
+profile [discovery],2026-10-08T00:33:31Z,0.109,255.53125,260.5,264.3,,,,,"","",FAILED,AttributeError: 'Series' object has no attribute 'with_columns',20261008_003258_3d32af
+profile [discovery],2026-10-08T00:35:05Z,11.143,264.04296875,330.0,310.9,,142,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_test_participation.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_combine_drill_coverage.png,"",OK,"",20261008_003258_3d32af
+tracking_qc [discovery],2026-10-08T00:35:25Z,8.025,311.71875,507.5,430.3,,,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_game.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_speed_consistency_combine.png; C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\figures\03_tracking_sampling_intervals.png,"",OK,"",20261008_003258_3d32af
+validate [discovery],2026-10-08T00:35:46Z,14.687,431.015625,760.8,425.5,,47,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\03_data_quality.md,"MEDIUM Key uniqueness combine_tracking.event_id, nfl_id, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys); CRITICAL Key uniqueness combine_tracking.event_id, nfl_id, attempt, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys); HIGH Referential integrity game_tracking.(game_id,play_id) → player_play(game_id,play_id): 150 of 104,545 distinct child keys have no parent (0.14%); MEDIUM Referential integrity game_tracking.(game_id,play_id,nfl_id) → player_play(game_id,play_id,nfl_id): 1,879 of 237,177 distinct child keys have no parent (0.79%)",FAILED,"DataIntegrityError: 1 critical data-quality failure(s): Key uniqueness combine_tracking.event_id, nfl_id, attempt, time: 16 duplicate-key rows of 9,317 (9,301 distinct keys)",20261008_003258_3d32af
+relationships [discovery],2026-10-08T00:36:04Z,2.121,425.96484375,539.5,365.9,,510,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\04_relationship_analysis.md,"",OK,"",20261008_003258_3d32af
+catalog [discovery],2026-10-08T00:36:19Z,0.318,367.01171875,370.9,370.9,,27,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\warehouse\catalog\bdb27.duckdb,"",OK,"",20261008_003258_3d32af
+feasibility [discovery],2026-10-08T00:36:29Z,0.607,380.1484375,409.0,399.8,,5,,,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\reports\08_research_feasibility.md,"",OK,"",20261008_003258_3d32af
+lab_marts,2026-10-08T01:38:46Z,1.323,40.3203125,130.9,121.9,,,,,"","",FAILED,"ParserException: Parser Error: syntax error at or near ""a""
+
+LINE 6:                 FROM (UNPIVOT INCLUDE NULLS a ON combine_height, combine_weight, hand_size, arm_length...
+                                                    ^",20261008_013846_1f663b
+lab_monitoring,2026-10-08T01:38:47Z,0.474,123.0625,128.9,129.3,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_013846_1f663b
+lab_marts,2026-10-08T01:39:53Z,0.427,40.33203125,66.1,60.5,,,,,"","",FAILED,"ParserException: Parser Error: syntax error at or near ""a""
+
+LINE 6:                 FROM (UNPIVOT INCLUDE NULLS a ON combine_height, combine_weight, hand_size, arm_length...
+                                                    ^",20261008_013953_f669c3
+lab_monitoring,2026-10-08T01:39:53Z,0.461,71.13671875,97.5,97.6,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_013953_f669c3
+lab_marts,2026-10-08T01:40:03Z,0.171,40.5078125,65.7,60.6,,,,,"","",FAILED,"ParserException: Parser Error: syntax error at or near ""a""
+
+LINE 6:                 FROM (UNPIVOT INCLUDE NULLS a ON combine_height, combine_weight, hand_size, arm_length...
+                                                    ^",20261008_014003_a463f9
+lab_monitoring,2026-10-08T01:40:03Z,0.268,71.09375,97.6,97.8,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_014003_a463f9
+lab_marts,2026-10-08T01:44:34Z,2.445,41.1796875,497.9,359.7,,24,,,warehouse/gold/phase_lab,"",OK,"",20261008_014434_da7356
+lab_serving,2026-10-08T01:44:37Z,3.221,359.73046875,669.0,399.3,,24,,36974592,warehouse/serving/nfl_lab.duckdb,"",OK,"",20261008_014434_da7356
+lab_monitoring,2026-10-08T01:44:40Z,0.156,320.8359375,323.6,323.9,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_014434_da7356
+lab_marts,2026-10-08T01:52:31Z,1.183,40.39453125,117.9,110.9,,24,,,warehouse/gold/phase_lab,"",OK,"",20261008_015231_cd860d
+lab_serving,2026-10-08T01:52:33Z,2.224,110.90234375,423.2,152.5,,,,,"","",FAILED,PermissionError: cannot replace warehouse/serving/nfl_lab.duckdb (open in another process?). Stop the readers (`docker compose stop superset streamlit grafana`) and re-run the serving step.,20261008_015231_cd860d
+lab_monitoring,2026-10-08T01:52:35Z,0.149,153.546875,157.0,157.3,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_015231_cd860d
+lab_serving,2026-10-08T01:53:38Z,2.688,40.37890625,368.2,126.7,,24,,36974592,warehouse/serving/nfl_lab.duckdb,"",OK,"",20261008_015338_46c46e
+lab_marts,2026-10-08T01:54:16Z,0.831,40.53125,117.7,111.4,,24,,,warehouse/gold/phase_lab,"",OK,"",20261008_015416_2c1f29
+lab_serving,2026-10-08T01:54:17Z,1.702,111.37109375,419.4,153.8,,24,,36974592,warehouse/serving/nfl_lab.duckdb,"",OK,"",20261008_015416_2c1f29
+lab_monitoring,2026-10-08T01:54:19Z,0.146,154.7578125,158.0,158.3,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_015416_2c1f29
+lab_marts,2026-10-08T01:57:11Z,0.619,40.26171875,117.1,111.9,,24,,,warehouse/gold/phase_lab,"",OK,"",20261008_015711_6a6dbc
+lab_serving,2026-10-08T01:57:12Z,1.668,111.91015625,429.4,153.5,,24,,36712448,warehouse/serving/nfl_lab.duckdb,"",OK,"",20261008_015711_6a6dbc
+lab_monitoring,2026-10-08T01:57:14Z,0.101,154.53125,157.6,158.1,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_015711_6a6dbc
+lab_serving,2026-10-08T02:08:04Z,2.603,40.9609375,380.2,126.5,,24,,36712448,warehouse/serving/nfl_lab.duckdb,"",OK,"",20261008_020804_248f59
+lab_monitoring,2026-10-08T02:08:07Z,0.177,138.70703125,143.9,144.5,,,,,warehouse/serving/lab_monitoring.sqlite,"",OK,"",20261008_020804_248f59

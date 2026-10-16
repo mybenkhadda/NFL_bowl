@@ -1,0 +1,11 @@
+combine,nfl,kind,n_pairs,n_athletes
+forty.band_4_6_mean_accel,nfl.band_4_6,matched,1341,230
+forty.band_6_8_mean_accel,nfl.band_6_8,matched,767,113
+forty.band_2_4_mean_accel,nfl.band_2_4,matched,1814,303
+forty.phase_A0,env.lin_A0,matched,1937,317
+forty.phase_V0,env.lin_V0,matched,1937,317
+forty.v_max_obs,nfl.vmax_p90,matched,900,146
+forty.early_accel,nfl.accel_low_mean,matched,1800,307
+short_shuttle.decel_mean,nfl.brake_decel,matched,172,91
+forty.band_2_4_mean_accel,nfl.band_6_8,control,767,113
+forty.band_6_8_mean_accel,nfl.brake_decel,control,1558,275

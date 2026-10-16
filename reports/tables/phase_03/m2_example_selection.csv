@@ -1,0 +1,11 @@
+example,drill,nfl_id,value_feature,value,rule
+forty_high_acceleration,FORTY_YARD_DASH,57203,model_a0,9.487893104553223,athlete median model_a0 closest to its p90; ties → lowest nfl_id
+forty_low_acceleration,FORTY_YARD_DASH,58369,model_a0,7.080731391906738,athlete median model_a0 closest to its p10; ties → lowest nfl_id
+forty_similar_time_different_profile,FORTY_YARD_DASH,57143,model_tau_s,1.5099999904632568,adjacent athletes with |Δ official forty| ≤ 0.02 s maximising |Δ τ|; ties → closer to median forty
+forty_similar_time_different_profile,FORTY_YARD_DASH,57144,model_tau_s,0.8199999928474426,adjacent athletes with |Δ official forty| ≤ 0.02 s maximising |Δ τ|; ties → closer to median forty
+forty_stable_attempts,FORTY_YARD_DASH,56010,sd,0.0010503217345103621,min within-athlete SD of model_vmax (≥ 2 fit-ok attempts); ties → lowest nfl_id
+forty_variable_attempts,FORTY_YARD_DASH,57152,sd,0.815211832523346,max within-athlete SD of model_vmax (≥ 2 fit-ok attempts); ties → lowest nfl_id
+shuttle_high_braking,SHORT_SHUTTLE,58940,cod_approach_decel_median,5.928979873657227,athlete median closest to p90; ties → lowest nfl_id
+shuttle_low_braking,SHORT_SHUTTLE,57262,cod_approach_decel_median,4.54362678527832,athlete median closest to p10; ties → lowest nfl_id
+three_cone_short_path,THREE_CONE_DRILL,57347,path_len_yds,21.238719940185547,athlete median path length closest to p10 (fixed course → shorter = tighter)
+three_cone_long_path,THREE_CONE_DRILL,57441,path_len_yds,24.35181427001953,athlete median path length closest to p90 (fixed course → shorter = tighter)

@@ -1,0 +1,9 @@
+case,nfl_id_a,nfl_id_b,feature_id,feature_label,unit,value_a,value_b,difference,se_difference,ci_lower,ci_upper,z,verdict,state_a,state_b
+stable_versus_unstable_attempts,56071,56541,cmb_forty,official forty-yard dash,s,4.43,4.44,0.010000000000000675,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,56071,56541,cmb_ten_yd_split,official 10-yard split,s,1.52,1.51,-0.010000000000000009,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,56071,56541,F2.forty.p95_speed,tracked top speed (p95),yd/s,11.268599514518282,11.267272862894416,-0.0013266516238665815,0.09551642757768948,-0.18853541108474517,0.185882107837012,-0.013889250859885153,not_distinguishable,supported,supported
+stable_versus_unstable_attempts,56071,56541,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8590685894903998,0.8785693842903115,0.019500794799911736,0.050833806919542306,-0.08013163674534209,0.11913322634516556,0.38361861882146275,not_distinguishable,supported,supported
+stable_versus_unstable_attempts,57305,58901,cmb_forty,official forty-yard dash,s,4.52,4.5,-0.019999999999999574,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,57305,58901,cmb_ten_yd_split,official 10-yard split,s,1.55,1.52,-0.030000000000000027,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,57305,58901,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.839947153450288,11.077469956957511,0.23752280350722366,0.09551642757768948,0.05031404404634507,0.4247315629681022,2.4867220176762945,distinguishable,supported,supported
+stable_versus_unstable_attempts,57305,58901,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8625038218561198,0.9059723737207429,0.04346855186462306,0.050833806919542306,-0.05616387968063076,0.14310098340987687,0.8551110864748597,not_distinguishable,supported,supported

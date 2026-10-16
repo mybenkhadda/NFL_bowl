@@ -1,0 +1,12 @@
+trait,n_athletes_multi_season,n_athletes_ge3,n_athletes_any,state
+env.lin_A0,207,83,388,SUPPORTED
+env.lin_V0,206,83,386,SUPPORTED
+nfl.accel_low_mean,207,84,385,SUPPORTED
+nfl.band_4_6,136,55,267,SUPPORTED
+nfl.band_6_8,65,20,129,SUPPORTED
+nfl.brake_decel,179,75,338,SUPPORTED
+nfl.burst_per_100_plays,180,71,334,SUPPORTED
+nfl.high_speed_per_100_plays,180,71,334,SUPPORTED
+nfl.movement_diversity,187,79,362,SUPPORTED
+nfl.reaccel_mean,120,45,223,SUPPORTED
+nfl.vmax_p90,90,31,165,SUPPORTED

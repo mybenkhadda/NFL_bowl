@@ -1,0 +1,136 @@
+variable,kind,population,group_type,group,n_athletes,n_missing,share_missing,missing_class,in_model,rule
+cmb_forty,official_core,target_exposed,ALL,ALL,336,49,0.14583333333333334,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,ALL,ALL,336,49,0.14583333333333334,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,ALL,ALL,336,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,ALL,ALL,336,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,ALL,ALL,336,48,0.14285714285714285,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,ALL,ALL,336,54,0.16071428571428573,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,ALL,ALL,336,201,0.5982142857142857,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,ALL,ALL,336,219,0.6517857142857143,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,ALL,ALL,336,203,0.6041666666666666,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,ALL,ALL,336,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,ALL,ALL,336,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,ALL,ALL,336,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,ALL,ALL,284,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,ALL,ALL,284,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,ALL,ALL,284,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,position_group,DB,78,10,0.1282051282051282,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,position_group,DB,78,10,0.1282051282051282,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,position_group,DB,78,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,position_group,DB,78,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,position_group,DB,78,13,0.16666666666666666,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,position_group,DB,78,18,0.23076923076923078,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,position_group,DB,78,56,0.717948717948718,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,position_group,DB,78,61,0.782051282051282,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,position_group,DB,78,46,0.5897435897435898,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,position_group,DB,78,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,position_group,DB,78,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,position_group,DB,78,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,position_group,DB,67,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,position_group,DB,67,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,position_group,DB,67,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,position_group,DL,88,17,0.19318181818181818,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,position_group,DL,88,17,0.19318181818181818,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,position_group,DL,88,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,position_group,DL,88,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,position_group,DL,88,10,0.11363636363636363,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,position_group,DL,88,12,0.13636363636363635,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,position_group,DL,88,56,0.6363636363636364,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,position_group,DL,88,57,0.6477272727272727,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,position_group,DL,88,48,0.5454545454545454,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,position_group,DL,88,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,position_group,DL,88,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,position_group,DL,88,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,position_group,DL,70,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,position_group,DL,70,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,position_group,DL,70,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,position_group,OL,77,14,0.18181818181818182,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,position_group,OL,77,14,0.18181818181818182,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,position_group,OL,77,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,position_group,OL,77,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,position_group,OL,77,13,0.16883116883116883,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,position_group,OL,77,12,0.15584415584415584,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,position_group,OL,77,35,0.45454545454545453,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,position_group,OL,77,40,0.5194805194805194,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,position_group,OL,77,42,0.5454545454545454,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,position_group,OL,77,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,position_group,OL,77,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,position_group,OL,77,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,position_group,OL,63,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,position_group,OL,63,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,position_group,OL,63,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,position_group,TE,23,3,0.13043478260869565,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,position_group,TE,23,3,0.13043478260869565,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,position_group,TE,23,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,position_group,TE,23,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,position_group,TE,23,4,0.17391304347826086,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,position_group,TE,23,5,0.21739130434782608,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,position_group,TE,23,12,0.5217391304347826,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,position_group,TE,23,15,0.6521739130434783,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,position_group,TE,23,16,0.6956521739130435,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,position_group,TE,23,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,position_group,TE,23,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,position_group,TE,23,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,position_group,TE,20,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,position_group,TE,20,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,position_group,TE,20,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,position_group,WR,70,5,0.07142857142857142,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,position_group,WR,70,5,0.07142857142857142,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,position_group,WR,70,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,position_group,WR,70,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,position_group,WR,70,8,0.11428571428571428,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,position_group,WR,70,7,0.1,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,position_group,WR,70,42,0.6,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,position_group,WR,70,46,0.6571428571428571,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,position_group,WR,70,51,0.7285714285714285,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,position_group,WR,70,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,position_group,WR,70,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,position_group,WR,70,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,position_group,WR,64,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,position_group,WR,64,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,position_group,WR,64,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,draft_year,2023,117,12,0.10256410256410256,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,draft_year,2023,117,12,0.10256410256410256,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,draft_year,2023,117,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,draft_year,2023,117,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,draft_year,2023,117,13,0.1111111111111111,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,draft_year,2023,117,14,0.11965811965811966,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,draft_year,2023,117,67,0.5726495726495726,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,draft_year,2023,117,76,0.6495726495726496,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,draft_year,2023,117,63,0.5384615384615384,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,draft_year,2023,117,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,draft_year,2023,117,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,draft_year,2023,117,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,draft_year,2023,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,draft_year,2023,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,draft_year,2023,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,draft_year,2024,118,14,0.11864406779661017,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,draft_year,2024,118,14,0.11864406779661017,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,draft_year,2024,118,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,draft_year,2024,118,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,draft_year,2024,118,15,0.1271186440677966,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,draft_year,2024,118,19,0.16101694915254236,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,draft_year,2024,118,74,0.6271186440677966,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,draft_year,2024,118,77,0.652542372881356,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,draft_year,2024,118,74,0.6271186440677966,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,draft_year,2024,118,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,draft_year,2024,118,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,draft_year,2024,118,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,draft_year,2024,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,draft_year,2024,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,draft_year,2024,103,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+cmb_forty,official_core,target_exposed,draft_year,2025,101,23,0.22772277227722773,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_ten_yd_split,official_core,target_exposed,draft_year,2025,101,23,0.22772277227722773,no_value_recorded,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_weight,official_core_body,target_exposed,draft_year,2025,101,0,0.0,complete,mandatory,an athlete without it is not in the primary or wide cohort; never imputed
+cmb_combine_height,body,target_exposed,draft_year,2025,101,0,0.0,complete,imputed_with_indicator,training-fold median + missingness indicator
+cmb_vertical,optional_test,target_exposed,draft_year,2025,101,20,0.19801980198019803,no_value_recorded,imputed_with_indicator,coverage 0.86 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_broad_jump,optional_test,target_exposed,draft_year,2025,101,21,0.2079207920792079,no_value_recorded,imputed_with_indicator,coverage 0.84 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_short_shuttle,optional_test,target_exposed,draft_year,2025,101,60,0.594059405940594,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_three_cone,optional_test,target_exposed,draft_year,2025,101,66,0.6534653465346535,no_value_recorded,excluded_low_coverage,coverage 0.35 < 0.5 among target-exposed athletes
+cmb_bench_reps,optional_test,target_exposed,draft_year,2025,101,66,0.6534653465346535,no_value_recorded,excluded_low_coverage,coverage 0.40 < 0.5 among target-exposed athletes
+cmb_hand_size,optional_body,target_exposed,draft_year,2025,101,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_arm_length,optional_body,target_exposed,draft_year,2025,101,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+cmb_wing_span,optional_body,target_exposed,draft_year,2025,101,0,0.0,complete,imputed_with_indicator,coverage 1.00 ≥ 0.5 among target-exposed athletes: training-fold median + missingness indicator
+F6.forty.time_v4_to_v8_s,engineered,target_exposed,draft_year,2025,78,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.p95_speed,engineered,target_exposed,draft_year,2025,78,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed
+F2.forty.peak_speed_interior,engineered,target_exposed,draft_year,2025,78,0,0.0,complete,mandatory,an athlete without a measured value is not in the primary cohort; never imputed

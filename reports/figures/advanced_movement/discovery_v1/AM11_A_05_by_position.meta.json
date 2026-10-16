@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_A_05_by_position",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T22:40:51Z",
+  "seed": 20261011,
+  "source": "m11_transfer_matrix_by_position"
+}

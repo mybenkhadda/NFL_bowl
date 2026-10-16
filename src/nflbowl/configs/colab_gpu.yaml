@@ -1,0 +1,13 @@
+# Google Colab / Kaggle GPU. SCIENTIFICALLY IDENTICAL to `default` (same science hash): only runtime keys differ.
+description: Full protocol on a single Colab/Kaggle GPU; data staged on local disk, store resident on the GPU.
+extends: default
+
+runtime:
+  device: auto
+  precision: auto            # fp16 autocast (T4 has no bf16); set bf16 explicitly on A100/L4 if you accept the change
+  data_placement: auto       # whole sequence store on the GPU when it fits in 50 % of free memory, else pinned host memory
+  gpu_memory_fraction: 0.5
+  embed_batch: 4096
+  checkpoint_every: 1        # Colab can disconnect at any time: keep per-epoch checkpoints
+  stage_dir: /content/nflbowl_stage
+  compile: false

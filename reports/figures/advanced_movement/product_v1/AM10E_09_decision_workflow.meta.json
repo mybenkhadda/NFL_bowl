@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_09_decision_workflow",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "\u2014",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:55Z",
+  "seed": 20261011,
+  "source": "decision_simulator (diagram)"
+}

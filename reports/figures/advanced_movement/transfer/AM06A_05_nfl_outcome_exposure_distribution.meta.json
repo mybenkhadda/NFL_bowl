@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06A_05_nfl_outcome_exposure_distribution",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "401 NFL-tracked athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:10:29Z",
+  "seed": 20261011,
+  "source": "transfer_cohort_manifest (notebook 06A)"
+}

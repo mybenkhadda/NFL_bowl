@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09A_02_demand_intensity_by_position",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "episodes and athletes annotated per row",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:06:17Z",
+  "seed": 20261011,
+  "source": "nfl_movement_demand_profiles"
+}

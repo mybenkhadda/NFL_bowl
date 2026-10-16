@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09D_01_case_same_top_speed_different_development-1",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "two athletes, every recorded attempt",
+  "note": "Same top speed, different speed development",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:11:42Z",
+  "seed": 20261011,
+  "source": "scouting_cases + stopwatch_twin_differences + sequence_frames"
+}

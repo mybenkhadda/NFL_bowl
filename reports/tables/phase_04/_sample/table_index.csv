@@ -1,0 +1,5 @@
+area,built_at,description,kind,name,path,rows,study
+descriptive,2026-10-11T01:37:14Z,Feature definitions used by Phase 04 validation.,table,B_feature_catalog,reports/tables/phase_04/_sample/descriptive/B_feature_catalog.parquet,24,B
+descriptive,2026-10-11T01:29:49Z,Every Phase 04 parameter with unit and provenance (established / proposed / execution).,table,P04_thresholds,reports/tables/phase_04/_sample/descriptive/P04_thresholds.parquet,41,P04
+movement_events,2026-10-11T01:37:14Z,Detected events for every SG setting × threshold rule (Study B → read by C1).,dataset,events_by_smoothing,warehouse/gold/phase_04/_sample/movement_events/events_by_smoothing.parquet,93003,B
+quality,2026-10-11T01:37:14Z,Long table: trajectory × SG setting × feature value (Study B).,dataset,trajectory_features_by_smoothing,warehouse/gold/phase_04/_sample/quality/trajectory_features_by_smoothing.parquet,274272,B

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09B_03_prospect_demand_alignment_55887",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "one prospect; NFL reference sizes in the table",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:08:35Z",
+  "seed": 20261011,
+  "source": "movement_similarity"
+}

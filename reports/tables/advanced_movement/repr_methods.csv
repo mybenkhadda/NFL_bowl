@@ -1,0 +1,12 @@
+method,family,objective,representation,embedding_dim,label,reference,primary,n_parameters,train_seconds,value_unit
+FPCA_A_K2,fpca,fpca,A_speed_by_distance,2,FPCA · A (K = 2),"",true,48,,yd/s
+FPCA_B_K5,fpca,fpca,B_accel_by_speed,5,FPCA · B (K = 5),"",true,60,,yd/s²
+FPCA_C_K2,fpca,fpca,C_speed_by_time,2,FPCA · C (K = 2),"",true,48,,yd/s
+TCNA_A,tcn,reconstruction,A_speed_by_distance,8,TCN-A · A (8-d),FPCA_A_K2,true,32761,210.52320029994007,yd/s
+TCNA_B,tcn,reconstruction,B_accel_by_speed,8,TCN-A · B (8-d),FPCA_B_K5,true,30291,171.62431780004408,yd/s²
+TCNA_C,tcn,reconstruction,C_speed_by_time,8,TCN-A · C (8-d),FPCA_C_K2,true,31461,177.30571900011273,yd/s
+TCNB_A,tcn,reconstruction+consistency,A_speed_by_distance,8,TCN-B · A (8-d),FPCA_A_K2,true,32761,476.9896893000114,yd/s
+TCNB_B,tcn,reconstruction+consistency,B_accel_by_speed,8,TCN-B · B (8-d),FPCA_B_K5,true,30291,259.652003900148,yd/s²
+TCNB_C,tcn,reconstruction+consistency,C_speed_by_time,8,TCN-B · C (8-d),FPCA_C_K2,true,31461,372.94881660002284,yd/s
+TCNA_A_E16,tcn,reconstruction,A_speed_by_distance,16,TCN-A · A (16-d),FPCA_A_K2,false,33793,196.62788550008554,yd/s
+TCNB_A_E16,tcn,reconstruction+consistency,A_speed_by_distance,16,TCN-B · A (16-d),FPCA_A_K2,false,33793,423.0955058999825,yd/s

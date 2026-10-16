@@ -1,0 +1,367 @@
+outcome_id,adjustment,group,min_windows,method,n_athletes,estimate,ci_lower,ci_upper,median_windows,median_games,note
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.7358040066259232,0.6606842830079254,0.798665317689875,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.8477961841512139,0.7956771672593379,0.888064399568948,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.6297827595387778,0.5247835248232338,0.7152591222448443,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.7728425838999597,0.6883383985724416,0.8339954155833311,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.7334152108284648,0.6617281780423871,0.7981438030036979,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.8462083478290674,0.7964337209734766,0.8877419054810229,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.6207472733722866,0.5198934354187436,0.7187911727423739,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.7660013175042382,0.6841182721149244,0.8363915106633051,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,game_odd_even,330,0.8443970510355061,0.8026444934456046,0.8830868797125281,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9156347875978585,0.8905188975019879,0.9379141124357895,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_p90_mean,context,WITHIN_POSITION,50,game_odd_even,330,0.7901920113471459,0.7249294878692333,0.8449836373538184,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.882801404920263,0.8405323150510023,0.9159795461012787,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_max_p95,raw,WITHIN_POSITION,50,game_odd_even,330,0.659134924634444,0.5777018327003891,0.7361522770025367,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.7945525283661553,0.7323333480719821,0.8480273150619048,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_max_p95,context,WITHIN_POSITION,50,game_odd_even,330,0.5398142812827107,0.40179798692169505,0.6523180920495639,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O1.speed_max_p95,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.7011420634870713,0.5732608987462323,0.7895793130733287,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.8781744607536454,0.8348893767381749,0.9121872094848025,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9351361964545772,0.9100160340154473,0.9540773047327009,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.7350674966201305,0.6619346494195436,0.7947110645548877,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.8473070909944704,0.7965832467007468,0.8856144927729486,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.8715527197497486,0.8259616179247075,0.9043870949729006,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9313686016456825,0.9046867248649534,0.9497933454393316,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.6783619529162793,0.5963889160447652,0.7481641058958862,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.8083619290077145,0.7471724591052492,0.85594264677168,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,game_odd_even,330,0.903678742283814,0.8804153928218952,0.9233626190151065,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9494025669474929,0.9364052178924961,0.9601544814133192,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,game_odd_even,330,0.7775580404343458,0.7161144206849606,0.8252740754333208,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.8748609302730276,0.834576543444154,0.9042741433090264,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,game_odd_even,329,0.8787100520224481,0.8519824987119093,0.9049980296780532,471.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,329,0.9354397727062874,0.920076187873784,0.9501301477261883,471.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,game_odd_even,329,0.7702754702906153,0.7073436153720871,0.8260018089337239,471.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,game_odd_even_sb,329,0.8702323262313112,0.8285896394885143,0.9047108331355485,471.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,game_odd_even,325,0.7852542001248992,0.7158319692166204,0.8426088382495907,456.0,20.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,325,0.8797113599508256,0.834384697405353,0.9145824341644182,456.0,20.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,game_odd_even,325,0.6596356620690648,0.5556578671822006,0.7387274704199297,456.0,20.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,game_odd_even_sb,325,0.7949162302847822,0.7143702724155879,0.8497334780608436,456.0,20.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,game_odd_even,299,0.7726184152053026,0.7027743964830692,0.8280731959893622,258.0,21.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,299,0.8717255880655159,0.8254462810042104,0.9059519036831618,258.0,21.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,game_odd_even,299,0.7243801251668969,0.6469151836176051,0.7869980698486105,258.0,21.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,game_odd_even_sb,299,0.8401629253257447,0.7856083786860167,0.8808046109588499,258.0,21.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,game_odd_even,183,0.820030868312972,0.7546673693680546,0.8733436486176865,181.0,26.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,183,0.9011175388174347,0.8601828272897659,0.9323902203016668,181.0,26.0,odd / even stepped up to all games (Spearman–Brown)
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,game_odd_even,183,0.7816098704094565,0.7019953045443189,0.8455600787347961,181.0,26.0,"Pearson, odd vs even games; athlete bootstrap"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,game_odd_even_sb,183,0.877419780156274,0.8249086265631815,0.9163181285482299,181.0,26.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain05_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.8737139132645647,0.8275046015521518,0.9106985215310379,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain05_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9326011906932966,0.9056115107445732,0.9532623920191213,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain05_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.7257381805734734,0.650584017938358,0.7861996333948694,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain05_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.8410756495313862,0.7883076667020708,0.8803043273507009,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain10_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.868020856719267,0.8217938048896913,0.9026870166664617,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain10_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.9293481425509761,0.902180919359807,0.9488549706382964,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain10_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.6992837117389805,0.6169097710043696,0.7651642232232295,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain10_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.8230335015962237,0.7630725994328875,0.8669609469265386,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain_d_p90,raw,WITHIN_POSITION,50,game_odd_even,328,0.7112538960671693,0.6241988122399409,0.7865937420316683,475.5,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,328,0.831266357028357,0.7686236531340706,0.8805513234779095,475.5,19.0,odd / even stepped up to all games (Spearman–Brown)
+O4.gain_d_p90,context,WITHIN_POSITION,50,game_odd_even,328,0.5383495576380193,0.4200497449606879,0.6397877288972913,475.5,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O4.gain_d_p90,context,WITHIN_POSITION,50,game_odd_even_sb,328,0.6999053693161921,0.59159863441589,0.7803299385921488,475.5,19.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,game_odd_even,329,0.8713962296262469,0.825237800091114,0.9111253479472627,474.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,329,0.9312792404207004,0.9042523665134691,0.9534961680309471,474.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,game_odd_even,329,0.7277979582945467,0.6508774177398298,0.7890422807145737,474.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,game_odd_even_sb,329,0.842457250051311,0.7885230129695855,0.8820834356127313,474.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,game_odd_even,327,0.861501204363778,0.8238025767241506,0.894785891885012,478.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,327,0.9255983314372563,0.9033900787702971,0.944471769308818,478.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,game_odd_even,327,0.6723796586772496,0.5963378119112966,0.7430500344116568,478.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,game_odd_even_sb,327,0.8040993026775523,0.7471323518889789,0.8525860069902852,478.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,game_odd_even,307,0.6919665066126868,0.6220776925737878,0.7561339027177462,303.0,21.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,307,0.8179435040921729,0.7670134364362324,0.8611346794769732,303.0,21.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,game_odd_even,307,0.5896775988723021,0.5021942785023403,0.6681271008209474,303.0,21.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,game_odd_even_sb,307,0.7418832589584357,0.6686142873650386,0.8010505919988198,303.0,21.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,game_odd_even,207,0.7369607852816842,0.6536199682294952,0.8147101348835272,203.0,25.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,207,0.8485635271980775,0.7905322635034648,0.897895613434503,203.0,25.0,odd / even stepped up to all games (Spearman–Brown)
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,game_odd_even,207,0.7121757258877687,0.6182710981241561,0.7955518431849142,203.0,25.0,"Pearson, odd vs even games; athlete bootstrap"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,game_odd_even_sb,207,0.8318955994058416,0.7641131314040455,0.8861363109112796,203.0,25.0,odd / even stepped up to all games (Spearman–Brown)
+O5.envelope_level,raw,WITHIN_POSITION,50,game_odd_even,206,0.8963509029856923,0.8552338031667255,0.9263411807704427,204.0,25.5,"Pearson, odd vs even games; athlete bootstrap"
+O5.envelope_level,raw,WITHIN_POSITION,50,game_odd_even_sb,206,0.9453428704301939,0.9219687585542204,0.9617623191754134,204.0,25.5,odd / even stepped up to all games (Spearman–Brown)
+O5.envelope_level,context,WITHIN_POSITION,50,game_odd_even,206,0.8248200025248594,0.7671608789531049,0.8722535260981589,204.0,25.5,"Pearson, odd vs even games; athlete bootstrap"
+O5.envelope_level,context,WITHIN_POSITION,50,game_odd_even_sb,206,0.9040014920744195,0.8682411297013134,0.9317686028515223,204.0,25.5,odd / even stepped up to all games (Spearman–Brown)
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,game_odd_even,330,0.7034092287710212,0.6414553223339583,0.7622052017265805,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,game_odd_even_sb,330,0.8258840176397519,0.7815690303673737,0.865058394992574,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O6.decel_sust_p90,context,WITHIN_POSITION,50,game_odd_even,330,0.5899990949481302,0.49936686227055493,0.6786238235812878,483.0,19.0,"Pearson, odd vs even games; athlete bootstrap"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,game_odd_even_sb,330,0.7421376487857403,0.6661036399248447,0.8085478283436566,483.0,19.0,odd / even stepped up to all games (Spearman–Brown)
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,game_odd_even,294,0.6710235192252273,0.5738396527471461,0.7522178248593341,213.5,22.0,"Pearson, odd vs even games; athlete bootstrap"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,game_odd_even_sb,294,0.8031287549278163,0.729222512275003,0.8585893993170869,213.5,22.0,odd / even stepped up to all games (Spearman–Brown)
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,game_odd_even,294,0.656330328152374,0.5509242869199841,0.7419921505034424,213.5,22.0,"Pearson, odd vs even games; athlete bootstrap"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,game_odd_even_sb,294,0.792511393406056,0.710446398404241,0.8518892008658062,213.5,22.0,odd / even stepped up to all games (Spearman–Brown)
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.8437724139060429,0.8097143652796683,0.868227120393551,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.7533750833764108,0.7165958042215598,0.7899768855406699,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.8399314361772586,0.8051935849532835,0.8664994153424825,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.74871761853402,0.7121898119223578,0.7854435435548364,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9001097152147467,0.8789366990261568,0.9218738246715893,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_p90_mean,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.8581450270432514,0.8280708238903624,0.885773084522154,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_max_p95,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.7861206093915166,0.7445671713656222,0.8298491964937743,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_max_p95,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.6820852821570945,0.6397861682601369,0.7251769821865381,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9233254031372796,0.9071649812765937,0.9362758282662498,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.8182809623558704,0.7772795880923634,0.8495705756280272,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9215427108733957,0.9011256252701814,0.9378503804925092,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.7627578913063456,0.7153124318155198,0.797429510512856,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9316490339648935,0.9152963904442011,0.9480690868020795,,,mean over 100 random game half-splits; interval = spread over splits
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.843402050653876,0.8077921168549143,0.8788625739240334,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9215933569966047,0.9017456578010382,0.9388260902301859,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.8494630368075673,0.81456268007246,0.8739015342225319,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,325,0.8807826234588654,0.8537157074977741,0.9067075355938423,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,game_random_halves_sb,325,0.7948242016346545,0.7446271129370949,0.841337665562588,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,301,0.8638532153269617,0.8382283392327529,0.8895216070700369,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,game_random_halves_sb,301,0.825113943855489,0.7919779845727941,0.8572760224367799,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,182,0.8842588789476562,0.8466016104855902,0.912637851617542,,,mean over 100 random game half-splits; interval = spread over splits
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,game_random_halves_sb,182,0.8568352571810186,0.8085895974692439,0.8924679419495353,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain05_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9209514979612813,0.9024359830907176,0.9345674169211279,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain05_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.8140026089676731,0.7657957876550334,0.8463737173760282,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain10_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9217384499755442,0.9006685787336166,0.9384428661271074,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain10_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.773926987512138,0.7352901136485094,0.8124936048457588,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain_d_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,326,0.8563003302417141,0.822307965886054,0.8872452487925534,,,mean over 100 random game half-splits; interval = spread over splits
+O4.gain_d_p90,context,WITHIN_POSITION,50,game_random_halves_sb,326,0.7322945866367195,0.6673674898493266,0.7885401311065582,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.9197593571103023,0.9008768494694747,0.9334185382337346,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.8184413774300853,0.7758534225075091,0.8499133745451353,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,326,0.9302944357617726,0.9156589792079934,0.9417284004277837,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,game_random_halves_sb,326,0.7868776100713862,0.7433642682570331,0.8207478222678827,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,311,0.8087918542373354,0.7707233787382652,0.8441175566501209,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,game_random_halves_sb,311,0.7255506879154455,0.6801741605873629,0.7766474823757334,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,207,0.8472852518700392,0.7983251042651811,0.8772617741173127,,,mean over 100 random game half-splits; interval = spread over splits
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,game_random_halves_sb,207,0.8272986755510139,0.7749165325702838,0.8702280941955562,,,mean over 100 random game half-splits; interval = spread over splits
+O5.envelope_level,raw,WITHIN_POSITION,50,game_random_halves_sb,207,0.9374070313360093,0.9227493007479873,0.9506711946361501,,,mean over 100 random game half-splits; interval = spread over splits
+O5.envelope_level,context,WITHIN_POSITION,50,game_random_halves_sb,207,0.8794325970830488,0.853040940830242,0.9031585291011364,,,mean over 100 random game half-splits; interval = spread over splits
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,game_random_halves_sb,328,0.8152627294718152,0.7851689139249006,0.8472083860402717,,,mean over 100 random game half-splits; interval = spread over splits
+O6.decel_sust_p90,context,WITHIN_POSITION,50,game_random_halves_sb,328,0.7052193522629919,0.6522695697605446,0.7530347469572956,,,mean over 100 random game half-splits; interval = spread over splits
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,game_random_halves_sb,294,0.8001200020292809,0.7412380380553101,0.8399648393478227,,,mean over 100 random game half-splits; interval = spread over splits
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,game_random_halves_sb,294,0.784611440974727,0.7294006440038499,0.8275680001316833,,,mean over 100 random game half-splits; interval = spread over splits
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.03904354522231966,0.031522725233516874,0.04539486041804477,,,"single windows of the play measure, stratified by position"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.3548822007695076,0.304884142015932,0.395113866979805,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.08135294596842649,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,var_game,336,0.0344443685469895,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,var_window,336,1.9695621933822332,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,play_icc1,336,0.024379935259691243,0.019546735727559335,0.028685305362523696,,,"single windows of the play measure, stratified by position"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,game_icc1,334,0.26189890289496914,0.21222657410575713,0.3008901374416397,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,var_athlete,336,0.04483844774275635,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,var_game,336,0.030829932561170774,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,var_window,336,1.7650185648176284,,,,,"play measure, squared unit of the measure"
+O1.speed_sust05_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.03711122450411193,0.02993959826503407,0.042296593315465855,,,"single windows of the play measure, stratified by position"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.3445397714199872,0.29313629860088175,0.3848917074745944,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.07904672482261117,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,var_game,336,0.03476010547273818,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,var_window,336,2.0179169487605906,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,play_icc1,336,0.02393912749564149,0.01899177163578789,0.027847781034703627,,,"single windows of the play measure, stratified by position"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,game_icc1,334,0.25971637911323087,0.21109074687446192,0.2986760772598559,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,var_athlete,336,0.04513391251911378,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,var_game,336,0.03125803383892071,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,var_window,336,1.810524239184192,,,,,"play measure, squared unit of the measure"
+O1.speed_sust10_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,play_icc1,336,0.039327065117257295,0.03146410982821673,0.045678453992173164,,,"single windows of the play measure, stratified by position"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,game_icc1,334,0.3542345468798468,0.30817092643059335,0.3926861073916474,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,var_athlete,336,0.07982734606672316,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,var_game,336,0.03438286359582311,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,var_window,336,1.9173320244634926,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_p90_mean,context,WITHIN_POSITION,50,play_icc1,336,0.025727700982066656,0.020010936108400344,0.03064186569968049,,,"single windows of the play measure, stratified by position"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,game_icc1,334,0.26926669458896724,0.22341381134769311,0.30645563814156873,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,var_athlete,336,0.04638389474440143,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,var_game,336,0.031034006800951773,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,var_window,336,1.7270030679811452,,,,,"play measure, squared unit of the measure"
+O1.speed_p90_mean,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_max_p95,raw,WITHIN_POSITION,50,play_icc1,336,0.04033151535338572,0.033082327543976,0.04696339157452326,,,"single windows of the play measure, stratified by position"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,game_icc1,334,0.3617754477524706,0.3148458574598337,0.40122714234775814,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,var_athlete,336,0.08287012733829444,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,var_game,336,0.03433088612206493,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,var_window,336,1.9392302311090883,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O1.speed_max_p95,context,WITHIN_POSITION,50,play_icc1,336,0.025110367503131264,0.020107219662898,0.029418454216044956,,,"single windows of the play measure, stratified by position"
+O1.speed_max_p95,context,WITHIN_POSITION,50,game_icc1,334,0.26643540159326057,0.21928614437206137,0.3027160583543954,,,"athlete-game means, games with ≥ 3 windows"
+O1.speed_max_p95,context,WITHIN_POSITION,50,var_athlete,336,0.045467289930436014,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,context,WITHIN_POSITION,50,var_game,336,0.030659129432971118,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,context,WITHIN_POSITION,50,var_window,336,1.736096256395966,,,,,"play measure, squared unit of the measure"
+O1.speed_max_p95,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.06440614921961753,0.05343293116693479,0.07298220172079704,,,"single windows of the play measure, stratified by position"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.42423207958941384,0.37354323018380037,0.45987836388035574,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.06178200199619024,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,var_game,336,0.033380134349823794,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,var_window,336,0.8657545069203495,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,play_icc1,336,0.02046802631944091,0.016186342021788213,0.024096012868802343,,,"single windows of the play measure, stratified by position"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,game_icc1,334,0.20548119302999251,0.15039559387868073,0.2551959784759987,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,var_athlete,336,0.017248673060542754,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,var_game,336,0.028226896202635292,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,var_window,336,0.7986415395648898,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.05300213739655405,0.04332963739475855,0.06194229323461468,,,"single windows of the play measure, stratified by position"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.4090114098732039,0.3577924311468355,0.4539060357398913,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.03805027969617602,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,var_game,336,0.020172107048156734,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,var_window,336,0.6606822015157493,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,play_icc1,336,0.01918283681134011,0.014815490075071847,0.022779365046445465,,,"single windows of the play measure, stratified by position"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,game_icc1,334,0.22167335125377938,0.161401652716787,0.2864933176743393,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,var_athlete,336,0.012136461834468378,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,var_game,336,0.016361646485615992,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,var_window,336,0.604988966847129,,,,,"play measure, squared unit of the measure"
+O2.accel_sust10_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,play_icc1,336,0.06440614921961753,0.05349449754378315,0.07308255901306086,,,"single windows of the play measure, stratified by position"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,game_icc1,334,0.42423207958940967,0.3752247332159003,0.45926404909926094,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,var_athlete,336,0.06178200199619024,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,var_game,336,0.033380134349823794,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,var_window,336,0.8657545069203495,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,play_icc1,336,0.02046802631944091,0.016001473188033775,0.024302770402232082,,,"single windows of the play measure, stratified by position"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,game_icc1,334,0.20548119302997916,0.15531960864895247,0.25550080125500924,,,"athlete-game means, games with ≥ 3 windows"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,var_athlete,336,0.017248673060542754,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,var_game,336,0.028226896202635292,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,var_window,336,0.7986415395648898,,,,,"play measure, squared unit of the measure"
+O2.accel_sust05_mean,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,play_icc1,336,0.052583369327602054,0.04395890457035462,0.059316796963325924,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,game_icc1,334,0.3876176969828386,0.34229447448805883,0.4242133996913692,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,var_athlete,336,0.040361210272038095,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,var_game,336,0.022466890213477034,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,var_window,336,0.7058576458955662,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,raw,WITHIN_POSITION,50,windows_per_game,336,27.0,,,,,median windows per athlete-game
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,play_icc1,336,0.02412149533583997,0.01889318676590251,0.028589721311877286,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,game_icc1,334,0.22283347263305373,0.17747394722719764,0.2595021625966028,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,var_athlete,336,0.017043343430174822,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,var_game,336,0.019640940845992928,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,var_window,336,0.6708570282422485,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v0_2_mean,context,WITHIN_POSITION,50,windows_per_game,336,27.0,,,,,median windows per athlete-game
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,play_icc1,333,0.0351039053217237,0.0285356078437572,0.041355627669481726,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,game_icc1,331,0.3500433501304196,0.3031276891813818,0.386721341379787,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,var_athlete,333,0.03125263722009925,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,var_game,333,0.015955109276721266,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,var_window,333,0.8438740073131752,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,raw,WITHIN_POSITION,50,windows_per_game,333,26.0,,,,,median windows per athlete-game
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,play_icc1,333,0.018005613181163338,0.014035508866978847,0.02173376212357968,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,game_icc1,331,0.22437977150552132,0.17831254024666626,0.2625874986228493,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,var_athlete,333,0.015114991467048373,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,var_game,333,0.014894279336735814,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,var_window,333,0.810190304593577,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v2_4_mean,context,WITHIN_POSITION,50,windows_per_game,333,26.0,,,,,median windows per athlete-game
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,play_icc1,301,0.03209687788417421,0.023986003947471093,0.03971305746414913,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,game_icc1,301,0.31019621472313785,0.25265192118939045,0.3584292850443323,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,var_athlete,301,0.02138445416392094,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,var_game,301,0.003951355442804051,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,var_window,301,0.6410968536664817,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,raw,WITHIN_POSITION,50,windows_per_game,301,12.0,,,,,median windows per athlete-game
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,play_icc1,301,0.025259797550880994,0.018833283606360406,0.0313095240014953,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,game_icc1,301,0.24988833708971128,0.19991089902819525,0.2886154883952345,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,var_athlete,301,0.01624528689380947,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,var_game,301,0.003999144363857871,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,var_window,301,0.6230714530420556,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v4_6_mean,context,WITHIN_POSITION,50,windows_per_game,301,12.0,,,,,median windows per athlete-game
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,play_icc1,183,0.049756648526229116,0.034979040255430714,0.06291460122763186,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,game_icc1,183,0.27587628815340726,0.2115512130889298,0.3298500742276435,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,var_athlete,183,0.012235002096030515,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,var_game,183,0.0022335900809399138,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,var_window,183,0.2315290195302483,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,raw,WITHIN_POSITION,50,windows_per_game,183,8.0,,,,,median windows per athlete-game
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,play_icc1,183,0.03908032281812657,0.02659095501736992,0.05104373317132282,,,"single windows of the play measure, stratified by position"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,game_icc1,183,0.2311124710788881,0.1704398490965795,0.28109035395529974,,,"athlete-game means, games with ≥ 3 windows"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,var_athlete,183,0.009415206332140501,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,var_game,183,0.0021965465950948013,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,var_window,183,0.229406717528834,,,,,"play measure, squared unit of the measure"
+O3.band_acc_v6_8_mean,context,WITHIN_POSITION,50,windows_per_game,183,8.0,,,,,median windows per athlete-game
+O4.gain05_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.06340041533169882,0.053488746065603256,0.07128990456165339,,,"single windows of the play measure, stratified by position"
+O4.gain05_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.41675825329411903,0.3652999213776326,0.4546726236800252,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain05_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.015595053547647177,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,raw,WITHIN_POSITION,50,var_game,336,0.008476145808178839,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,raw,WITHIN_POSITION,50,var_window,336,0.22232749498414567,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O4.gain05_p90,context,WITHIN_POSITION,50,play_icc1,336,0.02015699212836473,0.01611977356365396,0.023510099642438807,,,"single windows of the play measure, stratified by position"
+O4.gain05_p90,context,WITHIN_POSITION,50,game_icc1,334,0.19983377718785753,0.1491081210223572,0.25076779405365257,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain05_p90,context,WITHIN_POSITION,50,var_athlete,336,0.004359727587285795,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,context,WITHIN_POSITION,50,var_game,336,0.007156149739472262,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,context,WITHIN_POSITION,50,var_window,336,0.20512861760417012,,,,,"play measure, squared unit of the measure"
+O4.gain05_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O4.gain10_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.05346023616346151,0.04354304381749754,0.06140364576954324,,,"single windows of the play measure, stratified by position"
+O4.gain10_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.40278739827468435,0.34784854880855226,0.4448603691175623,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain10_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.04064153799775853,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,raw,WITHIN_POSITION,50,var_game,336,0.02197909562123004,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,raw,WITHIN_POSITION,50,var_window,336,0.698692398898384,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O4.gain10_p90,context,WITHIN_POSITION,50,play_icc1,336,0.019080336974022522,0.01492732751712001,0.022189342898644014,,,"single windows of the play measure, stratified by position"
+O4.gain10_p90,context,WITHIN_POSITION,50,game_icc1,334,0.21471472773950329,0.1527439155800196,0.27206334073745014,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain10_p90,context,WITHIN_POSITION,50,var_athlete,336,0.012760806992459078,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,context,WITHIN_POSITION,50,var_game,336,0.01782285721529813,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,context,WITHIN_POSITION,50,var_window,336,0.6390963041133485,,,,,"play measure, squared unit of the measure"
+O4.gain10_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O4.gain_d_p90,raw,WITHIN_POSITION,50,play_icc1,334,0.03566769594955658,0.028801927775237046,0.042726193366048534,,,"single windows of the play measure, stratified by position"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,game_icc1,332,0.3663891025419712,0.30927523418464825,0.41890956393144163,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,var_athlete,334,0.05622768154671316,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,var_game,334,0.03206611973505089,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,var_window,334,1.4897302820162581,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,raw,WITHIN_POSITION,50,windows_per_game,334,27.0,,,,,median windows per athlete-game
+O4.gain_d_p90,context,WITHIN_POSITION,50,play_icc1,334,0.021505200914946534,0.01721142303626769,0.025778154765749486,,,"single windows of the play measure, stratified by position"
+O4.gain_d_p90,context,WITHIN_POSITION,50,game_icc1,332,0.26252549307016987,0.19599157710287343,0.32976485782546316,,,"athlete-game means, games with ≥ 3 windows"
+O4.gain_d_p90,context,WITHIN_POSITION,50,var_athlete,334,0.031556844431774166,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,context,WITHIN_POSITION,50,var_game,334,0.028797425688140338,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,context,WITHIN_POSITION,50,var_window,334,1.4084811545102645,,,,,"play measure, squared unit of the measure"
+O4.gain_d_p90,context,WITHIN_POSITION,50,windows_per_game,334,27.0,,,,,median windows per athlete-game
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.05868416953325756,0.04903981081982423,0.06734387577557203,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.3929428388333616,0.3472438002228125,0.42795882897549137,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.015606362975894109,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,var_game,336,0.009034789574268625,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,var_window,336,0.24174704149080023,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,raw,WITHIN_POSITION,50,windows_per_game,336,27.0,,,,,median windows per athlete-game
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,play_icc1,336,0.018900440740475945,0.014749955676505517,0.022365416045342354,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,game_icc1,334,0.1827395960377708,0.14378818538306862,0.2144224328528785,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,var_athlete,336,0.004479385569968003,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,var_game,336,0.007641165362327746,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,var_window,336,0.22525902382704827,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v0_2_p90,context,WITHIN_POSITION,50,windows_per_game,336,27.0,,,,,median windows per athlete-game
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,play_icc1,334,0.05080897590216205,0.040713248720761916,0.05937432349173728,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,game_icc1,332,0.42105758771414237,0.3724679011529418,0.4566873188973825,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,var_athlete,334,0.015723631746947474,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,var_game,334,0.006735050339004939,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,var_window,334,0.28734116935250936,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,raw,WITHIN_POSITION,50,windows_per_game,334,27.0,,,,,median windows per athlete-game
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,play_icc1,334,0.018714888828370226,0.014273281670326392,0.022832657614168216,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,game_icc1,332,0.22908723190010935,0.16340015732942265,0.2805591760377662,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,var_athlete,334,0.005190044198805247,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,var_game,334,0.005821640712851823,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,var_window,334,0.2665988778128456,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v2_4_p90,context,WITHIN_POSITION,50,windows_per_game,334,27.0,,,,,median windows per athlete-game
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,play_icc1,312,0.020157860346242985,0.015497988314477124,0.02469270473256778,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,game_icc1,312,0.2448765807782256,0.186750925935915,0.29540848808884707,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,var_athlete,312,0.00722166275188324,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,var_game,312,0.004155089108577472,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,var_window,312,0.34707617745996444,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,raw,WITHIN_POSITION,50,windows_per_game,312,15.0,,,,,median windows per athlete-game
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,play_icc1,312,0.014899337183814657,0.011058001261241245,0.018803422659203234,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,game_icc1,312,0.18913508983019559,0.1293609656254107,0.24781184845228452,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,var_athlete,312,0.005088110896570297,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,var_game,312,0.003975899093152436,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,var_window,312,0.332624124505794,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v4_6_p90,context,WITHIN_POSITION,50,windows_per_game,312,15.0,,,,,median windows per athlete-game
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,play_icc1,207,0.023981090324641463,0.01682625221338773,0.030076989437830333,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,game_icc1,207,0.19126380166771936,0.14158829804334505,0.2301106677422128,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,var_athlete,207,0.005131362431148123,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,var_game,207,0.0006961275591247015,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,var_window,207,0.20817968923642535,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,raw,WITHIN_POSITION,50,windows_per_game,207,9.0,,,,,median windows per athlete-game
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,play_icc1,207,0.019979514560733012,0.013781634262659477,0.025665035532044075,,,"single windows of the play measure, stratified by position"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,game_icc1,207,0.1623174147657886,0.1187820419011582,0.19960484331844686,,,"athlete-game means, games with ≥ 3 windows"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,var_athlete,207,0.004197194840784619,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,var_game,207,0.0007039198248367504,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,var_window,207,0.20520597680237543,,,,,"play measure, squared unit of the measure"
+O5.band_gain_v6_8_p90,context,WITHIN_POSITION,50,windows_per_game,207,9.0,,,,,median windows per athlete-game
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,play_icc1,336,0.0310511824049942,0.02520733799230619,0.03611893213591796,,,"single windows of the play measure, stratified by position"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,game_icc1,334,0.2836574328826624,0.23989832315279375,0.3185644919283485,,,"athlete-game means, games with ≥ 3 windows"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,var_athlete,336,0.04576763428637437,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,var_game,336,0.022540076001016693,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,var_window,336,1.406755223579136,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,raw,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O6.decel_sust_p90,context,WITHIN_POSITION,50,play_icc1,336,0.015032671268518604,0.011058203002247524,0.018680345170918603,,,"single windows of the play measure, stratified by position"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,game_icc1,334,0.16427575019926072,0.12459205253404934,0.19705906222082945,,,"athlete-game means, games with ≥ 3 windows"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,var_athlete,336,0.021182066345199944,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,var_game,336,0.021271631653177095,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,var_window,336,1.367673072111755,,,,,"play measure, squared unit of the measure"
+O6.decel_sust_p90,context,WITHIN_POSITION,50,windows_per_game,336,28.0,,,,,median windows per athlete-game
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,play_icc1,294,0.02373935144687533,0.018978361729151856,0.027975449907731428,,,"single windows of the play measure, stratified by position"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,game_icc1,294,0.18238954982664796,0.15126347762630474,0.21128824568502846,,,"athlete-game means, games with ≥ 3 windows"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,var_athlete,294,0.024897419350175396,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,var_game,294,0.010985067334761005,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,var_window,294,1.0133990457953694,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,raw,WITHIN_POSITION,50,windows_per_game,294,11.0,,,,,median windows per athlete-game
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,play_icc1,294,0.02171090605714706,0.016644290954011324,0.025767738509353353,,,"single windows of the play measure, stratified by position"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,game_icc1,294,0.17223696732990038,0.13788652691734668,0.19904092605977303,,,"athlete-game means, games with ≥ 3 windows"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,var_athlete,294,0.02194521596489349,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,var_game,294,0.008440429784060963,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,var_window,294,0.9807899590478002,,,,,"play measure, squared unit of the measure"
+O6.reaccel_gain_mean,context,WITHIN_POSITION,50,windows_per_game,294,11.0,,,,,median windows per athlete-game

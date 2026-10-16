@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_05_uncertainty_time_v4_to_v8_s",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with a percentile",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:12Z",
+  "seed": 20261011,
+  "source": "combine percentile tables"
+}

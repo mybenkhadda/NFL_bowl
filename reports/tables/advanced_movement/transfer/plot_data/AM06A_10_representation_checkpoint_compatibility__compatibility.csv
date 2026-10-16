@@ -1,0 +1,52 @@
+artifact,family,method,repeat,fold,n_fit_athletes,n_heldout_transfer,n_overlap,status,use,note
+artifacts/models/advanced_movement/tcn/TCNA_A__r0_f0.pt,tcn (notebook 03),TCNA_A,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A__r0_f1.pt,tcn (notebook 03),TCNA_A,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A__r0_f2.pt,tcn (notebook 03),TCNA_A,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A__r0_f3.pt,tcn (notebook 03),TCNA_A,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A__r0_f4.pt,tcn (notebook 03),TCNA_A,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A_E16__r0_f0.pt,tcn (notebook 03),TCNA_A_E16,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A_E16__r0_f1.pt,tcn (notebook 03),TCNA_A_E16,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A_E16__r0_f2.pt,tcn (notebook 03),TCNA_A_E16,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A_E16__r0_f3.pt,tcn (notebook 03),TCNA_A_E16,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNA_A_E16__r0_f4.pt,tcn (notebook 03),TCNA_A_E16,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A__r0_f0.pt,tcn (notebook 03),TCNB_A,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A__r0_f1.pt,tcn (notebook 03),TCNB_A,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A__r0_f2.pt,tcn (notebook 03),TCNB_A,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A__r0_f3.pt,tcn (notebook 03),TCNB_A,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A__r0_f4.pt,tcn (notebook 03),TCNB_A,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A_E16__r0_f0.pt,tcn (notebook 03),TCNB_A_E16,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A_E16__r0_f1.pt,tcn (notebook 03),TCNB_A_E16,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A_E16__r0_f2.pt,tcn (notebook 03),TCNB_A_E16,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A_E16__r0_f3.pt,tcn (notebook 03),TCNB_A_E16,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/tcn/TCNB_A_E16__r0_f4.pt,tcn (notebook 03),TCNB_A_E16,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s1__r0_f0.pt,tcn (notebook 04B),TCNB_A_s1,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s1__r0_f1.pt,tcn (notebook 04B),TCNB_A_s1,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s1__r0_f2.pt,tcn (notebook 04B),TCNB_A_s1,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s1__r0_f3.pt,tcn (notebook 04B),TCNB_A_s1,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s1__r0_f4.pt,tcn (notebook 04B),TCNB_A_s1,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s2__r0_f0.pt,tcn (notebook 04B),TCNB_A_s2,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s2__r0_f1.pt,tcn (notebook 04B),TCNB_A_s2,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s2__r0_f2.pt,tcn (notebook 04B),TCNB_A_s2,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s2__r0_f3.pt,tcn (notebook 04B),TCNB_A_s2,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/atlas/tcn/TCNB_A_s2__r0_f4.pt,tcn (notebook 04B),TCNB_A_s2,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r0_f0,0,0,334,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r0_f1,0,1,334,55,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r0_f2,0,2,334,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r0_f3,0,3,335,59,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r0_f4,0,4,335,57,0,compatible,reusable in 06B for this fold,no held-out transfer athlete took part in the fit
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r1_f0,1,0,334,287,226,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r1_f1,1,1,334,287,227,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r1_f2,1,2,334,287,232,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r1_f3,1,3,335,287,225,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r1_f4,1,4,335,287,226,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r2_f0,2,0,334,287,230,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r2_f1,2,1,334,287,228,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r2_f2,2,2,334,287,231,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r2_f3,2,3,335,287,222,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:r2_f4,2,4,335,287,225,descriptive_only,not used as a predictor,another split repeat: no transfer fold corresponds to it
+artifacts/models/advanced_movement/fpca/A_speed_by_distance.npz,fpca,FPCA:reference,-1,-1,418,287,284,descriptive_only,not used as a predictor,all-athlete reference fit
+"TCN-B consistency term (kind, weight)",tcn,selection,-1,-1,0,0,0,combine_only_selection,kept as frozen,notebook 03 chose it on the DESIGN athletes' Combine attempts (cross-fitted); it returned the pre-declared default. No NFL value. Design athletes are held out in some transfer fold: this choice is transductive in the Combine data only.
+"TCN architecture, optimiser and budget",tcn,selection,-1,-2,0,0,0,combine_only_selection,kept as frozen,fixed before any fit (TcnConfig); reused unchanged.
+FPCA number of components,fpca,selection,-1,-3,0,0,0,combine_only_selection,kept as frozen,smallest K with out-of-fold explained variance ≥ 0.95 on Combine curves (notebook 02). No NFL value.
+"Frozen shortlist (engineered feature, speed control, compact dimension)",shortlist,selection,-1,-4,0,0,0,combine_only_selection,kept as frozen,"notebook 04B, by Combine reliability and redundancy on all tracked athletes. No NFL value; frozen before this milestone."
+"Matching rule (variables, caliper, k)",matching,selection,-1,-5,0,0,0,combine_only_selection,kept as frozen,notebook 04B MatchConfig; scales from design athletes. No NFL value.

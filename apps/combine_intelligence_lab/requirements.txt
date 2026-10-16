@@ -1,0 +1,10 @@
+# Combine Intelligence Lab — install into the environment you launch from (the project's `nfl` conda env works):
+#   pip install -r apps/combine_intelligence_lab/requirements.txt
+# polars, numpy and matplotlib are already project dependencies; versions below are minimums, not pins.
+streamlit>=1.39
+plotly>=5.24
+polars>=1.0
+pandas>=2.0
+pyarrow>=14
+numpy>=1.26
+matplotlib>=3.8   # one-page PDF intelligence card (optional: the HTML report works without it)

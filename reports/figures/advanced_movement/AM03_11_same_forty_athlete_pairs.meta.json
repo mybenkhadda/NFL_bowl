@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_11_same_forty_athlete_pairs",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "4 pairs of athletes (illustration)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T23:50:25Z",
+  "seed": 20261011,
+  "source": "sequence_summary, athlete_registry, embeddings"
+}

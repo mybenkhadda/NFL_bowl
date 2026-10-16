@@ -1,0 +1,5 @@
+layer,bytes,size,ratio_to_raw
+raw (CSV),2306804135,2.1 GB,1.0
+bronze,481414423,459.1 MB,0.209
+silver,584784522,557.7 MB,0.254
+gold,17288123,16.5 MB,0.007

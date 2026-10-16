@@ -1,0 +1,29 @@
+apiVersion: 1
+
+datasources:
+  # Engineering snapshot written on the host by `python -m nflbdb.lab.build` (read-only mount).
+  - name: NFL Lab monitoring (SQLite)
+    uid: nfl-lab-sqlite
+    type: frser-sqlite-datasource
+    access: proxy
+    isDefault: true
+    editable: false
+    jsonData:
+      path: $LAB_MONITORING_DB
+
+  # Superset metadata DB, read-only role created by postgres/initdb/10_grafana_reader.sh.
+  # Used only for real query-duration panels (Superset `logs` / `query` tables).
+  - name: Superset metadata (read-only)
+    uid: superset-meta
+    type: grafana-postgresql-datasource
+    access: proxy
+    editable: false
+    url: superset-db:5432
+    user: grafana_reader
+    jsonData:
+      database: $SUPERSET_DB_NAME
+      sslmode: disable
+      postgresVersion: 1600
+      timescaledb: false
+    secureJsonData:
+      password: $GRAFANA_READER_PASSWORD

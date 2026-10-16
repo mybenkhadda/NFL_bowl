@@ -1,0 +1,201 @@
+# NFL Big Data Bowl 2027 — Analytics Lab (local only)
+#
+# AUTHORED, NOT EXECUTED. See README.md → "User execution guide".
+#
+# Services
+#   superset-db     PostgreSQL — Superset metadata only (users, charts, dashboards, query logs)
+#   superset-init   one-shot: migrate metadata, create admin, import version-controlled dashboards
+#   superset        Apache Superset UI           → http://localhost:${SUPERSET_PORT:-8088}
+#   streamlit       trajectory explorer          → http://localhost:${STREAMLIT_PORT:-8501}
+#   grafana         engineering monitoring       → http://localhost:${GRAFANA_PORT:-3000}  (profile: monitoring)
+#
+# Data access (all READ-ONLY):
+#   warehouse/serving  → self-contained DuckDB + SQLite snapshots built on the host by
+#                        `python -m nflbdb.lab.build` (no absolute host paths inside)
+#   warehouse/silver   → Streamlit only, for bounded single-trajectory frame queries
+# Writable bind mounts: reports/figures/analytics_lab and reports/tables/analytics_lab (Streamlit exports).
+# Every web port is bound to 127.0.0.1 — the stack is never exposed on the network.
+
+name: nfl-analytics-lab
+
+x-common: &common
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }
+
+x-superset-env: &superset-env
+  SUPERSET_SECRET_KEY: ${SUPERSET_SECRET_KEY:?Set SUPERSET_SECRET_KEY in .env (see .env.example)}
+  SUPERSET_CONFIG_PATH: /app/lab/superset_config.py
+  POSTGRES_USER: ${POSTGRES_USER:-superset}
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+  POSTGRES_DB: ${POSTGRES_DB:-superset}
+  POSTGRES_HOST: superset-db
+  LAB_SERVING_DB: /srv/nfl-lab/serving/nfl_lab.duckdb
+  LAB_DATA_CACHE_SECONDS: ${LAB_DATA_CACHE_SECONDS:-3600}
+  # Memory (exit 137 = OOM kill): 1 gunicorn worker × 8 threads is ample for one local user; each
+  # worker holds the in-process caches. Workers are recycled to cap slow RSS growth.
+  SERVER_WORKER_AMOUNT: ${SUPERSET_WORKERS:-1}
+  SERVER_THREADS_AMOUNT: ${SUPERSET_THREADS:-8}
+  WORKER_MAX_REQUESTS: ${SUPERSET_WORKER_MAX_REQUESTS:-1000}
+  WORKER_MAX_REQUESTS_JITTER: "100"
+  GUNICORN_TIMEOUT: "120"
+
+x-superset-volumes: &superset-volumes
+  - ${NFL_BDB_PROJECT_ROOT:-../..}/warehouse/serving:/srv/nfl-lab/serving:ro
+  - ./superset/superset_config.py:/app/lab/superset_config.py:ro
+  - ./superset/bootstrap:/app/lab/bootstrap:ro
+  - ./superset/dashboards:/app/lab/dashboards:ro
+  - superset_home:/app/superset_home
+
+services:
+  # One-shot gate: warehouse/serving is mounted and nfl_lab.duckdb opens read-only. superset-init and
+  # streamlit wait for it to exit 0, so nothing starts against a missing/broken snapshot.
+  serving-check:
+    build:
+      context: ./streamlit
+    image: nfl-lab/streamlit:1
+    command: ["python", "/app/check_serving.py"]
+    environment:
+      LAB_SERVING_DB: /srv/nfl-lab/serving/nfl_lab.duckdb
+    volumes:
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/warehouse/serving:/srv/nfl-lab/serving:ro
+    network_mode: none
+    restart: "no"
+    mem_limit: 512m
+
+  superset-db:
+    <<: *common
+    image: postgres:${POSTGRES_VERSION:-16.4-alpine}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-superset}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-superset}
+      GRAFANA_READER_PASSWORD: ${GRAFANA_READER_PASSWORD:?Set GRAFANA_READER_PASSWORD in .env}
+    volumes:
+      - superset_db:/var/lib/postgresql/data
+      - ./postgres/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [lab-backend]
+    mem_limit: 512m
+    cpus: 1.0
+
+  superset-init:
+    build:
+      context: ./superset
+      args:
+        SUPERSET_VERSION: ${SUPERSET_VERSION:-5.0.0}
+    image: nfl-lab/superset:${SUPERSET_VERSION:-5.0.0}
+    entrypoint: ["/bin/bash", "/app/lab/bootstrap/init.sh"]
+    environment:
+      <<: *superset-env
+      ADMIN_USERNAME: ${SUPERSET_ADMIN_USERNAME:-admin}
+      ADMIN_PASSWORD: ${SUPERSET_ADMIN_PASSWORD:?Set SUPERSET_ADMIN_PASSWORD in .env}
+      ADMIN_EMAIL: ${SUPERSET_ADMIN_EMAIL:-admin@localhost}
+      LAB_IMPORT_MODE: ${LAB_IMPORT_MODE:-on_change}
+    volumes: *superset-volumes
+    depends_on:
+      superset-db: { condition: service_healthy }
+      serving-check: { condition: service_completed_successfully }
+    networks: [lab-backend]
+    restart: "no"
+    mem_limit: 1536m
+
+  superset:
+    <<: *common
+    image: nfl-lab/superset:${SUPERSET_VERSION:-5.0.0}
+    environment: *superset-env
+    volumes: *superset-volumes
+    ports:
+      - "127.0.0.1:${SUPERSET_PORT:-8088}:8088"
+    depends_on:
+      superset-db: { condition: service_healthy }
+      superset-init: { condition: service_completed_successfully }
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8088/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks: [lab-backend, lab-frontend]
+    mem_limit: ${SUPERSET_MEM_LIMIT:-2g}
+    cpus: 2.0
+
+  streamlit:
+    <<: *common
+    build:
+      context: ./streamlit
+    image: nfl-lab/streamlit:1
+    environment:
+      LAB_SERVING_DB: /srv/nfl-lab/serving/nfl_lab.duckdb
+      LAB_SILVER_ROOT: /data/warehouse/silver
+      LAB_FIGURE_DIR: /exports/figures
+      LAB_TABLE_DIR: /exports/tables
+      LAB_DUCKDB_MEMORY: ${STREAMLIT_DUCKDB_MEMORY:-768MB}
+      LAB_MAX_TRAJECTORY_FRAMES: ${LAB_MAX_TRAJECTORY_FRAMES:-6000}
+    volumes:
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/warehouse/serving:/srv/nfl-lab/serving:ro
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/warehouse/silver:/data/warehouse/silver:ro
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/reports/figures/analytics_lab:/exports/figures
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/reports/tables/analytics_lab:/exports/tables
+    depends_on:
+      serving-check: { condition: service_completed_successfully }
+    ports:
+      - "127.0.0.1:${STREAMLIT_PORT:-8501}:8501"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=5)"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks: [lab-frontend]
+    mem_limit: ${STREAMLIT_MEM_LIMIT:-1536m}
+    cpus: 2.0
+
+  grafana:
+    <<: *common
+    profiles: ["monitoring"]
+    image: grafana/grafana:${GRAFANA_VERSION:-12.0.2}
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD in .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_USERS_DEFAULT_THEME: dark
+      GF_PLUGINS_PREINSTALL: ${GRAFANA_SQLITE_PLUGIN:-frser-sqlite-datasource}
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/nfl-lab/engineering.json
+      LAB_MONITORING_DB: /srv/nfl-lab/serving/lab_monitoring.sqlite
+      SUPERSET_DB_NAME: ${POSTGRES_DB:-superset}
+      GRAFANA_READER_PASSWORD: ${GRAFANA_READER_PASSWORD:?Set GRAFANA_READER_PASSWORD in .env}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards/nfl-lab:ro
+      - ${NFL_BDB_PROJECT_ROOT:-../..}/warehouse/serving:/srv/nfl-lab/serving:ro
+    ports:
+      - "127.0.0.1:${GRAFANA_PORT:-3000}:3000"
+    depends_on:
+      superset-db: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks: [lab-backend, lab-frontend]
+    mem_limit: 512m
+    cpus: 1.0
+
+networks:
+  lab-backend:
+    internal: true        # metadata DB is unreachable from outside the stack
+  lab-frontend: {}
+
+volumes:
+  superset_db: {}         # Superset metadata (dashboards, charts, users, logs) — survives restarts
+  superset_home: {}       # Superset home (import marker, local state)
+  grafana_data: {}        # Grafana state + installed plugin

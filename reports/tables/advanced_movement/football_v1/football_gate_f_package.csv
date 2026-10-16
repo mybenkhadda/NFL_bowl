@@ -1,0 +1,5 @@
+criterion,passed,detail
+narrative_uses_executed_claims_only,true,20 of 20 claims read from an executed artifact
+evidence_levels_kept_apart,true,"descriptively_repeatable 5, exploratory_association 2, incremental_information_demonstrated 1, measurement_validated 6, unsupported_or_unresolved 6"
+no_pending_token_in_reports,true,none pending
+visual_story_complete (informative),true,11 of 12 story steps have a saved figure

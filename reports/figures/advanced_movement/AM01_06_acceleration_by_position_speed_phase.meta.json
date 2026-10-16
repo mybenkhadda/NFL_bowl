@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM01_06_acceleration_by_position_speed_phase",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "793 sequences",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T13:41:17Z",
+  "seed": 20261011,
+  "source": "sequence_frames"
+}

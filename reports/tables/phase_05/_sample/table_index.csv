@@ -1,0 +1,11 @@
+area,built_at,description,kind,name,path,rows,study
+descriptive,2026-10-11T01:03:04Z,Every Phase 05 parameter with unit and provenance (established / proposed / execution).,table,P05_thresholds,reports/tables/phase_05/_sample/descriptive/P05_thresholds.parquet,23,P05
+descriptive,2026-10-11T01:03:06Z,"Vendor action labels: vocabulary, coverage and within-athlete variation by position group.",table,P0_action_overlap,reports/tables/phase_05/_sample/descriptive/P0_action_overlap.parquet,24,P0
+descriptive,2026-10-11T01:03:06Z,"Tracking rows, football rows, plays and tracked athletes per season × season type.",table,P0_entity_census,reports/tables/phase_05/_sample/descriptive/P0_entity_census.parquet,3,P0
+descriptive,2026-10-11T01:03:06Z,"Athletes with at least N tracked plays, by position group.",table,P0_exposure_summary,reports/tables/phase_05/_sample/descriptive/P0_exposure_summary.parquet,30,P0
+descriptive,2026-10-11T01:03:06Z,Non-null coverage of vendor state / action / outcome fields by position group.,table,P0_field_coverage,reports/tables/phase_05/_sample/descriptive/P0_field_coverage.parquet,186,P0
+descriptive,2026-10-11T01:03:06Z,"Co-tracked offensive × defensive athletes by position-group pair (availability, not matchups).",table,P0_opponent_pairs,reports/tables/phase_05/_sample/descriptive/P0_opponent_pairs.parquet,6,P0
+descriptive,2026-10-11T01:03:06Z,Distribution of tracked athletes per play (last bin = ≥ max_players_hist).,table,P0_players_per_play,reports/tables/phase_05/_sample/descriptive/P0_players_per_play.parquet,12,P0
+descriptive,2026-10-11T01:03:06Z,Plays by which side of the ball has ≥ 1 tracked athlete (metric M13).,table,P0_side_coverage,reports/tables/phase_05/_sample/descriptive/P0_side_coverage.parquet,2,P0
+descriptive,2026-10-11T01:03:06Z,Rule-based screening verdict per frontier stream (PROPOSED thresholds).,table,P0_stream_feasibility,reports/tables/phase_05/_sample/descriptive/P0_stream_feasibility.parquet,18,P0
+decision_audit,2026-10-11T01:03:06Z,One row per tracked athlete: NFL tracking exposure in the P0 population.,dataset,athlete_exposure,warehouse/gold/phase_05/_sample/decision_audit/athlete_exposure.parquet,122,P0

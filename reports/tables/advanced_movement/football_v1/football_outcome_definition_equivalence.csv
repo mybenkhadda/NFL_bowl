@@ -1,0 +1,2 @@
+definition_a,definition_b,n_athletes_a,n_athletes_b,n_common,n_same_observations,max_abs_value_difference,spearman,identical,reading
+FO01.S0,FO01.S1,116,116,116,116,0.0,1.0,true,"FO01.S1 is operationally identical to FO01.S0 on the observed data: retain FO01.S0, classify FO01.S1 as redundant"

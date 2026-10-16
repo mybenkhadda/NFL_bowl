@@ -1,0 +1,71 @@
+check_id,rank,example_key,detail
+"uniq:combine_tracking:event_id, nfl_id, time",1,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.200,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",2,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.300,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",3,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.400,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",4,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.500,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",5,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.600,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",6,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.700,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",7,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.800,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",8,20250228100500_1740789896177_000|58407|2025-03-01T00:44:50.900,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",9,20250228100500_1740789896177_000|58407|2025-03-01T00:44:51.000,n=2
+"uniq:combine_tracking:event_id, nfl_id, time",10,20250228100500_1740789896177_000|58407|2025-03-01T00:44:51.100,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",1,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.200,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",2,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.300,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",3,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.400,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",4,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.500,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",5,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.600,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",6,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.700,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",7,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.800,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",8,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:50.900,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",9,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:51.000,n=2
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",10,20250228100500_1740789896177_000|58407|1|2025-03-01T00:44:51.100,n=2
+range:combine_tracking:s,1,20250301100700_1740865165633_000|58440|6|BALL,max_value=25.79415639; n=13
+range:combine_tracking:s,2,20250301100800_1740874595957_000|58449|7|BALL,max_value=25.60882568; n=14
+range:combine_tracking:s,3,20250301100800_1740874584484_000|58333|7|BALL,max_value=25.56867218; n=14
+range:combine_tracking:s,4,20250301100700_1740865045883_000|59278|6|BALL,max_value=25.36848195; n=14
+range:combine_tracking:s,5,20250301100800_1740874424917_000|58313|6|BALL,max_value=25.22340393; n=13
+range:combine_tracking:s,6,20250301100700_1740869683178_000|58717|10|BALL,max_value=24.99375661; n=9
+range:combine_tracking:s,7,20250301100700_1740864898934_000|58494|5|BALL,max_value=24.92704773; n=15
+range:combine_tracking:s,8,20250301100700_1740866700266_000|58244|13|BALL,max_value=24.8958079; n=12
+range:combine_tracking:s,9,20250301100800_1740874298459_000|58333|6|BALL,max_value=24.86489868; n=13
+range:combine_tracking:s,10,20250301100800_1740874084477_000|59004|5|BALL,max_value=24.73873647; n=12
+range:combine_tracking:a,1,20250301100800_1740872964096_000|58977|1|BALL,max_value=44.60728273; n=12
+range:combine_tracking:a,2,20250228100500_1740791284831_000|58251|5|BALL,max_value=42.80750889; n=10
+range:combine_tracking:a,3,20250301100800_1740872954667_000|58315|1|BALL,max_value=41.05021397; n=13
+range:combine_tracking:a,4,20250228100500_1740789991127_000|58370|1|BALL,max_value=40.58995776; n=9
+range:combine_tracking:a,5,20250228100500_1740791314410_000|58325|5|BALL,max_value=39.92519265; n=8
+range:combine_tracking:a,6,20250301100800_1740872877143_000|58447|1|BALL,max_value=39.68048437; n=13
+range:combine_tracking:a,7,20250301100700_1740863717647_000|58717|1|BALL,max_value=37.06676732; n=12
+range:combine_tracking:a,8,20250301100800_1740872867751_000|58449|1|BALL,max_value=35.99637282; n=11
+range:combine_tracking:a,9,20250301100800_1740873042086_000|58274|1|BALL,max_value=35.25859064; n=11
+range:combine_tracking:a,10,20250301100800_1740872919259_000|58445|1|BALL,max_value=34.43382606; n=14
+"fk:game_tracking:game_id,play_id->player_play",1,2023091009|103,n=1
+"fk:game_tracking:game_id,play_id->player_play",2,2023091400|3461,n=1
+"fk:game_tracking:game_id,play_id->player_play",3,2023091707|470,n=1
+"fk:game_tracking:game_id,play_id->player_play",4,2023091709|278,n=1
+"fk:game_tracking:game_id,play_id->player_play",5,2023091800|281,n=1
+"fk:game_tracking:game_id,play_id->player_play",6,2023091800|2029,n=1
+"fk:game_tracking:game_id,play_id->player_play",7,2023092100|3544,n=1
+"fk:game_tracking:game_id,play_id->player_play",8,2023092403|275,n=1
+"fk:game_tracking:game_id,play_id->player_play",9,2023092406|510,n=1
+"fk:game_tracking:game_id,play_id->player_play",10,2023092406|3425,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",1,2023091001|3056|55934,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",2,2023091001|4534|55934,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",3,2023091001|4534|56070,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",4,2023091004|2505|56056,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",5,2023091004|3990|55887,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",6,2023091008|1292|55915,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",7,2023091008|4429|55998,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",8,2023091009|103|55900,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",9,2023091011|589|56052,n=1
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",10,2023091011|1709|56052,n=1
+trk:game:n_jumps,1,2026010300|1114|58413,n_jump_breaks=6
+trk:game:n_jumps,2,2024080951|957|56090,n_jump_breaks=3
+trk:game:n_jumps,3,2023110502|3208|55884,n_jump_breaks=2
+trk:game:n_jumps,4,2023123103|2174|55978,n_jump_breaks=2
+trk:game:n_jumps,5,2024080951|3722|57156,n_jump_breaks=2
+trk:game:n_jumps,6,2024080951|3747|57156,n_jump_breaks=2
+trk:game:n_jumps,7,2024110310|2763|57145,n_jump_breaks=2
+trk:game:n_jumps,8,2024111100|2953|57304,n_jump_breaks=2
+trk:game:n_jumps,9,2025101205|1289|57155,n_jump_breaks=2
+trk:game:n_jumps,10,2025113003|3254|58298,n_jump_breaks=2

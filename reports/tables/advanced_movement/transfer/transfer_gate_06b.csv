@@ -1,0 +1,7 @@
+criterion,passed,detail
+identical_heldout_athletes,true,"6 (cohort, target) group(s): every model on the same athletes"
+official_baseline_included,true,"models evaluated: ['M0', 'M1', 'M2', 'M3', 'M4', 'M5', 'M5S', 'M6', 'M7_PC2', 'M7_PC4', 'MEAN', 'POS']"
+frozen_feature_candidates_used,true,"block sizes {'ENG': 1, 'FPCA': 2, 'RAND': 8, 'SPEED2': 2, 'TCN': 8, 'TCN_PC2': 2, 'TCN_PC4': 4}; frozen engineered ids ['F6.forty.time_v4_to_v8_s']"
+inductive_representation_fitting,true,"35 fold fits, 0 athlete(s) shared between a fit and its held-out fold"
+oof_predictions_unique,true,"one prediction per athlete, model, target and cohort"
+uncertainty_reported,true,paired athlete-bootstrap interval of Δ RMSE (M5 − M1) on the primary target

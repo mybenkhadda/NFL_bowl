@@ -1,0 +1,5 @@
+example,domain,traj_id,quality_tier,n_flagged_dims,flagged_dims,resid_rms_yds,rule
+combine_good,combine,64065c26e3d8e72dcd19956f-2023|56218|1,A,0,"",0.010970769450068474,"tier A, no screening flag, resid_rms closest to domain median"
+combine_poor,combine,20250228100500_1740793859122_000|58424|2,B,3,coordinate_validity;speed_consistency;heading_reliability,0.031431566923856735,"most flagged dimensions, then largest resid_rms"
+nfl_sample_good,nfl_sample,2024080151|1274|56066,A,0,"",0.004668162114616376,"tier A, no screening flag, resid_rms closest to domain median"
+nfl_sample_poor,nfl_sample,2024082454|974|56070,B,4,structural_integrity;coordinate_validity;speed_consistency;derivative_reliability,0.03256652009798734,"most flagged dimensions, then largest resid_rms"

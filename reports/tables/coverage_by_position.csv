@@ -1,0 +1,6 @@
+position_group,n_combine_athletes,n_with_combine_tracking,n_with_nfl_tracking,n_matched_tracking_both,n_with_career_outcomes,median_nfl_plays_if_tracked,match_rate
+DB,122,122,118,118,122,434.5,0.967
+DL,118,118,115,115,118,395.0,0.975
+OL,121,121,120,120,121,507.5,0.992
+TE,42,42,38,38,42,192.5,0.905
+WR,107,107,106,106,107,277.0,0.991

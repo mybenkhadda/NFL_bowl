@@ -1,0 +1,11 @@
+target_id,fold,n_test,n_train,positions_test,min_position_train,viable
+FO01.S0,0,19,65,TE 5 · WR 14,15,true
+FO01.S0,1,14,70,TE 4 · WR 10,16,true
+FO01.S0,2,17,67,TE 4 · WR 13,16,true
+FO01.S0,3,18,66,TE 4 · WR 14,16,true
+FO01.S0,4,16,68,TE 3 · WR 13,17,true
+FO12.T2,0,21,112,DB 9 · DL 12,54,true
+FO12.T2,1,26,107,DB 11 · DL 15,52,true
+FO12.T2,2,27,106,DB 16 · DL 11,47,true
+FO12.T2,3,30,103,DB 14 · DL 16,49,true
+FO12.T2,4,29,104,DB 13 · DL 16,50,true

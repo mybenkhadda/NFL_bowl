@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_11_alignment_sensitivity_and_fold_stability",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "athletes scored under both alignments; 5 fold fits",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T15:17:43Z",
+  "seed": 20261011,
+  "source": "fpca_alignment_sensitivity, fpca_fold_components"
+}

@@ -1,0 +1,4 @@
+track,experiment,comparison,metric,better,estimate,lo,hi,n_athletes,cohort,evaluation_target,training_regime,primary,verdict,source_table,run_mode
+12E,5,retrieval AUC E5_conditional_w1 vs E0_euclidean,Δ retrieval AUC,positive,0.005431840608826418,-0.019497322166967944,0.030968361224798496,267,"",cross_domain_physical_transfer,"",true,inconclusive,m12e_auc_diff,full
+12E,5,retrieval AUC E0_euclidean − 0.5,AUC − 0.5,positive,0.0010489905788015896,-0.03365802325742967,0.03681848533486154,267,"",cross_domain_physical_transfer,"",false,inconclusive,m12e_retrieval_summary,full
+12E,5,retrieval AUC E5_conditional_w1 − 0.5,AUC − 0.5,positive,0.006480831187627989,-0.02905544779248237,0.04362988436234905,267,"",cross_domain_physical_transfer,"",false,inconclusive,m12e_retrieval_summary,full

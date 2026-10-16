@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_01_scorecard_58239",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "1 athlete; position reference 96 athletes",
+  "note": "DESCRIPTIVE ONLY \u2014 not validated as a predictor of NFL movement or performance (Milestone 06: no incremental gain over official Combine testing was established)",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:34Z",
+  "seed": 20261011,
+  "source": "combine scorecard tables"
+}

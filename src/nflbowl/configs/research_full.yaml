@@ -1,0 +1,9 @@
+# Research-grade run: default science, full evaluation level by default (identity null included), reference-exact options.
+description: Full protocol, evaluation level "full" by default.
+extends: default
+
+evaluation:
+  default_level: full
+  identity_null_perms: 10
+  approx_topk: false
+  similarity_device: cpu

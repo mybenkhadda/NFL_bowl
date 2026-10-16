@@ -1,0 +1,9 @@
+hypothesis,feature,target_id,control,n_athletes,r,ci_lower,ci_upper,expected_sign,status
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v4_6_mean,position,251,0.19408551906369426,0.08748788217571299,0.29724098225714163,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v4_6_mean,official,251,-0.07820881705890045,-0.18027005371316968,0.0383782002734438,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v6_8_mean,position,155,0.181013482889479,0.05195276309736879,0.3147161451174842,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v6_8_mean,official,155,-0.051166789211095305,-0.20025086851885437,0.1118427737255247,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v0_2_mean,position,284,0.2995738403223023,0.17102107927674706,0.42952674845065614,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C0:O3.band_acc_v0_2_mean,official,284,-0.08303551040586908,-0.20863979759973061,0.05090580098970101,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C4:O2.accel_sust05_mean,position,284,0.10114853477904326,-0.016432569979026843,0.2158742370266788,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H2,Combine accel 4→8 yd/s (4 / time) [yd/s²],C4:O2.accel_sust05_mean,official,284,-0.053595519530999766,-0.17110101915141404,0.06245950087211165,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"

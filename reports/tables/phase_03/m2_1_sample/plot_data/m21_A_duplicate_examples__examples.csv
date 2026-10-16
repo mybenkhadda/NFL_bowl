@@ -1,0 +1,2 @@
+example,pair_id,nfl_id,drill,event_id_a,attempt_a,event_id_b,attempt_b,attempt_order_a,attempt_order_b,pair_class,speed_rmse,raw_pos_rmse_rigid_yds,n_class_pairs,rule
+consistent,57347|FORTY_YARD_DASH|20240301100300_1709324122741_000:2|20240301100300_1709325477120_000:3,57347,FORTY_YARD_DASH,20240301100300_1709324122741_000,2,20240301100300_1709325477120_000,3,1,2,consistent,0.14793260528078092,0.2897203882402276,151,forty 'consistent' pair (speed RMSE ≤ 0.3 yd/s) closest to the class median speed RMSE; ties by nfl_id / attempt order

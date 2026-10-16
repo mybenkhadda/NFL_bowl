@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_05_quality_filter_vs_retention",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "418 tracked athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T00:59:51Z",
+  "seed": 20261011,
+  "source": "atlas_quality_retention, atlas_reliability"
+}

@@ -1,0 +1,96 @@
+table,column,declared,resolved,n_rows,n_non_null,n_empty,n_cast_fail,fail_examples,action,severity,evidence
+players,nfl_id,Int64,Int64,510,510,0,0,"",keep,OK,full scan
+players,draft_year,Int64,Int64,510,510,0,0,"",keep,OK,full scan
+players,draft_round,Float64,Float64,510,383,0,0,"",keep,OK,full scan
+players,draft_pick_within_round,Float64,Float64,510,383,0,0,"",keep,OK,full scan
+players,draft_overall_pick,Float64,Float64,510,383,0,0,"",keep,OK,full scan
+combine_results,draft_year,Int64,Int64,510,510,0,0,"",keep,OK,full scan
+combine_results,nfl_id,Int64,Int64,510,510,0,0,"",keep,OK,full scan
+combine_results,combine_height,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,combine_weight,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,hand_size,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,arm_length,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,wing_span,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,ten_yd_split,Float64,Float64,510,425,0,0,"",keep,OK,full scan
+combine_results,forty,Float64,Float64,510,424,0,0,"",keep,OK,full scan
+combine_results,vertical,Float64,Float64,510,438,0,0,"",keep,OK,full scan
+combine_results,broad_jump,Float64,Float64,510,423,0,0,"",keep,OK,full scan
+combine_results,three_cone,Float64,Float64,510,180,0,0,"",keep,OK,full scan
+combine_results,short_shuttle,Float64,Float64,510,201,0,0,"",keep,OK,full scan
+combine_results,bench_reps,Float64,Float64,510,192,0,0,"",keep,OK,full scan
+combine_results,ngs_athleticism_score,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+combine_results,ngs_college_production_score,Float64,Float64,510,509,0,0,"",keep,OK,full scan
+combine_results,ngs_final_score,Float64,Float64,510,509,0,0,"",keep,OK,full scan
+combine_tracking,draft_year,Int64,Int64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,nfl_id,Int64,Int64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,attempt,Int64,Int64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,x,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,y,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,s,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,a,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,dis,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+combine_tracking,dir,Float64,Float64,40000,40000,0,0,"",keep,OK,"bounded sample (40,000 rows)"
+game_tracking,game_id,Int64,Int64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,play_id,Int64,Int64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,nfl_id,Int64,Int64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,x,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,y,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,s,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,a,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,dis,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,o,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+game_tracking,dir,Float64,Float64,120000,120000,0,0,"",keep,OK,"bounded sample (120,000 rows)"
+games,game_id,Int64,Int64,1002,1002,0,0,"",keep,OK,full scan
+games,game_key,Int64,Int64,1002,1002,0,0,"",keep,OK,full scan
+games,season,Int64,Int64,1002,1002,0,0,"",keep,OK,full scan
+games,week,Int64,Int64,1002,1002,0,0,"",keep,OK,full scan
+player_play,game_id,Int64,Int64,314197,314197,0,0,"",keep,OK,full scan
+player_play,play_id,Int64,Int64,314197,314197,0,0,"",keep,OK,full scan
+player_play,nfl_id,Int64,Int64,314197,314197,0,0,"",keep,OK,full scan
+player_play,quarter,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,down,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,yards_to_go,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,yardline_number,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,pre_snap_home_score,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,pre_snap_visitor_score,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,pre_snap_home_team_win_probability,Float64,Float64,314197,314194,0,0,"",keep,OK,full scan
+player_play,pre_snap_visitor_team_win_probability,Float64,Float64,314197,314194,0,0,"",keep,OK,full scan
+player_play,home_team_win_probability_added,Float64,Float64,314197,314191,0,0,"",keep,OK,full scan
+player_play,visitor_team_win_probility_added,Float64,Float64,314197,314191,0,0,"",keep,OK,full scan
+player_play,expected_points_added,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,expected_points,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,pass_length,Float64,Float64,314197,184739,0,0,"",keep,OK,full scan
+player_play,penalty_yards,Float64,Float64,314197,20750,0,0,"",keep,OK,full scan
+player_play,pre_penalty_yards_gained,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,yards_gained,Float64,Float64,314197,314197,0,0,"",keep,OK,full scan
+player_play,rec_yards,Float64,Float64,314197,6260,0,0,"",keep,OK,full scan
+player_play,rush_yards,Float64,Float64,314197,22,0,0,"",keep,OK,full scan
+player_play,yards_after_catch,Float64,Float64,314197,6260,0,0,"",keep,OK,full scan
+player_play,fumble,Float64,Float64,314197,73,0,0,"",keep,OK,full scan
+player_play,fumble_lost,Float64,Float64,314197,73,0,0,"",keep,OK,full scan
+player_play,separation_at_pass_forward,Float64,Float64,314197,46737,0,0,"",keep,OK,full scan
+player_play,cushion,Float64,Float64,314197,103752,0,0,"",keep,OK,full scan
+player_play,expected_yards_after_catch,Float64,Float64,314197,8976,0,0,"",keep,OK,full scan
+player_play,dropback_duration,Float64,Float64,314197,60803,0,0,"",keep,OK,full scan
+player_play,extended_sack_allowed,Float64,Float64,314197,60803,0,0,"",keep,OK,full scan
+player_play,pass_rushers_encountered,Float64,Float64,314197,60803,0,0,"",keep,OK,full scan
+player_play,peak_pressure_probability_allowed,Float64,Float64,314197,58028,0,0,"",keep,OK,full scan
+player_play,sack_allowed,Float64,Float64,314197,60803,0,0,"",keep,OK,full scan
+player_play,time_to_pressure_allowed,Float64,Float64,314197,4970,0,0,"",keep,OK,full scan
+player_play,player_get_off,Float64,Float64,314197,44002,0,0,"",keep,OK,full scan
+player_play,sack,Float64,Float64,314197,86835,0,0,"",keep,OK,full scan
+player_play,tackle,Float64,Float64,314197,11896,0,0,"",keep,OK,full scan
+player_play,assist,Float64,Float64,314197,11896,0,0,"",keep,OK,full scan
+player_play,caused_forced_fumble,Float64,Float64,314197,11896,0,0,"",keep,OK,full scan
+player_play,recovered_fumble,Float64,String,314197,2214,0,2214,FALSE | TRUE,boolean_like,INFO,full scan
+player_play,time_to_pressure,Float64,Float64,314197,3804,0,0,"",keep,OK,full scan
+player_play,time_to_qb_hurry,Float64,Float64,314197,3879,0,0,"",keep,OK,full scan
+player_career_successes,nfl_id,Int64,Int64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,career_offensive_snaps,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,career_defensive_snaps,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,career_special_teams_snaps,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,career_games_active,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,career_games_started,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,ap_all_pro_1st_team,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,ap_all_pro_2nd_team,Float64,Float64,510,510,0,0,"",keep,OK,full scan
+player_career_successes,pro_bowl_original_ballot,Float64,Float64,510,510,0,0,"",keep,OK,full scan

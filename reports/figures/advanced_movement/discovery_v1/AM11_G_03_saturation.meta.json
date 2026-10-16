@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_G_03_saturation",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T23:27:41Z",
+  "seed": 20261011,
+  "source": "m11_drill_curve"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_02_missing_versus_zero",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "242,043 eligible player-plays",
+  "note": "shares of eligible player-plays by position group; a null is not a zero",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:39:57Z",
+  "seed": 20261011,
+  "source": "football_outcome_zero_missing"
+}

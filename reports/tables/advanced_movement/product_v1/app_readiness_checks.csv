@@ -1,0 +1,34 @@
+check,passed,detail,group
+declared_version,true,"manifest 'v1', expected 'v1'",09E mart
+tables_present,true,all present,09E mart
+required_columns,true,all present,09E mart
+rows_match_manifest,true,row counts equal the manifest,09E mart
+fingerprints_match_manifest,true,files unchanged since the manifest was written,09E mart
+profile_key_unique,true,one profile row per athlete,09E mart
+displayed_athletes_exist_in_source,true,every athlete of every table is in the profile table,09E mart
+cases_backed_by_twin_pairs,true,"23 case(s), each a ranked twin pair",09E mart
+no_case_selected_on_nfl_outcome,true,no NFL outcome value entered a selection,09E mart
+three_views_per_case,true,"scout, coach and general-manager views for every case",09E mart
+no_grade_or_ranking_column,true,"no grade, potential or overall-score column",09E mart
+similarity_labelled_descriptive,true,every similarity row carries its descriptive reading,09E mart
+unsupported_comparisons_abstain,true,3453 abstention row(s) carry no interval,09E mart
+football_value_not_claimed,true,every measurement row says football value is not established,09E mart
+evidence_document_present,true,08B.4 registry and interpretation registry present,09E mart
+phase_decomposition_never_invents,true,absent phase stays 'not identified'; unstable feature never leads; verdicts follow the stored rows,M10 logic
+replay_never_extrapolates,true,grid = recorded frames at 10 Hz; distance mode flags interpolation; nothing beyond the recording,M10 logic
+evidence_labels_and_stability,true,missing evidence is stated; labels quote stored ICC / R²; single attempts flagged,M10 logic
+coverage_classes_follow_the_registry,true,"classes derive from the analogue, the start state, the 09A support and the 09B comparison",M10 logic
+gap_summary_and_focus_rule,true,unsupported cells excluded from rates; the thin position is excluded from the focus rule,M10 logic
+position_comparison_flags,true,exposure and support differences are flagged; ratios only between supported rates,M10 logic
+simulator_sections_and_categories,true,six structured sections; categories follow the stored evidence; non-twins get no computed difference,M10 logic
+simulator_audiences_and_wording,true,"three audiences render; no grading, ranking or probability wording",M10 logic
+wr_selection_rules,true,preferred pair only when it passes; otherwise largest eligible contrast; NFL values ignored,M10 logic
+story_deliverables,true,"word limits, every deliverable, provenance; same-forty validation",M10 logic
+token_rendering_and_templates,true,tokens filled from values; authored text kept as template; reruns refresh; typed numbers cross-checked,M10 logic
+twins_within_stored_caliper,true,max |Δ forty| = 0.030 s (stored rule 0.03 s; app filters may only narrow it),targeted
+every_pair_has_differences,true,each twin pair has its 09C difference rows,targeted
+ten_hz_sampling,true,median frame interval 0.100 s → the time-mode replay grid IS the recorded frames,targeted
+every_feature_has_a_sprint_phase,true,"features ['acc_2_4', 'acc_4_6', 'acc_6_8', 'speed_10yd', 'speed_20yd', 'speed_30yd', 'time_4_8', 'top_speed']; unmapped []",targeted
+every_demand_in_registry,true,9 demand ids,targeted
+cases_not_selected_on_nfl_outcome,true,story inputs are pre-draft,targeted
+evidence_claims_present,true,20 executed 08B.6 claims,targeted

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_E_06_feature_vs_transport",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T11:02:12Z",
+  "seed": 20261015,
+  "source": "m12e_retrieval_summary"
+}

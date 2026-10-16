@@ -1,0 +1,1410 @@
+feature_id,family,grade
+F1.official.cmb_arm_length,F1,Provisional
+F1.official.cmb_bench_reps,F1,Reject / not currently usable
+F1.official.cmb_broad_jump,F1,Provisional
+F1.official.cmb_combine_height,F1,Provisional
+F1.official.cmb_combine_weight,F1,Provisional
+F1.official.cmb_forty,F1,Provisional
+F1.official.cmb_hand_size,F1,Provisional
+F1.official.cmb_short_shuttle,F1,Reject / not currently usable
+F1.official.cmb_ten_yd_split,F1,Provisional
+F1.official.cmb_three_cone,F1,Reject / not currently usable
+F1.official.cmb_vertical,F1,Provisional
+F1.official.cmb_wing_span,F1,Provisional
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.p90_abs_yaw_rate,F2,Exploratory
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.peak_accel_mag,F2,Exploratory
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.peak_accel_mag_interior,F2,Exploratory
+F2.FORTY_YARD_DASH:FORTY_YARD_DASH.peak_decel_interior,F2,Reject / not currently usable
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.p90_abs_yaw_rate,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.p95_a_tan,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.p95_decel,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.p95_speed,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.path_smooth_yds,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_a_tan,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_a_tan_interior,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_accel_mag,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_accel_mag_interior,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_decel,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_decel_interior,F2,Exploratory
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_speed,F2,Reject / not currently usable
+F2.SHORT_SHUTTLE:SHORT_SHUTTLE.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:BOX_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:GAUNTLET_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:LINE_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DB:W_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DB:W_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:PASS_RUSH_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:PASS_RUSH_DRILL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_LB:WAVE_DRILL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:PASS_RUSH_DROP.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_OL:SCREEN_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:BLOCK_EXPLOSION.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:CORNER_ROUTE.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:GAUNTLET_DRILL.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:IN_ROUTE_LEFT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.p95_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.p95_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.path_smooth_yds,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_decel_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_speed,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.peak_speed_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:GAUNTLET_DRILL.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.p90_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_accel_mag,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.p95_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_a_tan,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_a_tan_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.peak_speed_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.p90_abs_yaw_rate,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.p95_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.p95_decel,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.p95_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.path_smooth_yds,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_a_tan,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_a_tan_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_accel_mag,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_accel_mag_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_decel,F2,Reject / not currently usable
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_decel_interior,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_speed,F2,Exploratory
+F2.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.peak_speed_interior,F2,Exploratory
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.p90_abs_yaw_rate,F2,Exploratory
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.p95_a_tan,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.p95_decel,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.p95_speed,F2,Exploratory
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.path_smooth_yds,F2,Exploratory
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_a_tan,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_a_tan_interior,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_abs_yaw_rate,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_abs_yaw_rate_interior,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_accel_mag,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_accel_mag_interior,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_decel,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_decel_interior,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_speed,F2,Reject / not currently usable
+F2.THREE_CONE_DRILL:THREE_CONE_DRILL.peak_speed_interior,F2,Exploratory
+F2.forty.p95_a_tan,F2,Reject / not currently usable
+F2.forty.p95_decel,F2,Reject / not currently usable
+F2.forty.p95_speed,F2,Strong
+F2.forty.peak_a_tan,F2,Reject / not currently usable
+F2.forty.peak_a_tan_interior,F2,Reject / not currently usable
+F2.forty.peak_decel,F2,Reject / not currently usable
+F2.forty.peak_speed,F2,Strong
+F2.forty.peak_speed_interior,F2,Strong
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.n_acceleration,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.n_braking,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.n_reversal,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.n_turn,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.rate_braking_per_s,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.rate_reversal_per_s,F3,Reject / not currently usable
+F3.FORTY_YARD_DASH:FORTY_YARD_DASH.rate_turn_per_s,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.n_acceleration,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.n_braking,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.n_reversal,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.n_turn,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.rate_braking_per_s,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SHORT_SHUTTLE:SHORT_SHUTTLE.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:BOX_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:GAUNTLET_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:LINE_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_1.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:TERYL_AUSTIN_DRILL_2.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DB:W_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BACK_PEDAL_AND_REACT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:BODY_CONTROL_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FOUR_BAG_AGILITY_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:PASS_RUSH_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_AND_CLUB_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:RUN_THE_HOOP_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAKS.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FLAT_WHEEL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_FORWARD.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_DL:SHORT_ZONE_BREAK_INSIDE.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:BACK_PEDAL_AND_REACT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:FOUR_BAG_SHUFFLE_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:PASS_RUSH_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHORT_ZONE_BREAKS.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:SHUFFLE_SPRINT_AND_COD_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_LB:WAVE_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_FOLD_BLOCK_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:OL_PULL_DRILL_LONG_PULL_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_PRO-MIRROR_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:PASS_RUSH_DROP.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_OL:SCREEN_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:BLOCK_EXPLOSION.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:CORNER_ROUTE.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:END_ZONE_FADE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:FLAT_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:GAUNTLET_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:HOOK_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:IN_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:OVER_SHOULDER_ADJUST.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_TE:WHEEL_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CIRCUS_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:COMEBACK_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:CURL_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:DAGGER_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GAUNTLET_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:GO_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:OVER_SHOULDER_ADJUST.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:POST_CORNER_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:RED_ZONE_FADE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLANT_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_SAIL_ROUTE_RIGHT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SLOT_STRIKE_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.n_acceleration,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.n_braking,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.n_reversal,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.n_turn,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.rate_braking_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.rate_reversal_per_s,F3,Reject / not currently usable
+F3.SKILL_DRILLS_WR:SPEED_OUT_ROUTE_LEFT.rate_turn_per_s,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.n_acceleration,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.n_braking,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.n_reversal,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.n_turn,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.rate_acceleration_per_s,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.rate_braking_per_s,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.rate_reversal_per_s,F3,Reject / not currently usable
+F3.THREE_CONE_DRILL:THREE_CONE_DRILL.rate_turn_per_s,F3,Reject / not currently usable
+F4.forty.model_a0,F4,Exploratory
+F4.forty.model_a_at_ref,F4,Exploratory
+F4.forty.model_r2,F4,Reject / not currently usable
+F4.forty.model_rmse,F4,Reject / not currently usable
+F4.forty.model_tau_s,F4,Exploratory
+F4.forty.model_vmax,F4,Provisional
+F4.forty.tau_rel_width,F4,Reject / not currently usable
+F4.forty.vmax_extrapolation_ratio,F4,Reject / not currently usable
+F5.fpca.A_alt_origin_at_ref_speed.pc1,F5,Provisional
+F5.fpca.A_alt_origin_at_ref_speed.pc2,F5,Exploratory
+F5.fpca.A_speed_by_distance.pc1,F5,Provisional
+F5.fpca.A_speed_by_distance.pc2,F5,Reject / not currently usable
+F5.fpca.B_accel_by_speed.pc1,F5,Exploratory
+F5.fpca.B_accel_by_speed.pc2,F5,Reject / not currently usable
+F5.fpca.B_accel_by_speed.pc3,F5,Reject / not currently usable
+F5.fpca.B_accel_by_speed.pc4,F5,Reject / not currently usable
+F5.fpca.B_accel_by_speed.pc5,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc1,F5,Exploratory
+F5.fpca.B_alt_boundary_kept.pc2,F5,Exploratory
+F5.fpca.B_alt_boundary_kept.pc3,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc4,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc5,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc6,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc7,F5,Reject / not currently usable
+F5.fpca.B_alt_boundary_kept.pc8,F5,Reject / not currently usable
+F5.fpca.C_alt_origin_at_ref_speed.pc1,F5,Provisional
+F5.fpca.C_alt_origin_at_ref_speed.pc2,F5,Exploratory
+F5.fpca.C_speed_by_time.pc1,F5,Exploratory
+F5.fpca.C_speed_by_time.pc2,F5,Reject / not currently usable
+F5.vector.FPCA_A_K2,F5,Exploratory
+F5.vector.FPCA_B_K5,F5,Exploratory
+F5.vector.FPCA_C_K2,F5,Exploratory
+F5.vector.TCNA_A,F5,Exploratory
+F5.vector.TCNA_A_E16,F5,Exploratory
+F5.vector.TCNA_B,F5,Exploratory
+F5.vector.TCNA_C,F5,Exploratory
+F5.vector.TCNB_A,F5,Provisional
+F5.vector.TCNB_A_E16,F5,Exploratory
+F5.vector.TCNB_B,F5,Exploratory
+F5.vector.TCNB_C,F5,Provisional
+F6.forty.accel_0p5s_from_v4,F6,Exploratory
+F6.forty.accel_1s_from_v4,F6,Provisional
+F6.forty.accel_initial,F6,Reject / not currently usable
+F6.forty.accel_sustained,F6,Reject / not currently usable
+F6.forty.accel_v2_5,F6,Exploratory
+F6.forty.accel_v2_7,F6,Exploratory
+F6.forty.accel_v4_7,F6,Exploratory
+F6.forty.speed_gain_10yd_from_v4,F6,Strong
+F6.forty.time_v4_to_v8_s,F6,Provisional
+F7.forty.a_tan_roughness,F7,Reject / not currently usable
+F7.forty.boundary_peak,F7,Reject / not currently usable
+F7.forty.duration_s,F7,Reject / not currently usable
+F7.forty.ends_at_peak,F7,Reject / not currently usable
+F7.forty.first_frame_censored,F7,Reject / not currently usable
+F7.forty.first_speed,F7,Reject / not currently usable
+F7.forty.frames_after_peak,F7,Reject / not currently usable
+F7.forty.last_frame_censored,F7,Reject / not currently usable
+F7.forty.last_speed_frac_of_peak,F7,Reject / not currently usable
+F7.forty.path_smooth_yds,F7,Reject / not currently usable
+F7.forty.path_yd,F7,Reject / not currently usable
+F7.forty.pos_resid_rms,F7,Reject / not currently usable
+F7.forty.share_boundary,F7,Reject / not currently usable
+F7.forty.signal_flag,F7,Reject / not currently usable
+F7.forty.start_above_ref_speed,F7,Reject / not currently usable

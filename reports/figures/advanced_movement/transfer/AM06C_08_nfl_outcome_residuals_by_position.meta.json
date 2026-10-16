@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06C_08_nfl_outcome_residuals_by_position",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "284 athletes of the paired cohort",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:47:31Z",
+  "seed": 20261011,
+  "source": "transfer_oof_predictions (notebook 06B)"
+}

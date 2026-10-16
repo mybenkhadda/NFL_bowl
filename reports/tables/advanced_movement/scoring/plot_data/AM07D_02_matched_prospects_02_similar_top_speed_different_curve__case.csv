@@ -1,0 +1,3 @@
+case,criterion,position_group,nfl_id_a,nfl_id_b,name_a,name_b,matched_on,contrast,value_a,value_b,contrast_size,fingerprint_distance,selected_using_nfl
+similar_top_speed_different_curve,tracked top-speed percentile within 5 points; largest fingerprint distance,DB,56250,57181,Trey Dean,Cole Bishop,top_speed_pct,fingerprint distance,,,1.1503123784837208,1.1503123784837208,false
+similar_top_speed_different_curve,tracked top-speed percentile within 5 points; largest fingerprint distance,DL,55942,55947,Byron Young,YaYa Diaby,top_speed_pct,fingerprint distance,,,1.1135889630388442,1.1135889630388442,false

@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_01_mean_curves_by_position",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "116 sequences of 60 athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T15:16:50Z",
+  "seed": 20261011,
+  "source": "sequence_frames"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_01_architecture_and_input",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "1 held-out attempt (illustration)",
+  "note": "the attempt is the held-out sequence of outer fold 0 with the median coverage of the support",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T23:00:22Z",
+  "seed": 20261011,
+  "source": "sequence_frames, split_registry"
+}

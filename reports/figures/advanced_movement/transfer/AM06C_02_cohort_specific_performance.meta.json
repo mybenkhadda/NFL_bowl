@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06C_02_cohort_specific_performance",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "284 athletes of the paired cohort",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:53:30Z",
+  "seed": 20261011,
+  "source": "transfer_oof_predictions (notebook 06B) + leave-one-cohort-out refits"
+}

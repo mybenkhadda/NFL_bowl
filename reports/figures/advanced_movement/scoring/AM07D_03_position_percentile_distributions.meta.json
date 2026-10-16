@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_03_position_percentile_distributions",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "510 Combine athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:09Z",
+  "seed": 20261011,
+  "source": "combine percentile tables"
+}

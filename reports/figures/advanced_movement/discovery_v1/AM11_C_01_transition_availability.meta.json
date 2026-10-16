@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_C_01_transition_availability",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T22:45:42Z",
+  "seed": 20261011,
+  "source": "m11_combine_transitions"
+}

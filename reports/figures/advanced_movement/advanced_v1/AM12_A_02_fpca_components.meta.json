@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_A_02_fpca_components",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T01:20:20Z",
+  "seed": 20261015,
+  "source": "m12_combine_curves"
+}

@@ -1,0 +1,31 @@
+stage,definition,n_athletes,expected,matches_expected,source
+01_combine_results,athletes with a Combine results row,510,510,true,silver.combine_results
+02_nfl_tracking_any,… with ≥ 1 tracked NFL play in any season type,497,497,true,gold.fact_nfl_play_participation
+03_nfl_tracking_reg,… with ≥ 1 tracked regular-season play,401,401,true,gold.fact_nfl_play_participation × silver.games
+04_nfl_no_reg:POST+PRE,NFL tracking but no regular-season play; season types present: POST+PRE,1,,,silver.games.season_type
+05_nfl_no_reg:PRE,NFL tracking but no regular-season play; season types present: PRE,95,,,silver.games.season_type
+06_nfl_reg_ge_50,≥ 50 tracked regular-season plays,337,,,gold.fact_nfl_play_participation
+07_nfl_reg_ge_100,≥ 100 tracked regular-season plays,303,,,gold.fact_nfl_play_participation
+08_nfl_reg_ge_200,≥ 200 tracked regular-season plays,265,,,gold.fact_nfl_play_participation
+09_forty_tracked,≥ 1 tracked forty attempt (usable tier),418,,,phase_03 combine_sprint_profiles
+10_forty_repeat,≥ 2 tracked forty attempts,375,,,phase_03 combine_sprint_profiles
+11_official_forty,official forty time present,424,,,gold.mart_athlete_research_base
+12_official_ten_split,official 10-yard split present,425,,,gold.mart_athlete_research_base
+13_official_both,official forty AND 10-yard split present,424,,,gold.mart_athlete_research_base
+14_forty_tracked_and_official_both,tracked forty AND both official times,418,,,join
+15_scenario_S0_all_any,≥ 1 forty attempt retained by S0_all,418,,,phase_04 Q flags
+16_scenario_S0_all_repeat,≥ 2 forty attempts retained by S0_all,375,,,phase_04 Q flags
+17_scenario_S1_structural_any,≥ 1 forty attempt retained by S1_structural,416,,,phase_04 Q flags
+18_scenario_S1_structural_repeat,≥ 2 forty attempts retained by S1_structural,369,,,phase_04 Q flags
+19_scenario_S2_signal_any,≥ 1 forty attempt retained by S2_signal,401,,,phase_04 Q flags
+20_scenario_S2_signal_repeat,≥ 2 forty attempts retained by S2_signal,333,,,phase_04 Q flags
+21_scenario_S3_no_boundary_any,≥ 1 forty attempt retained by S3_no_boundary,378,,,phase_04 Q flags
+22_scenario_S3_no_boundary_repeat,≥ 2 forty attempts retained by S3_no_boundary,254,,,phase_04 Q flags
+23_model_fit_ok_any,≥ 1 forty attempt with a usable sprint-model fit,413,,,phase_03 fit_ok
+24_model_fit_ok_repeat,≥ 2 forty attempts with a usable fit,345,,,phase_03 fit_ok
+25_forty_repeat_and_reg_ge_50,repeated forty AND ≥ 50 regular-season plays,252,,,join
+26_forty_official_both_and_reg_ge_50,"tracked forty, both official times AND ≥ 50 regular-season plays",285,,,join
+27_forty_repeat_and_reg_ge_100,repeated forty AND ≥ 100 regular-season plays,222,,,join
+28_forty_official_both_and_reg_ge_100,"tracked forty, both official times AND ≥ 100 regular-season plays",253,,,join
+29_forty_repeat_and_reg_ge_200,repeated forty AND ≥ 200 regular-season plays,189,,,join
+30_forty_official_both_and_reg_ge_200,"tracked forty, both official times AND ≥ 200 regular-season plays",219,,,join

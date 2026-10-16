@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_08_reliable_speed_vs_derivatives",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "375 athletes with a repeat (at most)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T00:59:50Z",
+  "seed": 20261011,
+  "source": "atlas_attempt_features, atlas_reliability"
+}

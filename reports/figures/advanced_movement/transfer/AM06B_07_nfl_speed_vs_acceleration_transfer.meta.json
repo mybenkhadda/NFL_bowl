@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06B_07_nfl_speed_vs_acceleration_transfer",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "each frozen target on its own paired cohort",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:42:27Z",
+  "seed": 20261011,
+  "source": "transfer_oof_predictions (notebook 06B)"
+}

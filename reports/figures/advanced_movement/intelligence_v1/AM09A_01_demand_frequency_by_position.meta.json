@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09A_01_demand_frequency_by_position",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "486,626 episodes of 399 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:06:12Z",
+  "seed": 20261011,
+  "source": "nfl_movement_demand_frequency"
+}

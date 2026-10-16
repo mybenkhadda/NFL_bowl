@@ -1,0 +1,3 @@
+case,criterion,position_group,nfl_id_a,nfl_id_b,name_a,name_b,matched_on,contrast,value_a,value_b,contrast_size,fingerprint_distance,selected_using_nfl
+similar_forty_different_development,official forty and 10-yard split within 0.03 s; largest difference in speed-development percentile,WR,57355,58239,Devaughn Vele,Jayden Higgins,"official_forty, official_ten",speed_development_pct,97.6470588235294,9.411764705882348,88.23529411764706,0.1536190908874624,false
+similar_forty_different_development,official forty and 10-yard split within 0.03 s; largest difference in speed-development percentile,WR,57201,58514,Jermaine Burton,Elijhah Badger,"official_forty, official_ten",speed_development_pct,95.29411764705883,10.588235294117652,84.70588235294117,0.4854567602065035,false

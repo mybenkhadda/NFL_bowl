@@ -1,0 +1,76 @@
+metric,officials,n_athletes,r2_official
+backpedal_transition.abs_turn_angle_deg,"forty, ten",143,0.0067682051425650425
+backpedal_transition.approach_speed,"forty, ten",144,0.0008368513164948022
+backpedal_transition.brake_time_5_2_s,"forty, ten",53,0.0034420662811721625
+backpedal_transition.brake_to_burst_s,"forty, ten",143,0.0012595277074217703
+backpedal_transition.braking_distance_yd,"forty, ten",144,0.005742839381127185
+backpedal_transition.braking_duration_s,"forty, ten",144,0.007804931490347444
+backpedal_transition.censored_share,"forty, ten",144,0.01607041409619403
+backpedal_transition.curved_speed,"forty, ten",150,0.02071411810313928
+backpedal_transition.decel_mean,"forty, ten",144,0.004491112652909246
+backpedal_transition.decel_peak,"forty, ten",144,0.0016041598575987637
+backpedal_transition.decel_peak_max,"forty, ten",144,0.0016602869005535315
+backpedal_transition.duration_s,"forty, ten",152,0.0069699260872514435
+backpedal_transition.entry_speed,"forty, ten",144,0.0017880514558702432
+backpedal_transition.exit_accel,"forty, ten",143,0.04069256263762844
+backpedal_transition.exit_speed,"forty, ten",143,0.0020491563204070307
+backpedal_transition.lat_accel_peak,"forty, ten",144,0.006813674909307066
+backpedal_transition.n_transitions,"forty, ten",152,0.007496155969844209
+backpedal_transition.speed_recovery_time_s,"forty, ten",143,0.006038241574890302
+backpedal_transition.state_changes_per_s,"forty, ten",152,0.0013647690644102983
+backpedal_transition.tci_ccw,"forty, ten",141,0.0063280805737838675
+backpedal_transition.tci_cw,"forty, ten",97,0.030307270131538555
+backpedal_transition.transition_cost_index,"forty, ten",143,0.014790512336683048
+backpedal_transition.transition_duration_s,"forty, ten",144,0.006331667876684044
+backpedal_transition.turn_angle_deg,"forty, ten",143,0.002299376017423249
+backpedal_transition.v_min,"forty, ten",144,0.00001714807645747385
+short_shuttle.abs_turn_angle_deg,"forty, ten, short_shuttle",141,0.007174298549890157
+short_shuttle.approach_speed,"forty, ten, short_shuttle",141,0.023575675141719543
+short_shuttle.brake_time_5_2_s,"forty, ten, short_shuttle",128,0.06694802038256087
+short_shuttle.brake_to_burst_s,"forty, ten, short_shuttle",141,0.008210168197300804
+short_shuttle.braking_distance_yd,"forty, ten, short_shuttle",141,0.10495864544243194
+short_shuttle.braking_duration_s,"forty, ten, short_shuttle",141,0.12989142352595306
+short_shuttle.censored_share,"forty, ten, short_shuttle",141,0.007368396801617494
+short_shuttle.curved_speed,"forty, ten, short_shuttle",1,NaN
+short_shuttle.decel_mean,"forty, ten, short_shuttle",141,0.09871764445579867
+short_shuttle.decel_peak,"forty, ten, short_shuttle",141,0.15825873342865193
+short_shuttle.decel_peak_max,"forty, ten, short_shuttle",141,0.10078070712771003
+short_shuttle.duration_s,"forty, ten, short_shuttle",122,0.020291637342590874
+short_shuttle.entry_speed,"forty, ten, short_shuttle",141,0.08376433193379251
+short_shuttle.exit_accel,"forty, ten, short_shuttle",141,0.1444326870864291
+short_shuttle.exit_speed,"forty, ten, short_shuttle",141,0.1306182652665483
+short_shuttle.lat_accel_peak,"forty, ten, short_shuttle",141,0.030617205573762463
+short_shuttle.n_transitions,"forty, ten, short_shuttle",142,0.03438468745603862
+short_shuttle.speed_recovery_time_s,"forty, ten, short_shuttle",141,0.08631888298880186
+short_shuttle.state_changes_per_s,"forty, ten, short_shuttle",142,0.014774389298022772
+short_shuttle.tci_ccw,"forty, ten, short_shuttle",115,0.007315997899214999
+short_shuttle.tci_cw,"forty, ten, short_shuttle",109,0.06723751769802921
+short_shuttle.transition_cost_index,"forty, ten, short_shuttle",141,0.09079861519820365
+short_shuttle.transition_duration_s,"forty, ten, short_shuttle",141,0.1627784837092512
+short_shuttle.turn_angle_deg,"forty, ten, short_shuttle",141,0.03455631410010018
+short_shuttle.v_min,"forty, ten, short_shuttle",141,0.02337530399920862
+three_cone.abs_turn_angle_deg,"forty, ten, three_cone",140,0.02897635263254794
+three_cone.approach_speed,"forty, ten, three_cone",140,0.026149595749197063
+three_cone.brake_time_5_2_s,"forty, ten, three_cone",4,NaN
+three_cone.brake_to_burst_s,"forty, ten, three_cone",140,0.011021633651593254
+three_cone.braking_distance_yd,"forty, ten, three_cone",140,0.02171749935536238
+three_cone.braking_duration_s,"forty, ten, three_cone",140,0.010410324639576363
+three_cone.censored_share,"forty, ten, three_cone",140,0.0041841387607477465
+three_cone.curved_speed,"forty, ten, three_cone",145,0.011061076042364615
+three_cone.decel_mean,"forty, ten, three_cone",140,0.012675118005094244
+three_cone.decel_peak,"forty, ten, three_cone",140,0.016371813582726658
+three_cone.decel_peak_max,"forty, ten, three_cone",140,0.009107730108448897
+three_cone.duration_s,"forty, ten, three_cone",135,0.022627448548031226
+three_cone.entry_speed,"forty, ten, three_cone",140,0.061737856629831334
+three_cone.exit_accel,"forty, ten, three_cone",140,0.046136001045849584
+three_cone.exit_speed,"forty, ten, three_cone",140,0.009546733515204076
+three_cone.lat_accel_peak,"forty, ten, three_cone",140,0.0813259360053682
+three_cone.n_transitions,"forty, ten, three_cone",152,0.044286837660381106
+three_cone.speed_recovery_time_s,"forty, ten, three_cone",140,0.08980597472697394
+three_cone.state_changes_per_s,"forty, ten, three_cone",152,0.01555284637848775
+three_cone.tci_ccw,"forty, ten, three_cone",139,0.05438972091154748
+three_cone.tci_cw,"forty, ten, three_cone",74,0.06205510649901225
+three_cone.transition_cost_index,"forty, ten, three_cone",140,0.08282028438350508
+three_cone.transition_duration_s,"forty, ten, three_cone",140,0.07136531621549158
+three_cone.turn_angle_deg,"forty, ten, three_cone",140,0.03469773942095167
+three_cone.v_min,"forty, ten, three_cone",140,0.037628707056346467

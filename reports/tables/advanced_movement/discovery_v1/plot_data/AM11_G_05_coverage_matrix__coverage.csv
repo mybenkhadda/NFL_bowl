@@ -1,0 +1,14 @@
+family,demand_id,len
+three_cone,redirection,1
+gauntlet,sustained_high,2
+short_shuttle,braking,1
+three_cone,reaccel_after_brake,1
+backpedal_transition,braking,2
+short_shuttle,accel_low,2
+backpedal_transition,reaccel_after_brake,2
+forty,accel_low,4
+three_cone,braking,2
+pass_rush,accel_low,2
+gauntlet,speed_maintenance,2
+three_cone,repeated_change,2
+backpedal_transition,redirection,2

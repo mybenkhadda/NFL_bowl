@@ -1,0 +1,13 @@
+output,fingerprint,rows_in,rows_out,seconds,written_at,type_changes,dup_dup_keys,dup_dup_rows,dup_conflicting_keys,play_level_columns,off_grid,no_direction,frame_key_collisions
+players,110301ff2e46bc2b,510,510,0.04,2026-10-08T00:27:37Z,"{""draft_round"": ""BIGINT"", ""draft_pick_within_round"": ""BIGINT"", ""draft_overall_pick"": ""BIGINT""}",0,0,0,,,,
+games,5ce125c846c2126e,1002,1002,0.03,2026-10-08T00:27:37Z,{},0,0,0,,,,
+combine_results,fc2e4dc555c0bc7e,510,510,0.03,2026-10-08T00:27:37Z,"{""bench_reps"": ""BIGINT""}",0,0,0,,,,
+player_career_successes,e0037ff0e0b3cb83,510,510,0.04,2026-10-08T00:27:37Z,"{""career_offensive_snaps"": ""BIGINT"", ""career_defensive_snaps"": ""BIGINT"", ""career_special_teams_snaps"": ""BIGINT"", ""career_games_active"": ""BIGINT"", ""career_games_started"": ""BIGINT"", ""ap_all_pro_1st_team"": ""BIGINT"", ""ap_all_pro_2nd_team"": ""BIGINT"", ""pro_bowl_original_ballot"": ""BIGINT""}",0,0,0,,,,
+plays,293884c35a565e9f,314197,114954,23.99,2026-10-08T00:28:01Z,,,,,27,,,
+player_play,293884c35a565e9f,314197,314197,0.52,2026-10-08T00:28:01Z,"{""in_motion_at_ball_snap"": ""BOOLEAN"", ""target"": ""BOOLEAN"", ""pressure_allowed"": ""BOOLEAN"", ""quick_pressure"": ""BOOLEAN"", ""unblocked_pressure"": ""BOOLEAN"", ""blitzing"": ""BOOLEAN"", ""recovered_fumble"": ""BOOLEAN"", ""tackle_for_loss"": ""BOOLEAN"", ""quarter"": ""BIGINT"", ""down"": ""BIGINT"", ""yards_to_go"": ""BIGINT"", ""yardline_number"": ""BIGINT"", ""pre_snap_home_score"": ""BIGINT"", ""pre_snap_visitor_score"": ""BIGINT"", ""penalty_yards"": ""BIGINT"", ""pre_penalty_yards_gained"": ""BIGINT"", ""yards_gained"": ""BIGINT"", ""rec_yards"": ""BIGINT"", ""rush_yards"": ""BIGINT"", ""fumble"": ""BIGINT"", ""fumble_lost"": ""BIGINT"", ""pass_rushers_encountered"": ""BIGINT"", ""tackle"": ""BIGINT"", ""assist"": ""BIGINT"", ""caused_forced_fumble"": ""BIGINT""}",0,0,0,,,,
+game_tracking/season=2023,d3b1b65cacc44c0680c3a374bce47ced,3665443,3665443,4.42,2026-10-08T00:28:06Z,,0,0,0,,0,9939,0
+game_tracking/season=2024,ea3a75b6c4c7d22d80c3a374bce47ced,7827944,7827944,12.72,2026-10-08T00:28:19Z,,0,0,0,,0,3572,0
+game_tracking/season=2025,0c1f64cdc87df1c980c3a374bce47ced,11160903,11160903,23.11,2026-10-08T00:28:42Z,,0,0,0,,0,2367,0
+combine_tracking/draft_year=2023,e942f3e9ce73accd80c3a374bce47ced,136097,136097,0.39,2026-10-08T00:28:42Z,,0,0,0,,,,
+combine_tracking/draft_year=2024,e942f3e9ce73accd80c3a374bce47ced,147815,147815,0.38,2026-10-08T00:28:43Z,,0,0,0,,,,
+combine_tracking/draft_year=2025,e942f3e9ce73accd80c3a374bce47ced,179277,179277,0.38,2026-10-08T00:28:43Z,,0,0,0,,,,

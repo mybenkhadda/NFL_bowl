@@ -1,0 +1,5 @@
+# Secrets
+.env
+
+# Generated Superset bundles (regenerated from superset/bootstrap/dashboards_spec.py)
+superset/dashboards/generated/*.zip

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10C_03_gap_TE",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "8,124 eligible player-plays",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:24:10Z",
+  "seed": 20261011,
+  "source": "gap matrix"
+}

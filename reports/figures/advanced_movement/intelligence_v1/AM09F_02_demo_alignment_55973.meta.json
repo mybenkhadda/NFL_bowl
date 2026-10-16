@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09F_02_demo_alignment_55973",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "one prospect",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:20:11Z",
+  "seed": 20261011,
+  "source": "application mart"
+}

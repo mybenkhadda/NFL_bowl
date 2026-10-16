@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_03_separation_distribution",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "37,398 recorded separations \u00b7 116 athletes",
+  "note": "values above 15.0 yd are clipped into the last bin for display only",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:39:57Z",
+  "seed": 20261011,
+  "source": "silver.player_play.separation_at_pass_forward (eligible WR / TE player-plays)"
+}

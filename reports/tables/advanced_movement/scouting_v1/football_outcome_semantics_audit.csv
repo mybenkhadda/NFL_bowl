@@ -1,0 +1,30 @@
+outcome_id,check,observed,passed,blocking,meaning
+FO01.separation_at_pass_forward,field_present,separation_at_pass_forward: present,true,true,the value field exists in silver.player_play
+FO01.separation_at_pass_forward,one_row_per_player_play,0 conflicting duplicates (0 duplicated rows),true,true,duplicated vendor rows carry the same values (the first is kept)
+FO01.separation_at_pass_forward,recorded_share,"37,398 of 44,960 eligible player-plays (83.2 %)",,false,share of eligible player-plays of the declared positions with a recorded value
+FO01.separation_at_pass_forward,recorded_zero,"0 recorded zeros · 37,398 positive",,false,a recorded zero is a statement by the vendor; a null is not
+FO01.separation_at_pass_forward,non_negative,min 0.128,true,true,a distance cannot be negative
+FO01.separation_at_pass_forward,unit_plausible_yards,median 2.67,true,true,a median nearest-defender distance outside 0.5–10 yd contradicts 'yards' (range declared before reading)
+FO01.separation_at_pass_forward,recorded_for_non_targeted,targeted 100.0 % · not targeted 84.8 %,true,false,"if the value existed for targeted receivers only, the quarterback's choice would select the plays"
+FO01.separation_at_pass_forward,route_label_coverage,100.0 % of recorded values carry a route label · 87.5 % of labelled routes carry a value,,false,the route label documents that the player was in a route (denominator S1)
+FO01.separation_at_pass_forward,nearest_defender_recomputable,median 2 tracked athletes per play (max 11),false,false,"with only the project athletes tracked, 'distance to the nearest defender' cannot be recomputed from tracking"
+FO12.tackle,field_present,tackle: present,true,true,the value field exists in silver.player_play
+FO12.tackle,one_row_per_player_play,0 conflicting duplicates (0 duplicated rows),true,true,duplicated vendor rows carry the same values (the first is kept)
+FO12.tackle,recorded_share,"9,243 of 114,277 eligible player-plays (8.1 %)",,false,share of eligible player-plays of the declared positions with a recorded value
+FO12.tackle,recorded_zero,"3,630 recorded zeros · 5,613 positive",,false,a recorded zero is a statement by the vendor; a null is not
+FO12.tackle,values_in_declared_set,"0 recorded values outside [0.0, 1.0]",true,true,a credit takes the declared values only
+FO12.tackle,play_total_at_most_one,"2 of 11,635 plays with a total above 1 over the delivered rows",,false,a shared credit cannot exceed 1 per play (only the delivered player rows are summed)
+FO12.tackle,zero_explained_by_assist,99.9 % of recorded zeros have assist > 0,,false,what a recorded 0 means: a row created by another credited statistic
+FO12.tackle,zero_explained_by_tackle_for_loss,0.0 % of recorded zeros have tackle_for_loss > 0,,false,what a recorded 0 means: a row created by another credited statistic
+FO12.tackle,zero_explained_by_caused_forced_fumble,0.6 % of recorded zeros have caused_forced_fumble > 0,,false,what a recorded 0 means: a row created by another credited statistic
+FO12.tackle,opportunity_field,no field records tackle attempts or plays run at the player,false,false,a tackle RATE per opportunity is undefined; only credits per snap on the field can be counted
+FO13.sack,field_present,sack: present,true,true,the value field exists in silver.player_play
+FO13.sack,one_row_per_player_play,0 conflicting duplicates (0 duplicated rows),true,true,duplicated vendor rows carry the same values (the first is kept)
+FO13.sack,recorded_share,"28,962 of 50,363 eligible player-plays (57.5 %)",,false,share of eligible player-plays of the declared positions with a recorded value
+FO13.sack,recorded_zero,"28,567 recorded zeros · 395 positive",,false,a recorded zero is a statement by the vendor; a null is not
+FO13.sack,values_in_declared_set,"0 recorded values outside [0.0, 0.5, 1.0]",true,true,a credit takes the declared values only
+FO13.sack,play_total_at_most_one,"0 of 49,940 plays with a total above 1 over the delivered rows",true,true,a shared credit cannot exceed 1 per play (only the delivered player rows are summed)
+FO13.sack,positive_on_sack_coded_plays,100.0 % of positive credits on plays coded 'S',,false,consistency with the play-level result code (its meaning is itself inferred)
+FO13.sack,recorded_on_no_pass_plays,0.4 % of recorded rows are 'no_pass' plays,,false,"if zeros are recorded on run plays, the recorded rows are not pass-rush opportunities"
+FO13.sack,recorded_with_coverage_label,100.0 % of recorded rows carry a coverage label,,false,"the recorded rows coincide with defensive pass-play rows, whatever the player's job on them"
+FO13.sack,rush_participation_field,no field records that the player rushed the passer,false,false,sacks per PASS-RUSH snap is undefined; sacks per recorded pass-defence row is the supported quantity

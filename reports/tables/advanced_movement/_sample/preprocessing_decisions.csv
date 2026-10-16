@@ -1,0 +1,5 @@
+decision,options,evidence,choice,status,rationale
+alignment,elapsed_time | normalized_time | distance | speed_phase,highest integrated ICC per channel on design athletes: ,"",PENDING REVIEW,""
+input_channels,subset of the channel registry,channel missingness (section 2) and alignment_comparison.csv,"",PENDING REVIEW,""
+quality_scenario,S0_all | S1_structural | S2_signal | S3_no_boundary,scenario counts (section 7): S0_all keeps 56 athletes with a repeat; S1_structural keeps 56 athletes with a repeat; S2_signal keeps 51 athletes with a repeat; S3_no_boundary keeps 42 athletes with a repeat,"",PENDING REVIEW,""
+boundary_frames,keep | mask in losses | drop,median share of boundary frames per sequence: 0.118,"",PENDING REVIEW,""

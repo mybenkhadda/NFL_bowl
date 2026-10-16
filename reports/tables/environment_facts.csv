@@ -1,0 +1,23 @@
+item,value
+platform,local
+os,Windows 10 (10.0.26300)
+machine,AMD64
+python,3.10.18
+python_executable,python.exe
+cpu_logical,16
+cpu_physical,8
+ram_total,16540860416
+ram_available,740638720
+data_root,data
+data_root_exists,True
+raw_data_bytes,2306804135
+POLARS_MAX_THREADS,15
+polars_thread_pool_size,15
+lib_polars,2.0.0
+lib_duckdb,1.5.6
+lib_pyarrow,25.0.1
+lib_pandas,2.3.3
+lib_numpy,2.2.6
+lib_matplotlib,3.10.7
+lib_psutil,7.1.0
+lib_pytest,9.1.1

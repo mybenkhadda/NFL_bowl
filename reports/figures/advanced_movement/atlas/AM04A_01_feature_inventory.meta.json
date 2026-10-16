@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_01_feature_inventory",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "1409 definitions; 418 tracked athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T00:59:39Z",
+  "seed": 20261011,
+  "source": "feature_dictionary, atlas_feature_status, atlas_coverage"
+}

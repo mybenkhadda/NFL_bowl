@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_06_first_vs_second_attempt",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with two scored attempts",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T15:17:33Z",
+  "seed": 20261011,
+  "source": "fpca_attempt_scores (out-of-fold)"
+}

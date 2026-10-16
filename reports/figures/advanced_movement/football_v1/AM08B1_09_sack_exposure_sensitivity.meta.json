@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B1_09_sack_exposure_sensitivity",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "supported athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:55Z",
+  "seed": 20261011,
+  "source": "football_sack_exposure"
+}

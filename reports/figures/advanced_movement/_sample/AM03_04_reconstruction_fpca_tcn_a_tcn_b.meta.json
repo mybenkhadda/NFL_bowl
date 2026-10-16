@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_04_reconstruction_fpca_tcn_a_tcn_b",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "60 athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T22:55:32Z",
+  "seed": 20261011,
+  "source": "repr_reconstruction"
+}

@@ -1,0 +1,8 @@
+check_id,severity,classification,drilldown_mode,n_affected_rows,n_affected_trajectories,n_affected_athletes,n_affected_linked_athletes,blocking
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",CRITICAL,rule_error,exact,64190,551,54,54,false
+"fk:game_tracking:game_id,play_id->player_play",HIGH,coverage_gap,exact,14952,209,46,46,false
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",MEDIUM,coverage_gap,exact,180858,2497,124,124,false
+range:combine_tracking:a,MEDIUM,rule_error,exact,0,0,0,0,false
+range:combine_tracking:s,MEDIUM,rule_error,exact,0,0,0,0,false
+trk:game:n_jumps,MEDIUM,data_defect_handled,exact (M1 trajectories),391,375,153,,false
+"uniq:combine_tracking:event_id, nfl_id, time",MEDIUM,rule_error,exact,64190,551,54,54,false

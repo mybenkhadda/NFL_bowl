@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B6_01_evidence_hierarchy",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "20 of 20 claims executed",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:44:27Z",
+  "seed": 20261011,
+  "source": "final_evidence_registry"
+}

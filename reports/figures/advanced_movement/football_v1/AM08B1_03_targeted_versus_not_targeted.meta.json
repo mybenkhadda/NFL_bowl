@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B1_03_targeted_versus_not_targeted",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "recorded player-plays with a target flag",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:46Z",
+  "seed": 20261011,
+  "source": "football_outcome_rows"
+}

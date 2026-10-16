@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07C_06_reliability_attenuation",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "analytic",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:00:53Z",
+  "seed": 20261011,
+  "source": "attenuation approximation + persisted reliabilities"
+}

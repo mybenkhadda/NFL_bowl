@@ -1,0 +1,6 @@
+scope,component,variance,share_within_position,share_total,ci_lower,ci_upper,n_athletes,n_athlete_games,n_windows,method,truncated,note
+ALL,context:alignment,,0.05050838769843837,,,,401,7891,239528,marginal η² of position × level cells beyond position,false,"38 cells · window level, descriptive: not additive with the nested components"
+ALL,context:alignment_x_play_class,,0.12123862788964118,,,,401,7891,241760,marginal η² of position × level cells beyond position,false,"93 cells · window level, descriptive: not additive with the nested components"
+ALL,context:down,,0.01234632906952311,,,,401,7891,241760,marginal η² of position × level cells beyond position,false,"25 cells · window level, descriptive: not additive with the nested components"
+ALL,context:season,,0.011594730130219735,,,,401,7891,241760,marginal η² of position × level cells beyond position,false,"15 cells · window level, descriptive: not additive with the nested components"
+ALL,context:starting_speed_band,,0.08614387362966941,,,,401,7891,241760,marginal η² of position × level cells beyond position,false,"20 cells · window level, descriptive: not additive with the nested components · 4 bands"

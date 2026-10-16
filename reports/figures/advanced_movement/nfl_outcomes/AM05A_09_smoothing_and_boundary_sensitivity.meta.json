@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05A_09_smoothing_and_boundary_sensitivity",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "125419 windows",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T09:02:32Z",
+  "seed": 20261011,
+  "source": "nfl_play_movement, nfl_play_movement_variants"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10C_02_nfl_demands_by_position",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "416,507 episodes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:24:07Z",
+  "seed": 20261011,
+  "source": "nfl_movement_demands"
+}

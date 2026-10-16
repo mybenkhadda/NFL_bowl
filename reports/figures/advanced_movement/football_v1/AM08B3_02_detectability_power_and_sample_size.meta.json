@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B3_02_detectability_power_and_sample_size",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "84 athletes; 6800 synthetic replicates",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:40:54Z",
+  "seed": 20261011,
+  "source": "transfer_power_scenarios (football cohort)"
+}

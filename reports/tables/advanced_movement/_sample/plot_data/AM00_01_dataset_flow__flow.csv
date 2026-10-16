@@ -1,0 +1,49 @@
+section,item,metric,value,note
+flow,01_combine_athletes,n_athletes,60.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|DB,n_athletes,13.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|DL,n_athletes,13.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|OL,n_athletes,14.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|TE,n_athletes,6.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|WR,n_athletes,14.0,athletes with a Combine results row or a tracked sequence
+flow,02_primary_sequence,n_athletes,60.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|DB,n_athletes,13.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|DL,n_athletes,13.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|OL,n_athletes,14.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|TE,n_athletes,6.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|WR,n_athletes,14.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow,03_official_times,n_athletes,60.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|DB,n_athletes,13.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|DL,n_athletes,13.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|OL,n_athletes,14.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|TE,n_athletes,6.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|WR,n_athletes,14.0,… AND official forty + 10-yard split
+flow,04_nfl_any,n_athletes,59.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|DB,n_athletes,13.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|DL,n_athletes,12.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|OL,n_athletes,14.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|TE,n_athletes,6.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|WR,n_athletes,14.0,… AND ≥ 1 tracked NFL play (any season type)
+flow,05_nfl_reg,n_athletes,51.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|DB,n_athletes,11.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|DL,n_athletes,11.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|OL,n_athletes,12.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|TE,n_athletes,5.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|WR,n_athletes,12.0,… AND ≥ 1 tracked regular-season play
+flow,06_nfl_reg_ge_20,n_athletes,50.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|DB,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|DL,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|OL,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|TE,n_athletes,5.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|WR,n_athletes,12.0,… AND ≥ 20 regular-season plays
+flow,07_nfl_reg_ge_50,n_athletes,44.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|DB,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|DL,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|OL,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|TE,n_athletes,3.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|WR,n_athletes,11.0,… AND ≥ 50 regular-season plays
+flow,08_nfl_reg_ge_100,n_athletes,37.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|DB,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|DL,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|OL,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|TE,n_athletes,3.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|WR,n_athletes,10.0,… AND ≥ 100 regular-season plays

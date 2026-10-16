@@ -1,0 +1,7 @@
+domain,reason,n_trajectories,share
+combine,vendor_speed_disagreement,1,0.0001584786053882726
+nfl,vendor_speed_disagreement,2357,0.007483870148343833
+nfl,split_segments,380,0.0012065637065637065
+nfl,accel_implausible,306,0.000971601300548669
+nfl,moderate_residual,223,0.0007080623856939647
+nfl,speed_implausible,1,3.1751676488518594e-6

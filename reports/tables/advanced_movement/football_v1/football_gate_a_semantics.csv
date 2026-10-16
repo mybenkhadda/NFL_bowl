@@ -1,0 +1,6 @@
+criterion,passed,detail
+lineage_recorded_for_every_field,true,12 fields; 0 with recorded source evidence
+unresolved_semantics_stay_visible,true,"definitions by class: BLOCKED 5, PROVISIONAL 6"
+decision_recorded,true,FREEZE → frozen_exploratory
+no_source_class_upgraded,true,"FO01.S0 PROVISIONAL, FO12.T2 PROVISIONAL, FO13.K0 PROVISIONAL"
+football_transfer_allowed,true,EXPLORATORY — source semantics inferred; definitions locked — strongest claim: exploratory association only — never a confirmed predictive claim

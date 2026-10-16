@@ -1,0 +1,61 @@
+level,n,rate,family,by
+OL,121,0.7851239669421488,forty,position_group
+WR,107,0.8785046728971962,forty,position_group
+DL,118,0.788135593220339,forty,position_group
+TE,42,0.8095238095238095,forty,position_group
+DB,122,0.8360655737704918,forty,position_group
+,86,0.0,forty,forty_quartile
+Q1 fastest,106,0.9811320754716981,forty,forty_quartile
+Q4 slowest,106,1.0,forty,forty_quartile
+Q3,103,0.9805825242718447,forty,forty_quartile
+Q2,109,0.981651376146789,forty,forty_quartile
+DB,122,0.22950819672131148,short_shuttle,position_group
+TE,42,0.5,short_shuttle,position_group
+DL,118,0.3220338983050847,short_shuttle,position_group
+WR,107,0.27102803738317754,short_shuttle,position_group
+OL,121,0.4462809917355372,short_shuttle,position_group
+Q2,109,0.3944954128440367,short_shuttle,forty_quartile
+Q3,103,0.42718446601941745,short_shuttle,forty_quartile
+Q1 fastest,106,0.29245283018867924,short_shuttle,forty_quartile
+Q4 slowest,106,0.32075471698113206,short_shuttle,forty_quartile
+,86,0.20930232558139536,short_shuttle,forty_quartile
+DL,118,0.940677966101695,three_cone,position_group
+WR,107,0.22429906542056074,three_cone,position_group
+OL,121,1.0,three_cone,position_group
+DB,122,0.19672131147540983,three_cone,position_group
+TE,42,0.4523809523809524,three_cone,position_group
+,86,0.6511627906976745,three_cone,forty_quartile
+Q4 slowest,106,0.5566037735849056,three_cone,forty_quartile
+Q2,109,0.5504587155963303,three_cone,forty_quartile
+Q3,103,0.6213592233009708,three_cone,forty_quartile
+Q1 fastest,106,0.5660377358490566,three_cone,forty_quartile
+DL,118,0.0,gauntlet,position_group
+WR,107,1.0,gauntlet,position_group
+OL,121,0.0,gauntlet,position_group
+DB,122,0.9754098360655737,gauntlet,position_group
+TE,42,0.9761904761904762,gauntlet,position_group
+Q3,103,0.5436893203883495,gauntlet,forty_quartile
+Q1 fastest,106,0.5094339622641509,gauntlet,forty_quartile
+,86,0.4186046511627907,gauntlet,forty_quartile
+Q2,109,0.5871559633027523,gauntlet,forty_quartile
+Q4 slowest,106,0.5377358490566038,gauntlet,forty_quartile
+DL,118,0.5169491525423728,backpedal_transition,position_group
+WR,107,0.0,backpedal_transition,position_group
+OL,121,0.0,backpedal_transition,position_group
+TE,42,0.0,backpedal_transition,position_group
+DB,122,1.0,backpedal_transition,position_group
+Q1 fastest,106,0.4339622641509434,backpedal_transition,forty_quartile
+Q2,109,0.47706422018348627,backpedal_transition,forty_quartile
+Q3,103,0.2912621359223301,backpedal_transition,forty_quartile
+Q4 slowest,106,0.22641509433962265,backpedal_transition,forty_quartile
+,86,0.36046511627906974,backpedal_transition,forty_quartile
+DB,122,0.0,pass_rush,position_group
+OL,121,1.0,pass_rush,position_group
+WR,107,0.0,pass_rush,position_group
+TE,42,0.0,pass_rush,position_group
+DL,118,1.0,pass_rush,position_group
+Q1 fastest,106,0.4811320754716981,pass_rush,forty_quartile
+Q3,103,0.44660194174757284,pass_rush,forty_quartile
+,86,0.5813953488372093,pass_rush,forty_quartile
+Q4 slowest,106,0.4528301886792453,pass_rush,forty_quartile
+Q2,109,0.4036697247706422,pass_rush,forty_quartile

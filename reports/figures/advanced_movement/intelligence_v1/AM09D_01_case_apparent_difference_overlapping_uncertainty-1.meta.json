@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09D_01_case_apparent_difference_overlapping_uncertainty-1",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "two athletes, every recorded attempt",
+  "note": "Apparent difference inside the measurement uncertainty",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:12:03Z",
+  "seed": 20261011,
+  "source": "scouting_cases + stopwatch_twin_differences + sequence_frames"
+}

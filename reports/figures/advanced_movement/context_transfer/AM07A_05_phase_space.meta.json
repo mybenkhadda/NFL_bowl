@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07A_05_phase_space",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "15,592,605 frames",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:33:58Z",
+  "seed": 20261011,
+  "source": "nfl_phase_space (05A)"
+}

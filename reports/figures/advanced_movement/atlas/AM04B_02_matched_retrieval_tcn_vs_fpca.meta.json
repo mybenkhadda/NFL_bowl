@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04B_02_matched_retrieval_tcn_vs_fpca",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "234 confirm athletes, 865 matched comparisons",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T01:35:46Z",
+  "seed": 20261011,
+  "source": "robust_matched_summary"
+}

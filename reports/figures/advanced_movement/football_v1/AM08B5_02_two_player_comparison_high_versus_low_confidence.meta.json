@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B5_02_two_player_comparison_high_versus_low_confidence",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "two athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:42:49Z",
+  "seed": 20261011,
+  "source": "scouting_pairwise_uncertainty"
+}

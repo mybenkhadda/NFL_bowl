@@ -1,0 +1,19 @@
+# Wiring check — the 12F SMOKE budgets (M12Config.for_mode(smoke)). Numbers are NOT results and are never comparable
+# with `default`: run_mode is recorded in every checkpoint directory and artifact.
+description: Smoke budgets for checking the pipeline end to end in minutes.
+extends: default
+
+science:
+  run_mode: fast_iteration
+  epochs: 2
+  batch: 64
+  max_minutes: 5.0
+  n_boot: 60
+  n_perm: 10
+  max_train_batches: 4
+  max_val_batches: 4
+  learning_curve_fractions: [0.3]
+
+evaluation:
+  default_level: quick
+  identity_null_perms: 2

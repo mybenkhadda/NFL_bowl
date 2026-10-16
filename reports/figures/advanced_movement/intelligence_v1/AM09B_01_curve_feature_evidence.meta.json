@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09B_01_curve_feature_evidence",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "375 athletes with a repeat (largest)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:08:27Z",
+  "seed": 20261011,
+  "source": "combine_curve_feature_evidence"
+}

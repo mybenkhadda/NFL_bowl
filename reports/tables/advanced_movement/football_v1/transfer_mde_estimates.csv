@@ -1,0 +1,28 @@
+study,candidate,mode,n_athletes,scope,target_power,mde_effect,mde_delta_rmse,mde_relative,mde_delta_r2,max_power_reached,method,note
+power,M2,conditional,84,ALL,0.8,,,,,0.605,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M2,conditional,84,TE,0.8,,,,,0.17,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M2,conditional,84,WR,0.8,,,,,0.56,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M2,raw,84,ALL,0.8,,,,,0.605,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M2,raw,84,TE,0.8,,,,,0.285,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M2,raw,84,WR,0.8,,,,,0.485,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,conditional,84,ALL,0.8,,,,,0.29,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,conditional,84,TE,0.8,,,,,0.14,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,conditional,84,WR,0.8,,,,,0.235,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,raw,84,ALL,0.8,,,,,0.395,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,raw,84,TE,0.8,,,,,0.19,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+power,M5,raw,84,WR,0.8,,,,,0.285,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.35: the effect grid does not reach it
+sample_size,M2,conditional,84,ALL,0.8,,,,,0.28,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,84,TE,0.8,,,,,0.13829787234042554,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,84,WR,0.8,,,,,0.28,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,150,ALL,0.8,,,,,0.7,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,150,TE,0.8,,,,,0.3,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,150,WR,0.8,,,,,0.59,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,284,ALL,0.8,0.12500000000000003,0.020227905379768346,0.051627063096667467,0.08738172855676876,0.98,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,284,TE,0.8,,,,,0.44,linear interpolation of the simulated power curve over the effect grid,power stays below 80% up to f = 0.2: the effect grid does not reach it
+sample_size,M2,conditional,284,WR,0.8,0.16000000000000003,0.027327972856014626,0.06854115431369384,0.11904267517374127,0.94,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,500,ALL,0.8,0.055555555555555566,0.008673229782942358,0.022172936625930516,0.03797391628831371,1.0,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,500,TE,0.8,0.184375,0.03691271207761678,0.10005158904191044,0.1433174506302417,0.85,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,500,WR,0.8,0.08703703703703705,0.014534032311136522,0.03675515217831632,0.06435502233282263,1.0,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,1000,ALL,0.8,0.039898989898989906,0.006601903845149126,0.01707552197100605,0.028875630268575227,1.0,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,1000,TE,0.8,0.1384615384615385,0.026949913591247692,0.07358776000766834,0.10695178813779048,0.96,linear interpolation of the simulated power curve over the effect grid,""
+sample_size,M2,conditional,1000,WR,0.8,0.0423913043478261,0.006952467123211921,0.017693530991070145,0.030964585289309187,1.0,linear interpolation of the simulated power curve over the effect grid,""

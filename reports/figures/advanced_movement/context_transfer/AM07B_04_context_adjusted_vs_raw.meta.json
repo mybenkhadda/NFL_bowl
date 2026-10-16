@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07B_04_context_adjusted_vs_raw",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "401 NFL athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:41:34Z",
+  "seed": 20261011,
+  "source": "nfl_context_adjusted_outcomes (07A)"
+}

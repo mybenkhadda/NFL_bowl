@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09D_02_band_time_same_first10_different_later-1",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "two athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:11:48Z",
+  "seed": 20261011,
+  "source": "stopwatch_twin_differences"
+}

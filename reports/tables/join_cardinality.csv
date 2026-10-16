@@ -1,0 +1,8 @@
+left,right,keys,purpose,n_left,n_right,keys_left,keys_right,max_per_key_left,max_per_key_right,matched_keys,est_inner_rows,left_rows_unmatched,cardinality,multiplicative_factor,left_match_rate,explosion_flag
+combine_results,players,nfl_id,Attach biography to traditional Combine results,510,510,510,510,1,1,510,510.0,,1:1,1.0,1.0,false
+combine_tracking,combine_results,nfl_id,Tracking frames ↔ traditional results,431094,510,510,510,1305,1,510,431094.0,,N:1,1.0,1.0,false
+player_play,games,game_id,Play rows ↔ game metadata,314197,1002,1001,1002,812,1,1001,314197.0,,N:1,1.0,1.0,false
+game_tracking,player_play,"game_id, play_id, nfl_id",Frames ↔ player-play context,22654290,314197,314944,314197,688,1,312447,22473432.0,180858,N:1,0.992,0.992,false
+game_tracking,player_play,"game_id, play_id",ANTI-PATTERN: frames ↔ player_play on play only (every frame × every player),22654290,314197,114565,114954,1544,11,114363,82427686.0,14952,N:M,3.639,0.9993,true
+game_tracking,players,nfl_id,Frames ↔ biography,22654290,510,497,510,278149,1,497,22654290.0,,N:1,1.0,1.0,false
+combine_tracking,game_tracking,nfl_id,ANTI-PATTERN: Combine frames × NFL frames — aggregate both sides to athlete level first,431094,22654290,510,497,1305,278149,497,18663886845.0,12333,N:M,823.857,0.9714,true

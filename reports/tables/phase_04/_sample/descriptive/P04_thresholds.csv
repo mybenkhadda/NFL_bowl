@@ -1,0 +1,42 @@
+study_section,name,value,unit,provenance,rationale
+eligibility,signal_quantile,0.95,quantile,proposed,= Study A3 unreliable_quantile (same 'unreliable signal' target)
+eligibility,min_attempts_eligible,2,attempts,established,MovementConfig.min_attempts — ICC needs ≥ 2 attempts
+eligibility,min_athletes,10,athletes,proposed,clusters needed for a cluster-bootstrap interval
+eligibility,n_boot,300,resamples,execution,proportions — cheap
+smoothing,nfl_games_per_season,8,games,established,KinematicDiagnostics / Study A2 / A3 deterministic sample
+smoothing,top_fraction,0.1,share,proposed,decile = scouting-relevant 'top athletes' set
+smoothing,min_athletes,10,athletes,proposed,clusters needed for a cluster-bootstrap interval
+smoothing,min_trajectories,20,trajectories,proposed,below this a comparison is not interpreted
+smoothing,n_boot,200,resamples,execution,Spearman bootstrap is O(n log n) per resample
+smoothing,max_attempts,4,attempts,established,MovementConfig.max_attempts (position drills must not dominate)
+smoothing,min_attempts,2,attempts,established,MovementConfig.min_attempts
+smoothing,speed_bands,"(0.0, 1.0, 3.0, 5.0, 7.0, 9.0)",yd/s,established,QualityStudyConfig.speed_bands
+smoothing,example_drills,"('FORTY_YARD_DASH', 'SHORT_SHUTTLE', 'THREE_CONE_DRILL')",drills,established,M1 example drills
+smoothing,robustness_settings,"('sg5p2', 'sg11p3')",labels,proposed,the narrowest and widest SG windows bracket the setting effect
+events,match_tolerance_s,0.3,s,established,AnnotationConfig.tolerance_s (C2)
+events,min_athletes,10,athletes,proposed,clusters needed for a cluster-bootstrap interval
+events,n_boot,500,resamples,execution,ratio bootstrap — cheap
+annotation,combine_strata,"('FORTY_YARD_DASH', 'SHORT_SHUTTLE', 'THREE_CONE_DRILL', 'SKILL_DRILLS_WR', 'SKILL_DRILLS_DB', 'SKILL_DRILLS_DL', 'SKILL_DRILLS_OL', 'SKILL_DRILLS_TE')",strata,established,Study A drill_type strata with ≥ 40 athletes (LB drills excluded: 4 athletes in A3)
+annotation,nfl_positions,"('WR', 'DB', 'DL', 'OL', 'TE', 'LB', 'RB')",position groups,established,dim_athlete.position_group
+annotation,per_stratum_random,6,tasks,proposed,random tasks give an unbiased within-stratum P/R estimate
+annotation,per_stratum_difficult,2,tasks,proposed,stress test; never pooled with random tasks for the headline
+annotation,dev_fraction,0.3,share of athletes,proposed,athlete-level split so no athlete informs both detector revision and evaluation
+annotation,tolerances_s,"(0.2, 0.3, 0.5)",s,proposed,2 / 3 / 5 frames — tolerance sensitivity is reported
+annotation,primary_tolerance_s,0.3,s,established,AnnotationConfig.tolerance_s (C2)
+annotation,n_boot,1000,resamples,execution,athlete-cluster bootstrap of TP/FP/FN sums
+validation,rho_pass,0.9,Spearman ρ,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,rho_fail,0.8,Spearman ρ,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,overlap_pass,0.7,share,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,overlap_fail,0.5,share,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,rel_diff_pass,0.05,relative change,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,rel_diff_fail,0.15,relative change,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,boundary_ratio_pass,1.5,observed / expected,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,boundary_ratio_fail,3.0,observed / expected,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,icc_pass,0.75,ICC,established,reliability_label: 'good' = CI lower ≥ 0.75 (Koo & Li 2016)
+validation,icc_fail,0.5,ICC,established,reliability_label: 'poor' below 0.5
+validation,icc_range_pass,0.05,ICC,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,f1_pass,0.8,F1,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,f1_fail,0.6,F1,proposed,the decision uses the exported continuous value; the cut can be changed without recomputation
+validation,vendor_rel_mae_pass,0.05,relative MAE,proposed,"A2: Combine rel MAE ≈ 0.016, NFL ≈ 0.037 (executed)"
+validation,primary_strata,"('FORTY_YARD_DASH', 'SHORT_SHUTTLE', 'THREE_CONE_DRILL', 'nfl_play')",strata,proposed,the roll-up status uses the drills that answer research questions
+validation,severity,"(('smooth_rank', 'critical'), ('boundary', 'critical'), ('detector_f1', 'critical'), ('smooth_overlap', 'major'), ('repeatability', 'major'), ('event_smoothing', 'major'), ('smooth_magnitude', 'minor'), ('icc_setting_range', 'minor'), ('vendor', 'minor'))",criterion → severity,proposed,critical = measurement is not trustworthy at all; major = athlete ranking not trustworthy; minor = magnitude caveat

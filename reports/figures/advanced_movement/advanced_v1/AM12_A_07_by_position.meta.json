@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_A_07_by_position",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T01:20:26Z",
+  "seed": 20261015,
+  "source": "m12a_by_position"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_09_window_dependence_heatmap",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "athletes (within-athlete panel: athletes with two scored attempts)",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T15:17:41Z",
+  "seed": 20261011,
+  "source": "fpca_window_dependence"
+}

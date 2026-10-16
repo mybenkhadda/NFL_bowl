@@ -1,0 +1,10 @@
+field,total_credit,n_plays,median_rows_recorded
+assist,0.0,7329,1.0
+assist,1.0,4095,1.0
+assist,2.0,211,2.0
+sack,0.0,49393,1.0
+sack,0.5,104,2.0
+sack,1.0,443,2.0
+tackle,0.0,4260,1.0
+tackle,1.0,7373,1.0
+tackle,2.0,2,1.5

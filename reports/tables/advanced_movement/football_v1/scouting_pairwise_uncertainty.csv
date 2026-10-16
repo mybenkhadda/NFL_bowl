@@ -1,0 +1,41 @@
+case,nfl_id_a,nfl_id_b,feature_id,feature_label,unit,value_a,value_b,difference,se_difference,ci_lower,ci_upper,z,verdict,state_a,state_b
+similar_forty_different_development,56096,57226,cmb_forty,official forty-yard dash,s,5.16,5.18,0.019999999999999574,,,,,insufficient_evidence,supported,supported
+similar_forty_different_development,56096,57226,cmb_ten_yd_split,official 10-yard split,s,1.77,1.8,0.030000000000000027,,,,,insufficient_evidence,supported,supported
+similar_forty_different_development,56096,57226,F2.forty.p95_speed,tracked top speed (p95),yd/s,9.066239152026975,9.286809280275634,0.2205701282486583,0.09331577897285803,0.03767456082989956,0.403465695667417,2.363695943778315,distinguishable,supported,supported
+similar_forty_different_development,56096,57226,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,1.724652019039401,1.2538809377576339,-0.47077108128176715,0.0615837422084592,-0.5914729989956277,-0.3500691635679066,-7.644405234229199,distinguishable,supported,supported
+similar_forty_different_development,56066,57207,cmb_forty,official forty-yard dash,s,5.33,5.35,0.019999999999999574,,,,,insufficient_evidence,supported,supported
+similar_forty_different_development,56066,57207,cmb_ten_yd_split,official 10-yard split,s,1.82,1.86,0.040000000000000036,,,,,insufficient_evidence,supported,supported
+similar_forty_different_development,56066,57207,F2.forty.p95_speed,tracked top speed (p95),yd/s,9.054333897330608,8.889971079912431,-0.16436281741817638,0.09129282147761136,-0.34329346097272145,0.0145678261363687,-1.8003914739176363,not_distinguishable,supported,supported
+similar_forty_different_development,56066,57207,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,1.5921251748139162,2.1023634135374416,0.5102382387235254,0.10269789322847181,0.30895406511987683,0.711522412327174,4.968341829451158,distinguishable,supported,supported
+similar_top_speed_different_curve,57334,58330,cmb_forty,official forty-yard dash,s,4.63,4.73,0.10000000000000053,,,,,insufficient_evidence,supported,supported
+similar_top_speed_different_curve,57334,58330,cmb_ten_yd_split,official 10-yard split,s,1.61,1.63,0.019999999999999796,,,,,insufficient_evidence,supported,supported
+similar_top_speed_different_curve,57334,58330,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.362508732800109,10.363971348294228,0.0014626154941197456,0.09331577897285803,-0.18143295192463899,0.18435818291287848,0.015673828265905212,not_distinguishable,supported,supported
+similar_top_speed_different_curve,57334,58330,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8687113812209841,1.2102463356718058,0.3415349544508217,0.0615837422084592,0.2208330367369612,0.46223687216468223,5.545862303962233,distinguishable,supported,supported
+similar_top_speed_different_curve,56103,58214,cmb_forty,official forty-yard dash,s,5.18,5.38,0.20000000000000018,,,,,insufficient_evidence,supported,supported
+similar_top_speed_different_curve,56103,58214,cmb_ten_yd_split,official 10-yard split,s,1.78,1.96,0.17999999999999994,,,,,insufficient_evidence,supported,supported
+similar_top_speed_different_curve,56103,58214,F2.forty.p95_speed,tracked top speed (p95),yd/s,9.334265547110945,9.316702493528624,-0.017563053582321686,0.09129282147761136,-0.19649369713686676,0.1613675899722234,-0.19238153995085852,not_distinguishable,supported,supported
+similar_top_speed_different_curve,56103,58214,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,1.2810413567219547,1.8440387635631614,0.5629974068412067,0.10269789322847181,0.36171323323755816,0.7642815804448553,5.482073576608894,distinguishable,supported,supported
+similar_body_different_fingerprint,55891,57141,cmb_forty,official forty-yard dash,s,4.98,5.01,0.02999999999999936,,,,,insufficient_evidence,supported,supported
+similar_body_different_fingerprint,55891,57141,cmb_ten_yd_split,official 10-yard split,s,1.77,1.71,-0.06000000000000005,,,,,insufficient_evidence,supported,supported
+similar_body_different_fingerprint,55891,57141,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.185310610162709,,,,,,,not_observed,supported,not_observed
+similar_body_different_fingerprint,55891,57141,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,1.3167736916067583,,,,,,,not_observed,supported,not_observed
+similar_body_different_fingerprint,56089,57377,cmb_forty,official forty-yard dash,s,4.57,4.6,0.02999999999999936,,,,,insufficient_evidence,supported,supported
+similar_body_different_fingerprint,56089,57377,cmb_ten_yd_split,official 10-yard split,s,1.57,1.59,0.020000000000000018,,,,,insufficient_evidence,supported,supported
+similar_body_different_fingerprint,56089,57377,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.968323099485135,10.33388878328857,-0.6344343161965647,0.10257239718195652,-0.8354725220669008,-0.43339611032622843,-6.185234367401212,distinguishable,supported,supported
+similar_body_different_fingerprint,56089,57377,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.9300114033752303,0.8603281624892115,-0.06968324088601874,0.056637801768164873,-0.18069129339075823,0.04132481161872076,-1.2303309576041224,not_distinguishable,supported,supported
+high_versus_low_confidence,55904,57221,cmb_forty,official forty-yard dash,s,4.46,4.46,0.0,,,,,insufficient_evidence,supported,supported
+high_versus_low_confidence,55904,57221,cmb_ten_yd_split,official 10-yard split,s,1.54,1.52,-0.020000000000000018,,,,,insufficient_evidence,supported,supported
+high_versus_low_confidence,55904,57221,F2.forty.p95_speed,tracked top speed (p95),yd/s,11.296021543661457,,,,,,,not_observed,supported,not_observed
+high_versus_low_confidence,55904,57221,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8072277075915926,,,,,,,not_observed,supported,not_observed
+high_versus_low_confidence,55909,57315,cmb_forty,official forty-yard dash,s,4.53,4.53,0.0,,,,,insufficient_evidence,supported,supported
+high_versus_low_confidence,55909,57315,cmb_ten_yd_split,official 10-yard split,s,1.57,1.55,-0.020000000000000018,,,,,insufficient_evidence,supported,supported
+high_versus_low_confidence,55909,57315,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.861694868278203,,,,,,,not_observed,supported,not_observed
+high_versus_low_confidence,55909,57315,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.9559062428686638,,,,,,,not_observed,supported,not_observed
+stable_versus_unstable_attempts,56071,56541,cmb_forty,official forty-yard dash,s,4.43,4.44,0.010000000000000675,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,56071,56541,cmb_ten_yd_split,official 10-yard split,s,1.52,1.51,-0.010000000000000009,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,56071,56541,F2.forty.p95_speed,tracked top speed (p95),yd/s,11.268599514518282,11.267272862894416,-0.0013266516238665815,0.09551642757768948,-0.18853541108474517,0.185882107837012,-0.013889250859885153,not_distinguishable,supported,supported
+stable_versus_unstable_attempts,56071,56541,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8590685894903998,0.8785693842903115,0.019500794799911736,0.050833806919542306,-0.08013163674534209,0.11913322634516556,0.38361861882146275,not_distinguishable,supported,supported
+stable_versus_unstable_attempts,57305,58901,cmb_forty,official forty-yard dash,s,4.52,4.5,-0.019999999999999574,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,57305,58901,cmb_ten_yd_split,official 10-yard split,s,1.55,1.52,-0.030000000000000027,,,,,insufficient_evidence,supported,supported
+stable_versus_unstable_attempts,57305,58901,F2.forty.p95_speed,tracked top speed (p95),yd/s,10.839947153450288,11.077469956957511,0.23752280350722366,0.09551642757768948,0.05031404404634507,0.4247315629681022,2.4867220176762945,distinguishable,supported,supported
+stable_versus_unstable_attempts,57305,58901,F6.forty.time_v4_to_v8_s,speed development 4 → 8 yd/s,s,0.8625038218561198,0.9059723737207429,0.04346855186462306,0.050833806919542306,-0.05616387968063076,0.14310098340987687,0.8551110864748597,not_distinguishable,supported,supported

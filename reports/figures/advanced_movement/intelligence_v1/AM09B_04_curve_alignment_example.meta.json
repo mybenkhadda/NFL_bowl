@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09B_04_curve_alignment_example",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "one attempt and one real play",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:08:35Z",
+  "seed": 20261011,
+  "source": "sequence_frames + nfl_movement_demand_examples"
+}

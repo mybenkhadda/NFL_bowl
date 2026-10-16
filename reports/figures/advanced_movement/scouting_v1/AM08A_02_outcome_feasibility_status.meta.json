@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A_02_outcome_feasibility_status",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "16 candidates",
+  "note": "status by the ordered rule of scouting_feasibility.status_of; tick = defensible",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:43:28Z",
+  "seed": 20261011,
+  "source": "football_outcome_feasibility_registry"
+}

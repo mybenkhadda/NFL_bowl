@@ -1,0 +1,23 @@
+check,passed,blocking,n_violations,detail
+original_clock_strictly_increasing,true,true,0,"t_s (seconds since the trajectory's first valid frame, Phase 03) increases on every frame of every sequence"
+t_rel_is_original_clock_minus_first_frame,true,true,0,t_rel = t_s − t_s of frame 0; the original clock is kept beside it in sequence_frames and on every aligned grid
+regular_sampling_inside_sequences,true,false,0,"0 of 40707 frame steps differ from 0.1 s; every alignment interpolates on the recorded clock, so an irregular step is used as recorded, not assumed regular"
+padding_is_zero_and_masked,true,true,0,"41,500 real frames and 29,870 padded cells in 793 sequences; padded cells are exactly zero, flagged by `mask`, and aligned curves hold NaN (not zero) outside the recording"
+fpca_axis_channels_always_defined,true,true,0,"undefined real frames of t_rel / dist / speed; shares of undefined real frames per channel: t_rel 0.00 %, dist 0.00 %, along 0.00 %, speed 0.00 %, a_tan 0.03 %, a_lat 0.03 %, yaw_rate 3.45 %, lat_dev 0.00 %, head_sin 3.45 %, head_cos 3.45 %, pos_resid 0.00 %"
+boundary_frames_flagged_on_both_edges,true,false,0,sequences whose flagged boundary frames differ from 2 × 3 (the Savitzky–Golay half-window at each edge); median share of boundary frames per sequence 0.118
+sprint_rescue_flags_present,true,true,0,"eligible sequences without sprint-rescue flags (793 checked). Non-zero means the manifest was built on the quality-tier fallback: rerun the sprint rescue, then notebook 00"
+censoring_indicators_complete,true,true,0,sequences with an undefined first-frame or last-frame censoring indicator
+no_value_outside_the_recording:A_speed_by_distance,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:A_speed_by_distance,true,false,0,99.7 % of grid points × sequences observed; 0 of 793 sequences have no value on the grid and cannot be scored
+no_value_outside_the_recording:B_accel_by_speed,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:B_accel_by_speed,true,false,0,79.5 % of grid points × sequences observed; 0 of 793 sequences have no value on the grid and cannot be scored
+no_value_outside_the_recording:C_speed_by_time,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:C_speed_by_time,true,false,0,85.7 % of grid points × sequences observed; 0 of 793 sequences have no value on the grid and cannot be scored
+no_value_outside_the_recording:A_alt_origin_at_ref_speed,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:A_alt_origin_at_ref_speed,true,false,0,98.8 % of grid points × sequences observed; 3 of 793 sequences have no value on the grid and cannot be scored
+no_value_outside_the_recording:B_alt_boundary_kept,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:B_alt_boundary_kept,true,false,0,88.2 % of grid points × sequences observed; 0 of 793 sequences have no value on the grid and cannot be scored
+no_value_outside_the_recording:C_alt_origin_at_ref_speed,true,true,0,"grid values whose original time is unknown or outside [first frame, last frame] — any would be an extrapolation"
+coverage:C_alt_origin_at_ref_speed,true,false,0,78.8 % of grid points × sequences observed; 3 of 793 sequences have no value on the grid and cannot be scored
+split_registry_passes_the_leakage_audit,true,true,0,the seven checks of notebook 00 re-run on the registry as loaded: one_outer_fold_per_athlete_and_repeat = ok; every_eligible_sequence_has_a_fold = ok; all_attempts_of_an_athlete_share_a_fold = ok; every_outer_fold_is_populated = ok; inner_folds_partition_every_outer_training_set = ok; design_role_is_constant_per_athlete = ok; split_uses_position_and_cohort_only = ok
+every_sequence_athlete_has_a_fold,true,true,0,sequences of an athlete absent from the split registry

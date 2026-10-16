@@ -1,0 +1,21 @@
+workstream,name,value,unit,provenance,rationale
+duplicates,coord_quantum_yds,0.01,yd,proposed,"assumed vendor coordinate precision (2 decimals); verify on raw x, y"
+duplicates,kgram_frames,10,frames,proposed,1 s at 10 Hz — long enough that coincidental equality is implausible
+duplicates,kgram_min_motion_yds,1.0,yd,proposed,excludes stationary windows whose displacements are all ~0
+duplicates,align_speed,2.0,yd/s,established,MovementConfig.onset_speed_fast (robust to pre-start drift)
+duplicates,align_frames,3,frames,established,MovementConfig.onset_frames
+duplicates,max_lag_s,1.0,s,proposed,onset anchors of two attempts can differ by a few frames
+duplicates,grid_dt_s,0.1,s,established,KinematicsConfig.nominal_interval_ms / 1000
+duplicates,min_overlap_frac,0.8,fraction,proposed,pairs with little common aligned time are 'not_comparable'
+duplicates,exact_shared_frac,0.95,fraction,proposed,identical timestamps AND coordinates on ≥ 95 % of frames
+duplicates,reuse_kgram_frac,0.5,fraction,proposed,half of the moving 1-s displacement windows shared
+duplicates,reuse_shared_frame_frac,0.2,fraction,proposed,a fifth of the frames identical in time and position
+duplicates,near_dup_pos_rmse_yds,0.05,yd,proposed,below M1 tier-B residual-noise limit (TierRules.b_max_resid_rms = 0.06 yd): two real runs should not agree more closely than the measurement noise
+duplicates,near_dup_speed_rmse,0.05,yd/s,proposed,≈ 1 % of forty peak speed; far below between-attempt variation
+duplicates,consistent_speed_rmse,0.3,yd/s,proposed,example selection only; never used to flag
+duplicates,cross_athlete_min_frames,20,frames,proposed,short static recordings can coincide by chance
+duplicates,cross_athlete_min_path_yds,2.0,yd,proposed,"as above, for distance"
+duplicates,zero_sd_abs,1e-06,feature unit,proposed,float32 storage noise floor
+duplicates,zero_sd_rel,0.0001,fraction,proposed,relative float32 noise floor
+duplicates,quantized_unique_frac,0.1,fraction,proposed,"grid-searched fit parameters (tau step 0.01 s, t0 step 0.02 s) tie by construction; explains zero SD, not flags it"
+duplicates,max_attempts_per_group,8,attempts,execution,bounds pairwise work; larger groups are flagged

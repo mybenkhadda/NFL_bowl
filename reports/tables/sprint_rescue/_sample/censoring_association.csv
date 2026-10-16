@@ -1,0 +1,439 @@
+analysis,outcome,predictor,adjustment,group,statistic,n,estimate,ci_lower,ci_upper,note
+A2_paired_association,d_accel_initial,d_duration_s,none,all,spearman,70,-0.6500778668749292,-0.7677734160794918,-0.48994338909190327,""
+A2_paired_association,d_accel_initial,d_duration_s,position+cohort+noise,all,spearman,70,-0.6708174657106446,-0.7861011630950085,-0.5104308581859401,""
+A2_paired_association,d_accel_initial,d_first_speed,none,all,spearman,70,-0.2751290350800455,-0.4791282869950548,-0.042930384456190775,""
+A2_paired_association,d_accel_initial,d_first_speed,position+cohort+noise,all,spearman,70,-0.2284055333129086,-0.44738193287226596,0.01640761072293711,""
+A2_paired_association,d_accel_initial,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_accel_initial,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_accel_initial,d_path_smooth_yds,none,all,spearman,70,-0.2535036304785233,-0.461016395663776,-0.019703268846600033,""
+A2_paired_association,d_accel_initial,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.26234277728217453,-0.47579787947340335,-0.01970446011887988,""
+A2_paired_association,d_accel_sustained,d_duration_s,none,all,spearman,70,-0.5218138061027886,-0.6741308337842467,-0.3269249289365484,""
+A2_paired_association,d_accel_sustained,d_duration_s,position+cohort+noise,all,spearman,70,-0.5468678029618628,-0.697706431393383,-0.3495983153686877,""
+A2_paired_association,d_accel_sustained,d_first_speed,none,all,spearman,70,-0.13442393491383078,-0.3580873616942346,0.10382966429746855,""
+A2_paired_association,d_accel_sustained,d_first_speed,position+cohort+noise,all,spearman,70,-0.08691518644412176,-0.3239470925232052,0.16038382637153867,""
+A2_paired_association,d_accel_sustained,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_accel_sustained,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_accel_sustained,d_path_smooth_yds,none,all,spearman,70,-0.2482197533024232,-0.4565645586540744,-0.01406614209722855,""
+A2_paired_association,d_accel_sustained,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.26962275174275846,-0.4818359678545335,-0.02753431878349817,""
+A2_paired_association,d_accel_v2_5,d_duration_s,none,all,spearman,70,-0.5664845853461347,-0.7073092641335925,-0.38241327379759915,""
+A2_paired_association,d_accel_v2_5,d_duration_s,position+cohort+noise,all,spearman,70,-0.5776699807050053,-0.7201104320148973,-0.38850916804958774,""
+A2_paired_association,d_accel_v2_5,d_first_speed,none,all,spearman,70,-0.09498731519552095,-0.32275753348564146,0.14318247509282214,""
+A2_paired_association,d_accel_v2_5,d_first_speed,position+cohort+noise,all,spearman,70,-0.06692084896811658,-0.3058282503759001,0.17991481951055388,""
+A2_paired_association,d_accel_v2_5,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_accel_v2_5,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_accel_v2_5,d_path_smooth_yds,none,all,spearman,70,-0.26998512816026593,-0.47483580770987305,-0.03738264230614751,""
+A2_paired_association,d_accel_v2_5,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.27420223151301143,-0.48562393932969283,-0.03247497190952513,""
+A2_paired_association,d_accel_v2_7,d_duration_s,none,all,spearman,70,-0.5025687910838723,-0.6596449394630985,-0.30342660193022625,""
+A2_paired_association,d_accel_v2_7,d_duration_s,position+cohort+noise,all,spearman,70,-0.49526584347756103,-0.65950064081581,-0.28590226864346174,""
+A2_paired_association,d_accel_v2_7,d_first_speed,none,all,spearman,70,-0.11433820313183449,-0.34017296530289676,0.12396636171245644,""
+A2_paired_association,d_accel_v2_7,d_first_speed,position+cohort+noise,all,spearman,70,-0.08984834202736641,-0.32659056932070263,0.15750226201989243,""
+A2_paired_association,d_accel_v2_7,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_accel_v2_7,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_accel_v2_7,d_path_smooth_yds,none,all,spearman,70,-0.27274954072259644,-0.4771438624358461,-0.040362300833335425,""
+A2_paired_association,d_accel_v2_7,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.24918598008495535,-0.4648342151838803,-0.005628977789979745,""
+A2_paired_association,d_accel_v4_7,d_duration_s,none,all,spearman,70,-0.40845201819641935,-0.5870806174995203,-0.19189526200320936,""
+A2_paired_association,d_accel_v4_7,d_duration_s,position+cohort+noise,all,spearman,70,-0.3935007960909081,-0.5815827922206104,-0.16548392132943587,""
+A2_paired_association,d_accel_v4_7,d_first_speed,none,all,spearman,70,-0.07364185110663983,-0.3033664435230056,0.164173007462969,""
+A2_paired_association,d_accel_v4_7,d_first_speed,position+cohort+noise,all,spearman,70,-0.05188513905466858,-0.29208795256819636,0.19447500177876467,""
+A2_paired_association,d_accel_v4_7,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_accel_v4_7,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_accel_v4_7,d_path_smooth_yds,none,all,spearman,70,-0.2591024407313446,-0.4657222036743999,-0.025692647637631322,""
+A2_paired_association,d_accel_v4_7,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.22389392379611156,-0.44357073261741736,0.021160721295964302,""
+A2_paired_association,d_model_a0,d_duration_s,none,all,spearman,65,-0.5438850505901333,-0.6955211396123697,-0.34586615029984186,""
+A2_paired_association,d_model_a0,d_duration_s,position+cohort+noise,all,spearman,65,-0.5605534400374433,-0.7129920232761568,-0.35751714344722874,""
+A2_paired_association,d_model_a0,d_first_speed,none,all,spearman,65,-0.18645104895104897,-0.4116311327454127,0.060184988540104095,""
+A2_paired_association,d_model_a0,d_first_speed,position+cohort+noise,all,spearman,65,-0.17072357647596187,-0.40700426415419233,0.08697141807955606,""
+A2_paired_association,d_model_a0,d_fit_start_rel_s,none,all,spearman,65,,,,""
+A2_paired_association,d_model_a0,d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A2_paired_association,d_model_a0,d_path_smooth_yds,none,all,spearman,65,-0.24986888111888111,-0.4654049139380432,-0.006357196038021242,""
+A2_paired_association,d_model_a0,d_path_smooth_yds,position+cohort+noise,all,spearman,65,-0.25579448190422016,-0.4786308931799709,-0.001999662661677974,""
+A2_paired_association,d_model_a_at_ref,d_duration_s,none,all,spearman,65,-0.5716220822999667,-0.7157347950436755,-0.3808155603959021,""
+A2_paired_association,d_model_a_at_ref,d_duration_s,position+cohort+noise,all,spearman,65,-0.58658998340148,-0.7315504720010345,-0.390887913324636,""
+A2_paired_association,d_model_a_at_ref,d_first_speed,none,all,spearman,65,-0.1750437062937063,-0.40178922749246127,0.07192614741700502,""
+A2_paired_association,d_model_a_at_ref,d_first_speed,position+cohort+noise,all,spearman,65,-0.160057574106955,-0.39781408881703384,0.09784374993923452,""
+A2_paired_association,d_model_a_at_ref,d_fit_start_rel_s,none,all,spearman,65,,,,""
+A2_paired_association,d_model_a_at_ref,d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A2_paired_association,d_model_a_at_ref,d_path_smooth_yds,none,all,spearman,65,-0.2660402097902098,-0.4788670857208645,-0.02367745790930281,""
+A2_paired_association,d_model_a_at_ref,d_path_smooth_yds,position+cohort+noise,all,spearman,65,-0.2709375742246316,-0.49107726893639014,-0.018269792290634097,""
+A2_paired_association,d_model_tau_s,d_duration_s,none,all,spearman,65,0.500962831193827,0.29284478145559806,0.6637607410833685,""
+A2_paired_association,d_model_tau_s,d_duration_s,position+cohort+noise,all,spearman,65,0.5231571629393944,0.31047701125554406,0.6859575332724839,""
+A2_paired_association,d_model_tau_s,d_first_speed,none,all,spearman,65,0.19509371249184476,-0.051243738063658284,0.4190529497255266,""
+A2_paired_association,d_model_tau_s,d_first_speed,position+cohort+noise,all,spearman,65,0.1740216436744009,-0.08359707942219585,0.4098363365333344,""
+A2_paired_association,d_model_tau_s,d_fit_start_rel_s,none,all,spearman,65,,,,""
+A2_paired_association,d_model_tau_s,d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A2_paired_association,d_model_tau_s,d_path_smooth_yds,none,all,spearman,65,0.23851589258921155,-0.005715723224321198,0.45589391515130173,""
+A2_paired_association,d_model_tau_s,d_path_smooth_yds,position+cohort+noise,all,spearman,65,0.2400388998600687,-0.01478710319529529,0.46558533514369915,""
+A2_paired_association,d_p95_a_tan,d_duration_s,none,all,spearman,70,-0.5294541491440063,-0.6798494769890614,-0.3363211605709517,""
+A2_paired_association,d_p95_a_tan,d_duration_s,position+cohort+noise,all,spearman,70,-0.5728423213501781,-0.7166185465387063,-0.3823657172533968,""
+A2_paired_association,d_p95_a_tan,d_first_speed,none,all,spearman,70,-0.17414049514478175,-0.39303223044661195,0.06342894326049274,""
+A2_paired_association,d_p95_a_tan,d_first_speed,position+cohort+noise,all,spearman,70,-0.10185028422911392,-0.33736875209795136,0.1456673777125732,""
+A2_paired_association,d_p95_a_tan,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_p95_a_tan,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_p95_a_tan,d_path_smooth_yds,none,all,spearman,70,-0.26946023969906396,-0.47439725092537205,-0.03681735119047048,""
+A2_paired_association,d_p95_a_tan,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.3113100785737522,-0.5160280793236227,-0.07294992869233119,""
+A2_paired_association,d_p95_speed,d_duration_s,none,all,spearman,70,-0.40670410952897096,-0.5857052658889805,-0.18987552330503293,""
+A2_paired_association,d_p95_speed,d_duration_s,position+cohort+noise,all,spearman,70,-0.4382175004591581,-0.6162511580192432,-0.2175727526605785,""
+A2_paired_association,d_p95_speed,d_first_speed,none,all,spearman,70,-0.09274779109439243,-0.3207319972389901,0.14539486766482737,""
+A2_paired_association,d_p95_speed,d_first_speed,position+cohort+noise,all,spearman,70,-0.008335426044204263,-0.2517227832651366,0.23604356161767834,""
+A2_paired_association,d_p95_speed,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_p95_speed,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_p95_speed,d_path_smooth_yds,none,all,spearman,70,-0.1440818825999475,-0.3666430216659761,0.09407716859276632,""
+A2_paired_association,d_p95_speed,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.19121154639821786,-0.4157228694979518,0.055264916669145105,""
+A2_paired_association,d_peak_a_tan,d_duration_s,none,all,spearman,70,-0.4321298737534007,-0.6056106203942722,-0.2194373675322367,""
+A2_paired_association,d_peak_a_tan,d_duration_s,position+cohort+noise,all,spearman,70,-0.44144114668300777,-0.6187240329164415,-0.22137706336521132,""
+A2_paired_association,d_peak_a_tan,d_first_speed,none,all,spearman,70,-0.04725745779021957,-0.27913192186100666,0.1898244264938411,""
+A2_paired_association,d_peak_a_tan,d_first_speed,position+cohort+noise,all,spearman,70,-0.029440685839906826,-0.27139105725444057,0.2160094930497039,""
+A2_paired_association,d_peak_a_tan,d_fit_start_rel_s,none,all,spearman,70,,,,""
+A2_paired_association,d_peak_a_tan,d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A2_paired_association,d_peak_a_tan,d_path_smooth_yds,none,all,spearman,70,-0.25059924765987224,-0.4585706515275153,-0.016602874873975278,""
+A2_paired_association,d_peak_a_tan,d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.25006163422298827,-0.46556596481911544,-0.006562786959892694,""
+A2_window_r2,d_accel_initial,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.7604886258183378,0.71389375336017,0.9425142628147684,adjusted R² = 0.7489
+A2_window_r2,d_accel_sustained,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.07724414406326163,0.020389414103054584,0.4851167927346536,adjusted R² = 0.0326
+A2_window_r2,d_accel_v2_5,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.08502675432781626,0.020844091150468272,0.5637573471582717,adjusted R² = 0.0408
+A2_window_r2,d_accel_v2_7,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.08403807055764945,0.01810555114619669,0.5075337424491062,adjusted R² = 0.0397
+A2_window_r2,d_accel_v4_7,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.07062534996873915,0.02057253008052371,0.3987954532468939,adjusted R² = 0.0257
+A2_window_r2,d_model_a0,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,65,0.3924305371646333,0.2854391386596959,0.624767176015533,adjusted R² = 0.3605
+A2_window_r2,d_model_a_at_ref,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,65,0.41674369448025417,0.3123480145870277,0.6408773113609354,adjusted R² = 0.3860
+A2_window_r2,d_model_tau_s,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,65,0.37233409240879445,0.2527651968722753,0.5950720065367902,adjusted R² = 0.3393
+A2_window_r2,d_p95_a_tan,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.11514431126385238,0.06026189296721442,0.5121371585121884,adjusted R² = 0.0723
+A2_window_r2,d_p95_speed,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.08703859204425035,0.0696761587500633,0.3568150757188149,adjusted R² = 0.0429
+A2_window_r2,d_peak_a_tan,d_first_speed+d_duration_s+d_path_smooth_yds,position+cohort,all,partial_r2,70,0.07433909341170197,0.01525120601311401,0.4362239961914939,adjusted R² = 0.0295
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_duration_s,none,all,spearman,70,0.15903717033972564,-0.07888474289260519,0.3798175603702988,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.18576435312993228,-0.060893715122761406,0.4110401546525736,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_first_speed,none,all,spearman,70,-0.012999737555769398,-0.24721860512024946,0.2226544043921167,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_first_speed,position+cohort+noise,all,spearman,70,0.045375127218902564,-0.20074562561105713,0.286107894939834,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_path_smooth_yds,none,all,spearman,70,0.0028868865366109705,-0.23224467676052593,0.23769966621870275,""
+A3_abs_discrepancy,abs_d_accel_initial,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.03362379952102117,-0.2752655084614213,0.2120139984067685,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_duration_s,none,all,spearman,70,0.08153496238717146,-0.15643615672255165,0.31055910696333633,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.1466486231984792,-0.10085791968458332,0.37706120860102127,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_first_speed,none,all,spearman,70,-0.08462951622780159,-0.31337190633829315,0.15339487571493146,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_first_speed,position+cohort+noise,all,spearman,70,0.005642105054994933,-0.2385853236532401,0.24919829258089643,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_path_smooth_yds,none,all,spearman,70,0.03256058087656373,-0.20397402373922838,0.26550326609158864,""
+A3_abs_discrepancy,abs_d_accel_sustained,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.023895182917988884,-0.22129362981662062,0.26624262758894507,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_duration_s,none,all,spearman,70,0.06285597707410318,-0.17469825425385807,0.29349521479232005,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.1132971593412604,-0.13431344472861584,0.34759125406464947,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_first_speed,none,all,spearman,70,0.029096317032630565,-0.20729495508314752,0.26227718144347706,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_first_speed,position+cohort+noise,all,spearman,70,0.07817709108712814,-0.16894331607774069,0.31604997454180167,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_path_smooth_yds,none,all,spearman,70,0.009045577814714373,-0.2264096721312021,0.24350204178577162,""
+A3_abs_discrepancy,abs_d_accel_v2_5,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.00260278641555415,-0.24144960035943802,0.24634551241834413,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_duration_s,none,all,spearman,70,0.19062096984356922,-0.04643282329293226,0.4073494137381345,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.18474757408840564,-0.06194265817175699,0.41016475536665625,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_first_speed,none,all,spearman,70,0.10415536698451579,-0.13410060684683217,0.33102787679398216,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_first_speed,position+cohort+noise,all,spearman,70,-0.0012187525355620238,-0.24504502264466074,0.24275251668926157,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_path_smooth_yds,none,all,spearman,70,0.2028693902545709,-0.03371163245074116,0.417921496834754,""
+A3_abs_discrepancy,abs_d_accel_v2_7,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.15915782348834145,-0.08816366381875451,0.3879955475149534,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_duration_s,none,all,spearman,70,0.11172562854087455,-0.12657121928249127,0.3378307088950506,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.040007523740304786,-0.20590072463081835,0.2811631009820809,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_first_speed,none,all,spearman,70,0.01572915755401977,-0.22005818671803495,0.2497800064532389,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_first_speed,position+cohort+noise,all,spearman,70,-0.1269727821369151,-0.35973152918348617,0.12066308899340399,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_path_smooth_yds,none,all,spearman,70,0.26743067098241624,0.03463295882896863,0.4727005403606512,""
+A3_abs_discrepancy,abs_d_accel_v4_7,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.22014050055826428,-0.025106637214671716,0.44039394731523396,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_duration_s,none,all,spearman,65,0.1978198654669828,-0.048415185096148686,0.42138781878957704,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_duration_s,position+cohort+noise,all,spearman,65,0.16252724718109987,-0.09533176701847303,0.39994629291310324,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_first_speed,none,all,spearman,65,0.05279720279720279,-0.193594865617708,0.2929242714592775,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_first_speed,position+cohort+noise,all,spearman,65,0.006361927298718668,-0.2479633476211529,0.25986682770993647,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_fit_start_rel_s,none,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_path_smooth_yds,none,all,spearman,65,0.18352272727272728,-0.06320552763446216,0.40910966759512024,""
+A3_abs_discrepancy,abs_d_model_a0,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,65,0.1347103884595317,-0.12343662354326373,0.3757810145155633,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_duration_s,none,all,spearman,65,0.23209330727463445,-0.012514198763099114,0.4504912985321253,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_duration_s,position+cohort+noise,all,spearman,65,0.1974812917138631,-0.05942321003594528,0.4298509553809743,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_first_speed,none,all,spearman,65,0.04925699300699301,-0.19700893082397197,0.28967601204197424,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_first_speed,position+cohort+noise,all,spearman,65,-0.005173900746705575,-0.25875865090085415,0.2490780357027262,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_fit_start_rel_s,none,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_path_smooth_yds,none,all,spearman,65,0.22631118881118883,-0.018615439832236683,0.44561371545091844,""
+A3_abs_discrepancy,abs_d_model_a_at_ref,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,65,0.17413499745350103,-0.08348099910080604,0.4099335934344657,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_duration_s,none,all,spearman,65,0.1359669815312855,-0.11163416629642471,0.3676732292614897,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_duration_s,position+cohort+noise,all,spearman,65,0.09031988385279056,-0.1674450792907368,0.3365265353852124,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_first_speed,none,all,spearman,65,0.03499062260190699,-0.21070669703491285,0.2765297776210971,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_first_speed,position+cohort+noise,all,spearman,65,-0.004688127807767465,-0.2583053354175571,0.24953362727903425,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_fit_start_rel_s,none,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,65,,,,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_path_smooth_yds,none,all,spearman,65,0.1824370360425882,-0.06432426153815152,0.4081739444022187,""
+A3_abs_discrepancy,abs_d_model_tau_s,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,65,0.1500676461358829,-0.1079714018094684,0.38916295090661196,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_duration_s,none,all,spearman,70,0.1573140843540255,-0.08064080223591082,0.37830419617534505,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.18000659807378566,-0.06682642277302366,0.4060775053657221,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_first_speed,none,all,spearman,70,-0.13106464876213805,-0.3551026495488627,0.1072111313477707,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_first_speed,position+cohort+noise,all,spearman,70,-0.09744342117777206,-0.3334183888644621,0.15002114634859395,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_path_smooth_yds,none,all,spearman,70,0.14667133234187735,-0.09145457550120539,0.36893054897430255,""
+A3_abs_discrepancy,abs_d_p95_a_tan,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.15033870592272883,-0.09712160879184387,0.380293416358688,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_duration_s,none,all,spearman,70,0.03415009778041826,-0.20244844834440556,0.26698175484128917,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.03299456312132034,-0.21261553777067851,0.2746832031255343,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_first_speed,none,all,spearman,70,-0.10667483159828536,-0.3332945539065713,0.13159779597101315,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_first_speed,position+cohort+noise,all,spearman,70,-0.20247838155595663,-0.42537085142988823,0.043572527481857116,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_path_smooth_yds,none,all,spearman,70,-0.08092030443530748,-0.30999993483781596,0.1570396966212014,""
+A3_abs_discrepancy,abs_d_p95_speed,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,-0.05605015666962094,-0.29590408559780945,0.19045255119931415,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_duration_s,none,all,spearman,70,0.03790789168540256,-0.19883724686240728,0.2704727128886012,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_duration_s,position+cohort+noise,all,spearman,70,0.10622184562080765,-0.14133899251709664,0.34127929222034176,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_first_speed,none,all,spearman,70,-0.06104452803779197,-0.29183253929118946,0.17646062332730827,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_first_speed,position+cohort+noise,all,spearman,70,-0.011954773900433284,-0.2551100449561849,0.23262260789053057,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_fit_start_rel_s,none,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_fit_start_rel_s,position+cohort+noise,all,spearman,70,,,,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_path_smooth_yds,none,all,spearman,70,0.09456740442655934,-0.14359748009355056,0.32237790429242413,""
+A3_abs_discrepancy,abs_d_peak_a_tan,abs_d_path_smooth_yds,position+cohort+noise,all,spearman,70,0.0939880965111287,-0.15342814123499202,0.3303151892955639,""
+A3_fit_quality,model_rmse,duration_s,position+cohort+noise,all,spearman,80,0.2751479779044821,0.05139569590057234,0.4725970393403965,athlete means over attempts
+A3_fit_quality,model_rmse,first_speed,position+cohort+noise,all,spearman,80,-0.2284805743672032,-0.4329891716741455,-0.0016017923174360996,athlete means over attempts
+A3_fit_quality,model_rmse,frames_after_peak,position+cohort+noise,all,spearman,80,-0.02519806962467454,-0.25072601265297784,0.20292429971116677,athlete means over attempts
+A3_fit_quality,tau_rel_width,duration_s,position+cohort+noise,all,spearman,80,0.39442918799885157,0.1839331034448865,0.5703344762542628,athlete means over attempts
+A3_fit_quality,tau_rel_width,first_speed,position+cohort+noise,all,spearman,80,-0.1769263238454383,-0.38829594167158077,0.052128779862766476,athlete means over attempts
+A3_fit_quality,tau_rel_width,frames_after_peak,position+cohort+noise,all,spearman,80,0.03211908526184323,-0.19627355624351833,0.25720594876218744,athlete means over attempts
+A3_fit_quality,vmax_extrapolation_ratio,duration_s,position+cohort+noise,all,spearman,80,-0.010093424651509942,-0.23651345953737385,0.21736636825775538,athlete means over attempts
+A3_fit_quality,vmax_extrapolation_ratio,first_speed,position+cohort+noise,all,spearman,80,-0.1890992364697927,-0.398939281263118,0.03956047762658313,athlete means over attempts
+A3_fit_quality,vmax_extrapolation_ratio,frames_after_peak,position+cohort+noise,all,spearman,80,0.3352377478546375,0.11719264293622617,0.5224484847277794,athlete means over attempts
+A3_icc_by_pattern,accel_initial,athlete_group,none,boundary:any,icc1,10,-0.09972068763835962,-0.5460830353599514,0.6744531694516966,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,none,boundary:none,icc1,60,0.4751546299783249,0.21240869682022792,0.8704618783771184,poor
+A3_icc_by_pattern,accel_initial,athlete_group,none,censor:both_censored,icc1,19,0.8373701690598565,0.6566578964632737,0.9284835365214785,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,none,censor:both_uncensored,icc1,17,0.8242834260633564,0.5698950575899295,0.945560594768156,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,none,censor:discordant,icc1,34,0.09101750325932269,-0.13060594490156593,0.6984707454058483,poor
+A3_icc_by_pattern,accel_initial,athlete_group,none,window_change:high,icc1,23,0.0877615147032059,-0.1431835780503883,0.8488312419368711,poor
+A3_icc_by_pattern,accel_initial,athlete_group,none,window_change:low,icc1,24,0.793578977711716,0.584349564076271,0.9033335034011275,moderate
+A3_icc_by_pattern,accel_initial,athlete_group,none,window_change:mid,icc1,23,0.7190010994002468,0.4714508793692694,0.8398078427086335,poor
+A3_icc_by_pattern,accel_initial,athlete_group,position,boundary:any,icc1,10,0.09599021475642243,-0.9862689215710272,0.1858237421789323,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,position,boundary:none,icc1,60,0.3762602757750381,0.1337814676326614,0.7922457601134149,poor
+A3_icc_by_pattern,accel_initial,athlete_group,position,censor:both_censored,icc1,19,0.7630808301764574,0.03893100404739707,0.8838157813897847,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,position,censor:both_uncensored,icc1,17,0.6899219223949763,0.06633380735961233,0.8655806443186073,insufficient_for_label
+A3_icc_by_pattern,accel_initial,athlete_group,position,censor:discordant,icc1,34,0.07795904764418322,-0.21134321249393634,0.3440678391484592,poor
+A3_icc_by_pattern,accel_initial,athlete_group,position,window_change:high,icc1,23,0.1438247143432978,-0.15549168116358353,0.7739263543300607,poor
+A3_icc_by_pattern,accel_initial,athlete_group,position,window_change:low,icc1,24,0.675721834831747,0.27708858275930565,0.8336301321290561,poor
+A3_icc_by_pattern,accel_initial,athlete_group,position,window_change:mid,icc1,23,0.5606716778003538,0.1666856534656336,0.6796172597761568,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,none,boundary:any,icc1,10,0.48488286909787665,-0.22628437344814087,0.828579755969009,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,none,boundary:none,icc1,60,0.775315219901567,0.648225065085436,0.8550568094354521,moderate
+A3_icc_by_pattern,accel_sustained,athlete_group,none,censor:both_censored,icc1,19,0.8186119890326945,0.6019652516330877,0.9047707652994998,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,none,censor:both_uncensored,icc1,17,0.8851332133119681,0.7107118012825379,0.9444744280822797,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,none,censor:discordant,icc1,34,0.5780274853991408,0.32898928654076903,0.7469518724179062,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,none,window_change:high,icc1,23,0.7464054301965811,0.4864805751433071,0.8774157822006989,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,none,window_change:low,icc1,24,0.7958224550632756,0.5651250543499508,0.8971792412306544,moderate
+A3_icc_by_pattern,accel_sustained,athlete_group,none,window_change:mid,icc1,23,0.6646309388368845,0.38446742475584206,0.8153707250271023,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,position,boundary:any,icc1,10,0.2652683769494215,-0.9677929000411258,0.32940717620933113,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,position,boundary:none,icc1,60,0.5976053756899536,0.3634416314235636,0.7228114859621025,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,position,censor:both_censored,icc1,19,0.6260189819865559,-0.09148895610814127,0.7719616820520284,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,position,censor:both_uncensored,icc1,17,0.7642678213104431,0.12772244186420614,0.8651320413835655,insufficient_for_label
+A3_icc_by_pattern,accel_sustained,athlete_group,position,censor:discordant,icc1,34,0.2591663169493973,-0.23599592656860316,0.49115026974211673,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,position,window_change:high,icc1,23,0.5164959932390523,-0.02455983063715094,0.7122354980252533,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,position,window_change:low,icc1,24,0.632134291348186,0.18578165567032165,0.7773717600803066,poor
+A3_icc_by_pattern,accel_sustained,athlete_group,position,window_change:mid,icc1,23,0.5148243809540697,0.024144170067136206,0.6793708451486685,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,boundary:any,icc1,10,0.6315224441596632,-0.014718350635649536,0.886402423847228,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,boundary:none,icc1,60,0.8222400644014014,0.7249483426106235,0.8841994980297481,moderate
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,censor:both_censored,icc1,19,0.8680836772430097,0.6934111213515625,0.9403990429870476,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,censor:both_uncensored,icc1,17,0.8978758897506255,0.7386230527642643,0.9590432097389986,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,censor:discordant,icc1,34,0.6630327249260317,0.43677630213737034,0.7947040732349145,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,window_change:high,icc1,23,0.7238837561144943,0.41189964336123225,0.8826695455966489,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,window_change:low,icc1,24,0.8606691368551276,0.6991957401357284,0.9315554271528965,moderate
+A3_icc_by_pattern,accel_v2_5,athlete_group,none,window_change:mid,icc1,23,0.7552399186410272,0.5631434136425776,0.8540535209698533,moderate
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,boundary:any,icc1,10,0.46104458772444085,-0.9883737213415164,0.5997297426052383,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,boundary:none,icc1,60,0.6630334573280319,0.471136997068224,0.7599070501772068,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,censor:both_censored,icc1,19,0.7042510636815205,0.05884126249392091,0.8327238952581526,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,censor:both_uncensored,icc1,17,0.8017477484728184,0.27026803239892927,0.89480415500058,insufficient_for_label
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,censor:discordant,icc1,34,0.3098942270958616,-0.13363065643518474,0.48904019797969683,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,window_change:high,icc1,23,0.4605071331308815,-0.09007193111676569,0.6927614262978986,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,window_change:low,icc1,24,0.7499976375596555,0.4149378543587007,0.8651901825211573,poor
+A3_icc_by_pattern,accel_v2_5,athlete_group,position,window_change:mid,icc1,23,0.609392010659779,0.1807029291319089,0.7282747989278694,poor
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,boundary:any,icc1,10,0.9010275041314193,0.6534471897788828,0.9733510647507276,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,boundary:none,icc1,60,0.904674421367387,0.8515347667806927,0.9378303668927844,good
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,censor:both_censored,icc1,19,0.9217894253175022,0.8115678238356421,0.9640205806869169,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,censor:both_uncensored,icc1,17,0.9418135730087877,0.881349372163124,0.971167358727221,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,censor:discordant,icc1,34,0.8668144230222982,0.7589120895446249,0.9237377009554091,good
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,window_change:high,icc1,23,0.8992537832036018,0.782388375154228,0.9483562008569282,good
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,window_change:low,icc1,24,0.9465443573009104,0.8852254101799703,0.9734699002410828,good
+A3_icc_by_pattern,accel_v2_7,athlete_group,none,window_change:mid,icc1,23,0.835229495520888,0.6866763862058016,0.9076903683379842,moderate
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,boundary:any,icc1,10,0.8213558259069661,-0.8897947498934282,0.8885047392613556,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,boundary:none,icc1,60,0.7331751247980592,0.5743208325784583,0.8038816490547337,moderate
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,censor:both_censored,icc1,19,0.7545843946457556,0.3985399886951182,0.8406216902987419,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,censor:both_uncensored,icc1,17,0.8326800885536629,0.23592474735208624,0.916237089048101,insufficient_for_label
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,censor:discordant,icc1,34,0.5833550595333974,0.23328490661955423,0.7154353310544985,poor
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,window_change:high,icc1,23,0.659394204658596,0.21662384041383695,0.8050481224415056,poor
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,window_change:low,icc1,24,0.8852537884689232,0.7285305938241283,0.937769165008698,moderate
+A3_icc_by_pattern,accel_v2_7,athlete_group,position,window_change:mid,icc1,23,0.6483456739020038,0.1879739609751561,0.7614732862744015,poor
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,boundary:any,icc1,10,0.9478233879217967,0.8042781556976354,0.9844335082341347,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,boundary:none,icc1,60,0.9072338526221737,0.8592035943323076,0.9384227945938985,good
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,censor:both_censored,icc1,19,0.914994893933783,0.8145437184070415,0.954223042113759,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,censor:both_uncensored,icc1,17,0.9329759519459737,0.8502779414423454,0.9656126274222407,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,censor:discordant,icc1,34,0.8998392055319462,0.82106794852735,0.9482944219599935,good
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,window_change:high,icc1,23,0.9238764492449649,0.8477847815334839,0.9633104290850092,good
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,window_change:low,icc1,24,0.9429978407418184,0.8931902877230229,0.9691121244915538,good
+A3_icc_by_pattern,accel_v4_7,athlete_group,none,window_change:mid,icc1,23,0.8412987201510495,0.6869534197089743,0.9136940919427278,moderate
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,boundary:any,icc1,10,0.8956286694820412,-0.8994424661951614,0.9281741730340205,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,boundary:none,icc1,60,0.7138514306786123,0.5362160286255804,0.794408993161937,moderate
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,censor:both_censored,icc1,19,0.7110651104618726,0.3079889743366076,0.8005365328479912,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,censor:both_uncensored,icc1,17,0.7850977759065844,-0.02769718905759812,0.8969433249762971,insufficient_for_label
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,censor:discordant,icc1,34,0.654486963992581,0.3309014536526835,0.7649528422685591,poor
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,window_change:high,icc1,23,0.7060546637766707,0.36591081672300313,0.8098525472444443,poor
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,window_change:low,icc1,24,0.8759288087237408,0.7100486992638636,0.9257574004721277,moderate
+A3_icc_by_pattern,accel_v4_7,athlete_group,position,window_change:mid,icc1,23,0.6346518888378574,0.12966927235208686,0.7591190654114849,poor
+A3_icc_by_pattern,model_a0,athlete_group,none,boundary:any,icc1,10,0.8422817181918067,-0.09237311780246106,0.9699863446333374,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,none,boundary:none,icc1,55,0.7711784105637142,0.6539173115004112,0.8478303082331565,moderate
+A3_icc_by_pattern,model_a0,athlete_group,none,censor:both_censored,icc1,18,0.7939081361567878,0.5494119907439974,0.9026277682693401,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,none,censor:both_uncensored,icc1,14,0.8571120163191073,0.656536132511856,0.9284242235870467,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,none,censor:discordant,icc1,33,0.7405944921202213,0.5120978283251818,0.8496941022355434,moderate
+A3_icc_by_pattern,model_a0,athlete_group,none,window_change:high,icc1,22,0.8344475471910813,0.6398911277005123,0.9186794601809004,moderate
+A3_icc_by_pattern,model_a0,athlete_group,none,window_change:low,icc1,21,0.8136493190834523,0.5422581519922032,0.9212643795745773,moderate
+A3_icc_by_pattern,model_a0,athlete_group,none,window_change:mid,icc1,22,0.6830093009558849,0.4450109242209473,0.803546409861215,poor
+A3_icc_by_pattern,model_a0,athlete_group,position,boundary:any,icc1,10,0.8024848736813954,-0.9164309121751203,0.8548942110932948,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,position,boundary:none,icc1,55,0.5823431411411967,0.3800071256883705,0.6812678041310728,poor
+A3_icc_by_pattern,model_a0,athlete_group,position,censor:both_censored,icc1,18,0.5644260066074009,-0.05370092474446715,0.7361090727541172,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,position,censor:both_uncensored,icc1,14,0.7447598914735903,-0.047563491350007855,0.8511470913766854,insufficient_for_label
+A3_icc_by_pattern,model_a0,athlete_group,position,censor:discordant,icc1,33,0.5760843390727559,0.21459833895973454,0.6823623552944624,poor
+A3_icc_by_pattern,model_a0,athlete_group,position,window_change:high,icc1,22,0.7354708471419998,0.24620464645008297,0.8358861636218531,poor
+A3_icc_by_pattern,model_a0,athlete_group,position,window_change:low,icc1,21,0.5819640017447049,0.05250089021762769,0.8134165979535751,poor
+A3_icc_by_pattern,model_a0,athlete_group,position,window_change:mid,icc1,22,0.5407902054611385,0.056445368971574185,0.6629108684585063,poor
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,boundary:any,icc1,10,0.8843645271696128,0.21749101598130258,0.9804999707434534,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,boundary:none,icc1,55,0.8593185679549885,0.7873476333345272,0.9055634725414329,good
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,censor:both_censored,icc1,18,0.8657274329674449,0.7012888834528559,0.9363085261783636,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,censor:both_uncensored,icc1,14,0.915380274924764,0.794561319773831,0.9601541879968247,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,censor:discordant,icc1,33,0.8363814304197745,0.7055396370702951,0.9017745167716877,moderate
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,window_change:high,icc1,22,0.8823659170835207,0.7469754217128917,0.9377088840622205,moderate
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,window_change:low,icc1,21,0.8933501730952337,0.7531266023425752,0.956645098341652,good
+A3_icc_by_pattern,model_a_at_ref,athlete_group,none,window_change:mid,icc1,22,0.7920279482624597,0.6176475600768411,0.8770572127223474,moderate
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,boundary:any,icc1,10,0.8162938144254207,-0.9955788146105277,0.8718451493499674,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,boundary:none,icc1,55,0.6554940250846139,0.46689913399534333,0.747120889458745,poor
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,censor:both_censored,icc1,18,0.6414473383043939,0.026636309385249312,0.7881979832741389,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,censor:both_uncensored,icc1,14,0.8188688443106962,-0.12401266521216153,0.9045907554607637,insufficient_for_label
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,censor:discordant,icc1,33,0.602605348850704,0.2479979292323615,0.7019950128136128,poor
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,window_change:high,icc1,22,0.7312986958380764,0.30128765499706067,0.8343165981519198,poor
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,window_change:low,icc1,21,0.7121087776786158,0.24049417288456543,0.8563135081135359,poor
+A3_icc_by_pattern,model_a_at_ref,athlete_group,position,window_change:mid,icc1,22,0.6133126489560413,0.13469195342175205,0.7186784870116961,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,none,boundary:any,icc1,10,0.8432185178968825,0.597602658869193,0.9587820255656624,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,none,boundary:none,icc1,55,0.5548834812063336,0.3676794656678874,0.701651790135337,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,none,censor:both_censored,icc1,18,0.6590405204937538,0.40619180493805346,0.8682032784430663,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,none,censor:both_uncensored,icc1,14,0.6412640642083847,0.15733289626600777,0.8088151845988523,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,none,censor:discordant,icc1,33,0.5691625810720194,0.3208386811059286,0.722397350525071,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,none,window_change:high,icc1,22,0.6964448515292883,0.3862947548779448,0.8540630307814318,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,none,window_change:low,icc1,21,0.6623239991576795,0.26515091836929205,0.8912191250327699,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,none,window_change:mid,icc1,22,0.5465694789331814,0.32766234711671477,0.7179211053508788,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,position,boundary:any,icc1,10,0.8305085070421887,-0.6460828371904864,0.8722633174781205,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,position,boundary:none,icc1,55,0.5689408252830599,0.3236004657577439,0.6987377782424339,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,position,censor:both_censored,icc1,18,0.6245591138360234,0.1076824556769767,0.7617502340767776,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,position,censor:both_uncensored,icc1,14,0.6225191593952523,-0.07109466908824655,0.706002627479219,insufficient_for_label
+A3_icc_by_pattern,model_tau_s,athlete_group,position,censor:discordant,icc1,33,0.5929276866312779,0.2583711096857992,0.7069680632231844,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,position,window_change:high,icc1,22,0.7386210174678745,0.33010306633875935,0.8314822527331788,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,position,window_change:low,icc1,21,0.7023164405039354,0.14521554917905774,0.8883767074310023,poor
+A3_icc_by_pattern,model_tau_s,athlete_group,position,window_change:mid,icc1,22,0.509367305086059,-0.13195872724062552,0.6836424681803082,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,boundary:any,icc1,10,0.5448064156251495,-0.15754291652156155,0.8688081168389609,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,boundary:none,icc1,60,0.7864866313871887,0.672812726735273,0.866453757688352,moderate
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,censor:both_censored,icc1,19,0.8115817397366349,0.6159748623554372,0.9091780447905835,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,censor:both_uncensored,icc1,17,0.8807114613820013,0.6972116484662022,0.946297555539494,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,censor:discordant,icc1,34,0.6508598867088297,0.4137442583400751,0.8060492130089887,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,window_change:high,icc1,23,0.8144577512558767,0.6078811676364353,0.9085427120624068,moderate
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,window_change:low,icc1,24,0.7892355927491054,0.5445123273961103,0.9014086927016841,moderate
+A3_icc_by_pattern,p95_a_tan,athlete_group,none,window_change:mid,icc1,23,0.6809136569797555,0.40993513364403406,0.8233232818474264,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,boundary:any,icc1,10,0.3641016087886854,-0.8913514687085993,0.4830421877556652,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,boundary:none,icc1,60,0.6162369037572937,0.3981287450577918,0.7348842240752176,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,censor:both_censored,icc1,19,0.6040553775966014,-0.15864347554656325,0.775576762617886,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,censor:both_uncensored,icc1,17,0.755269078766055,0.1145029226798796,0.8695049238146417,insufficient_for_label
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,censor:discordant,icc1,34,0.40301309055262724,-0.0353936680897795,0.606335019113847,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,window_change:high,icc1,23,0.6641515582400568,0.24398580775468598,0.8001713392918075,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,window_change:low,icc1,24,0.6154276671030136,0.1814673996683983,0.7947066748838093,poor
+A3_icc_by_pattern,p95_a_tan,athlete_group,position,window_change:mid,icc1,23,0.5297639976909004,0.03149759250010856,0.7017018852706315,poor
+A3_icc_by_pattern,p95_speed,athlete_group,none,boundary:any,icc1,10,0.9861539127627776,0.9549339589211527,0.9946462459903959,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,none,boundary:none,icc1,60,0.986691399823648,0.9795555580748833,0.9914130003556133,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,none,censor:both_censored,icc1,19,0.9851813146893253,0.9614230340357433,0.9930957528637862,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,none,censor:both_uncensored,icc1,17,0.9868206067762396,0.9726659182174637,0.9924765982071777,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,none,censor:discordant,icc1,34,0.9868966752779433,0.9748437328249944,0.9933662395742302,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,none,window_change:high,icc1,23,0.9796692636156452,0.957483099190522,0.9885663564425005,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,none,window_change:low,icc1,24,0.9879214191905917,0.976493584465792,0.993013701471763,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,none,window_change:mid,icc1,23,0.9863812427781813,0.9647630410286167,0.9947601205557334,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,position,boundary:any,icc1,10,0.9625252967317602,-0.7559330663108589,0.9821856670550666,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,position,boundary:none,icc1,60,0.9597320885484841,0.9269908604611563,0.9721890696699483,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,position,censor:both_censored,icc1,19,0.9627999874601408,0.8491170797484577,0.9742765183522215,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,position,censor:both_uncensored,icc1,17,0.9619068771997601,0.7857181905186983,0.9795924318059063,insufficient_for_label
+A3_icc_by_pattern,p95_speed,athlete_group,position,censor:discordant,icc1,34,0.9382772321961913,0.8455420330534185,0.964259917334818,good
+A3_icc_by_pattern,p95_speed,athlete_group,position,window_change:high,icc1,23,0.9008135230521708,0.6848742239629215,0.9340566750170043,moderate
+A3_icc_by_pattern,p95_speed,athlete_group,position,window_change:low,icc1,24,0.9788186899967561,0.9520134435598742,0.9865191972901102,excellent
+A3_icc_by_pattern,p95_speed,athlete_group,position,window_change:mid,icc1,23,0.9598197142450069,0.8506453012700659,0.9791125638542253,good
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,boundary:any,icc1,10,0.30061574358091586,-0.3592364888525546,0.6662061023320704,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,boundary:none,icc1,60,0.7301169299763177,0.6103726905027425,0.8180241754389544,moderate
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,censor:both_censored,icc1,19,0.7725247092150281,0.5262601156689861,0.8817053919366564,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,censor:both_uncensored,icc1,17,0.8802611323113901,0.7216421588966215,0.9360664754264375,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,censor:discordant,icc1,34,0.4512255384379277,0.15743452315874337,0.6355106386641233,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,window_change:high,icc1,23,0.5656017128351345,0.2272574601095591,0.7819437882693566,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,window_change:low,icc1,24,0.7229583547101869,0.4273422240805468,0.8556483334513296,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,none,window_change:mid,icc1,23,0.6403762417420936,0.35258171696148216,0.795195468203419,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,boundary:any,icc1,10,0.07337836204378756,-0.9065031506734594,0.12879542436249816,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,boundary:none,icc1,60,0.5305492791202638,0.2813906500501653,0.6679666320100476,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,censor:both_censored,icc1,19,0.5469981443564715,-0.3558627761919502,0.7555098998378822,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,censor:both_uncensored,icc1,17,0.7404381616764877,0.14752792585865623,0.8460099721352157,insufficient_for_label
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,censor:discordant,icc1,34,0.14500185866112753,-0.24656939221762827,0.34690966064757345,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,window_change:high,icc1,23,0.23106593421116958,-0.39148948969318054,0.49602825852675064,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,window_change:low,icc1,24,0.5196800443884163,0.08266809723401432,0.7027248066385132,poor
+A3_icc_by_pattern,peak_a_tan,athlete_group,position,window_change:mid,icc1,23,0.541137423863071,0.0038492128086724518,0.7262184720626447,poor
+A3_window_adjusted_icc,accel_initial,start,position,all,icc_gain,70,0.08648801365763648,-0.09413512034061174,0.18631331277323288,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_initial,start,position,all,icc_raw,70,0.27142622168237096,0.049966195001740155,0.674794917441523,""
+A3_window_adjusted_icc,accel_initial,start,position,all,icc_window_adjusted,70,0.35791423534000744,0.14375076844389792,0.6435629249981096,within-athlete slopes (first_speed: -1.044); in-sample
+A3_window_adjusted_icc,accel_initial,start+end,position,all,icc_gain,70,0.15495378848082986,-0.09382268671917998,0.3319456783277266,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_initial,start+end,position,all,icc_raw,70,0.27142622168237096,0.0441432528849081,0.6684901266922764,""
+A3_window_adjusted_icc,accel_initial,start+end,position,all,icc_window_adjusted,70,0.4263800101632008,0.18743039793501887,0.6852201288037857,"within-athlete slopes (first_speed: -0.7261, duration_s: -1.271, frames_after_peak: -0.007305); in-sample"
+A3_window_adjusted_icc,accel_sustained,start,position,all,icc_gain,70,0.007202991124817593,-0.010743755764965637,0.02359518817138435,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_sustained,start,position,all,icc_raw,70,0.5532380769055537,0.3435130784246578,0.6785488441529794,""
+A3_window_adjusted_icc,accel_sustained,start,position,all,icc_window_adjusted,70,0.5604410680303713,0.3519957874376099,0.6846093386391078,within-athlete slopes (first_speed: -0.1229); in-sample
+A3_window_adjusted_icc,accel_sustained,start+end,position,all,icc_gain,70,-0.015510424624023855,-0.06109149620541798,0.018654200167701595,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_sustained,start+end,position,all,icc_raw,70,0.5532380769055537,0.33439651572878626,0.677528781394469,""
+A3_window_adjusted_icc,accel_sustained,start+end,position,all,icc_window_adjusted,70,0.5377276522815299,0.3155415299069601,0.663891135395723,"within-athlete slopes (first_speed: -0.08715, duration_s: -0.09467, frames_after_peak: -0.009417); in-sample"
+A3_window_adjusted_icc,accel_v2_5,start,position,all,icc_gain,70,0.003327512006418454,-0.011815531360675735,0.017475190310396044,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v2_5,start,position,all,icc_raw,70,0.6226031214947135,0.4228513234920108,0.7208108565934741,""
+A3_window_adjusted_icc,accel_v2_5,start,position,all,icc_window_adjusted,70,0.625930633501132,0.42732343693894065,0.7235231110535866,within-athlete slopes (first_speed: -0.102); in-sample
+A3_window_adjusted_icc,accel_v2_5,start+end,position,all,icc_gain,70,-0.015711547262314496,-0.05863782601065848,0.015923019849064062,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v2_5,start+end,position,all,icc_raw,70,0.6226031214947135,0.4353272841090167,0.7280594971941217,""
+A3_window_adjusted_icc,accel_v2_5,start+end,position,all,icc_window_adjusted,70,0.606891574232399,0.41618178162765396,0.7134610579527875,"within-athlete slopes (first_speed: -0.06453, duration_s: -0.08721, frames_after_peak: -0.01199); in-sample"
+A3_window_adjusted_icc,accel_v2_7,start,position,all,icc_gain,70,0.0007427322549218296,-0.010307280196211976,0.011651446256563619,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v2_7,start,position,all,icc_raw,70,0.7351737013014643,0.5921470207440168,0.8012229694865962,""
+A3_window_adjusted_icc,accel_v2_7,start,position,all,icc_window_adjusted,70,0.7359164335563861,0.5922861677662237,0.8020076793123423,within-athlete slopes (first_speed: -0.1055); in-sample
+A3_window_adjusted_icc,accel_v2_7,start+end,position,all,icc_gain,70,-0.006456332459112368,-0.03405302794694193,0.019878221689249274,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v2_7,start+end,position,all,icc_raw,70,0.7351737013014643,0.5950908482260346,0.8025904678950414,""
+A3_window_adjusted_icc,accel_v2_7,start+end,position,all,icc_window_adjusted,70,0.7287173688423519,0.5877047499753276,0.7978602320433005,"within-athlete slopes (first_speed: -0.07876, duration_s: -0.02569, frames_after_peak: -0.0151); in-sample"
+A3_window_adjusted_icc,accel_v4_7,start,position,all,icc_gain,70,-0.0007563638984193766,-0.0055086847737988165,0.004324935267429383,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v4_7,start,position,all,icc_raw,70,0.7371109028175016,0.591695397266734,0.8089207316585232,""
+A3_window_adjusted_icc,accel_v4_7,start,position,all,icc_window_adjusted,70,0.7363545389190822,0.5894845759683599,0.8089601345420843,within-athlete slopes (first_speed: -0.05967); in-sample
+A3_window_adjusted_icc,accel_v4_7,start+end,position,all,icc_gain,70,-0.0013274781153141957,-0.026860063801467625,0.01916941110938694,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,accel_v4_7,start+end,position,all,icc_raw,70,0.7371109028175016,0.5917591307449691,0.8100396373655625,""
+A3_window_adjusted_icc,accel_v4_7,start+end,position,all,icc_window_adjusted,70,0.7357834247021874,0.5813315071607897,0.8122936361928398,"within-athlete slopes (first_speed: -0.03817, duration_s: 0.01183, frames_after_peak: -0.01793); in-sample"
+A3_window_adjusted_icc,model_a0,start,position,all,icc_gain,65,0.01117467158138652,-0.01042107880711843,0.03503187821925218,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_a0,start,position,all,icc_raw,65,0.6050041739324563,0.4222764833885846,0.6990581356003196,""
+A3_window_adjusted_icc,model_a0,start,position,all,icc_window_adjusted,65,0.6161788455138428,0.43075946345347804,0.7078612167760013,within-athlete slopes (first_speed: -0.2674); in-sample
+A3_window_adjusted_icc,model_a0,start+end,position,all,icc_gain,65,0.10282654501731525,-0.048851864468131376,0.26532306074496553,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_a0,start+end,position,all,icc_raw,65,0.6050041739324563,0.42528493775874887,0.6982082493976464,""
+A3_window_adjusted_icc,model_a0,start+end,position,all,icc_window_adjusted,65,0.7078307189497716,0.5402061866894013,0.782419629931639,"within-athlete slopes (first_speed: -0.495, duration_s: -2.661, frames_after_peak: -0.02622); in-sample"
+A3_window_adjusted_icc,model_a_at_ref,start,position,all,icc_gain,65,0.005583944179561651,-0.013193259419639919,0.02287599504329278,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_a_at_ref,start,position,all,icc_raw,65,0.6638711914765965,0.49180531580993864,0.7521182619946998,""
+A3_window_adjusted_icc,model_a_at_ref,start,position,all,icc_window_adjusted,65,0.6694551356561581,0.49802325145574255,0.7574639613730174,within-athlete slopes (first_speed: -0.1747); in-sample
+A3_window_adjusted_icc,model_a_at_ref,start+end,position,all,icc_gain,65,-0.06369759568530009,-0.213174137806784,0.07415041950257417,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_a_at_ref,start+end,position,all,icc_raw,65,0.6638711914765965,0.4986160953900845,0.7530337029370197,""
+A3_window_adjusted_icc,model_a_at_ref,start+end,position,all,icc_window_adjusted,65,0.6001735957912964,0.42530992723253486,0.6970933903529453,"within-athlete slopes (first_speed: -0.3446, duration_s: -1.894, frames_after_peak: -0.01472); in-sample"
+A3_window_adjusted_icc,model_tau_s,start,position,all,icc_gain,65,0.017972085258503245,-0.003595685637077714,0.0432937511190136,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_tau_s,start,position,all,icc_raw,65,0.625090818792975,0.4476190911075755,0.7304520878479116,""
+A3_window_adjusted_icc,model_tau_s,start,position,all,icc_window_adjusted,65,0.6430629040514783,0.4677091647922095,0.7467320020456233,within-athlete slopes (first_speed: 0.05737); in-sample
+A3_window_adjusted_icc,model_tau_s,start+end,position,all,icc_gain,65,0.2380590408876192,0.14533844069202018,0.3676553460945828,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,model_tau_s,start+end,position,all,icc_raw,65,0.625090818792975,0.44804136736234496,0.7281390489004612,""
+A3_window_adjusted_icc,model_tau_s,start+end,position,all,icc_window_adjusted,65,0.8631498596805942,0.7604533322549503,0.9058465110670538,"within-athlete slopes (first_speed: 0.09202, duration_s: 0.474, frames_after_peak: 0.00761); in-sample"
+A3_window_adjusted_icc,p95_a_tan,start,position,all,icc_gain,70,0.010331582720859767,-0.009724335629923269,0.030448899470697652,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,p95_a_tan,start,position,all,icc_raw,70,0.5858837772717378,0.3799966079878543,0.6999117539538703,""
+A3_window_adjusted_icc,p95_a_tan,start,position,all,icc_window_adjusted,70,0.5962153599925976,0.38603568252412335,0.7087485420755041,within-athlete slopes (first_speed: -0.1732); in-sample
+A3_window_adjusted_icc,p95_a_tan,start+end,position,all,icc_gain,70,-0.015294297562279291,-0.0631880209010903,0.02396985076692797,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,p95_a_tan,start+end,position,all,icc_raw,70,0.5858837772717378,0.3760890061624432,0.7021745150228711,""
+A3_window_adjusted_icc,p95_a_tan,start+end,position,all,icc_window_adjusted,70,0.5705894797094585,0.3568102119093283,0.6915757023708972,"within-athlete slopes (first_speed: -0.117, duration_s: -0.163, frames_after_peak: -0.01227); in-sample"
+A3_window_adjusted_icc,p95_speed,start,position,all,icc_gain,70,0.000018280080691601697,-0.0024184713176185813,0.002409655452354948,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,p95_speed,start,position,all,icc_raw,70,0.9610500680112964,0.9328726463719914,0.972869426498681,""
+A3_window_adjusted_icc,p95_speed,start,position,all,icc_window_adjusted,70,0.961068348091988,0.9320114230293727,0.9735896777652706,within-athlete slopes (first_speed: -0.05388); in-sample
+A3_window_adjusted_icc,p95_speed,start+end,position,all,icc_gain,70,0.00642018884420259,-0.0003185103742745859,0.016904151992957896,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,p95_speed,start+end,position,all,icc_raw,70,0.9610500680112964,0.9320041863352967,0.9734586784369601,""
+A3_window_adjusted_icc,p95_speed,start+end,position,all,icc_window_adjusted,70,0.967470256855499,0.942305420142375,0.9781238774268584,"within-athlete slopes (first_speed: -0.01812, duration_s: -0.07294, frames_after_peak: -0.01331); in-sample"
+A3_window_adjusted_icc,peak_a_tan,start,position,all,icc_gain,70,0.003273744304911841,-0.00561297040971049,0.012286346534792632,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,peak_a_tan,start,position,all,icc_raw,70,0.45350414786688137,0.21316576686393474,0.5999077444334873,""
+A3_window_adjusted_icc,peak_a_tan,start,position,all,icc_window_adjusted,70,0.4567778921717932,0.21507469073887808,0.6023659290571588,within-athlete slopes (first_speed: -0.06204); in-sample
+A3_window_adjusted_icc,peak_a_tan,start+end,position,all,icc_gain,70,-0.020048475610411398,-0.06447172251563232,0.01410634588093624,upper bound: slopes fitted on the same attempts
+A3_window_adjusted_icc,peak_a_tan,start+end,position,all,icc_raw,70,0.45350414786688137,0.20373241886000867,0.5994373207700376,""
+A3_window_adjusted_icc,peak_a_tan,start+end,position,all,icc_window_adjusted,70,0.43345567225646997,0.18012417332327446,0.5788908400258465,"within-athlete slopes (first_speed: -0.02977, duration_s: -0.07104, frames_after_peak: -0.01108); in-sample"

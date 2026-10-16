@@ -1,0 +1,5 @@
+definition_id,context_id,context,estimand_change,n_rows,share_rows_supported_cell,n_athletes,row_variance_removed,rel_sb,rel_lo,rel_hi,spearman_vs_raw,mean_abs_pct_shift_vs_raw
+FO01.S0,R0,raw (no conditioning),the approved estimand,37398,1.0,102,0.0,0.7422803583100449,0.4847706980692572,0.874271262778567,1.0,0.0
+FO01.S0,R1,route,removes route mix — partly a property of the player and of his NFL usage,37398,0.9973527996149527,102,0.11916571738059134,0.5290610289667733,0.06664686504787477,0.77015925376824,0.9191424273952773,8.302106027596224
+FO01.S0,R2,route × alignment,also removes the NFL alignment the team chose,37398,0.9682603347772608,102,0.12350032349105233,0.508821299810969,0.12311935220896218,0.7408089190223448,0.8974656201936126,9.490196078431373
+FO01.S0,R3,target status,"conditions on the quarterback's choice, which depends on the outcome: SENSITIVITY ONLY",37398,1.0,102,0.019750024513002784,0.7443373831250493,0.5366953326255622,0.8604222562210142,0.9801439654392473,4.075526506899056

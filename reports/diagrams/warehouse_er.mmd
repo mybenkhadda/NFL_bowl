@@ -1,0 +1,67 @@
+%% Gold-layer ER diagram (design). Frame tables are views over silver.
+erDiagram
+    dim_athlete ||--o{ fact_combine_attempt : "nfl_id"
+    dim_athlete ||--o{ fact_nfl_play_participation : "nfl_id"
+    dim_athlete ||--o{ mart_athlete_combine_profile : "nfl_id"
+    dim_athlete ||--o{ mart_athlete_nfl_profile : "nfl_id"
+    dim_athlete ||--|| mart_athlete_research_base : "nfl_id"
+    dim_game ||--o{ dim_play : "game_id"
+    dim_season ||--o{ dim_game : "season"
+    dim_play ||--o{ fact_nfl_play_participation : "game_id, play_id"
+    dim_combine_drill ||--o{ fact_combine_attempt : "drill_type, drill_name"
+    fact_combine_attempt ||--o{ fact_combine_tracking : "event_id, nfl_id, attempt"
+    fact_nfl_play_participation ||--o{ fact_nfl_tracking : "game_id, play_id, nfl_id"
+
+    dim_athlete {
+        bigint nfl_id PK
+        string position_group
+        int cohort
+        bool has_combine_tracking
+        bool has_nfl_tracking
+    }
+    dim_play {
+        bigint game_id PK
+        bigint play_id PK
+        string play_direction
+        int season
+    }
+    fact_combine_attempt {
+        string event_id PK
+        bigint nfl_id PK
+        bigint attempt PK
+        string drill_name
+        double max_s
+        double time_to_max_s_s
+    }
+    fact_nfl_play_participation {
+        bigint game_id PK
+        bigint play_id PK
+        bigint nfl_id PK
+        int season
+        double max_s
+        double p95_a
+        string lined_up_position
+    }
+    fact_nfl_tracking {
+        bigint game_id
+        bigint play_id
+        bigint nfl_id
+        int frame_id
+        timestamp ts
+        double x_std
+        double y_std
+    }
+    fact_combine_tracking {
+        string event_id
+        bigint nfl_id
+        bigint attempt
+        int frame_id
+        timestamp ts
+    }
+    mart_athlete_research_base {
+        bigint nfl_id PK
+        double cmb_forty
+        double ctrk_best_max_s
+        bigint nfl_n_plays_tracked
+        double career_career_games_active
+    }

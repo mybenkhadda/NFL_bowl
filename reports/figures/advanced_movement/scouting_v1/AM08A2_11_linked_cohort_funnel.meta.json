@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_11_linked_cohort_funnel",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "510 Combine athletes in the Milestone 06 manifest",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:10Z",
+  "seed": 20261011,
+  "source": "football_outcome_linked_cohort"
+}

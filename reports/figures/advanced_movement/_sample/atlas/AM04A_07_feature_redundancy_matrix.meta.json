@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_07_feature_redundancy_matrix",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "60 tracked athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-12T00:51:07Z",
+  "seed": 20261011,
+  "source": "atlas_redundancy_matrix, atlas_feature_clusters"
+}

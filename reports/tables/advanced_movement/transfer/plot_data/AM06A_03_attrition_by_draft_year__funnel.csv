@@ -1,0 +1,28 @@
+stage,stage_order,group_type,group,n_meeting_rule,n_cumulative,definition
+combine_roster,0,draft_year,2023,160,160,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,draft_year,2023,138,138,≥ 1 eligible tracked forty-yard attempt
+official_core,2,draft_year,2023,141,138,"official forty, 10-yard split and weight recorded"
+engineered_features,3,draft_year,2023,138,138,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,draft_year,2023,138,138,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,draft_year,2023,138,138,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,draft_year,2023,132,114,≥ 1 eligible regular-season NFL window
+target_exposure,7,draft_year,2023,117,103,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,draft_year,2023,103,103,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,draft_year,2024,177,177,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,draft_year,2024,147,147,≥ 1 eligible tracked forty-yard attempt
+official_core,2,draft_year,2024,150,147,"official forty, 10-yard split and weight recorded"
+engineered_features,3,draft_year,2024,147,147,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,draft_year,2024,147,147,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,draft_year,2024,147,147,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,draft_year,2024,144,123,≥ 1 eligible regular-season NFL window
+target_exposure,7,draft_year,2024,118,103,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,draft_year,2024,103,103,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,draft_year,2025,173,173,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,draft_year,2025,133,133,≥ 1 eligible tracked forty-yard attempt
+official_core,2,draft_year,2025,133,133,"official forty, 10-yard split and weight recorded"
+engineered_features,3,draft_year,2025,133,133,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,draft_year,2025,133,133,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,draft_year,2025,133,133,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,draft_year,2025,125,95,≥ 1 eligible regular-season NFL window
+target_exposure,7,draft_year,2025,101,78,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,draft_year,2025,78,78,all of the above and a consistent Combine ↔ NFL identity

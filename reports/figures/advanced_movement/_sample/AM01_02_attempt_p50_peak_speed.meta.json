@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM01_02_attempt_p50_peak_speed",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "51 frames",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T13:37:32Z",
+  "seed": 20261011,
+  "source": "sequence_frames"
+}

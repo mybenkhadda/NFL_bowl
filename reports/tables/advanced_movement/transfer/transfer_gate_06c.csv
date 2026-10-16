@@ -1,0 +1,6 @@
+criterion,passed,detail
+gains_reported_with_uncertainty,true,6 of 6 dimension(s) carry a paired interval
+position_and_exposure_limits_documented,true,5 position groups and 10 exposure rules evaluated and saved
+matched_prospects_out_of_fold,true,833 matched pairs scored on out-of-fold predictions
+case_studies_illustrative,true,case studies are chosen by stopwatch distance only and labelled illustrative
+readiness_reflects_evidence,true,"6 dimension(s); statuses {'exploratory': 4, 'descriptive_ready': 2}"

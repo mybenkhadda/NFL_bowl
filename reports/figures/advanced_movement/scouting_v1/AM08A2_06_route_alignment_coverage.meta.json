@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_06_route_alignment_coverage",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "37,398 recorded separations with a route label",
+  "note": "orange frame = supported cell of denominator S2",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:00Z",
+  "seed": 20261011,
+  "source": "football_separation_context_cells"
+}

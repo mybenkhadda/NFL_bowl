@@ -1,0 +1,9 @@
+criterion,passed,detail
+no_nfl_input,true,"no NFL-named column in the profile, percentile or case tables"
+no_total_or_potential_score,true,the four sections are never combined
+uncertainty_displayed,true,"802 tracked percentile(s), each with an interval"
+abstention_explicit,true,389 cell(s) abstain with a stated reason
+cases_selected_pre_draft,true,"10 case(s), none selected with an NFL label"
+pairwise_tests_on_differences,true,verdicts use the standard error of the difference
+repeat_attempt_stability_reported,true,12 feature × position row(s)
+football_panel_matches_validation,true,Football-outcome evidence: no added value established

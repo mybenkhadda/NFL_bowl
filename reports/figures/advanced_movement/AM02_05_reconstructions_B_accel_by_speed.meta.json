@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_05_reconstructions_B_accel_by_speed",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "4 held-out attempts",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T15:20:38Z",
+  "seed": 20261011,
+  "source": "fpca_sequence_reconstruction (held-out)"
+}

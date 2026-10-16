@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05A_06_starting_speed_coverage",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "242043 windows, 401 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T09:02:15Z",
+  "seed": 20261011,
+  "source": "nfl_play_movement"
+}

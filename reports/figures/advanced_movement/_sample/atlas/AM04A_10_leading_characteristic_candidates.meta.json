@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04A_10_leading_characteristic_candidates",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "56 athletes with a repeat (at most)",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-12T00:51:13Z",
+  "seed": 20261011,
+  "source": "atlas_feature_status"
+}

@@ -1,0 +1,21 @@
+{
+  "_instructions": "Vendor definition of player_play.player_get_off. Fill every field from the competition data dictionary (Kaggle data page / vendor glossary) and set status to 'confirmed'. Until then the experiment reports the endpoint descriptively and blocks the football interpretation. Do not fill a field from a guess: leave it null and say so in 'open_questions'.",
+  "endpoint": "player_get_off",
+  "status": "unresolved",
+  "source": null,
+  "source_quote": null,
+  "timing_origin": null,
+  "timing_end": null,
+  "unit": "seconds (schema_catalog, inferred)",
+  "valid_play_contexts": null,
+  "lower_is_better": null,
+  "censoring_or_cap": null,
+  "open_questions": [
+    "Which event starts the clock (ball snap, first offensive movement, other)?",
+    "Which event stops it (first movement of the defender, crossing the line of scrimmage, a distance travelled, contact)?",
+    "Is the value computed on pass plays only, on pass-rush snaps only, or on every defensive-line snap?",
+    "Is 2.0 s (the exact observed maximum) a cap, a censoring window or a coincidence?",
+    "What do values below 0.1 s mean (anticipated snap, offside, measurement artefact)?",
+    "Is the measurement identical for EDGE and INTERIOR_LINE alignments?"
+  ]
+}

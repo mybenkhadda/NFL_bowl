@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_12_position_cohort_support",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "linked athletes with NFL support",
+  "note": "cell = all model families / linked with support",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:11Z",
+  "seed": 20261011,
+  "source": "football_outcome_cohort_support"
+}

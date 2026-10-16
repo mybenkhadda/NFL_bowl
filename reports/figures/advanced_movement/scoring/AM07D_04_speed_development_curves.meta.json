@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_04_speed_development_curves",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "95 DB athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:20Z",
+  "seed": 20261011,
+  "source": "sequence_frames + combine_speed_development_percentiles"
+}

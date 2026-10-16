@@ -1,0 +1,36 @@
+track,experiment,comparison,metric,better,estimate,lo,hi,n_athletes,cohort,evaluation_target,training_regime,primary,verdict,source_table,run_mode
+12D,4,retest D2 shared0 vs best feature forty.v_max_obs,Δ test–retest r,positive,-0.3436501896865497,-0.4228301184562718,-0.27871496732340795,375,"",measurement_reliability,"",false,reversed,m12d_retest,full
+12D,4,retest D2 shared1 vs best feature forty.v_max_obs,Δ test–retest r,positive,-0.5510140722462642,-0.6512423374770125,-0.44921320468712983,375,"",measurement_reliability,"",false,reversed,m12d_retest,full
+12D,4,retest D2 shared2 vs best feature gauntlet.sustained_speed,Δ test–retest r,positive,-0.03683935524896931,-0.07005930181330867,-0.0025540689121815036,137,"",measurement_reliability,"",false,reversed,m12d_retest,full
+12D,4,retest D2 shared3 vs best feature forty.band_6_8_mean_accel,Δ test–retest r,positive,-0.5321650040213439,-0.6075633683294056,-0.43768729292657454,375,"",measurement_reliability,"",false,reversed,m12d_retest,full
+12D,4,retest D3 shared0 vs best feature forty.v_max_obs,Δ test–retest r,positive,-0.17231361241063714,-0.22510940617545477,-0.12867717584754523,375,"",measurement_reliability,"",true,reversed,m12d_retest,full
+12D,4,retest D3 shared1 vs best feature forty.v_max_obs,Δ test–retest r,positive,-0.3776190894796255,-0.4655433510404371,-0.27143095374081044,375,"",measurement_reliability,"",true,reversed,m12d_retest,full
+12D,4,retest D4 shared0 vs best feature forty.v_max_obs,Δ test–retest r,positive,-0.36537930996634593,-0.4571658136467601,-0.277977364514716,375,"",measurement_reliability,"",false,reversed,m12d_retest,full
+12D,4,transfer D1 vs D0 → nfl.q90_shared,Δ RMSE,positive,-0.00343828583874492,-0.011986366288961214,0.005064386059121135,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D0 → nfl.q90_shared,Δ RMSE,positive,-0.0011353777499809037,-0.002859867893034394,0.0007498470947341066,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D0 → nfl.q90_shared,Δ RMSE,positive,-0.00035894899898469834,-0.00166236373697497,0.0009217693659470277,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D0 → nfl.q90_shared,Δ RMSE,positive,-0.000356657023814988,-0.001071776732384002,0.00041077881101920697,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D1 → nfl.q90_shared,Δ RMSE,positive,0.0023029080887640163,-0.005704489504318363,0.01060798121383766,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D1 → nfl.q90_shared,Δ RMSE,positive,0.0030793368397602217,-0.00511358974241846,0.011215395412758965,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D1 → nfl.q90_shared,Δ RMSE,positive,0.003081628814929932,-0.005285616878920855,0.011505198258311165,291,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D1 vs D0 → nfl.band_4_6,Δ RMSE,positive,-0.0025961925143429543,-0.009310571308506637,0.004854306531702652,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D0 → nfl.band_4_6,Δ RMSE,positive,0.001310190332971084,-0.0020438436174561843,0.0047862817932394055,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D0 → nfl.band_4_6,Δ RMSE,positive,0.002442933157563082,-0.0015874581787991711,0.006105613448043381,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D0 → nfl.band_4_6,Δ RMSE,positive,-0.00010497218298760602,-0.0005377192955364638,0.0003668957393694403,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D1 → nfl.band_4_6,Δ RMSE,positive,0.003906382847314038,-0.002306997069787541,0.009909554327557404,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D1 → nfl.band_4_6,Δ RMSE,positive,0.005039125671906036,-0.0023489543844287136,0.011689025720917923,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D1 → nfl.band_4_6,Δ RMSE,positive,0.0024912203313553483,-0.004952274699735194,0.009165080985617632,280,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D1 vs D0 → env.lin_A0,Δ RMSE,positive,-0.026737844000332966,-0.042785914823853244,-0.009239620279234617,388,"",cross_domain_physical_transfer,"",false,reversed,m12d_transfer,full
+12D,4,transfer D2 vs D0 → env.lin_A0,Δ RMSE,positive,-0.004290423950963684,-0.008223473477009479,-0.0007997180780963857,388,"",cross_domain_physical_transfer,"",false,reversed,m12d_transfer,full
+12D,4,transfer D3 vs D0 → env.lin_A0,Δ RMSE,positive,-0.0009107223292345035,-0.004138698088510415,0.00230046092228198,388,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D0 → env.lin_A0,Δ RMSE,positive,-0.001597321200017432,-0.0034040475329661464,0.00014833804326269383,388,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D1 → env.lin_A0,Δ RMSE,positive,0.022447420049369282,0.004922197808908196,0.03785149787832981,388,"",cross_domain_physical_transfer,"",false,supported,m12d_transfer,full
+12D,4,transfer D3 vs D1 → env.lin_A0,Δ RMSE,positive,0.025827121671098463,0.008446594892951612,0.04150427574885024,388,"",cross_domain_physical_transfer,"",false,supported,m12d_transfer,full
+12D,4,transfer D4 vs D1 → env.lin_A0,Δ RMSE,positive,0.025140522800315535,0.007585951852153399,0.04110079087574604,388,"",cross_domain_physical_transfer,"",false,supported,m12d_transfer,full
+12D,4,transfer D1 vs D0 → nfl.brake_decel,Δ RMSE,positive,-0.005461081794384426,-0.01098198222160278,-0.000523188105504608,341,"",cross_domain_physical_transfer,"",false,reversed,m12d_transfer,full
+12D,4,transfer D2 vs D0 → nfl.brake_decel,Δ RMSE,positive,-0.001710293781607558,-0.0034564740514400074,0.00014800939698602416,341,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D0 → nfl.brake_decel,Δ RMSE,positive,-0.0014375252281733364,-0.0033110029974088477,0.000367490098424607,341,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D0 → nfl.brake_decel,Δ RMSE,positive,-0.000043163969168757976,-0.0004087817974742024,0.0003469018353608637,341,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D2 vs D1 → nfl.brake_decel,Δ RMSE,positive,0.003750788012776868,-0.0012624651970009426,0.009189804146518788,341,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D3 vs D1 → nfl.brake_decel,Δ RMSE,positive,0.0040235565662110895,-0.0007234116085388174,0.009174652959453406,341,"",cross_domain_physical_transfer,"",false,inconclusive,m12d_transfer,full
+12D,4,transfer D4 vs D1 → nfl.brake_decel,Δ RMSE,positive,0.005417917825215668,0.00044334146662335235,0.010913078435143494,341,"",cross_domain_physical_transfer,"",false,supported,m12d_transfer,full

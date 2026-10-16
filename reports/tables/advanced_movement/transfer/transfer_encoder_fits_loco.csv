@@ -1,0 +1,16 @@
+scheme,family,fold,source,n_train_athletes,n_heldout_athletes,n_overlap,n_attempts_valid,n_heldout_valid,embedding_dim,epochs_run,best_epoch,train_seconds,seed,checkpoint
+loco,ENG,0,deterministic,280,138,0,793,262,1,,,,,""
+loco,SPEED2,0,deterministic,280,138,0,793,262,2,,,,,""
+loco,FPCA,0,fitted,280,138,0,793,262,2,,,,,""
+loco,TCN,0,trained,280,138,0,793,262,8,89,64,97.2273298,20261011,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\artifacts\models\advanced_movement\transfer\tcn\TCN__loco__r0_f0.pt
+loco,RAND,0,untrained,280,138,0,793,262,8,,,,20261011,""
+loco,ENG,1,deterministic,271,147,0,793,269,1,,,,,""
+loco,SPEED2,1,deterministic,271,147,0,793,269,2,,,,,""
+loco,FPCA,1,fitted,271,147,0,793,269,2,,,,,""
+loco,TCN,1,trained,271,147,0,793,269,8,105,80,107.76255309999942,20261011,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\artifacts\models\advanced_movement\transfer\tcn\TCN__loco__r0_f1.pt
+loco,RAND,1,untrained,271,147,0,793,269,8,,,,20261011,""
+loco,ENG,2,deterministic,285,133,0,793,262,1,,,,,""
+loco,SPEED2,2,deterministic,285,133,0,793,262,2,,,,,""
+loco,FPCA,2,fitted,285,133,0,793,262,2,,,,,""
+loco,TCN,2,trained,285,133,0,793,262,8,103,78,103.94273069999872,20261011,C:\Users\myben\Downloads\nfl-big-data-bowl-2027\nfl-big-data-bowl-2027\artifacts\models\advanced_movement\transfer\tcn\TCN__loco__r0_f2.pt
+loco,RAND,2,untrained,285,133,0,793,262,8,,,,20261011,""

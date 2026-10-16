@@ -1,0 +1,8 @@
+check,passed,n_violations,detail
+one_outer_fold_per_athlete_and_repeat,true,0,"the registry key (nfl_id, repeat) is unique"
+every_eligible_sequence_has_a_fold,true,0,eligible sequences whose athlete is absent from the registry
+all_attempts_of_an_athlete_share_a_fold,true,0,athlete × repeat combinations whose sequences fall in more than one outer fold
+every_outer_fold_is_populated,true,0,fold sizes 12–12 athletes
+inner_folds_partition_every_outer_training_set,true,0,missing development folds inside outer training sets
+design_role_is_constant_per_athlete,true,0,18 design athletes of 60
+split_uses_position_and_cohort_only,true,0,"stratum = position group | draft cohort; no measurement, no NFL value"

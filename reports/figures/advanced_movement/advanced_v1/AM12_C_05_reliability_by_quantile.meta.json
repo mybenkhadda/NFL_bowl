@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_C_05_reliability_by_quantile",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T00:42:07Z",
+  "seed": 20261015,
+  "source": "m12c_reliability"
+}

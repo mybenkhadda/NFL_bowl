@@ -1,0 +1,260 @@
+endpoint,position_group,section,stratum,metric,value,n,note
+player_get_off,DL,definition,all,vendor_definition_established,0.0,,"schema_catalog: meaning = 'Timing metric: player get off', unit = 'seconds', evidence = 'inferred'. No vendor data dictionary in the repository: start / end events and sign convention are unknown."
+player_get_off,DL,missingness,all,n_non_null,33417.0,52591,player-plays
+player_get_off,DL,missingness,all,share_non_null,0.6354129033484817,52591,player-plays
+player_get_off,DL,missingness,season:2023,n_non_null,4865.0,7413,player-plays
+player_get_off,DL,missingness,season:2023,share_non_null,0.6562795089707271,7413,player-plays
+player_get_off,DL,missingness,season:2024,n_non_null,11165.0,17402,player-plays
+player_get_off,DL,missingness,season:2024,share_non_null,0.6415929203539823,17402,player-plays
+player_get_off,DL,missingness,season:2025,n_non_null,17387.0,27776,player-plays
+player_get_off,DL,missingness,season:2025,share_non_null,0.6259720622119815,27776,player-plays
+player_get_off,DL,missingness,pass_result:labelled,n_non_null,33417.0,52591,player-plays
+player_get_off,DL,missingness,pass_result:labelled,share_non_null,0.6354129033484817,52591,player-plays
+player_get_off,DL,missingness,pass_result:null,n_non_null,0.0,0,player-plays
+player_get_off,DL,missingness,pass_result:null,share_non_null,,0,player-plays
+player_get_off,DL,missingness,lined_up_position:EDGE,n_non_null,20219.0,28882,player-plays
+player_get_off,DL,missingness,lined_up_position:EDGE,share_non_null,0.7000553978256353,28882,player-plays
+player_get_off,DL,missingness,lined_up_position:INTERIOR_LINE,n_non_null,13073.0,23028,player-plays
+player_get_off,DL,missingness,lined_up_position:INTERIOR_LINE,share_non_null,0.5677001910717387,23028,player-plays
+player_get_off,DL,missingness,lined_up_position:SLOT_CB,n_non_null,114.0,503,player-plays
+player_get_off,DL,missingness,lined_up_position:SLOT_CB,share_non_null,0.22664015904572565,503,player-plays
+player_get_off,DL,missingness,lined_up_position:MLB,n_non_null,0.0,85,player-plays
+player_get_off,DL,missingness,lined_up_position:MLB,share_non_null,0.0,85,player-plays
+player_get_off,DL,missingness,lined_up_position:OLB,n_non_null,0.0,51,player-plays
+player_get_off,DL,missingness,lined_up_position:OLB,share_non_null,0.0,51,player-plays
+player_get_off,DL,missingness,lined_up_position:CB,n_non_null,11.0,33,player-plays
+player_get_off,DL,missingness,lined_up_position:CB,share_non_null,0.3333333333333333,33,player-plays
+player_get_off,DL,missingness,blitzing:labelled,n_non_null,25313.0,29000,player-plays
+player_get_off,DL,missingness,blitzing:labelled,share_non_null,0.8728620689655172,29000,player-plays
+player_get_off,DL,missingness,blitzing:null,n_non_null,8104.0,23591,player-plays
+player_get_off,DL,missingness,blitzing:null,share_non_null,0.3435208342164385,23591,player-plays
+player_get_off,DL,distribution,all,mean,1.0115321244612128,33417,non-null player-plays
+player_get_off,DL,distribution,all,sd,0.293050638358203,33417,non-null player-plays
+player_get_off,DL,distribution,all,min,0.00400000018998981,33417,non-null player-plays
+player_get_off,DL,distribution,all,p01,0.505999982357025,33417,non-null player-plays
+player_get_off,DL,distribution,all,p05,0.628000020980835,33417,non-null player-plays
+player_get_off,DL,distribution,all,p25,0.805000007152557,33417,non-null player-plays
+player_get_off,DL,distribution,all,p50,0.959999978542328,33417,non-null player-plays
+player_get_off,DL,distribution,all,p75,1.16199994087219,33417,non-null player-plays
+player_get_off,DL,distribution,all,p95,1.60699999332428,33417,non-null player-plays
+player_get_off,DL,distribution,all,p99,1.8848399829864502,33417,non-null player-plays
+player_get_off,DL,distribution,all,max,2.0,33417,non-null player-plays
+player_get_off,DL,distribution,all,share_le_zero,0.0,33417,non-null player-plays
+player_get_off,DL,athletes,all,n_athletes_position,98.0,98,athletes of the position group with tracked plays
+player_get_off,DL,athletes,all,n_athletes_any_obs,98.0,98,athletes
+player_get_off,DL,athletes,all,obs_per_athlete_p10,24.400000000000002,98,athletes
+player_get_off,DL,athletes,all,obs_per_athlete_p25,74.5,98,athletes
+player_get_off,DL,athletes,all,obs_per_athlete_p50,195.0,98,athletes
+player_get_off,DL,athletes,all,obs_per_athlete_p75,460.5,98,athletes
+player_get_off,DL,athletes,all,obs_per_athlete_p90,937.0999999999998,98,athletes
+player_get_off,DL,athletes,min_obs=20,n_athletes,93.0,98,athletes with at least this many observations
+player_get_off,DL,intersection,min_obs=20,has_cmb_forty,75.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,has_cmb_ten_yd_split,75.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,has_cmb_vertical,82.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,has_cmb_broad_jump,80.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,has_cmb_combine_weight,93.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,forty_tracked,74.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,forty_repeat,66.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,model_fit_ok_repeat,63.0,93,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=20,forty_tracked_and_official_both,74.0,93,athletes
+player_get_off,DL,athletes,min_obs=50,n_athletes,82.0,98,athletes with at least this many observations
+player_get_off,DL,intersection,min_obs=50,has_cmb_forty,66.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,has_cmb_ten_yd_split,66.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,has_cmb_vertical,72.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,has_cmb_broad_jump,70.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,has_cmb_combine_weight,82.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,forty_tracked,65.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,forty_repeat,57.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,model_fit_ok_repeat,54.0,82,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=50,forty_tracked_and_official_both,65.0,82,athletes
+player_get_off,DL,athletes,min_obs=100,n_athletes,69.0,98,athletes with at least this many observations
+player_get_off,DL,intersection,min_obs=100,has_cmb_forty,54.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,has_cmb_ten_yd_split,54.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,has_cmb_vertical,63.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,has_cmb_broad_jump,61.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,has_cmb_combine_weight,69.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,forty_tracked,53.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,forty_repeat,45.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,model_fit_ok_repeat,43.0,69,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=100,forty_tracked_and_official_both,53.0,69,athletes
+player_get_off,DL,athletes,min_obs=200,n_athletes,49.0,98,athletes with at least this many observations
+player_get_off,DL,intersection,min_obs=200,has_cmb_forty,37.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,has_cmb_ten_yd_split,37.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,has_cmb_vertical,44.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,has_cmb_broad_jump,43.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,has_cmb_combine_weight,49.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,forty_tracked,37.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,forty_repeat,30.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,model_fit_ok_repeat,28.0,49,athletes also meeting the Combine flag
+player_get_off,DL,intersection,min_obs=200,forty_tracked_and_official_both,37.0,49,athletes
+player_get_off,DL,context,all,share_non_null:lined_up_position,1.0,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:blitzing,0.75748870335458,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:down,1.0,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:yards_to_go,1.0,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:offense_formation,0.9983242062423318,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:pass_result,1.0,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:quarter,1.0,33417,non-null endpoint player-plays
+player_get_off,DL,context,all,share_non_null:team_coverage_man_zone,0.9971870604781997,33417,non-null endpoint player-plays
+player_get_off,DL,context,lined_up_position:EDGE,share_of_endpoint_plays,0.6050513211838285,33417,player-plays
+player_get_off,DL,context,lined_up_position:INTERIOR_LINE,share_of_endpoint_plays,0.39120806774994765,33417,player-plays
+player_get_off,DL,context,lined_up_position:SLOT_CB,share_of_endpoint_plays,0.003411437292396086,33417,player-plays
+player_get_off,DL,context,lined_up_position:CB,share_of_endpoint_plays,0.0003291737738276925,33417,player-plays
+player_get_off,DL,reliability,play,icc1,0.09673558867439604,93,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+player_get_off,DL,reliability,play,icc1_ci_lower,0.06725758999244014,93,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+player_get_off,DL,reliability,play,icc1_ci_upper,0.12845793314147988,93,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+player_get_off,DL,reliability,play,projected_reliability_n=20,0.6817223427881037,93,Spearman–Brown from the single-play ICC
+player_get_off,DL,reliability,play,projected_reliability_n=50,0.8426380641490625,93,Spearman–Brown from the single-play ICC
+player_get_off,DL,reliability,play,projected_reliability_n=100,0.914599649864713,93,Spearman–Brown from the single-play ICC
+player_get_off,DL,reliability,play,projected_reliability_n=200,0.9553951918139537,93,Spearman–Brown from the single-play ICC
+player_get_off,DL,reliability,play,plays_needed_for_0.7,21.78739994909015,93,Spearman–Brown inverse
+player_get_off,DL,reliability,play,plays_needed_for_0.8,37.349828484154564,93,Spearman–Brown inverse
+player_get_off,DL,reliability,play_context_centred,icc1,0.05090384737867968,93,alignment × season means removed before the ICC
+player_get_off,DL,reliability,play_context_centred,icc1_ci_lower,0.03283313590070866,93,""
+player_get_off,DL,reliability,play_context_centred,icc1_ci_upper,0.07172606183950123,93,""
+player_get_off,DL,reliability,game,icc1,0.4096355975405563,89,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+player_get_off,DL,reliability,game,icc1_ci_lower,0.32462445253252115,89,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+player_get_off,DL,reliability,game,icc1_ci_upper,0.4875844916407214,89,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+player_get_off,DL,reliability,game,games_per_athlete_median,16.0,89,athletes
+player_get_off,DL,reliability,split_half,spearman_odd_even,0.9027185103398883,93,odd vs even chronological observations
+player_get_off,DL,reliability,split_half,spearman_brown_full_length,0.9488723691226749,93,reliability of the athlete mean over all own observations
+player_get_off,DL,first_n,n=20,n_athletes_ge_n,93.0,98,athletes with ≥ n observations overall
+player_get_off,DL,first_n,n=20,n_athletes_ge_n_rookie_season,81.0,98,observations in the season equal to the draft cohort year
+player_get_off,DL,first_n,n=20,median_games_to_reach_n,3.0,93,athletes reaching n observations
+player_get_off,DL,first_n,n=20,spearman_first_n_vs_next_n,0.6018956419777213,85,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)
+player_get_off,DL,first_n,n=50,n_athletes_ge_n,82.0,98,athletes with ≥ n observations overall
+player_get_off,DL,first_n,n=50,n_athletes_ge_n_rookie_season,70.0,98,observations in the season equal to the draft cohort year
+player_get_off,DL,first_n,n=50,median_games_to_reach_n,5.0,82,athletes reaching n observations
+player_get_off,DL,first_n,n=50,spearman_first_n_vs_next_n,0.7878333942272563,69,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)
+player_get_off,DL,first_n,n=100,n_athletes_ge_n,69.0,98,athletes with ≥ n observations overall
+player_get_off,DL,first_n,n=100,n_athletes_ge_n_rookie_season,51.0,98,observations in the season equal to the draft cohort year
+player_get_off,DL,first_n,n=100,median_games_to_reach_n,7.0,69,athletes reaching n observations
+player_get_off,DL,first_n,n=100,spearman_first_n_vs_next_n,0.7385714285714285,49,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)
+separation_at_pass_forward,WR,definition,all,vendor_definition_established,0.0,,"schema_catalog: meaning = 'Distance metric: separation at pass forward', unit = 'yards', evidence = 'inferred'. No vendor data dictionary in the repository: start / end events and sign convention are unknown."
+separation_at_pass_forward,WR,missingness,all,n_non_null,30956.0,36944,player-plays
+separation_at_pass_forward,WR,missingness,all,share_non_null,0.8379168471199654,36944,player-plays
+separation_at_pass_forward,WR,missingness,season:2023,n_non_null,6596.0,7828,player-plays
+separation_at_pass_forward,WR,missingness,season:2023,share_non_null,0.8426162493612672,7828,player-plays
+separation_at_pass_forward,WR,missingness,season:2024,n_non_null,10884.0,13075,player-plays
+separation_at_pass_forward,WR,missingness,season:2024,share_non_null,0.8324282982791587,13075,player-plays
+separation_at_pass_forward,WR,missingness,season:2025,n_non_null,13476.0,16041,player-plays
+separation_at_pass_forward,WR,missingness,season:2025,share_non_null,0.8400972507948382,16041,player-plays
+separation_at_pass_forward,WR,missingness,pass_result:labelled,n_non_null,30956.0,36789,player-plays
+separation_at_pass_forward,WR,missingness,pass_result:labelled,share_non_null,0.8414471717089347,36789,player-plays
+separation_at_pass_forward,WR,missingness,pass_result:null,n_non_null,0.0,155,player-plays
+separation_at_pass_forward,WR,missingness,pass_result:null,share_non_null,0.0,155,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:WR,n_non_null,18911.0,21584,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:WR,share_non_null,0.8761582653817642,21584,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:SLOT_WR,n_non_null,10842.0,12413,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:SLOT_WR,share_non_null,0.8734391363892693,12413,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:TE,n_non_null,1003.0,1127,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:TE,share_non_null,0.8899733806566105,1127,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:RB,n_non_null,163.0,179,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:RB,share_non_null,0.9106145251396648,179,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:FB,n_non_null,37.0,40,player-plays
+separation_at_pass_forward,WR,missingness,lined_up_position:FB,share_non_null,0.925,40,player-plays
+separation_at_pass_forward,WR,missingness,blitzing:labelled,n_non_null,30935.0,35318,player-plays
+separation_at_pass_forward,WR,missingness,blitzing:labelled,share_non_null,0.8758989750268985,35318,player-plays
+separation_at_pass_forward,WR,missingness,blitzing:null,n_non_null,21.0,1626,player-plays
+separation_at_pass_forward,WR,missingness,blitzing:null,share_non_null,0.012915129151291513,1626,player-plays
+separation_at_pass_forward,WR,distribution,all,mean,3.1119158054599816,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,sd,2.1162561307323724,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,min,0.15033295750618,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p01,0.533104121685028,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p05,0.7413838207721708,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p25,1.40459954738617,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p50,2.62975287437439,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p75,4.320231676101683,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p95,7.105450391769413,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,p99,9.76713471412659,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,max,17.7160835266113,30956,non-null player-plays
+separation_at_pass_forward,WR,distribution,all,share_le_zero,0.0,30956,non-null player-plays
+separation_at_pass_forward,WR,athletes,all,n_athletes_position,83.0,83,athletes of the position group with tracked plays
+separation_at_pass_forward,WR,athletes,all,n_athletes_any_obs,83.0,83,athletes
+separation_at_pass_forward,WR,athletes,all,obs_per_athlete_p10,25.400000000000002,83,athletes
+separation_at_pass_forward,WR,athletes,all,obs_per_athlete_p25,120.5,83,athletes
+separation_at_pass_forward,WR,athletes,all,obs_per_athlete_p50,250.0,83,athletes
+separation_at_pass_forward,WR,athletes,all,obs_per_athlete_p75,576.0,83,athletes
+separation_at_pass_forward,WR,athletes,all,obs_per_athlete_p90,839.5999999999999,83,athletes
+separation_at_pass_forward,WR,athletes,min_obs=20,n_athletes,77.0,83,athletes with at least this many observations
+separation_at_pass_forward,WR,intersection,min_obs=20,has_cmb_forty,71.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,has_cmb_ten_yd_split,71.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,has_cmb_vertical,68.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,has_cmb_broad_jump,69.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,has_cmb_combine_weight,77.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,forty_tracked,69.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,forty_repeat,59.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,model_fit_ok_repeat,50.0,77,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=20,forty_tracked_and_official_both,69.0,77,athletes
+separation_at_pass_forward,WR,athletes,min_obs=50,n_athletes,69.0,83,athletes with at least this many observations
+separation_at_pass_forward,WR,intersection,min_obs=50,has_cmb_forty,64.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,has_cmb_ten_yd_split,64.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,has_cmb_vertical,61.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,has_cmb_broad_jump,62.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,has_cmb_combine_weight,69.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,forty_tracked,63.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,forty_repeat,53.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,model_fit_ok_repeat,45.0,69,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=50,forty_tracked_and_official_both,63.0,69,athletes
+separation_at_pass_forward,WR,athletes,min_obs=100,n_athletes,63.0,83,athletes with at least this many observations
+separation_at_pass_forward,WR,intersection,min_obs=100,has_cmb_forty,58.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,has_cmb_ten_yd_split,58.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,has_cmb_vertical,55.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,has_cmb_broad_jump,56.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,has_cmb_combine_weight,63.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,forty_tracked,57.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,forty_repeat,47.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,model_fit_ok_repeat,41.0,63,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=100,forty_tracked_and_official_both,57.0,63,athletes
+separation_at_pass_forward,WR,athletes,min_obs=200,n_athletes,45.0,83,athletes with at least this many observations
+separation_at_pass_forward,WR,intersection,min_obs=200,has_cmb_forty,41.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,has_cmb_ten_yd_split,41.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,has_cmb_vertical,39.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,has_cmb_broad_jump,40.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,has_cmb_combine_weight,45.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,forty_tracked,40.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,forty_repeat,31.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,model_fit_ok_repeat,27.0,45,athletes also meeting the Combine flag
+separation_at_pass_forward,WR,intersection,min_obs=200,forty_tracked_and_official_both,40.0,45,athletes
+separation_at_pass_forward,WR,context,all,share_non_null:lined_up_position,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:blitzing,0.999321617780075,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:down,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:yards_to_go,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:offense_formation,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:pass_result,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:quarter,1.0,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,all,share_non_null:team_coverage_man_zone,0.9995800491019512,30956,non-null endpoint player-plays
+separation_at_pass_forward,WR,context,lined_up_position:WR,share_of_endpoint_plays,0.6108993410001292,30956,player-plays
+separation_at_pass_forward,WR,context,lined_up_position:SLOT_WR,share_of_endpoint_plays,0.3502390489727355,30956,player-plays
+separation_at_pass_forward,WR,context,lined_up_position:TE,share_of_endpoint_plays,0.03240082698023,30956,player-plays
+separation_at_pass_forward,WR,context,lined_up_position:RB,share_of_endpoint_plays,0.005265538183227807,30956,player-plays
+separation_at_pass_forward,WR,context,lined_up_position:FB,share_of_endpoint_plays,0.0011952448636774777,30956,player-plays
+separation_at_pass_forward,WR,reliability,play,icc1,0.02391425957771667,77,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+separation_at_pass_forward,WR,reliability,play,icc1_ci_lower,0.014377284093972669,77,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+separation_at_pass_forward,WR,reliability,play,icc1_ci_upper,0.035687241875761604,77,"single plays, athletes with ≥ 20 observations; athlete bootstrap"
+separation_at_pass_forward,WR,reliability,play,projected_reliability_n=20,0.3288605272826116,77,Spearman–Brown from the single-play ICC
+separation_at_pass_forward,WR,reliability,play,projected_reliability_n=50,0.5505634423003799,77,Spearman–Brown from the single-play ICC
+separation_at_pass_forward,WR,reliability,play,projected_reliability_n=100,0.7101462955731457,77,Spearman–Brown from the single-play ICC
+separation_at_pass_forward,WR,reliability,play,projected_reliability_n=200,0.8305094101146993,77,Spearman–Brown from the single-play ICC
+separation_at_pass_forward,WR,reliability,play,plays_needed_for_0.7,95.23746227296407,77,Spearman–Brown inverse
+separation_at_pass_forward,WR,reliability,play,plays_needed_for_0.8,163.26422103936702,77,Spearman–Brown inverse
+separation_at_pass_forward,WR,reliability,play_context_centred,icc1,0.01876782742941519,77,alignment × season means removed before the ICC
+separation_at_pass_forward,WR,reliability,play_context_centred,icc1_ci_lower,0.011038357924757174,77,""
+separation_at_pass_forward,WR,reliability,play_context_centred,icc1_ci_upper,0.028472982632785256,77,""
+separation_at_pass_forward,WR,reliability,game,icc1,0.2245836387528974,74,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+separation_at_pass_forward,WR,reliability,game,icc1_ci_lower,0.13636560958255994,74,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+separation_at_pass_forward,WR,reliability,game,icc1_ci_upper,0.29516219382356446,74,"athlete-game means, games with ≥ 5 observations, athletes with ≥ 2 such games"
+separation_at_pass_forward,WR,reliability,game,games_per_athlete_median,16.5,74,athletes
+separation_at_pass_forward,WR,reliability,split_half,spearman_odd_even,0.6555023923444976,77,odd vs even chronological observations
+separation_at_pass_forward,WR,reliability,split_half,spearman_brown_full_length,0.791907514450867,77,reliability of the athlete mean over all own observations
+separation_at_pass_forward,WR,first_n,n=20,n_athletes_ge_n,77.0,83,athletes with ≥ n observations overall
+separation_at_pass_forward,WR,first_n,n=20,n_athletes_ge_n_rookie_season,70.0,83,observations in the season equal to the draft cohort year
+separation_at_pass_forward,WR,first_n,n=20,median_games_to_reach_n,3.0,77,athletes reaching n observations
+separation_at_pass_forward,WR,first_n,n=20,spearman_first_n_vs_next_n,0.3999475111538798,70,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)
+separation_at_pass_forward,WR,first_n,n=50,n_athletes_ge_n,69.0,83,athletes with ≥ n observations overall
+separation_at_pass_forward,WR,first_n,n=50,n_athletes_ge_n_rookie_season,63.0,83,observations in the season equal to the draft cohort year
+separation_at_pass_forward,WR,first_n,n=50,median_games_to_reach_n,5.0,69,athletes reaching n observations
+separation_at_pass_forward,WR,first_n,n=50,spearman_first_n_vs_next_n,0.40288978494623656,63,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)
+separation_at_pass_forward,WR,first_n,n=100,n_athletes_ge_n,63.0,83,athletes with ≥ n observations overall
+separation_at_pass_forward,WR,first_n,n=100,n_athletes_ge_n_rookie_season,52.0,83,observations in the season equal to the draft cohort year
+separation_at_pass_forward,WR,first_n,n=100,median_games_to_reach_n,8.0,63,athletes reaching n observations
+separation_at_pass_forward,WR,first_n,n=100,spearman_first_n_vs_next_n,0.49301712779973644,45,mean of the first n observations vs mean of the next n (athletes with ≥ 2n)

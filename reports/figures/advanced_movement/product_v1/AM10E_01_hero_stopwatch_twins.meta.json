@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_01_hero_stopwatch_twins",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "two athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:40Z",
+  "seed": 20261011,
+  "source": "stopwatch_twins + twin_differences + combine_attempt_curves"
+}

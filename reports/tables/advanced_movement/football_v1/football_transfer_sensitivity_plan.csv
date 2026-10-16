@@ -1,0 +1,9 @@
+analysis,kind,target_id,label_kind,n_athletes,position_counts,evaluated,note
+position:WR:refit,position,FO01.S0,observed,64,WR 64,true,"WR athletes only, refitted"
+definition:context (route × alignment),definition,FO01.S0|route_x_alignment,cross_fitted,84,TE 20 · WR 64,true,cross-fitted cell residual: context means from the training athletes of each fold
+exposure:min_games_8,exposure,FO01.S0,observed,83,TE 20 · WR 63,true,support rule: twice the games
+exposure:min_obs_40,exposure,FO01.S0,observed,84,TE 20 · WR 64,true,support rule: twice the observations
+season:first,season,FO01.S0,observed,78,TE 18 · WR 60,true,first observed NFL season only
+learner:elastic_net,learner,FO01.S0,observed,84,TE 20 · WR 64,true,elastic net instead of ridge
+definition:targeted_only,definition,FO01.S0T,observed,68,TE 15 · WR 53,true,rows selected by target status (outcome-dependent)
+definition:not_targeted_only,definition,FO01.S0N,observed,84,TE 20 · WR 64,true,rows selected by target status (outcome-dependent)

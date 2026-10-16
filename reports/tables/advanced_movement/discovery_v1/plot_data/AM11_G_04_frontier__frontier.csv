@@ -1,0 +1,33 @@
+subset,n_drills,hypothetical_cost_min,covered_cells,pareto
+forty,1,2.0,4,true
+forty + three_cone,2,5.0,10,true
+forty + gauntlet,2,5.0,8,false
+forty + short_shuttle,2,5.0,5,false
+forty + backpedal_transition,2,6.0,10,false
+forty + pass_rush,2,7.0,4,false
+forty + three_cone + gauntlet,3,8.0,14,true
+forty + short_shuttle + three_cone,3,8.0,10,false
+forty + short_shuttle + gauntlet,3,8.0,9,false
+forty + gauntlet + backpedal_transition,3,9.0,14,false
+forty + three_cone + backpedal_transition,3,9.0,13,false
+forty + short_shuttle + backpedal_transition,3,9.0,11,false
+forty + three_cone + pass_rush,3,10.0,10,false
+forty + gauntlet + pass_rush,3,10.0,8,false
+forty + short_shuttle + pass_rush,3,10.0,5,false
+forty + short_shuttle + three_cone + gauntlet,4,11.0,14,false
+forty + backpedal_transition + pass_rush,3,11.0,10,false
+forty + three_cone + gauntlet + backpedal_transition,4,12.0,17,true
+forty + short_shuttle + gauntlet + backpedal_transition,4,12.0,15,false
+forty + short_shuttle + three_cone + backpedal_transition,4,12.0,13,false
+forty + three_cone + gauntlet + pass_rush,4,13.0,14,false
+forty + short_shuttle + three_cone + pass_rush,4,13.0,10,false
+forty + short_shuttle + gauntlet + pass_rush,4,13.0,9,false
+forty + gauntlet + backpedal_transition + pass_rush,4,14.0,14,false
+forty + three_cone + backpedal_transition + pass_rush,4,14.0,13,false
+forty + short_shuttle + backpedal_transition + pass_rush,4,14.0,11,false
+forty + short_shuttle + three_cone + gauntlet + backpedal_transition,5,15.0,17,false
+forty + short_shuttle + three_cone + gauntlet + pass_rush,5,16.0,14,false
+forty + three_cone + gauntlet + backpedal_transition + pass_rush,5,17.0,17,false
+forty + short_shuttle + gauntlet + backpedal_transition + pass_rush,5,17.0,15,false
+forty + short_shuttle + three_cone + backpedal_transition + pass_rush,5,17.0,13,false
+forty + short_shuttle + three_cone + gauntlet + backpedal_transition + pass_rush,6,20.0,17,false

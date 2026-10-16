@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+# The distribution name stays "nflbdb" so existing editable installs keep working; it ships TWO import packages:
+#   nflbdb   — the research code (unchanged, notebooks keep importing it)
+#   nflbowl  — the high-level, GPU-ready experiment API built on top of it
+name = "nflbdb"
+version = "0.2.0"
+description = "NFL Big Data Bowl 2027 — research code (nflbdb) and a GPU-ready experiment API (nflbowl) for Combine/NFL movement representations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26,<3",
+    "polars>=1.10",
+    "pyarrow>=15",
+    "psutil>=5.9",
+    "pyyaml>=6.0",
+    "matplotlib>=3.8",
+    "duckdb>=1.1",
+]
+
+[project.optional-dependencies]
+# PyTorch is NOT a core dependency: Colab and Kaggle ship a CUDA build that must not be replaced.
+# Use this extra only on a machine without PyTorch (local CPU, or after installing the CUDA wheel you want yourself).
+torch = ["torch>=2.1"]
+dev = ["pytest>=8", "ipykernel"]
+all = ["torch>=2.1", "pytest>=8", "ipykernel"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["nflbdb*", "nflbowl*"]
+
+[tool.setuptools.package-data]
+nflbowl = ["configs/*.yaml", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

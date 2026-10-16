@@ -1,0 +1,16 @@
+study_section,name,value,unit,provenance,rationale
+quality,screen_quantile,0.99,quantile,proposed,screening only — flags the extreme 1 % per dimension; the percentile rank itself is exported
+quality,min_group_trajectories,20,trajectories,proposed,below this a proportion / effect is not interpreted
+quality,min_athletes,10,athletes,proposed,clusters needed for a cluster-bootstrap interval
+quality,n_boot,1000,resamples,execution,ratio statistics (cheap)
+quality,n_boot_generic,300,resamples,execution,rank statistics on ≤ 315k trajectories (cost-bounded)
+quality,duration_bins_s,"(0.0, 3.0, 5.0, 8.0, 12.0, 20.0, 40.0)",s,proposed,covers Combine drills (3–10 s) and NFL player-plays (≤ 40 s)
+quality,speed_bands,"(0.0, 1.0, 3.0, 5.0, 7.0, 9.0)",yd/s,proposed,walking / jogging / running / fast / sprint bands
+quality,rel_error_min_speed,1.0,yd/s,proposed,relative error is unstable near zero speed
+quality,extreme_accel_yds2,10.0,yd/s²,proposed,two-thirds of KinematicsConfig.max_accel_yds2 = 15 (established plausibility limit)
+quality,min_frames_trajectory,20,frames,proposed,2 s at 10 Hz
+quality,hist_speed_max,12.0,yd/s,established,KinematicsConfig.max_speed_yds = 12.5
+quality,hist_bin,0.1,yd/s,execution,plot resolution
+quality,resid_range,1.0,yd/s,proposed,M1 p95 |Δ| ≤ 0.37 yd/s in every group → ±1 covers the bulk; tails beyond are counted in edge bins
+quality,nfl_games_per_season,8,games,established,KinematicDiagnostics default (deterministic spacing)
+quality,n_examples,3,trajectories,execution,examples per figure

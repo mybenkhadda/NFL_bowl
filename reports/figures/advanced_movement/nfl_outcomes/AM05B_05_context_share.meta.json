@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05B_05_context_share",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "242043 windows, 401 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:06:23Z",
+  "seed": 20261011,
+  "source": "nfl_outcome_context_audit"
+}

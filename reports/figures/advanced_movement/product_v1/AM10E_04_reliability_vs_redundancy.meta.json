@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_04_reliability_vs_redundancy",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "tracked athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:43Z",
+  "seed": 20261011,
+  "source": "feature_evidence (09B / 08B.4)"
+}

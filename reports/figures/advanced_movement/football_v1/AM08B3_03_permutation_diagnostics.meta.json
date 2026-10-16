@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B3_03_permutation_diagnostics",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "84 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:41:13Z",
+  "seed": 20261011,
+  "source": "football_transfer_permutation_draws"
+}

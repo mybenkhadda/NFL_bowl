@@ -1,0 +1,12 @@
+{
+  "key": "e4153c60ba0e9acf",
+  "representations": [
+    "A_alt_origin_at_ref_speed",
+    "A_speed_by_distance",
+    "B_accel_by_speed",
+    "B_alt_boundary_kept",
+    "C_alt_origin_at_ref_speed",
+    "C_speed_by_time"
+  ],
+  "saved_at": "2026-10-11T15:16:51Z"
+}

@@ -1,0 +1,3 @@
+feature,n_variants,share_ci_above_0,share_positive,median_delta_pct,min_n,max_n
+forty.sprint_vmax,9,0.0,0.1111111111111111,-0.11746030470422009,124,267
+forty.v_max_obs,8,0.375,1.0,3.678016533539915,82,266

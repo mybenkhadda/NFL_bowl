@@ -1,0 +1,12 @@
+check,severity,passed,n_violations,detail
+unique_mart_row,critical,true,0,one row per athlete in gold.mart_athlete_research_base
+unique_registry_row,critical,true,0,one row per athlete in the athlete registry of notebook 00
+position_known,critical,true,0,Combine position group recorded for every tracked athlete
+position_in_scope,info,true,0,"Combine position group among ['DB', 'DL', 'OL', 'TE', 'WR'] (others cannot have an NFL target)"
+draft_year_known,critical,true,0,draft cohort recorded for every tracked athlete
+nfl_athlete_in_registry,info,true,0,every NFL-tracked athlete has a Combine registry row (others cannot be linked and are left out)
+same_position_group,critical,true,0,Combine position group = position group of the NFL play table
+same_draft_cohort,critical,true,0,draft year of the registry = cohort of the NFL play table
+nfl_after_combine,critical,true,0,no regular-season window before the athlete's draft year (the predictors are pre-NFL)
+attempts_have_athlete,critical,true,0,every eligible Combine attempt belongs to a registry athlete
+display_name_unique,info,false,2,"a display name shared by several ids is reported (ids are the key; names are never used to link) — nfl_id [56107, 56363]"

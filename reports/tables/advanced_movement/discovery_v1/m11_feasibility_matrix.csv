@@ -1,0 +1,316 @@
+family,demand_id,position_group,overlap_confidence,shared_quantity,overlap_note,n_combine_athletes,n_nfl_athletes,n_linked,n_linked_supported,data_completeness,feasibility,reason
+forty,accel_low,DB,high,band acceleration 2→4 / 4→6 yd/s from rest,"standing start, maximal effort; the NFL episode starts below 2 yd/s",102,90,80,77,0.9625,SUPPORTED,77 linked athletes with ≥ 10 episodes; overlap high
+forty,accel_low,DL,high,band acceleration 2→4 / 4→6 yd/s from rest,"standing start, maximal effort; the NFL episode starts below 2 yd/s",93,98,77,77,1.0,SUPPORTED,77 linked athletes with ≥ 10 episodes; overlap high
+forty,accel_low,OL,high,band acceleration 2→4 / 4→6 yd/s from rest,"standing start, maximal effort; the NFL episode starts below 2 yd/s",95,86,73,70,0.958904109589041,SUPPORTED,70 linked athletes with ≥ 10 episodes; overlap high
+forty,accel_low,TE,high,band acceleration 2→4 / 4→6 yd/s from rest,"standing start, maximal effort; the NFL episode starts below 2 yd/s",34,31,28,26,0.9285714285714286,LIMITED,26 linked athletes with ≥ 10 episodes; overlap high
+forty,accel_low,WR,high,band acceleration 2→4 / 4→6 yd/s from rest,"standing start, maximal effort; the NFL episode starts below 2 yd/s",94,81,73,72,0.9863013698630136,SUPPORTED,72 linked athletes with ≥ 10 episodes; overlap high
+forty,accel_mid,DB,low,band acceleration 4→6 / 6→8 yd/s,"same band, but the forty passes it from rest, the episode from a rolling start",102,78,80,67,0.8375,LIMITED,67 linked athletes with ≥ 10 episodes; overlap low
+forty,accel_mid,DL,low,band acceleration 4→6 / 6→8 yd/s,"same band, but the forty passes it from rest, the episode from a rolling start",93,81,76,64,0.8421052631578947,LIMITED,64 linked athletes with ≥ 10 episodes; overlap low
+forty,accel_mid,OL,low,band acceleration 4→6 / 6→8 yd/s,"same band, but the forty passes it from rest, the episode from a rolling start",95,56,67,43,0.6417910447761194,LIMITED,43 linked athletes with ≥ 10 episodes; overlap low
+forty,accel_mid,TE,low,band acceleration 4→6 / 6→8 yd/s,"same band, but the forty passes it from rest, the episode from a rolling start",34,23,25,20,0.8,LIMITED,20 linked athletes with ≥ 10 episodes; overlap low
+forty,accel_mid,WR,low,band acceleration 4→6 / 6→8 yd/s,"same band, but the forty passes it from rest, the episode from a rolling start",94,57,71,52,0.7323943661971831,LIMITED,52 linked athletes with ≥ 10 episodes; overlap low
+forty,transition_high,DB,medium,band acceleration 6→8 yd/s,both accelerate through 6→8 yd/s while already moving,102,25,61,21,0.3442622950819672,LIMITED,21 linked athletes with ≥ 10 episodes; overlap medium
+forty,transition_high,DL,medium,band acceleration 6→8 yd/s,both accelerate through 6→8 yd/s while already moving,93,0,17,0,0.0,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+forty,transition_high,OL,medium,band acceleration 6→8 yd/s,both accelerate through 6→8 yd/s while already moving,95,0,2,0,0.0,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+forty,transition_high,TE,medium,band acceleration 6→8 yd/s,both accelerate through 6→8 yd/s while already moving,34,0,14,0,0.0,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+forty,transition_high,WR,medium,band acceleration 6→8 yd/s,both accelerate through 6→8 yd/s while already moving,94,19,60,16,0.26666666666666666,LIMITED,16 linked athletes with ≥ 10 episodes; overlap medium
+forty,sustained_high,DB,low,top speed,forty recordings can end before the speed peak; game speed is rarely maximal,102,69,76,59,0.7763157894736842,LIMITED,59 linked athletes with ≥ 10 episodes; overlap low
+forty,sustained_high,DL,low,top speed,forty recordings can end before the speed peak; game speed is rarely maximal,93,19,58,14,0.2413793103448276,UNSUPPORTED,14 linked athletes with ≥ 10 episodes; overlap low
+forty,sustained_high,OL,low,top speed,forty recordings can end before the speed peak; game speed is rarely maximal,95,0,24,0,0.0,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+forty,sustained_high,TE,low,top speed,forty recordings can end before the speed peak; game speed is rarely maximal,34,16,25,13,0.52,UNSUPPORTED,13 linked athletes with ≥ 10 episodes; overlap low
+forty,sustained_high,WR,low,top speed,forty recordings can end before the speed peak; game speed is rarely maximal,94,71,72,64,0.8888888888888888,LIMITED,64 linked athletes with ≥ 10 episodes; overlap low
+forty,speed_maintenance,DB,none,"",no shared movement state,102,75,77,64,0.8311688311688312,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,speed_maintenance,DL,none,"",no shared movement state,93,74,76,57,0.75,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,speed_maintenance,OL,none,"",no shared movement state,95,50,68,38,0.5588235294117647,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,speed_maintenance,TE,none,"",no shared movement state,34,27,28,24,0.8571428571428571,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,speed_maintenance,WR,none,"",no shared movement state,94,75,72,67,0.9305555555555556,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,braking,DB,none,"",no shared movement state,102,85,80,72,0.9,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,braking,DL,none,"",no shared movement state,93,82,77,64,0.8311688311688312,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,braking,OL,none,"",no shared movement state,95,66,69,53,0.7681159420289855,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,braking,TE,none,"",no shared movement state,34,30,27,25,0.9259259259259259,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,braking,WR,none,"",no shared movement state,94,78,73,69,0.9452054794520548,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,reaccel_after_brake,DB,none,"",no shared movement state,102,74,77,63,0.8181818181818182,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,reaccel_after_brake,DL,none,"",no shared movement state,93,56,74,44,0.5945945945945946,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,reaccel_after_brake,OL,none,"",no shared movement state,95,23,62,18,0.2903225806451613,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,reaccel_after_brake,TE,none,"",no shared movement state,34,24,25,21,0.84,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,reaccel_after_brake,WR,none,"",no shared movement state,94,66,72,59,0.8194444444444444,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,redirection,DB,none,"",no shared movement state,102,73,79,62,0.7848101265822784,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,redirection,DL,none,"",no shared movement state,93,47,72,36,0.5,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,redirection,OL,none,"",no shared movement state,95,13,51,11,0.21568627450980393,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,redirection,TE,none,"",no shared movement state,34,21,25,18,0.72,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,redirection,WR,none,"",no shared movement state,94,62,72,56,0.7777777777777778,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,repeated_change,DB,none,"",no shared movement state,102,73,77,62,0.8051948051948052,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,repeated_change,DL,none,"",no shared movement state,93,70,77,54,0.7012987012987013,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,repeated_change,OL,none,"",no shared movement state,95,40,64,34,0.53125,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,repeated_change,TE,none,"",no shared movement state,34,24,25,21,0.84,UNSUPPORTED,no shared movement state (never a zero effect)
+forty,repeated_change,WR,none,"",no shared movement state,94,64,73,58,0.7945205479452054,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,accel_low,DB,medium,acceleration from low speed,lateral start from a stance,28,90,21,21,1.0,LIMITED,21 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,accel_low,DL,medium,acceleration from low speed,lateral start from a stance,38,98,31,31,1.0,SUPPORTED,31 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,accel_low,OL,medium,acceleration from low speed,lateral start from a stance,54,86,42,42,1.0,SUPPORTED,42 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,accel_low,TE,medium,acceleration from low speed,lateral start from a stance,21,31,15,15,1.0,LIMITED,15 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,accel_low,WR,medium,acceleration from low speed,lateral start from a stance,29,81,22,22,1.0,LIMITED,22 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,accel_mid,DB,none,"",no shared movement state,28,78,21,20,0.9523809523809523,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,accel_mid,DL,none,"",no shared movement state,38,81,30,24,0.8,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,accel_mid,OL,none,"",no shared movement state,54,56,40,26,0.65,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,accel_mid,TE,none,"",no shared movement state,21,23,14,12,0.8571428571428571,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,accel_mid,WR,none,"",no shared movement state,29,57,22,16,0.7272727272727273,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,transition_high,DB,none,"",no shared movement state,28,25,18,7,0.3888888888888889,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,transition_high,DL,none,"",no shared movement state,38,0,8,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,transition_high,OL,none,"",no shared movement state,54,0,1,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,transition_high,TE,none,"",no shared movement state,21,0,6,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,transition_high,WR,none,"",no shared movement state,29,19,20,7,0.35,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,sustained_high,DB,none,"",no shared movement state,28,69,21,18,0.8571428571428571,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,sustained_high,DL,none,"",no shared movement state,38,19,18,6,0.3333333333333333,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,sustained_high,OL,none,"",no shared movement state,54,0,12,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,sustained_high,TE,none,"",no shared movement state,21,16,14,7,0.5,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,sustained_high,WR,none,"",no shared movement state,29,71,22,20,0.9090909090909091,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,speed_maintenance,DB,none,"",no shared movement state,28,75,21,20,0.9523809523809523,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,speed_maintenance,DL,none,"",no shared movement state,38,74,30,18,0.6,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,speed_maintenance,OL,none,"",no shared movement state,54,50,42,24,0.5714285714285714,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,speed_maintenance,TE,none,"",no shared movement state,21,27,15,13,0.8666666666666667,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,speed_maintenance,WR,none,"",no shared movement state,29,75,22,22,1.0,UNSUPPORTED,no shared movement state (never a zero effect)
+short_shuttle,braking,DB,high,deceleration from ~5–7 yd/s to a near-stop,the shuttle forces two stops; NFL braking from ≥ 4 yd/s,28,85,21,20,0.9523809523809523,LIMITED,20 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,braking,DL,high,deceleration from ~5–7 yd/s to a near-stop,the shuttle forces two stops; NFL braking from ≥ 4 yd/s,38,82,31,25,0.8064516129032258,LIMITED,25 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,braking,OL,high,deceleration from ~5–7 yd/s to a near-stop,the shuttle forces two stops; NFL braking from ≥ 4 yd/s,54,66,40,31,0.775,SUPPORTED,31 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,braking,TE,high,deceleration from ~5–7 yd/s to a near-stop,the shuttle forces two stops; NFL braking from ≥ 4 yd/s,21,30,15,14,0.9333333333333333,UNSUPPORTED,14 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,braking,WR,high,deceleration from ~5–7 yd/s to a near-stop,the shuttle forces two stops; NFL braking from ≥ 4 yd/s,29,78,22,22,1.0,LIMITED,22 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,reaccel_after_brake,DB,high,acceleration after a stop,re-acceleration within 1 s of braking in both domains,28,74,21,19,0.9047619047619048,LIMITED,19 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,reaccel_after_brake,DL,high,acceleration after a stop,re-acceleration within 1 s of braking in both domains,38,56,30,15,0.5,LIMITED,15 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,reaccel_after_brake,OL,high,acceleration after a stop,re-acceleration within 1 s of braking in both domains,54,23,38,11,0.2894736842105263,UNSUPPORTED,11 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,reaccel_after_brake,TE,high,acceleration after a stop,re-acceleration within 1 s of braking in both domains,21,24,14,12,0.8571428571428571,UNSUPPORTED,12 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,reaccel_after_brake,WR,high,acceleration after a stop,re-acceleration within 1 s of braking in both domains,29,66,22,20,0.9090909090909091,LIMITED,20 linked athletes with ≥ 10 episodes; overlap high
+short_shuttle,redirection,DB,low,heading change,180° reversal THROUGH a stop vs NFL turns at ≥ 3 yd/s — different geometry,28,73,21,20,0.9523809523809523,LIMITED,20 linked athletes with ≥ 10 episodes; overlap low
+short_shuttle,redirection,DL,low,heading change,180° reversal THROUGH a stop vs NFL turns at ≥ 3 yd/s — different geometry,38,47,27,11,0.4074074074074074,UNSUPPORTED,11 linked athletes with ≥ 10 episodes; overlap low
+short_shuttle,redirection,OL,low,heading change,180° reversal THROUGH a stop vs NFL turns at ≥ 3 yd/s — different geometry,54,13,32,6,0.1875,UNSUPPORTED,6 linked athletes with ≥ 10 episodes; overlap low
+short_shuttle,redirection,TE,low,heading change,180° reversal THROUGH a stop vs NFL turns at ≥ 3 yd/s — different geometry,21,21,14,10,0.7142857142857143,UNSUPPORTED,10 linked athletes with ≥ 10 episodes; overlap low
+short_shuttle,redirection,WR,low,heading change,180° reversal THROUGH a stop vs NFL turns at ≥ 3 yd/s — different geometry,29,62,22,19,0.8636363636363636,LIMITED,19 linked athletes with ≥ 10 episodes; overlap low
+short_shuttle,repeated_change,DB,medium,brake → accelerate sequence,two reversals in one effort,28,73,21,20,0.9523809523809523,LIMITED,20 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,repeated_change,DL,medium,brake → accelerate sequence,two reversals in one effort,38,70,31,19,0.6129032258064516,LIMITED,19 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,repeated_change,OL,medium,brake → accelerate sequence,two reversals in one effort,54,40,40,20,0.5,LIMITED,20 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,repeated_change,TE,medium,brake → accelerate sequence,two reversals in one effort,21,24,14,12,0.8571428571428571,UNSUPPORTED,12 linked athletes with ≥ 10 episodes; overlap medium
+short_shuttle,repeated_change,WR,medium,brake → accelerate sequence,two reversals in one effort,29,64,22,19,0.8636363636363636,LIMITED,19 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,accel_low,DB,low,acceleration from a stance,short first leg,24,90,18,18,1.0,LIMITED,18 linked athletes with ≥ 10 episodes; overlap low
+three_cone,accel_low,DL,low,acceleration from a stance,short first leg,111,98,93,93,1.0,LIMITED,93 linked athletes with ≥ 10 episodes; overlap low
+three_cone,accel_low,OL,low,acceleration from a stance,short first leg,121,86,90,86,0.9555555555555556,LIMITED,86 linked athletes with ≥ 10 episodes; overlap low
+three_cone,accel_low,TE,low,acceleration from a stance,short first leg,19,31,14,14,1.0,UNSUPPORTED,14 linked athletes with ≥ 10 episodes; overlap low
+three_cone,accel_low,WR,low,acceleration from a stance,short first leg,24,81,18,18,1.0,LIMITED,18 linked athletes with ≥ 10 episodes; overlap low
+three_cone,accel_mid,DB,none,"",no shared movement state,24,78,18,17,0.9444444444444444,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,accel_mid,DL,none,"",no shared movement state,111,81,92,77,0.8369565217391305,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,accel_mid,OL,none,"",no shared movement state,121,56,83,56,0.6746987951807228,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,accel_mid,TE,none,"",no shared movement state,19,23,13,9,0.6923076923076923,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,accel_mid,WR,none,"",no shared movement state,24,57,18,16,0.8888888888888888,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,transition_high,DB,none,"",no shared movement state,24,25,15,8,0.5333333333333333,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,transition_high,DL,none,"",no shared movement state,111,0,19,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,transition_high,OL,none,"",no shared movement state,121,0,2,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,transition_high,TE,none,"",no shared movement state,19,0,5,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,transition_high,WR,none,"",no shared movement state,24,19,17,7,0.4117647058823529,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,sustained_high,DB,none,"",no shared movement state,24,69,18,15,0.8333333333333334,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,sustained_high,DL,none,"",no shared movement state,111,19,65,17,0.26153846153846155,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,sustained_high,OL,none,"",no shared movement state,121,0,29,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,sustained_high,TE,none,"",no shared movement state,19,16,13,7,0.5384615384615384,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,sustained_high,WR,none,"",no shared movement state,24,71,18,18,1.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,speed_maintenance,DB,none,"",no shared movement state,24,75,18,17,0.9444444444444444,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,speed_maintenance,DL,none,"",no shared movement state,111,74,92,70,0.7608695652173914,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,speed_maintenance,OL,none,"",no shared movement state,121,50,84,50,0.5952380952380952,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,speed_maintenance,TE,none,"",no shared movement state,19,27,14,12,0.8571428571428571,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,speed_maintenance,WR,none,"",no shared movement state,24,75,18,18,1.0,UNSUPPORTED,no shared movement state (never a zero effect)
+three_cone,braking,DB,medium,deceleration before a reversal,one 180° reversal,24,85,18,17,0.9444444444444444,LIMITED,17 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,braking,DL,medium,deceleration before a reversal,one 180° reversal,111,82,92,78,0.8478260869565217,SUPPORTED,78 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,braking,OL,medium,deceleration before a reversal,one 180° reversal,121,66,84,66,0.7857142857142857,SUPPORTED,66 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,braking,TE,medium,deceleration before a reversal,one 180° reversal,19,30,14,13,0.9285714285714286,UNSUPPORTED,13 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,braking,WR,medium,deceleration before a reversal,one 180° reversal,24,78,18,18,1.0,LIMITED,18 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,reaccel_after_brake,DB,medium,acceleration after a reversal,exit from the reversal,24,74,18,16,0.8888888888888888,LIMITED,16 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,reaccel_after_brake,DL,medium,acceleration after a reversal,exit from the reversal,111,56,89,52,0.5842696629213483,SUPPORTED,52 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,reaccel_after_brake,OL,medium,acceleration after a reversal,exit from the reversal,121,23,74,23,0.3108108108108108,LIMITED,23 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,reaccel_after_brake,TE,medium,acceleration after a reversal,exit from the reversal,19,24,13,10,0.7692307692307693,UNSUPPORTED,10 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,reaccel_after_brake,WR,medium,acceleration after a reversal,exit from the reversal,24,66,18,17,0.9444444444444444,LIMITED,17 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,redirection,DB,medium,turn at speed (90°) and speed retention,curved running around a cone at speed,24,73,18,17,0.9444444444444444,LIMITED,17 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,redirection,DL,medium,turn at speed (90°) and speed retention,curved running around a cone at speed,111,47,87,44,0.5057471264367817,SUPPORTED,44 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,redirection,OL,medium,turn at speed (90°) and speed retention,curved running around a cone at speed,121,13,65,13,0.2,UNSUPPORTED,13 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,redirection,TE,medium,turn at speed (90°) and speed retention,curved running around a cone at speed,19,21,13,8,0.6153846153846154,UNSUPPORTED,8 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,redirection,WR,medium,turn at speed (90°) and speed retention,curved running around a cone at speed,24,62,18,16,0.8888888888888888,LIMITED,16 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,repeated_change,DB,medium,sequence of speed changes,several changes in one effort,24,73,18,17,0.9444444444444444,LIMITED,17 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,repeated_change,DL,medium,sequence of speed changes,several changes in one effort,111,70,92,66,0.717391304347826,SUPPORTED,66 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,repeated_change,OL,medium,sequence of speed changes,several changes in one effort,121,40,78,40,0.5128205128205128,SUPPORTED,40 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,repeated_change,TE,medium,sequence of speed changes,several changes in one effort,19,24,13,10,0.7692307692307693,UNSUPPORTED,10 linked athletes with ≥ 10 episodes; overlap medium
+three_cone,repeated_change,WR,medium,sequence of speed changes,several changes in one effort,24,64,18,17,0.9444444444444444,LIMITED,17 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,accel_low,DB,none,"",no shared movement state,119,90,91,87,0.9560439560439561,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_low,DL,none,"",no shared movement state,0,98,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_low,OL,none,"",no shared movement state,0,86,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_low,TE,none,"",no shared movement state,41,31,32,30,0.9375,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_low,WR,none,"",no shared movement state,107,81,83,81,0.9759036144578314,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_mid,DB,none,"",no shared movement state,119,78,91,77,0.8461538461538461,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_mid,DL,none,"",no shared movement state,0,81,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_mid,OL,none,"",no shared movement state,0,56,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_mid,TE,none,"",no shared movement state,41,23,29,22,0.7586206896551724,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,accel_mid,WR,none,"",no shared movement state,107,57,80,57,0.7125,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,transition_high,DB,none,"",no shared movement state,119,25,70,24,0.34285714285714286,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,transition_high,DL,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,transition_high,OL,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,transition_high,TE,none,"",no shared movement state,41,0,17,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,transition_high,WR,none,"",no shared movement state,107,19,68,19,0.27941176470588236,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,sustained_high,DB,medium,speed held at high speed,lateral run at speed while catching,119,69,86,68,0.7906976744186046,SUPPORTED,68 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,sustained_high,DL,medium,speed held at high speed,lateral run at speed while catching,0,19,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,sustained_high,OL,medium,speed held at high speed,lateral run at speed while catching,0,0,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,sustained_high,TE,medium,speed held at high speed,lateral run at speed while catching,41,16,29,16,0.5517241379310345,LIMITED,16 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,sustained_high,WR,medium,speed held at high speed,lateral run at speed while catching,107,71,82,71,0.8658536585365854,SUPPORTED,71 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,speed_maintenance,DB,medium,steady speed,speed held across the field,119,75,88,74,0.8409090909090909,SUPPORTED,74 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,speed_maintenance,DL,medium,steady speed,speed held across the field,0,74,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,speed_maintenance,OL,medium,steady speed,speed held across the field,0,50,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,speed_maintenance,TE,medium,steady speed,speed held across the field,41,27,32,26,0.8125,LIMITED,26 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,speed_maintenance,WR,medium,steady speed,speed held across the field,107,75,82,75,0.9146341463414634,SUPPORTED,75 linked athletes with ≥ 10 episodes; overlap medium
+gauntlet,braking,DB,none,"",no shared movement state,119,85,91,83,0.9120879120879121,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,braking,DL,none,"",no shared movement state,0,82,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,braking,OL,none,"",no shared movement state,0,66,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,braking,TE,none,"",no shared movement state,41,30,31,29,0.9354838709677419,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,braking,WR,none,"",no shared movement state,107,78,83,78,0.9397590361445783,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,reaccel_after_brake,DB,none,"",no shared movement state,119,74,87,73,0.8390804597701149,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,reaccel_after_brake,DL,none,"",no shared movement state,0,56,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,reaccel_after_brake,OL,none,"",no shared movement state,0,23,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,reaccel_after_brake,TE,none,"",no shared movement state,41,24,29,23,0.7931034482758621,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,reaccel_after_brake,WR,none,"",no shared movement state,107,66,82,66,0.8048780487804879,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,redirection,DB,none,"",no shared movement state,119,73,90,72,0.8,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,redirection,DL,none,"",no shared movement state,0,47,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,redirection,OL,none,"",no shared movement state,0,13,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,redirection,TE,none,"",no shared movement state,41,21,28,21,0.75,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,redirection,WR,none,"",no shared movement state,107,62,80,62,0.775,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,repeated_change,DB,none,"",no shared movement state,119,73,87,72,0.8275862068965517,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,repeated_change,DL,none,"",no shared movement state,0,70,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,repeated_change,OL,none,"",no shared movement state,0,40,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,repeated_change,TE,none,"",no shared movement state,41,24,29,23,0.7931034482758621,UNSUPPORTED,no shared movement state (never a zero effect)
+gauntlet,repeated_change,WR,none,"",no shared movement state,107,64,83,64,0.7710843373493976,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_low,DB,none,"",no shared movement state,122,90,94,90,0.9574468085106383,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_low,DL,none,"",no shared movement state,61,98,52,52,1.0,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_low,OL,none,"",no shared movement state,0,86,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_low,TE,none,"",no shared movement state,0,31,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_low,WR,none,"",no shared movement state,0,81,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_mid,DB,none,"",no shared movement state,122,78,94,78,0.8297872340425532,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_mid,DL,none,"",no shared movement state,61,81,51,43,0.8431372549019608,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_mid,OL,none,"",no shared movement state,0,56,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_mid,TE,none,"",no shared movement state,0,23,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,accel_mid,WR,none,"",no shared movement state,0,57,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,transition_high,DB,none,"",no shared movement state,122,25,72,25,0.3472222222222222,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,transition_high,DL,none,"",no shared movement state,61,0,18,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,transition_high,OL,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,transition_high,TE,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,transition_high,WR,none,"",no shared movement state,0,19,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,sustained_high,DB,none,"",no shared movement state,122,69,89,69,0.7752808988764045,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,sustained_high,DL,none,"",no shared movement state,61,19,46,19,0.41304347826086957,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,sustained_high,OL,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,sustained_high,TE,none,"",no shared movement state,0,16,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,sustained_high,WR,none,"",no shared movement state,0,71,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,speed_maintenance,DB,none,"",no shared movement state,122,75,91,75,0.8241758241758241,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,speed_maintenance,DL,none,"",no shared movement state,61,74,51,41,0.803921568627451,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,speed_maintenance,OL,none,"",no shared movement state,0,50,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,speed_maintenance,TE,none,"",no shared movement state,0,27,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,speed_maintenance,WR,none,"",no shared movement state,0,75,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,braking,DB,medium,deceleration of the backpedal,plant before the transition,122,85,94,85,0.9042553191489362,SUPPORTED,85 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,braking,DL,medium,deceleration of the backpedal,plant before the transition,61,82,52,48,0.9230769230769231,SUPPORTED,48 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,braking,OL,medium,deceleration of the backpedal,plant before the transition,0,66,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,braking,TE,medium,deceleration of the backpedal,plant before the transition,0,30,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,braking,WR,medium,deceleration of the backpedal,plant before the transition,0,78,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,reaccel_after_brake,DB,medium,forward acceleration after a backward / lateral phase,transition into forward drive,122,74,90,74,0.8222222222222222,SUPPORTED,74 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,reaccel_after_brake,DL,medium,forward acceleration after a backward / lateral phase,transition into forward drive,61,56,52,42,0.8076923076923077,SUPPORTED,42 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,reaccel_after_brake,OL,medium,forward acceleration after a backward / lateral phase,transition into forward drive,0,23,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,reaccel_after_brake,TE,medium,forward acceleration after a backward / lateral phase,transition into forward drive,0,24,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,reaccel_after_brake,WR,medium,forward acceleration after a backward / lateral phase,transition into forward drive,0,66,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,redirection,DB,medium,change of direction of motion,hip turn / break; geometry varies by drill,122,73,93,73,0.7849462365591398,SUPPORTED,73 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,redirection,DL,medium,change of direction of motion,hip turn / break; geometry varies by drill,61,47,50,35,0.7,SUPPORTED,35 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,redirection,OL,medium,change of direction of motion,hip turn / break; geometry varies by drill,0,13,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,redirection,TE,medium,change of direction of motion,hip turn / break; geometry varies by drill,0,21,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,redirection,WR,medium,change of direction of motion,hip turn / break; geometry varies by drill,0,62,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap medium
+backpedal_transition,repeated_change,DB,none,"",no shared movement state,122,73,90,73,0.8111111111111111,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,repeated_change,DL,none,"",no shared movement state,61,70,52,43,0.8269230769230769,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,repeated_change,OL,none,"",no shared movement state,0,40,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,repeated_change,TE,none,"",no shared movement state,0,24,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+backpedal_transition,repeated_change,WR,none,"",no shared movement state,0,64,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,accel_low,DB,high,launch acceleration from a stance over 2–5 yd,get-off from a stance,0,90,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap high
+pass_rush,accel_low,DL,high,launch acceleration from a stance over 2–5 yd,get-off from a stance,118,98,98,98,1.0,SUPPORTED,98 linked athletes with ≥ 10 episodes; overlap high
+pass_rush,accel_low,OL,high,launch acceleration from a stance over 2–5 yd,get-off from a stance,121,86,90,86,0.9555555555555556,SUPPORTED,86 linked athletes with ≥ 10 episodes; overlap high
+pass_rush,accel_low,TE,high,launch acceleration from a stance over 2–5 yd,get-off from a stance,0,31,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap high
+pass_rush,accel_low,WR,high,launch acceleration from a stance over 2–5 yd,get-off from a stance,0,81,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap high
+pass_rush,accel_mid,DB,none,"",no shared movement state,0,78,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,accel_mid,DL,none,"",no shared movement state,118,81,97,81,0.8350515463917526,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,accel_mid,OL,none,"",no shared movement state,121,56,83,56,0.6746987951807228,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,accel_mid,TE,none,"",no shared movement state,0,23,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,accel_mid,WR,none,"",no shared movement state,0,57,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,transition_high,DB,none,"",no shared movement state,0,25,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,transition_high,DL,none,"",no shared movement state,118,0,22,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,transition_high,OL,none,"",no shared movement state,121,0,2,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,transition_high,TE,none,"",no shared movement state,0,0,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,transition_high,WR,none,"",no shared movement state,0,19,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,sustained_high,DB,none,"",no shared movement state,0,69,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,sustained_high,DL,none,"",no shared movement state,118,19,70,19,0.2714285714285714,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,sustained_high,OL,none,"",no shared movement state,121,0,29,0,0.0,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,sustained_high,TE,none,"",no shared movement state,0,16,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,sustained_high,WR,none,"",no shared movement state,0,71,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,speed_maintenance,DB,none,"",no shared movement state,0,75,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,speed_maintenance,DL,none,"",no shared movement state,118,74,97,74,0.7628865979381443,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,speed_maintenance,OL,none,"",no shared movement state,121,50,84,50,0.5952380952380952,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,speed_maintenance,TE,none,"",no shared movement state,0,27,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,speed_maintenance,WR,none,"",no shared movement state,0,75,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,braking,DB,none,"",no shared movement state,0,85,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,braking,DL,none,"",no shared movement state,118,82,97,82,0.845360824742268,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,braking,OL,none,"",no shared movement state,121,66,84,66,0.7857142857142857,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,braking,TE,none,"",no shared movement state,0,30,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,braking,WR,none,"",no shared movement state,0,78,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,reaccel_after_brake,DB,none,"",no shared movement state,0,74,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,reaccel_after_brake,DL,none,"",no shared movement state,118,56,94,56,0.5957446808510638,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,reaccel_after_brake,OL,none,"",no shared movement state,121,23,74,23,0.3108108108108108,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,reaccel_after_brake,TE,none,"",no shared movement state,0,24,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,reaccel_after_brake,WR,none,"",no shared movement state,0,66,0,0,NaN,UNSUPPORTED,no shared movement state (never a zero effect)
+pass_rush,redirection,DB,low,lateral redirection,bag / hoop drills; geometry varies,0,73,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,redirection,DL,low,lateral redirection,bag / hoop drills; geometry varies,118,47,91,47,0.5164835164835165,LIMITED,47 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,redirection,OL,low,lateral redirection,bag / hoop drills; geometry varies,121,13,65,13,0.2,UNSUPPORTED,13 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,redirection,TE,low,lateral redirection,bag / hoop drills; geometry varies,0,21,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,redirection,WR,low,lateral redirection,bag / hoop drills; geometry varies,0,62,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,repeated_change,DB,low,repeated short accelerations,multiple short phases,0,73,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,repeated_change,DL,low,repeated short accelerations,multiple short phases,118,70,97,70,0.7216494845360825,LIMITED,70 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,repeated_change,OL,low,repeated short accelerations,multiple short phases,121,40,78,40,0.5128205128205128,LIMITED,40 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,repeated_change,TE,low,repeated short accelerations,multiple short phases,0,24,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+pass_rush,repeated_change,WR,low,repeated short accelerations,multiple short phases,0,64,0,0,NaN,UNSUPPORTED,0 linked athletes with ≥ 10 episodes; overlap low
+other,accel_low,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,90,94,90,0.9574468085106383,UNKNOWN,90 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_low,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,98,98,98,1.0,UNKNOWN,98 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_low,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,86,90,86,0.9555555555555556,UNKNOWN,86 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_low,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,31,33,31,0.9393939393939394,UNKNOWN,31 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_low,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,81,83,81,0.9759036144578314,UNKNOWN,81 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_mid,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,78,94,78,0.8297872340425532,UNKNOWN,78 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_mid,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,81,97,81,0.8350515463917526,UNKNOWN,81 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_mid,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,56,83,56,0.6746987951807228,UNKNOWN,56 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_mid,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,23,30,23,0.7666666666666667,UNKNOWN,23 linked athletes with ≥ 10 episodes; overlap unknown
+other,accel_mid,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,57,80,57,0.7125,UNKNOWN,57 linked athletes with ≥ 10 episodes; overlap unknown
+other,transition_high,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,25,72,25,0.3472222222222222,UNKNOWN,25 linked athletes with ≥ 10 episodes; overlap unknown
+other,transition_high,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,0,22,0,0.0,UNKNOWN,0 linked athletes with ≥ 10 episodes; overlap unknown
+other,transition_high,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,0,2,0,0.0,UNKNOWN,0 linked athletes with ≥ 10 episodes; overlap unknown
+other,transition_high,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,0,17,0,0.0,UNKNOWN,0 linked athletes with ≥ 10 episodes; overlap unknown
+other,transition_high,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,19,68,19,0.27941176470588236,UNKNOWN,19 linked athletes with ≥ 10 episodes; overlap unknown
+other,sustained_high,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,69,89,69,0.7752808988764045,UNKNOWN,69 linked athletes with ≥ 10 episodes; overlap unknown
+other,sustained_high,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,19,70,19,0.2714285714285714,UNKNOWN,19 linked athletes with ≥ 10 episodes; overlap unknown
+other,sustained_high,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,0,29,0,0.0,UNKNOWN,0 linked athletes with ≥ 10 episodes; overlap unknown
+other,sustained_high,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,16,30,16,0.5333333333333333,UNKNOWN,16 linked athletes with ≥ 10 episodes; overlap unknown
+other,sustained_high,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,71,82,71,0.8658536585365854,UNKNOWN,71 linked athletes with ≥ 10 episodes; overlap unknown
+other,speed_maintenance,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,75,91,75,0.8241758241758241,UNKNOWN,75 linked athletes with ≥ 10 episodes; overlap unknown
+other,speed_maintenance,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,74,97,74,0.7628865979381443,UNKNOWN,74 linked athletes with ≥ 10 episodes; overlap unknown
+other,speed_maintenance,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,50,84,50,0.5952380952380952,UNKNOWN,50 linked athletes with ≥ 10 episodes; overlap unknown
+other,speed_maintenance,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,27,33,27,0.8181818181818182,UNKNOWN,27 linked athletes with ≥ 10 episodes; overlap unknown
+other,speed_maintenance,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,75,82,75,0.9146341463414634,UNKNOWN,75 linked athletes with ≥ 10 episodes; overlap unknown
+other,braking,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,85,94,85,0.9042553191489362,UNKNOWN,85 linked athletes with ≥ 10 episodes; overlap unknown
+other,braking,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,82,97,82,0.845360824742268,UNKNOWN,82 linked athletes with ≥ 10 episodes; overlap unknown
+other,braking,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,66,84,66,0.7857142857142857,UNKNOWN,66 linked athletes with ≥ 10 episodes; overlap unknown
+other,braking,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,30,32,30,0.9375,UNKNOWN,30 linked athletes with ≥ 10 episodes; overlap unknown
+other,braking,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,78,83,78,0.9397590361445783,UNKNOWN,78 linked athletes with ≥ 10 episodes; overlap unknown
+other,reaccel_after_brake,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,74,90,74,0.8222222222222222,UNKNOWN,74 linked athletes with ≥ 10 episodes; overlap unknown
+other,reaccel_after_brake,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,56,94,56,0.5957446808510638,UNKNOWN,56 linked athletes with ≥ 10 episodes; overlap unknown
+other,reaccel_after_brake,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,23,74,23,0.3108108108108108,UNKNOWN,23 linked athletes with ≥ 10 episodes; overlap unknown
+other,reaccel_after_brake,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,24,30,24,0.8,UNKNOWN,24 linked athletes with ≥ 10 episodes; overlap unknown
+other,reaccel_after_brake,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,66,82,66,0.8048780487804879,UNKNOWN,66 linked athletes with ≥ 10 episodes; overlap unknown
+other,redirection,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,73,93,73,0.7849462365591398,UNKNOWN,73 linked athletes with ≥ 10 episodes; overlap unknown
+other,redirection,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,47,91,47,0.5164835164835165,UNKNOWN,47 linked athletes with ≥ 10 episodes; overlap unknown
+other,redirection,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,13,65,13,0.2,UNKNOWN,13 linked athletes with ≥ 10 episodes; overlap unknown
+other,redirection,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,21,29,21,0.7241379310344828,UNKNOWN,21 linked athletes with ≥ 10 episodes; overlap unknown
+other,redirection,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,62,80,62,0.775,UNKNOWN,62 linked athletes with ≥ 10 episodes; overlap unknown
+other,repeated_change,DB,unknown,"",drill not mapped to a physical family — review the drill-name mapping,122,73,90,73,0.8111111111111111,UNKNOWN,73 linked athletes with ≥ 10 episodes; overlap unknown
+other,repeated_change,DL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,118,70,97,70,0.7216494845360825,UNKNOWN,70 linked athletes with ≥ 10 episodes; overlap unknown
+other,repeated_change,OL,unknown,"",drill not mapped to a physical family — review the drill-name mapping,121,40,78,40,0.5128205128205128,UNKNOWN,40 linked athletes with ≥ 10 episodes; overlap unknown
+other,repeated_change,TE,unknown,"",drill not mapped to a physical family — review the drill-name mapping,42,24,30,24,0.8,UNKNOWN,24 linked athletes with ≥ 10 episodes; overlap unknown
+other,repeated_change,WR,unknown,"",drill not mapped to a physical family — review the drill-name mapping,107,64,83,64,0.7710843373493976,UNKNOWN,64 linked athletes with ≥ 10 episodes; overlap unknown

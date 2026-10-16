@@ -1,0 +1,224 @@
+section,item,metric,value,note
+repeat,primary_eligible,n_athletes_repeat,56.0,athletes with ≥ 2 eligible sequences (basis of repeatability and of same-athlete pairs)
+flow,01_combine_athletes,n_athletes,60.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|DB,n_athletes,13.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|DL,n_athletes,13.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|OL,n_athletes,14.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|TE,n_athletes,6.0,athletes with a Combine results row or a tracked sequence
+flow_by_position,01_combine_athletes|WR,n_athletes,14.0,athletes with a Combine results row or a tracked sequence
+flow,02_primary_sequence,n_athletes,60.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|DB,n_athletes,13.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|DL,n_athletes,13.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|OL,n_athletes,14.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|TE,n_athletes,6.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow_by_position,02_primary_sequence|WR,n_athletes,14.0,… with ≥ 1 eligible FORTY_YARD_DASH sequence
+flow,03_official_times,n_athletes,60.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|DB,n_athletes,13.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|DL,n_athletes,13.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|OL,n_athletes,14.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|TE,n_athletes,6.0,… AND official forty + 10-yard split
+flow_by_position,03_official_times|WR,n_athletes,14.0,… AND official forty + 10-yard split
+flow,04_nfl_any,n_athletes,59.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|DB,n_athletes,13.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|DL,n_athletes,12.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|OL,n_athletes,14.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|TE,n_athletes,6.0,… AND ≥ 1 tracked NFL play (any season type)
+flow_by_position,04_nfl_any|WR,n_athletes,14.0,… AND ≥ 1 tracked NFL play (any season type)
+flow,05_nfl_reg,n_athletes,51.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|DB,n_athletes,11.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|DL,n_athletes,11.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|OL,n_athletes,12.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|TE,n_athletes,5.0,… AND ≥ 1 tracked regular-season play
+flow_by_position,05_nfl_reg|WR,n_athletes,12.0,… AND ≥ 1 tracked regular-season play
+flow,06_nfl_reg_ge_20,n_athletes,50.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|DB,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|DL,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|OL,n_athletes,11.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|TE,n_athletes,5.0,… AND ≥ 20 regular-season plays
+flow_by_position,06_nfl_reg_ge_20|WR,n_athletes,12.0,… AND ≥ 20 regular-season plays
+flow,07_nfl_reg_ge_50,n_athletes,44.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|DB,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|DL,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|OL,n_athletes,10.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|TE,n_athletes,3.0,… AND ≥ 50 regular-season plays
+flow_by_position,07_nfl_reg_ge_50|WR,n_athletes,11.0,… AND ≥ 50 regular-season plays
+flow,08_nfl_reg_ge_100,n_athletes,37.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|DB,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|DL,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|OL,n_athletes,8.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|TE,n_athletes,3.0,… AND ≥ 100 regular-season plays
+flow_by_position,08_nfl_reg_ge_100|WR,n_athletes,10.0,… AND ≥ 100 regular-season plays
+athletes_by_draft_year,2023,n_athletes,17.0,""
+athletes_by_draft_year,2023,n_with_primary_sequence,17.0,""
+athletes_by_draft_year,2023,n_with_repeat,17.0,""
+athletes_by_draft_year,2023,n_nfl_reg,17.0,""
+athletes_by_draft_year,2024,n_athletes,25.0,""
+athletes_by_draft_year,2024,n_with_primary_sequence,25.0,""
+athletes_by_draft_year,2024,n_with_repeat,21.0,""
+athletes_by_draft_year,2024,n_nfl_reg,20.0,""
+athletes_by_draft_year,2025,n_athletes,18.0,""
+athletes_by_draft_year,2025,n_with_primary_sequence,18.0,""
+athletes_by_draft_year,2025,n_with_repeat,18.0,""
+athletes_by_draft_year,2025,n_nfl_reg,14.0,""
+athletes_by_position_group,DB,n_athletes,13.0,""
+athletes_by_position_group,DB,n_with_primary_sequence,13.0,""
+athletes_by_position_group,DB,n_with_repeat,12.0,""
+athletes_by_position_group,DB,n_nfl_reg,11.0,""
+athletes_by_position_group,DL,n_athletes,13.0,""
+athletes_by_position_group,DL,n_with_primary_sequence,13.0,""
+athletes_by_position_group,DL,n_with_repeat,12.0,""
+athletes_by_position_group,DL,n_nfl_reg,11.0,""
+athletes_by_position_group,OL,n_athletes,14.0,""
+athletes_by_position_group,OL,n_with_primary_sequence,14.0,""
+athletes_by_position_group,OL,n_with_repeat,14.0,""
+athletes_by_position_group,OL,n_nfl_reg,12.0,""
+athletes_by_position_group,TE,n_athletes,6.0,""
+athletes_by_position_group,TE,n_with_primary_sequence,6.0,""
+athletes_by_position_group,TE,n_with_repeat,6.0,""
+athletes_by_position_group,TE,n_nfl_reg,5.0,""
+athletes_by_position_group,WR,n_athletes,14.0,""
+athletes_by_position_group,WR,n_with_primary_sequence,14.0,""
+athletes_by_position_group,WR,n_with_repeat,12.0,""
+athletes_by_position_group,WR,n_nfl_reg,12.0,""
+attempts_per_athlete,1,n_athletes,4.0,eligible primary sequences per athlete
+attempts_per_athlete,2,n_athletes,56.0,eligible primary sequences per athlete
+sequences,primary_all,n_sequences,116.0,""
+sequences,primary_all,n_athletes,60.0,""
+sequences,primary_all,longest_valid_p05,48.0,""
+sequences,primary_all,longest_valid_p50,51.0,""
+sequences,primary_all,longest_valid_p95,59.0,""
+sequences,primary_all,longest_valid_min,46.0,""
+sequences,primary_all,longest_valid_max,63.0,""
+sequences,primary_all,duration_s_p05,4.699999809265137,""
+sequences,primary_all,duration_s_p50,5.0,""
+sequences,primary_all,duration_s_p95,5.800000190734863,""
+sequences,primary_all,duration_s_min,4.5,""
+sequences,primary_all,duration_s_max,6.199999809265137,""
+sequences,primary_eligible,n_sequences,116.0,""
+sequences,primary_eligible,n_athletes,60.0,""
+sequences,primary_eligible,longest_valid_p05,48.0,""
+sequences,primary_eligible,longest_valid_p50,51.0,""
+sequences,primary_eligible,longest_valid_p95,59.0,""
+sequences,primary_eligible,longest_valid_min,46.0,""
+sequences,primary_eligible,longest_valid_max,63.0,""
+sequences,primary_eligible,duration_s_p05,4.699999809265137,""
+sequences,primary_eligible,duration_s_p50,5.0,""
+sequences,primary_eligible,duration_s_p95,5.800000190734863,""
+sequences,primary_eligible,duration_s_min,4.5,""
+sequences,primary_eligible,duration_s_max,6.199999809265137,""
+sequences,primary_eligible,total_valid_frames,6045.0,frames are not independent observations
+drill_coverage,BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL,n_sequences,13.0,""
+drill_coverage,BACK_PEDAL_AND_90_DEGREE_BREAK_TO_BALL,n_athletes,13.0,""
+drill_coverage,BACK_PEDAL_AND_REACT,n_sequences,8.0,""
+drill_coverage,BACK_PEDAL_AND_REACT,n_athletes,8.0,""
+drill_coverage,BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION,n_sequences,26.0,""
+drill_coverage,BACK_PEDAL_AND_TRANSITION_45_DEGREE_REACTION,n_athletes,13.0,""
+drill_coverage,BLOCK_EXPLOSION,n_sequences,6.0,""
+drill_coverage,BLOCK_EXPLOSION,n_athletes,6.0,""
+drill_coverage,BODY_CONTROL_DRILL,n_sequences,13.0,""
+drill_coverage,BODY_CONTROL_DRILL,n_athletes,13.0,""
+drill_coverage,BOX_DRILL,n_sequences,13.0,""
+drill_coverage,BOX_DRILL,n_athletes,13.0,""
+drill_coverage,CIRCUS_ROUTE_LEFT,n_sequences,8.0,""
+drill_coverage,CIRCUS_ROUTE_LEFT,n_athletes,7.0,""
+drill_coverage,COMEBACK_ROUTE_RIGHT,n_sequences,15.0,""
+drill_coverage,COMEBACK_ROUTE_RIGHT,n_athletes,13.0,""
+drill_coverage,CORNER_ROUTE,n_sequences,8.0,""
+drill_coverage,CORNER_ROUTE,n_athletes,4.0,""
+drill_coverage,CURL_ROUTE_RIGHT,n_sequences,14.0,""
+drill_coverage,CURL_ROUTE_RIGHT,n_athletes,14.0,""
+drill_coverage,DAGGER_ROUTE_LEFT,n_sequences,16.0,""
+drill_coverage,DAGGER_ROUTE_LEFT,n_athletes,14.0,""
+drill_coverage,END_ZONE_FADE_RIGHT,n_sequences,4.0,""
+drill_coverage,END_ZONE_FADE_RIGHT,n_athletes,4.0,""
+drill_coverage,FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE,n_sequences,14.0,""
+drill_coverage,FIVE_YARD_WAVE_DRILL_SLIDE_AND_SHUFFLE,n_athletes,14.0,""
+drill_coverage,FLAT_ROUTE_LEFT,n_sequences,6.0,""
+drill_coverage,FLAT_ROUTE_LEFT,n_athletes,6.0,""
+drill_coverage,FORTY_YARD_DASH,n_sequences,116.0,""
+drill_coverage,FORTY_YARD_DASH,n_athletes,60.0,""
+drill_coverage,FOUR_BAG_AGILITY_DRILL,n_sequences,12.0,""
+drill_coverage,FOUR_BAG_AGILITY_DRILL,n_athletes,12.0,""
+drill_coverage,FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION,n_sequences,13.0,""
+drill_coverage,FRONT_START_WAVE_DRILL_AND_LATERAL_REACTION,n_athletes,13.0,""
+drill_coverage,GAUNTLET_DRILL,n_sequences,50.0,""
+drill_coverage,GAUNTLET_DRILL,n_athletes,32.0,""
+drill_coverage,GO_ROUTE_RIGHT,n_sequences,14.0,""
+drill_coverage,GO_ROUTE_RIGHT,n_athletes,14.0,""
+drill_coverage,HOOK_ROUTE_RIGHT,n_sequences,7.0,""
+drill_coverage,HOOK_ROUTE_RIGHT,n_athletes,6.0,""
+drill_coverage,IN_ROUTE_LEFT,n_sequences,6.0,""
+drill_coverage,IN_ROUTE_LEFT,n_athletes,6.0,""
+drill_coverage,LINE_DRILL,n_sequences,22.0,""
+drill_coverage,LINE_DRILL,n_athletes,12.0,""
+drill_coverage,OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT,n_sequences,9.0,""
+drill_coverage,OL_PULL_DRILL_DEEP_SHORT_PULL_LEFT,n_athletes,9.0,""
+drill_coverage,OL_PULL_DRILL_FOLD_BLOCK_RIGHT,n_sequences,13.0,""
+drill_coverage,OL_PULL_DRILL_FOLD_BLOCK_RIGHT,n_athletes,13.0,""
+drill_coverage,OL_PULL_DRILL_LONG_PULL_RIGHT,n_sequences,9.0,""
+drill_coverage,OL_PULL_DRILL_LONG_PULL_RIGHT,n_athletes,9.0,""
+drill_coverage,OVER_SHOULDER_ADJUST,n_sequences,20.0,""
+drill_coverage,OVER_SHOULDER_ADJUST,n_athletes,19.0,""
+drill_coverage,PASS_PRO-MIRROR_DRILL,n_sequences,14.0,""
+drill_coverage,PASS_PRO-MIRROR_DRILL,n_athletes,14.0,""
+drill_coverage,PASS_RUSH_DRILL,n_sequences,26.0,""
+drill_coverage,PASS_RUSH_DRILL,n_athletes,13.0,""
+drill_coverage,PASS_RUSH_DROP,n_sequences,26.0,""
+drill_coverage,PASS_RUSH_DROP,n_athletes,13.0,""
+drill_coverage,POST_CORNER_ROUTE_LEFT,n_sequences,7.0,""
+drill_coverage,POST_CORNER_ROUTE_LEFT,n_athletes,7.0,""
+drill_coverage,POST_CORNER_ROUTE_RIGHT,n_sequences,18.0,""
+drill_coverage,POST_CORNER_ROUTE_RIGHT,n_athletes,13.0,""
+drill_coverage,RED_ZONE_FADE_RIGHT,n_sequences,14.0,""
+drill_coverage,RED_ZONE_FADE_RIGHT,n_athletes,13.0,""
+drill_coverage,RUN_AND_CLUB_DRILL,n_sequences,13.0,""
+drill_coverage,RUN_AND_CLUB_DRILL,n_athletes,13.0,""
+drill_coverage,RUN_THE_HOOP_DRILL,n_sequences,13.0,""
+drill_coverage,RUN_THE_HOOP_DRILL,n_athletes,13.0,""
+drill_coverage,SCREEN_DRILL,n_sequences,13.0,""
+drill_coverage,SCREEN_DRILL,n_athletes,13.0,""
+drill_coverage,SHORT_SHUTTLE,n_sequences,30.0,""
+drill_coverage,SHORT_SHUTTLE,n_athletes,22.0,""
+drill_coverage,SHORT_ZONE_BREAKS,n_sequences,20.0,""
+drill_coverage,SHORT_ZONE_BREAKS,n_athletes,7.0,""
+drill_coverage,SHORT_ZONE_BREAK_FLAT_WHEEL,n_sequences,1.0,""
+drill_coverage,SHORT_ZONE_BREAK_FLAT_WHEEL,n_athletes,1.0,""
+drill_coverage,SHORT_ZONE_BREAK_FORWARD,n_sequences,1.0,""
+drill_coverage,SHORT_ZONE_BREAK_FORWARD,n_athletes,1.0,""
+drill_coverage,SHORT_ZONE_BREAK_INSIDE,n_sequences,1.0,""
+drill_coverage,SHORT_ZONE_BREAK_INSIDE,n_athletes,1.0,""
+drill_coverage,SLANT_ROUTE_LEFT,n_sequences,15.0,""
+drill_coverage,SLANT_ROUTE_LEFT,n_athletes,14.0,""
+drill_coverage,SLOT_SAIL_ROUTE_RIGHT,n_sequences,15.0,""
+drill_coverage,SLOT_SAIL_ROUTE_RIGHT,n_athletes,14.0,""
+drill_coverage,SLOT_STRIKE_ROUTE_LEFT,n_sequences,14.0,""
+drill_coverage,SLOT_STRIKE_ROUTE_LEFT,n_athletes,14.0,""
+drill_coverage,SPEED_OUT_ROUTE_LEFT,n_sequences,16.0,""
+drill_coverage,SPEED_OUT_ROUTE_LEFT,n_athletes,14.0,""
+drill_coverage,TERYL_AUSTIN_DRILL_1,n_sequences,10.0,""
+drill_coverage,TERYL_AUSTIN_DRILL_1,n_athletes,10.0,""
+drill_coverage,TERYL_AUSTIN_DRILL_2,n_sequences,12.0,""
+drill_coverage,TERYL_AUSTIN_DRILL_2,n_athletes,12.0,""
+drill_coverage,THREE_CONE_DRILL,n_sequences,21.0,""
+drill_coverage,THREE_CONE_DRILL,n_athletes,17.0,""
+drill_coverage,WHEEL_ROUTE_LEFT,n_sequences,7.0,""
+drill_coverage,WHEEL_ROUTE_LEFT,n_athletes,6.0,""
+drill_coverage,W_DRILL,n_sequences,13.0,""
+drill_coverage,W_DRILL,n_athletes,13.0,""
+quality_tier_primary,A,n_sequences,116.0,""
+exclusions_primary,eligible,n_sequences,116.0,""
+flags_primary_eligible,onset_censored,share_true,0.5431034482758621,116 sequences with the flag
+flags_primary_eligible,signal_flag,share_true,0.08620689655172414,116 sequences with the flag
+flags_primary_eligible,structural_flag,share_true,0.008620689655172414,116 sequences with the flag
+flags_primary_eligible,boundary_peak,share_true,0.13793103448275862,116 sequences with the flag
+flags_primary_eligible,fit_ok,share_true,0.9482758620689655,116 sequences with the flag
+flags_primary_eligible,S0_all,share_true,1.0,116 sequences with the flag
+flags_primary_eligible,S1_structural,share_true,0.9913793103448276,116 sequences with the flag
+flags_primary_eligible,S2_signal,share_true,0.9137931034482759,116 sequences with the flag
+flags_primary_eligible,S3_no_boundary,share_true,0.8103448275862069,116 sequences with the flag
+nfl_outcomes,reg_plays_ge_20,n_athletes,50.0,"tracked regular-season plays (movement-envelope targets, notebook 07)"
+nfl_outcomes,getoff_obs_ge_20,n_athletes,10.0,valid player_get_off observations (DL only; vendor definition unresolved)
+nfl_outcomes,reg_plays_ge_50,n_athletes,44.0,"tracked regular-season plays (movement-envelope targets, notebook 07)"
+nfl_outcomes,getoff_obs_ge_50,n_athletes,8.0,valid player_get_off observations (DL only; vendor definition unresolved)
+nfl_outcomes,reg_plays_ge_100,n_athletes,37.0,"tracked regular-season plays (movement-envelope targets, notebook 07)"
+nfl_outcomes,getoff_obs_ge_100,n_athletes,6.0,valid player_get_off observations (DL only; vendor definition unresolved)

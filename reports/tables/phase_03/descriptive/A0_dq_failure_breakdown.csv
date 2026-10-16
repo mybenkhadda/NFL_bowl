@@ -1,0 +1,27 @@
+check_id,facet,level,n_keys,n_rows,n_trajectories,n_athletes
+"uniq:combine_tracking:event_id, nfl_id, time",row_kind,BALL,,32095,551,54
+"uniq:combine_tracking:event_id, nfl_id, time",row_kind,PLAYER,,32095,551,54
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",row_kind,BALL,,32095,551,54
+"uniq:combine_tracking:event_id, nfl_id, attempt, time",row_kind,PLAYER,,32095,551,54
+range:combine_tracking:s,row_kind,BALL,,8746,547,54
+range:combine_tracking:s,m1_player_frames,vendor_out_of_range,,0,,
+range:combine_tracking:s,m1_player_frames,derived_speed_also_out_of_range,,0,,
+range:combine_tracking:a,row_kind,BALL,,264,49,34
+range:combine_tracking:a,m1_player_frames,vendor_out_of_range,,0,,
+range:combine_tracking:a,m1_player_frames,derived_accel_mag_also_out_of_range,,0,,
+"fk:game_tracking:game_id,play_id->player_play",season_season_type,2023 POST,13,,,
+"fk:game_tracking:game_id,play_id->player_play",season_season_type,2023 REG,126,,,
+"fk:game_tracking:game_id,play_id->player_play",season_season_type,2024 REG,49,,,
+"fk:game_tracking:game_id,play_id->player_play",season_season_type,2025 PRE,2,,,
+"fk:game_tracking:game_id,play_id->player_play",season_season_type,2025 REG,12,,,
+"fk:game_tracking:game_id,play_id->player_play",ball_snap_tag,with_ball_snap,202,,,
+"fk:game_tracking:game_id,play_id->player_play",ball_snap_tag,without_ball_snap,0,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2023 POST,23,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2023 REG,426,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2024 POST,20,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2024 REG,837,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2025 POST,36,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2025 PRE,185,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",season_season_type,2025 REG,970,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",ball_snap_tag,with_ball_snap,2279,,,
+"fk:game_tracking:game_id,play_id,nfl_id->player_play",ball_snap_tag,without_ball_snap,1,,,

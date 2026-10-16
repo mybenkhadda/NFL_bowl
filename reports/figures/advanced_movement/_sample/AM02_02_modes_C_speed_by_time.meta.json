@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_02_modes_C_speed_by_time",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "60 athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T15:17:19Z",
+  "seed": 20261011,
+  "source": "fpca_functions (reference fit, transductive)"
+}

@@ -1,0 +1,18 @@
+target_id,label,unit,n_athletes,r_half,reliability,n_episodes
+nfl.band_2_4,acceleration through 2 → 4 yd/s,yd/s²,366,0.9543739296486112,0.9766543803827795,113101
+nfl.band_4_6,acceleration through 4 → 6 yd/s,yd/s²,323,0.9178897818752172,0.9571872070539427,49812
+nfl.band_6_8,acceleration through 6 → 8 yd/s,yd/s²,165,0.6416617550662588,0.7817222434354155,7960
+nfl.accel_low_mean,mean acceleration from low speed,yd/s²,378,0.9663744389311631,0.9828997161460692,228227
+nfl.accel_low_peak05,peak 0.5-s speed gain from low speed,yd/s²,378,0.9768552888849651,0.9882921571218855,228227
+nfl.transition_high_mean,acceleration into high-speed running,yd/s²,94,-0.0692202077998325,-0.14873594888907182,1197
+nfl.vmax_p90,observed high-speed peak (90th percentile),yd/s,213,0.6901611048979095,0.8166808511897417,15659
+nfl.brake_decel,mean deceleration while braking,yd/s²,354,0.7266830768033746,0.8417098500191362,67836
+nfl.brake_peak05,peak 0.5-s deceleration,yd/s²,354,0.7572978207558397,0.8618889886634182,67826
+nfl.brake_distance_matched,braking distance from 4–7 yd/s,yd,352,0.5345717787557359,0.6967048217049557,54425
+nfl.reaccel_mean,re-acceleration after braking,yd/s²,305,0.6438326254143013,0.7833311195560846,18001
+nfl.redirect_retention,speed retained through a redirection,fraction,270,0.4280411365254818,0.5994801208135139,14311
+nfl.redirect_retention_90,speed retained through a ≥ 90° redirection,fraction,142,0.2740995121789329,0.4302638994189313,2242
+nfl.brake_to_burst,Brake-to-Burst latency,s,305,0.07407997517370586,0.1379412648703841,17996
+nfl.pair_tci,Transition Cost Index of brake → re-acceleration,fraction,305,0.5429416230463414,0.7037746794002127,17996
+nfl.pair_tci_turn90,Transition Cost Index with an observed ≥ 90° turn,fraction,16,0.0374695702297879,0.07223261540382107,222
+nfl.broad_accel_sust05,"season-average sustained acceleration (Milestone 05 primary, broad)",yd/s²,380,0.9630741263591596,0.9811897711120438,241760

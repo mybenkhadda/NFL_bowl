@@ -1,0 +1,13 @@
+family,position_group,n_athletes,n_transitions,share_censored
+three_cone,DL,76,214,0.014018691588785047
+three_cone,TE,19,66,0.0
+short_shuttle,DB,28,69,0.043478260869565216
+backpedal_transition,DL,61,255,0.1843137254901961
+three_cone,OL,87,209,0.019138755980861243
+backpedal_transition,DB,113,322,0.14906832298136646
+short_shuttle,WR,29,72,0.05555555555555555
+three_cone,WR,24,65,0.0
+short_shuttle,OL,53,132,0.030303030303030304
+short_shuttle,TE,21,70,0.08571428571428572
+short_shuttle,DL,38,88,0.045454545454545456
+three_cone,DB,24,71,0.0

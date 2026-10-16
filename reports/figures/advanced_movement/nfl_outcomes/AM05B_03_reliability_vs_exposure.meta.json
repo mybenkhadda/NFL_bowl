@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05B_03_reliability_vs_exposure",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "up to 336 athletes",
+  "note": "the six candidates with the highest all-games reliability are drawn; the table holds every outcome",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:06:20Z",
+  "seed": 20261011,
+  "source": "nfl_reliability_vs_exposure"
+}

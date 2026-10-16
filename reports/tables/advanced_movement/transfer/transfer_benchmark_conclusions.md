@@ -1,0 +1,61 @@
+### What the tables show (primary analysis, paired cohort)
+
+- **`O2.accel_sust05_mean`** (primary, 284 athletes, yd/s²): M1 RMSE 0.179, R² +0.947.
+    - M1 vs M0: Δ RMSE +0.000 [-0.002, +0.003], +0.1 % → not established (interval includes 0)
+    - M2 vs M1: Δ RMSE +0.000 [-0.000, +0.000], +0.1 % → not established (interval includes 0)
+    - M3 vs M1: Δ RMSE -0.000 [-0.001, +0.000], -0.2 % → not established (interval includes 0)
+    - M4 vs M1: Δ RMSE -0.000 [-0.001, +0.000], -0.2 % → not established (interval includes 0)
+    - M5 vs M1: Δ RMSE +0.000 [-0.001, +0.002], +0.2 % → not established (interval includes 0)
+    - M5S vs M1: Δ RMSE -0.000 [-0.001, +0.001], -0.2 % → not established (interval includes 0)
+    - M6 vs M1: Δ RMSE +0.000 [-0.001, +0.001], +0.0 % → not established (interval includes 0)
+    - M7_PC2 vs M1: Δ RMSE -0.000 [-0.001, +0.000], -0.0 % → not established (interval includes 0)
+    - M7_PC4 vs M1: Δ RMSE +0.000 [-0.001, +0.001], +0.1 % → not established (interval includes 0)
+    - M5 vs M2: Δ RMSE +0.000 [-0.001, +0.001], +0.1 % → not established (interval includes 0)
+    - M5 vs M3: Δ RMSE +0.001 [-0.000, +0.002], +0.3 % → not established (interval includes 0)
+    - M5S vs M3: Δ RMSE -0.000 [-0.001, +0.001], -0.1 % → not established (interval includes 0)
+    - M5 vs M4: Δ RMSE +0.001 [-0.001, +0.002], +0.3 % → not established (interval includes 0)
+    - M7_PC2 vs M5: Δ RMSE -0.000 [-0.001, +0.001], -0.2 % → not established (interval includes 0)
+    - M7_PC4 vs M5: Δ RMSE -0.000 [-0.001, +0.001], -0.1 % → not established (interval includes 0)
+    - M5 vs M6: Δ RMSE +0.000 [-0.000, +0.001], +0.1 % → not established (interval includes 0)
+    - POS vs MEAN: Δ RMSE +0.596 [+0.550, +0.640], +76.7 % → established
+    - M0 vs POS: Δ RMSE +0.002 [-0.003, +0.006], +1.0 % → not established (interval includes 0)
+- **`O3.band_acc_v0_2_mean`** (secondary_speed_conditioned, 284 athletes, yd/s²): M1 RMSE 0.191, R² +0.937.
+    - M1 vs M0: Δ RMSE +0.001 [-0.004, +0.007], +0.7 % → not established (interval includes 0)
+    - M2 vs M1: Δ RMSE -0.000 [-0.002, +0.001], -0.2 % → not established (interval includes 0)
+    - M3 vs M1: Δ RMSE -0.001 [-0.002, +0.001], -0.3 % → not established (interval includes 0)
+    - M4 vs M1: Δ RMSE -0.000 [-0.002, +0.002], -0.1 % → not established (interval includes 0)
+    - M5 vs M1: Δ RMSE -0.000 [-0.005, +0.005], -0.0 % → not established (interval includes 0)
+    - M5S vs M1: Δ RMSE +0.002 [-0.004, +0.007], +0.9 % → not established (interval includes 0)
+    - M6 vs M1: Δ RMSE -0.002 [-0.006, +0.002], -0.9 % → not established (interval includes 0)
+    - M7_PC2 vs M1: Δ RMSE +0.001 [-0.001, +0.004], +0.7 % → not established (interval includes 0)
+    - M7_PC4 vs M1: Δ RMSE +0.001 [-0.004, +0.005], +0.3 % → not established (interval includes 0)
+    - M5 vs M2: Δ RMSE +0.000 [-0.005, +0.006], +0.2 % → not established (interval includes 0)
+    - M5 vs M3: Δ RMSE +0.001 [-0.005, +0.006], +0.3 % → not established (interval includes 0)
+    - M5S vs M3: Δ RMSE +0.002 [-0.004, +0.008], +1.2 % → not established (interval includes 0)
+    - M5 vs M4: Δ RMSE +0.000 [-0.006, +0.006], +0.1 % → not established (interval includes 0)
+    - M7_PC2 vs M5: Δ RMSE +0.001 [-0.002, +0.005], +0.8 % → not established (interval includes 0)
+    - M7_PC4 vs M5: Δ RMSE +0.001 [-0.001, +0.002], +0.3 % → not established (interval includes 0)
+    - M5 vs M6: Δ RMSE +0.002 [-0.004, +0.008], +0.9 % → not established (interval includes 0)
+    - POS vs MEAN: Δ RMSE +0.531 [+0.484, +0.577], +69.9 % → established
+    - M0 vs POS: Δ RMSE +0.036 [+0.022, +0.051], +15.8 % → established
+- **`O1.speed_p90_mean`** (secondary_speed, 284 athletes, yd/s): M1 RMSE 0.275, R² +0.961.
+    - M1 vs M0: Δ RMSE -0.004 [-0.010, +0.001], -1.5 % → not established (interval includes 0)
+    - M2 vs M1: Δ RMSE +0.000 [-0.001, +0.001], +0.0 % → not established (interval includes 0)
+    - M3 vs M1: Δ RMSE +0.003 [-0.001, +0.007], +1.0 % → not established (interval includes 0)
+    - M4 vs M1: Δ RMSE +0.001 [-0.001, +0.004], +0.5 % → not established (interval includes 0)
+    - M5 vs M1: Δ RMSE +0.001 [-0.005, +0.008], +0.5 % → not established (interval includes 0)
+    - M5S vs M1: Δ RMSE +0.001 [-0.005, +0.007], +0.4 % → not established (interval includes 0)
+    - M6 vs M1: Δ RMSE -0.002 [-0.009, +0.004], -0.9 % → not established (interval includes 0)
+    - M7_PC2 vs M1: Δ RMSE +0.004 [-0.000, +0.008], +1.4 % → not established (interval includes 0)
+    - M7_PC4 vs M1: Δ RMSE -0.001 [-0.007, +0.006], -0.2 % → not established (interval includes 0)
+    - M5 vs M2: Δ RMSE +0.001 [-0.005, +0.008], +0.5 % → not established (interval includes 0)
+    - M5 vs M3: Δ RMSE -0.001 [-0.007, +0.004], -0.5 % → not established (interval includes 0)
+    - M5S vs M3: Δ RMSE -0.002 [-0.007, +0.004], -0.6 % → not established (interval includes 0)
+    - M5 vs M4: Δ RMSE +0.000 [-0.005, +0.006], +0.0 % → not established (interval includes 0)
+    - M7_PC2 vs M5: Δ RMSE +0.003 [-0.001, +0.007], +1.0 % → not established (interval includes 0)
+    - M7_PC4 vs M5: Δ RMSE -0.002 [-0.005, +0.001], -0.7 % → not established (interval includes 0)
+    - M5 vs M6: Δ RMSE +0.004 [-0.002, +0.010], +1.4 % → not established (interval includes 0)
+    - POS vs MEAN: Δ RMSE +1.076 [+1.000, +1.145], +77.1 % → established
+    - M0 vs POS: Δ RMSE +0.049 [+0.028, +0.069], +15.3 % → established
+
+Δ RMSE = RMSE(reference) − RMSE(model); positive = lower error than the reference. Intervals: paired bootstrap of athletes (2000 replicates) on out-of-fold predictions. A gain below 2 % of the reference error is not treated as practically relevant (heuristic). Exploratory rows (M7, M5S, secondary targets) cannot replace the primary comparison M5 vs M1 on the primary target.

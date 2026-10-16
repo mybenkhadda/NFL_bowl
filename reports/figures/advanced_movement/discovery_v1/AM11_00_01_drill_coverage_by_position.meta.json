@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_00_01_drill_coverage_by_position",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "6,310 attempts",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T16:51:31Z",
+  "seed": 20261011,
+  "source": "combine_frame_kinematics"
+}

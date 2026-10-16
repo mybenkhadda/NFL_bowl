@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_A_03_predicted_vs_observed",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T01:20:23Z",
+  "seed": 20261015,
+  "source": "m12a (out-of-fold)"
+}

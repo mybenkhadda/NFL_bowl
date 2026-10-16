@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B2_07_matched_prospect_concordance",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "624 pairs, 210 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:56:06Z",
+  "seed": 20261011,
+  "source": "football_transfer_* tables"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B5_01_scouting_scorecard_56096",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "one athlete; reference sizes in the table",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:42:41Z",
+  "seed": 20261011,
+  "source": "07D scorecard tables + scouting_evidence_states"
+}

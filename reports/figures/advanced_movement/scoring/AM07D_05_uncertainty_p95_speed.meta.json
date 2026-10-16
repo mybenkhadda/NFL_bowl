@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_05_uncertainty_p95_speed",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "athletes with a percentile",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:10Z",
+  "seed": 20261011,
+  "source": "combine percentile tables"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_05_same_vs_different_athlete_distances",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "56 athletes with two attempts",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T22:56:13Z",
+  "seed": 20261011,
+  "source": "repr_pair_statistics"
+}

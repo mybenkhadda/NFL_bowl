@@ -1,0 +1,8 @@
+outcome_key,target_id,outcome_family,n_design,n_with_windows,n_eligible,position_counts,evaluated,reason,status
+Y_BAND02,C0:O3.band_acc_v0_2_mean,frozen_m05,284,284,284,DB 67 · DL 70 · OL 63 · TE 20 · WR 64,true,"",EXPLORATORY (Milestone 07B)
+Y_BAND46,C0:O3.band_acc_v4_6_mean,speed_band_aligned,284,284,251,DB 64 · DL 57 · OL 48 · TE 19 · WR 63,true,"",EXPLORATORY (Milestone 07B)
+Y_BAND68,C0:O3.band_acc_v6_8_mean,speed_band_aligned,284,281,155,DB 55 · DL 19 · OL 1 · TE 18 · WR 62,true,"",EXPLORATORY (Milestone 07B)
+Y_CTX,C4:O2.accel_sust05_mean,context_conditioned,284,284,284,DB 67 · DL 70 · OL 63 · TE 20 · WR 64,true,"",EXPLORATORY (Milestone 07B)
+Y_RAW,C0:O2.accel_sust05_mean,frozen_m05,284,284,284,DB 67 · DL 70 · OL 63 · TE 20 · WR 64,true,"",EXPLORATORY (Milestone 07B)
+Y_SPEED,C0:O1.speed_p90_mean,frozen_m05,284,284,284,DB 67 · DL 70 · OL 63 · TE 20 · WR 64,true,"",EXPLORATORY (Milestone 07B)
+Y_START,C2:O2.accel_sust05_mean,context_conditioned,284,284,284,DB 67 · DL 70 · OL 63 · TE 20 · WR 64,true,"",EXPLORATORY (Milestone 07B)

@@ -1,0 +1,6 @@
+definition,label,status,n_athletes_any,n_athletes_eligible,n_athlete_games,n_windows,share_windows_retained,missing_context_share,n_positions,min_position_athletes,position_counts,cells_supported,cells_total,start_speed_overlap,note
+C0,raw athlete aggregate (Milestone 05 statistic),reference_frozen_m05,401,336,7891,241760,1.0,,5,23,DB 78 · DL 88 · OL 77 · TE 23 · WR 70,,,,""
+C1,position-standardised athlete value,exploratory,401,336,7891,241760,1.0,,5,23,DB 78 · DL 88 · OL 77 · TE 23 · WR 70,,,,""
+C2,starting-speed-conditioned (position × starting-speed band),exploratory,401,336,7891,241760,1.0,0.0,5,23,DB 78 · DL 88 · OL 77 · TE 23 · WR 70,20,20,1.0,"windows in unsupported cells are DROPPED, not left unadjusted"
+C3,position × alignment conditioned,exploratory,400,334,7851,239402,0.9902465254798147,0.009232296492389146,5,22,DB 78 · DL 88 · OL 77 · TE 22 · WR 69,27,38,,"windows in unsupported cells are DROPPED, not left unadjusted"
+C4,hierarchical context-adjusted athlete effect (shrunk),exploratory,401,336,7891,241760,1.0,0.0,5,23,DB 78 · DL 88 · OL 77 · TE 23 · WR 70,61,93,1.0,"backfitting converged = False, 30 iteration(s)"

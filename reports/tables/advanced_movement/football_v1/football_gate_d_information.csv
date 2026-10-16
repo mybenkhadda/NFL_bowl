@@ -1,0 +1,19 @@
+feature_id,criterion,value,passed
+F2.forty.p95_speed,support,375 athletes with a repeat,true
+F2.forty.p95_speed,raw_repeatability,0.9473997234235965,true
+F2.forty.p95_speed,repeatable_beyond_official_tests,"residual repeatability 0.68 [0.62, 0.75] ≥ 0.50",true
+F6.forty.time_v4_to_v8_s,support,375 athletes with a repeat,true
+F6.forty.time_v4_to_v8_s,raw_repeatability,0.8218290558710465,true
+F6.forty.time_v4_to_v8_s,repeatable_beyond_official_tests,"residual repeatability 0.59 [0.49, 0.67] ≥ 0.50",true
+F6.forty.accel_1s_from_v4,support,375 athletes with a repeat,true
+F6.forty.accel_1s_from_v4,raw_repeatability,0.6692930946075334,false
+F6.forty.accel_1s_from_v4,repeatable_beyond_official_tests,raw repeatability 0.67 below the reference line 0.70,false
+F6.forty.speed_gain_10yd_from_v4,support,375 athletes with a repeat,true
+F6.forty.speed_gain_10yd_from_v4,raw_repeatability,0.8066429438939459,true
+F6.forty.speed_gain_10yd_from_v4,repeatable_beyond_official_tests,"residual repeatability 0.49 [0.38, 0.59] below 0.50",false
+FPCA,support,375 athletes with a repeat,true
+FPCA,raw_repeatability,0.7775120983376425,true
+FPCA,repeatable_beyond_official_tests,"residual repeatability 0.74 [0.72, 0.76] ≥ 0.65",true
+TCN,support,375 athletes with a repeat,true
+TCN,raw_repeatability,0.9718181292868925,true
+TCN,repeatable_beyond_official_tests,"residual repeatability 0.98 [0.98, 0.98] ≥ 0.65",true

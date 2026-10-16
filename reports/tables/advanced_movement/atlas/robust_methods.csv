@@ -1,0 +1,18 @@
+method,family,objective,representation,embedding_dim,label,reference,primary,n_parameters,train_seconds,value_unit
+FPCA_A_K2,fpca,fpca,A_speed_by_distance,2,FPCA · A (K = 2),"",true,48,,yd/s
+TCNA_A,tcn,reconstruction,A_speed_by_distance,8,TCN-A · A (8-d),FPCA_A_K2,true,32761,210.52320029994007,yd/s
+TCNB_A,tcn,reconstruction+consistency,A_speed_by_distance,8,TCN-B · A (8-d),FPCA_A_K2,true,32761,476.9896893000114,yd/s
+TCNB_A_E16,tcn,reconstruction+consistency,A_speed_by_distance,16,TCN-B · A (16-d),FPCA_A_K2,false,33793,423.0955058999825,yd/s
+TCNB_A_s1,tcn,reconstruction+consistency,A_speed_by_distance,8,"TCN-B · A (8-d), seed 20261012",FPCA_A_K2,false,32761,680.2484238999896,yd/s
+TCNB_A_s2,tcn,reconstruction+consistency,A_speed_by_distance,8,"TCN-B · A (8-d), seed 20261013",FPCA_A_K2,false,32761,333.2900267998921,yd/s
+TCNB_A_RAND,tcn,untrained,A_speed_by_distance,8,untrained encoder · A (8-d),FPCA_A_K2,false,32761,,yd/s
+SPEED2,control,tracked top speed,A_speed_by_distance,2,tracked top speed (p95 + interior peak),FPCA_A_K2,false,0,,yd/s
+TCNB_A|pc2,tcn,reconstruction+consistency,A_speed_by_distance,2,TCNB_A · first 2 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A|pc4,tcn,reconstruction+consistency,A_speed_by_distance,4,TCNB_A · first 4 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A|pc8,tcn,reconstruction+consistency,A_speed_by_distance,8,TCNB_A · first 8 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s1|pc2,tcn,reconstruction+consistency,A_speed_by_distance,2,TCNB_A_s1 · first 2 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s1|pc4,tcn,reconstruction+consistency,A_speed_by_distance,4,TCNB_A_s1 · first 4 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s1|pc8,tcn,reconstruction+consistency,A_speed_by_distance,8,TCNB_A_s1 · first 8 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s2|pc2,tcn,reconstruction+consistency,A_speed_by_distance,2,TCNB_A_s2 · first 2 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s2|pc4,tcn,reconstruction+consistency,A_speed_by_distance,4,TCNB_A_s2 · first 4 training axes,FPCA_A_K2,false,32761,,yd/s
+TCNB_A_s2|pc8,tcn,reconstruction+consistency,A_speed_by_distance,8,TCNB_A_s2 · first 8 training axes,FPCA_A_K2,false,32761,,yd/s

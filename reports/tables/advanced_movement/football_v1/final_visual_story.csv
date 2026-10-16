@@ -1,0 +1,13 @@
+step,story,figures,n_figures,available
+1,Feature reliability versus redundancy,AM04A_03_reliability_vs_stopwatch_redundancy · AM04A_03b_reliability_vs_redundancy_by_position · AM04A_04_reliability_by_family · AM04A_08_reliable_speed_vs_derivatives,4,true
+2,FPCA curve structure,AM03_04_reconstruction_fpca_tcn_a_tcn_b · AM04A_09_fpca_and_tcn_in_context · AM04B_02_matched_retrieval_tcn_vs_fpca · AM06B_08_tcn_vs_speed2_vs_fpca,4,true
+3,TCN matched-stopwatch retrieval,AM04B_02_matched_retrieval_tcn_vs_fpca,1,true
+4,Original NFL Δ RMSE (Milestone 06),AM06B_03_delta_rmse_relative_to_m1,1,true
+5,NFL context decomposition,AM07A_03_variance_components,1,true
+6,Statistical detectability,AM07C_01_power_vs_effect · AM07C_05_power_by_position,2,true
+7,Football-outcome availability,AM08A_02_outcome_feasibility_status,1,true
+8,Separation semantics and reliability,AM08A2_09_outcome_reliability · AM08A2_09b_odd_even_game_values,2,true
+9,Football transfer performance,AM08B2_02_paired_delta_rmse_forest,1,true
+10,Matched-prospect comparison,AM08B2_07_matched_prospect_concordance,1,true
+11,Scorecard uncertainty,AM08B5_04_pairwise_uncertainty,1,true
+12,Final scouting intelligence diagram,"",0,false

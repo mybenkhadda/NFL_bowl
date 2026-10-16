@@ -1,0 +1,54 @@
+# Default = the Milestone 12F FULL research protocol (M12Config defaults, 12F notebook settings).
+# Scientific keys here are the reference; change them only on purpose — every artifact records their hash.
+description: Milestone 12F full protocol, automatic device and precision.
+
+science:
+  run_mode: full
+  seed: 20261015
+  embed_dim: 32
+  width: 48
+  epochs: 25
+  batch: 256
+  accum_steps: 1
+  lr: 0.001
+  patience: 4
+  max_minutes: 90.0
+  lambda_mask: 1.0
+  lambda_phys: 1.0
+  lambda_temp: 0.5
+  lambda_align: 0.5
+  val_share: 0.1
+  outer_folds: 5
+  n_boot: 1000
+  n_perm: 200
+  max_train_batches: null
+  max_val_batches: 50
+  inductive_configs: [F2_cnn_physics, F4_physics_contrastive]
+  learning_curve_fractions: [0.1, 0.3]
+
+runtime:
+  device: auto
+  precision: auto          # fp16 autocast + GradScaler on CUDA (as the notebook), fp32 on CPU
+  data_placement: auto
+  gpu_memory_fraction: 0.5
+  compile: false
+  compile_mode: default
+  cudnn_benchmark: null
+  allow_tf32: null
+  embed_batch: 512
+  embed_precision: fp32
+  checkpoint_every: 1
+  stage_dir: null
+  num_threads: null
+  progress: true
+
+evaluation:
+  backend: fast            # exact estimands, vectorised; "reference" calls the nflbdb functions unchanged
+  default_level: standard
+  identity_null_perms: 10
+  quick_athlete_share: 0.25
+  quick_min_athletes: 60
+  quick_n_boot: 50
+  matched_query_chunk: 256
+  approx_topk: false
+  similarity_device: cpu

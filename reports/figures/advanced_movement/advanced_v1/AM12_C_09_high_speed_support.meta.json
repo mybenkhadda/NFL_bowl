@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_C_09_high_speed_support",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T00:42:11Z",
+  "seed": 20261015,
+  "source": "m12_nfl_bin_support"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B1_07_raw_versus_context_ranking",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "supported athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:52Z",
+  "seed": 20261011,
+  "source": "football_context_conditioning"
+}

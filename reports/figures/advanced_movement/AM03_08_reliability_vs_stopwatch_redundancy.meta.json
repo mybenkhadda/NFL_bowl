@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_08_reliability_vs_stopwatch_redundancy",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "265 confirm athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T23:50:19Z",
+  "seed": 20261011,
+  "source": "repr_method_summary"
+}

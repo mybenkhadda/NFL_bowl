@@ -1,0 +1,154 @@
+target,window,min_obs,method,n_athletes,estimate,ci_lower,ci_upper,note
+adj_mean,all,20,game_odd_even,93,0.733495264094909,0.6150350656027955,0.8511907598538865,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,all,20,game_odd_even_sb,93,0.8462616302305052,0.7616367950168809,0.9196143134606728,odd/even stepped up to all games (Spearman–Brown)
+mean,all,20,game_odd_even,93,0.827524105030651,0.7536831639502,0.9009244545138695,"Pearson, odd vs even games; athlete bootstrap"
+mean,all,20,game_odd_even_sb,93,0.9056231901431164,0.8595431369170659,0.9478803351438458,odd/even stepped up to all games (Spearman–Brown)
+median,all,20,game_odd_even,93,0.7854813208112955,0.6587609764639806,0.8962881636290944,"Pearson, odd vs even games; athlete bootstrap"
+median,all,20,game_odd_even_sb,93,0.8798538653480673,0.7942807743985836,0.9453079767304864,odd/even stepped up to all games (Spearman–Brown)
+p25,all,20,game_odd_even,93,0.857069811999986,0.7857765769399725,0.9209651836965794,"Pearson, odd vs even games; athlete bootstrap"
+p25,all,20,game_odd_even_sb,93,0.9230345638723811,0.880039067693949,0.958856715897718,odd/even stepped up to all games (Spearman–Brown)
+p75,all,20,game_odd_even,93,0.7540332708913471,0.6434216280787987,0.8597114432073912,"Pearson, odd vs even games; athlete bootstrap"
+p75,all,20,game_odd_even_sb,93,0.8597707733424805,0.7830268472625308,0.9245643417934467,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,all,20,game_random_halves_sb,93,0.8012375583637243,0.7262346742568034,0.8804548029878588,mean over 20 random game half-splits; interval = spread over splits
+mean,all,20,game_random_halves_sb,93,0.8833426512188967,0.8421485673826796,0.9288540432974675,mean over 20 random game half-splits; interval = spread over splits
+median,all,20,game_random_halves_sb,93,0.8685729477442896,0.8395844838667921,0.9121720757192022,mean over 20 random game half-splits; interval = spread over splits
+p25,all,20,game_random_halves_sb,93,0.8965569271984138,0.8701688946981512,0.9099482334778437,mean over 20 random game half-splits; interval = spread over splits
+p75,all,20,game_random_halves_sb,93,0.8250527528962948,0.7755787202428287,0.88971555214468,mean over 20 random game half-splits; interval = spread over splits
+mean,all,20,game_icc1,89,0.4111178204596167,0.31965878935095293,0.480490760971938,"athlete-game means, games with ≥ 5 observations"
+mean,all,20,play_icc1,93,0.0972272176204359,0.06585794219432564,0.12654876729180617,single observations
+mean,all,20,sb_projected:20,93,0.6829391530189729,0.5850656582140895,0.7434366074413422,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,20,sb_projected:50,93,0.8433810117708398,0.7790079484043905,0.8787023157477821,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,20,sb_projected:100,93,0.9150371045220302,0.8757779290453316,0.9354353889727667,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,20,sb_projected:200,93,0.9556338123802695,0.9337757049855625,0.9666407820198529,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,20,game_icc1,89,0.24287707156965127,0.15016786596537085,0.3070083830898506,"athlete-game means, games with ≥ 5 observations"
+adj_mean,all,20,play_icc1,93,0.05082562940750195,0.032761236928261044,0.07002441291232385,single observations
+adj_mean,all,20,sb_projected:20,93,0.5171284184539275,0.40384559523474145,0.6009482880630866,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,20,sb_projected:50,93,0.7280657845740355,0.6287419733636747,0.7901299021189556,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,20,sb_projected:100,93,0.8426366531566993,0.7720584152015165,0.8827626432960962,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,20,sb_projected:200,93,0.9145988187233143,0.8713690345402286,0.937731207318486,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,50,game_odd_even,81,0.7457820024327059,0.6090716644683867,0.8542546517383531,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,all,50,game_odd_even_sb,81,0.8543815910502873,0.7570472812590543,0.9213994970297034,odd/even stepped up to all games (Spearman–Brown)
+mean,all,50,game_odd_even,81,0.8444101655422971,0.7634856903362521,0.910857314812096,"Pearson, odd vs even games; athlete bootstrap"
+mean,all,50,game_odd_even_sb,81,0.9156424978757607,0.8658824900253936,0.9533493764830526,odd/even stepped up to all games (Spearman–Brown)
+median,all,50,game_odd_even,81,0.8314036814768011,0.7266102866521309,0.9138696522361512,"Pearson, odd vs even games; athlete bootstrap"
+median,all,50,game_odd_even_sb,81,0.9079414766780163,0.8416610190143329,0.9549967534815055,odd/even stepped up to all games (Spearman–Brown)
+p25,all,50,game_odd_even,81,0.8789484740288047,0.8250784235838206,0.9261270592764347,"Pearson, odd vs even games; athlete bootstrap"
+p25,all,50,game_odd_even_sb,81,0.9355748560195273,0.9041566794304137,0.9616469015541913,odd/even stepped up to all games (Spearman–Brown)
+p75,all,50,game_odd_even,81,0.7709111954172994,0.6381105890873414,0.8758330898231018,"Pearson, odd vs even games; athlete bootstrap"
+p75,all,50,game_odd_even_sb,81,0.8706378924163287,0.7790812089711954,0.9338070583941945,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,all,50,game_random_halves_sb,81,0.8326515002200414,0.7738808887678188,0.8782358487965892,mean over 20 random game half-splits; interval = spread over splits
+mean,all,50,game_random_halves_sb,81,0.9036419185185511,0.8721624573944385,0.9299082602206336,mean over 20 random game half-splits; interval = spread over splits
+median,all,50,game_random_halves_sb,81,0.8989529058824572,0.8668278902790492,0.9223004499514079,mean over 20 random game half-splits; interval = spread over splits
+p25,all,50,game_random_halves_sb,81,0.9282788413562475,0.9102772020615199,0.9455407319270333,mean over 20 random game half-splits; interval = spread over splits
+p75,all,50,game_random_halves_sb,81,0.8382798780057874,0.7903782398841659,0.8747424711956138,mean over 20 random game half-splits; interval = spread over splits
+mean,all,50,game_icc1,81,0.4130527236771308,0.32344320376515545,0.49544521715865875,"athlete-game means, games with ≥ 5 observations"
+mean,all,50,play_icc1,81,0.0957496694829182,0.06447884313394592,0.12878073843823312,single observations
+mean,all,50,sb_projected:20,81,0.6792578364027325,0.5795595750620613,0.7472407276078625,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,50,sb_projected:50,81,0.8411291951538091,0.7750860901175717,0.880822335128095,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,50,sb_projected:100,81,0.9137101267720006,0.8732940835182077,0.9366353415492654,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,50,sb_projected:200,81,0.9549096427819237,0.9323619726360168,0.9672810584980628,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,50,game_icc1,81,0.2469191278014769,0.16812282078346477,0.31774308318106703,"athlete-game means, games with ≥ 5 observations"
+adj_mean,all,50,play_icc1,81,0.04999209052929176,0.031462280925547544,0.06821147687839789,single observations
+adj_mean,all,50,sb_projected:20,81,0.5127789081903404,0.3938241210237411,0.5941719540125222,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,50,sb_projected:50,81,0.7246044513365364,0.6189337452605816,0.7854189852523891,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,50,sb_projected:100,81,0.8403137899533791,0.7646189933003822,0.8798147569169723,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,50,sb_projected:200,81,0.9132288140650915,0.8666108618385758,0.9360653795057233,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,100,game_odd_even,69,0.8572663797565667,0.7941245822739815,0.9064000028345455,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,all,100,game_odd_even_sb,69,0.9231485468109634,0.8852502107378298,0.950902225647144,odd/even stepped up to all games (Spearman–Brown)
+mean,all,100,game_odd_even,69,0.9115482241103947,0.8748300173434495,0.9434043337133339,"Pearson, odd vs even games; athlete bootstrap"
+mean,all,100,game_odd_even_sb,69,0.9537276775056149,0.933236623321238,0.9708780796127346,odd/even stepped up to all games (Spearman–Brown)
+median,all,100,game_odd_even,69,0.9107542219155496,0.8770811180682588,0.946462503885463,"Pearson, odd vs even games; athlete bootstrap"
+median,all,100,game_odd_even_sb,69,0.9532929054606611,0.9345159456623594,0.9724949769093074,odd/even stepped up to all games (Spearman–Brown)
+p25,all,100,game_odd_even,69,0.9143582732214921,0.8746353133729533,0.9435805010715478,"Pearson, odd vs even games; athlete bootstrap"
+p25,all,100,game_odd_even_sb,69,0.9552634802082322,0.9331258268033565,0.9709713598704316,odd/even stepped up to all games (Spearman–Brown)
+p75,all,100,game_odd_even,69,0.8496976202522629,0.7836841847833778,0.9025215193603844,"Pearson, odd vs even games; athlete bootstrap"
+p75,all,100,game_odd_even_sb,69,0.9187421889382986,0.8787252715127409,0.948763533212288,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,all,100,game_random_halves_sb,69,0.8717581189253837,0.8438401852061554,0.8968142245844221,mean over 20 random game half-splits; interval = spread over splits
+mean,all,100,game_random_halves_sb,69,0.9306813956324103,0.9150174826429853,0.9417320898765117,mean over 20 random game half-splits; interval = spread over splits
+median,all,100,game_random_halves_sb,69,0.9284062002179864,0.9047592057615779,0.9461425688600152,mean over 20 random game half-splits; interval = spread over splits
+p25,all,100,game_random_halves_sb,69,0.9373736900634931,0.9196614054848318,0.9482876357680051,mean over 20 random game half-splits; interval = spread over splits
+p75,all,100,game_random_halves_sb,69,0.8819174076683268,0.8438604889248676,0.9153759673687306,mean over 20 random game half-splits; interval = spread over splits
+mean,all,100,game_icc1,69,0.40256497415832343,0.29612325706933734,0.47837440373644385,"athlete-game means, games with ≥ 5 observations"
+mean,all,100,play_icc1,69,0.09272167790663884,0.06491028325355078,0.12418650282160525,single observations
+mean,all,100,sb_projected:20,69,0.6714797337877728,0.5812959967769827,0.7393058065173292,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,100,sb_projected:50,69,0.8363306804593477,0.7763266399505693,0.8763872463343008,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,100,sb_projected:100,69,0.9108715432997552,0.8740809516566981,0.9341219388976404,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,100,sb_projected:200,69,0.9533571699192636,0.9328102405437776,0.9659390342576296,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,100,game_icc1,69,0.23392651787740004,0.1587652229733367,0.303382786821548,"athlete-game means, games with ≥ 5 observations"
+adj_mean,all,100,play_icc1,69,0.04819959295253432,0.029319428692049985,0.0653476931085771,single observations
+adj_mean,all,100,sb_projected:20,69,0.5031818303630724,0.3765976454339834,0.583043480254997,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,100,sb_projected:50,69,0.716876062214691,0.6016334835859101,0.7775716122270073,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,100,sb_projected:100,69,0.8350935492570779,0.7512748575147269,0.8748695207309672,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,100,sb_projected:200,69,0.9101373056378063,0.8579748110823423,0.9332590999611282,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,200,game_odd_even,49,0.8523554973821802,0.749982734679663,0.9074706103369711,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,all,200,game_odd_even_sb,49,0.9202936462107427,0.8571315817203745,0.9514910535650755,odd/even stepped up to all games (Spearman–Brown)
+mean,all,200,game_odd_even,49,0.920252741319807,0.8867369549662469,0.9532491081135189,"Pearson, odd vs even games; athlete bootstrap"
+mean,all,200,game_odd_even_sb,49,0.9584704362273782,0.9399688203829244,0.9760650642602192,odd/even stepped up to all games (Spearman–Brown)
+median,all,200,game_odd_even,49,0.9057115182777019,0.8422624148454266,0.9481822546054622,"Pearson, odd vs even games; athlete bootstrap"
+median,all,200,game_odd_even_sb,49,0.9505232136039605,0.9143783296649363,0.973402003189362,odd/even stepped up to all games (Spearman–Brown)
+p25,all,200,game_odd_even,49,0.9096646628705045,0.8629530584661231,0.9501519548330037,"Pearson, odd vs even games; athlete bootstrap"
+p25,all,200,game_odd_even_sb,49,0.9526957067982248,0.9264356442525098,0.9744388917779154,odd/even stepped up to all games (Spearman–Brown)
+p75,all,200,game_odd_even,49,0.8560858231153512,0.7858793697250891,0.918185179339766,"Pearson, odd vs even games; athlete bootstrap"
+p75,all,200,game_odd_even_sb,49,0.9224636193583464,0.8801035311204296,0.9573477985642687,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,all,200,game_random_halves_sb,49,0.8928354079960483,0.8328364841579297,0.9180417322897494,mean over 20 random game half-splits; interval = spread over splits
+mean,all,200,game_random_halves_sb,49,0.9450206119482143,0.913454673477586,0.9595235305526397,mean over 20 random game half-splits; interval = spread over splits
+median,all,200,game_random_halves_sb,49,0.9391798253429492,0.9200721107434305,0.955662804362874,mean over 20 random game half-splits; interval = spread over splits
+p25,all,200,game_random_halves_sb,49,0.9466258581451517,0.933226141161639,0.9647295169844986,mean over 20 random game half-splits; interval = spread over splits
+p75,all,200,game_random_halves_sb,49,0.9101743482021245,0.860008616992232,0.9439714213657748,mean over 20 random game half-splits; interval = spread over splits
+mean,all,200,game_icc1,49,0.40019610700744973,0.30764347727884234,0.49019731375452885,"athlete-game means, games with ≥ 5 observations"
+mean,all,200,play_icc1,49,0.08961058624512175,0.05783846509164894,0.1266576471542517,single observations
+mean,all,200,sb_projected:20,49,0.6631432582733346,0.5511231154376232,0.7436243772627555,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,200,sb_projected:50,49,0.8311253684159091,0.7542669015847512,0.8788072273730023,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,200,sb_projected:100,49,0.9077754945145111,0.8599226273987949,0.9354948337108259,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+mean,all,200,sb_projected:200,49,0.9516586171954379,0.9246864517170206,0.9666725195202399,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,200,game_icc1,49,0.2306649183903299,0.1430107454998119,0.3358750693351907,"athlete-game means, games with ≥ 5 observations"
+adj_mean,all,200,play_icc1,49,0.04549085664634498,0.024920670907106632,0.07029193852676194,single observations
+adj_mean,all,200,sb_projected:20,49,0.48801389783661725,0.3382530515181656,0.6019313127308492,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,200,sb_projected:50,49,0.7043995728327243,0.5609951478332117,0.790809122231036,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,200,sb_projected:100,49,0.8265662395843096,0.7187660366682351,0.8831863903460864,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,all,200,sb_projected:200,49,0.9050492904899193,0.8363744934843333,0.9379702347825241,Spearman–Brown from the single-observation ICC (assumes exchangeable plays)
+adj_mean,first_20,20,game_odd_even,82,0.25235868506561143,0.042692953427908936,0.4536420690473481,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,first_20,20,game_odd_even_sb,82,0.403013430696798,0.081889789870649,0.6241454876779189,odd/even stepped up to all games (Spearman–Brown)
+mean,first_20,20,game_odd_even,82,0.4189634842107042,0.2639947857367967,0.5947596145339866,"Pearson, odd vs even games; athlete bootstrap"
+mean,first_20,20,game_odd_even_sb,82,0.5905204592967406,0.41771499173220267,0.7458924957888209,odd/even stepped up to all games (Spearman–Brown)
+median,first_20,20,game_odd_even,82,0.37628691033609285,0.20526631399151532,0.5694113132886307,"Pearson, odd vs even games; athlete bootstrap"
+median,first_20,20,game_odd_even_sb,82,0.5468146321964257,0.3406156989681872,0.7256368148582476,odd/even stepped up to all games (Spearman–Brown)
+p25,first_20,20,game_odd_even,82,0.2781858744544296,0.1019699922215345,0.4817977007481209,"Pearson, odd vs even games; athlete bootstrap"
+p25,first_20,20,game_odd_even_sb,82,0.4352823482315014,0.18506854622414248,0.6502880933137821,odd/even stepped up to all games (Spearman–Brown)
+p75,first_20,20,game_odd_even,82,0.3349844296763092,0.187198510698428,0.4819793884679773,"Pearson, odd vs even games; athlete bootstrap"
+p75,first_20,20,game_odd_even_sb,82,0.501855186067649,0.3153617680808903,0.650453565303944,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,first_20,20,game_random_halves_sb,82,0.2872786183222072,0.18190623721727195,0.36881996705147,mean over 20 random game half-splits; interval = spread over splits
+mean,first_20,20,game_random_halves_sb,82,0.5372100555567623,0.48631612808217095,0.5920025791149507,mean over 20 random game half-splits; interval = spread over splits
+median,first_20,20,game_random_halves_sb,82,0.4955824900846947,0.4380298597694293,0.5681087318796503,mean over 20 random game half-splits; interval = spread over splits
+p25,first_20,20,game_random_halves_sb,82,0.3639533060279375,0.26811651013794713,0.4288688909901811,mean over 20 random game half-splits; interval = spread over splits
+p75,first_20,20,game_random_halves_sb,82,0.4686351303370676,0.4065931007136488,0.5380677642017494,mean over 20 random game half-splits; interval = spread over splits
+adj_mean,first_50,50,game_odd_even,81,0.35189813003153647,0.1566230687640528,0.5023477083864144,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,first_50,50,game_odd_even_sb,81,0.52059858981139,0.2708281945844595,0.6687502574566541,odd/even stepped up to all games (Spearman–Brown)
+mean,first_50,50,game_odd_even,81,0.5826090091567667,0.4413470846068097,0.6948214257810588,"Pearson, odd vs even games; athlete bootstrap"
+mean,first_50,50,game_odd_even_sb,81,0.7362639866017039,0.6124091682291867,0.8199346730123501,odd/even stepped up to all games (Spearman–Brown)
+median,first_50,50,game_odd_even,81,0.5909353988263165,0.44887953014379545,0.703865726626367,"Pearson, odd vs even games; athlete bootstrap"
+median,first_50,50,game_odd_even_sb,81,0.7428779311369504,0.6196229856311739,0.8261985855188395,odd/even stepped up to all games (Spearman–Brown)
+p25,first_50,50,game_odd_even,81,0.6073541787388406,0.4445673272108669,0.7300365274419666,"Pearson, odd vs even games; athlete bootstrap"
+p25,first_50,50,game_odd_even_sb,81,0.7557191647896567,0.6155023983122004,0.8439550447196617,odd/even stepped up to all games (Spearman–Brown)
+p75,first_50,50,game_odd_even,81,0.46882797355515415,0.277908854952361,0.6449115763774975,"Pearson, odd vs even games; athlete bootstrap"
+p75,first_50,50,game_odd_even_sb,81,0.6383701590600865,0.43494315557070173,0.784129172216968,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,first_50,50,game_random_halves_sb,81,0.4904820304660869,0.38117860147231725,0.6066581843244059,mean over 20 random game half-splits; interval = spread over splits
+mean,first_50,50,game_random_halves_sb,81,0.7137485687197336,0.6454099330449515,0.7721768121368578,mean over 20 random game half-splits; interval = spread over splits
+median,first_50,50,game_random_halves_sb,81,0.6934336297479946,0.6193916846893481,0.7468532961528599,mean over 20 random game half-splits; interval = spread over splits
+p25,first_50,50,game_random_halves_sb,81,0.7303341922559264,0.6526966790315645,0.7816072631230956,mean over 20 random game half-splits; interval = spread over splits
+p75,first_50,50,game_random_halves_sb,81,0.6058895857226398,0.5230675014158653,0.7034658571726451,mean over 20 random game half-splits; interval = spread over splits
+adj_mean,first_100,100,game_odd_even,69,0.5466642516215225,0.34059087850400305,0.7196565614609972,"Pearson, odd vs even games; athlete bootstrap"
+adj_mean,first_100,100,game_odd_even_sb,69,0.7068945326025345,0.5081205369442412,0.8369770773875762,odd/even stepped up to all games (Spearman–Brown)
+mean,first_100,100,game_odd_even,69,0.728883078472151,0.626677395070033,0.830776967191313,"Pearson, odd vs even games; athlete bootstrap"
+mean,first_100,100,game_odd_even_sb,69,0.8431837728625116,0.7704999122374264,0.9075676415853644,odd/even stepped up to all games (Spearman–Brown)
+median,first_100,100,game_odd_even,69,0.7194750625289243,0.6232035640205457,0.805964814449341,"Pearson, odd vs even games; athlete bootstrap"
+median,first_100,100,game_odd_even_sb,69,0.8368543146775898,0.7678686491753631,0.8925587121087835,odd/even stepped up to all games (Spearman–Brown)
+p25,first_100,100,game_odd_even,69,0.7617704741581006,0.6328813067541014,0.8564937655840659,"Pearson, odd vs even games; athlete bootstrap"
+p25,first_100,100,game_odd_even_sb,69,0.8647783412559786,0.7751712315357017,0.9227003951878147,odd/even stepped up to all games (Spearman–Brown)
+p75,first_100,100,game_odd_even,69,0.6353934276479692,0.5280093229650482,0.7693663856720252,"Pearson, odd vs even games; athlete bootstrap"
+p75,first_100,100,game_odd_even_sb,69,0.7770526858014773,0.6911074625388604,0.8696518617084626,odd/even stepped up to all games (Spearman–Brown)
+adj_mean,first_100,100,game_random_halves_sb,69,0.6542258184891667,0.5591383239145956,0.7579631296580536,mean over 20 random game half-splits; interval = spread over splits
+mean,first_100,100,game_random_halves_sb,69,0.8228644037088179,0.7905083583880612,0.8725417843527314,mean over 20 random game half-splits; interval = spread over splits
+median,first_100,100,game_random_halves_sb,69,0.8101102712257164,0.7631075369095398,0.8624211391663453,mean over 20 random game half-splits; interval = spread over splits
+p25,first_100,100,game_random_halves_sb,69,0.8387447907085912,0.789085153793179,0.8819434584793403,mean over 20 random game half-splits; interval = spread over splits
+p75,first_100,100,game_random_halves_sb,69,0.7354008592064243,0.6789753400876681,0.8074382494358829,mean over 20 random game half-splits; interval = spread over splits

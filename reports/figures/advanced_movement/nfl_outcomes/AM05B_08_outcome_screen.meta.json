@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05B_08_outcome_screen",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "21 outcomes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:06:36Z",
+  "seed": 20261011,
+  "source": "nfl_outcome_screen"
+}

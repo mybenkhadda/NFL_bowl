@@ -1,0 +1,10 @@
+source,output,rows,row_groups,size_bytes,out_bytes,seconds,action,rel_path,parquet_to_csv_ratio
+players,warehouse/bronze/players/players.parquet,510,1,47301,17054,0.01,ingested,players.csv,0.361
+combine_results,warehouse/bronze/combine_results/combine_results.parquet,510,1,41020,21423,0.01,ingested,combine_results.csv,0.522
+combine_tracking,warehouse/bronze/combine_tracking/combine_tracking.parquet,463189,1,83788174,15003278,0.27,ingested,combine_tracking.csv,0.179
+game_tracking,warehouse/bronze/game_tracking/season=2023/game_tracking_2023.parquet,3665443,8,335463637,71687103,1.1,ingested,game_tracking_2023.csv,0.214
+game_tracking,warehouse/bronze/game_tracking/season=2024/game_tracking_2024.parquet,7827944,16,717952893,153978416,2.29,ingested,game_tracking_2024.csv,0.214
+game_tracking,warehouse/bronze/game_tracking/season=2025/game_tracking_2025.parquet,11160903,23,1022575093,218516236,3.66,ingested,game_tracking_2025.csv,0.214
+games,warehouse/bronze/games/games.parquet,1002,1,43174,10983,0.01,ingested,games.csv,0.254
+player_play,warehouse/bronze/player_play/player_play.parquet,314197,1,146879042,22168930,0.5,ingested,player_play.csv,0.151
+player_career_successes,warehouse/bronze/player_career_successes/player_career_successes.parquet,510,1,13801,11000,0.0,ingested,player_career_successes.csv,0.797

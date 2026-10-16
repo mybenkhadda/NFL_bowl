@@ -1,0 +1,6 @@
+check,n,spearman,median_difference
+forty.sprint_vmax vs Phase 03 model_vmax,758,0.9922999687861892,-0.003921324198480569
+forty.sprint_tau vs Phase 03 model_tau_s,758,0.9301403546261052,-0.004999959468841464
+forty.phase_V0 vs Phase 03 model_vmax,758,0.9677882344419088,0.26573987013864997
+model 40-yd time vs official forty (athlete mean),418,0.9155032198443375,0.27286939541628863
+share of attempts with an identifiable onset (offset fitted),793,NaN,0.9180327868852459

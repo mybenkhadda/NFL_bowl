@@ -1,0 +1,9 @@
+state,count,unit,message shown
+no_tracked_attempt,92,prospects,No tracked forty attempt is recorded for this prospect. Official testing only — nothing is imputed.
+missing_split,85,prospects,Official 10-yard split not recorded. Comparisons that need it are not shown.
+single_attempt,43,prospects,One recorded attempt: repeat-attempt stability cannot be estimated for this prospect.
+low_confidence,86,prospects (tier low / medium),"Recording evidence is below the high tier: the measurement is shown, with that caveat."
+no_twin,3,tracked prospects,"No stopwatch twin under the stored matching rule (same position, official forty within 0.03 s) and the current filters."
+unsupported_demand,2550,prospect × demand rows,This NFL movement demand has no physical analogue in the forty-yard dash. The Lab makes no statement about it.
+no_nfl_observation,1,position × demand cells,Too few observed NFL episodes for this position and demand to describe it (support rule of the 09A atlas).
+no_feature,1104,difference rows with a missing value,This feature was not recorded for both athletes: no difference is shown.

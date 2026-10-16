@@ -1,0 +1,9 @@
+metric_id,track,position_group,n_athletes,icc,icc_lo,nfl_reliability,stopwatch_r2,filter_sensitivity_rho,nfl_comparison,cross_domain_rho,cross_domain_lo,cross_domain_hi,expected_sign,football_lo,football_hi,delta_rmse,delta_lo,delta_hi,beats_controls,execution_mode,config_hash,note
+forty.band_4_6_mean_accel,11E,ALL,230,,,,,,nfl.band_4_6,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.524 [0.455, 0.594]"
+forty.band_6_8_mean_accel,11E,ALL,113,,,,,,nfl.band_6_8,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.505 [0.413, 0.594]"
+forty.band_2_4_mean_accel,11E,ALL,303,,,,,,nfl.band_2_4,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.557 [0.495, 0.615]"
+forty.phase_A0,11E,ALL,317,,,,,,env.lin_A0,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.517 [0.462, 0.577]"
+forty.phase_V0,11E,ALL,317,,,,,,env.lin_V0,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.515 [0.457, 0.576]"
+forty.v_max_obs,11E,ALL,146,,,,,,nfl.vmax_p90,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.579 [0.492, 0.665]"
+forty.early_accel,11E,ALL,307,,,,,,nfl.accel_low_mean,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.533 [0.479, 0.594]"
+short_shuttle.decel_mean,11E,ALL,91,,,,,,nfl.brake_decel,,,,,,,,,,,full,adfe53ee38110026,"twin concordance 0.488 [0.348, 0.642]"

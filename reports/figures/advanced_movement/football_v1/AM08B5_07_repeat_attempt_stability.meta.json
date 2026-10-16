@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B5_07_repeat_attempt_stability",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with two valid attempts",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:42:58Z",
+  "seed": 20261011,
+  "source": "scouting_attempt_percentile_shifts"
+}

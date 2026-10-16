@@ -1,0 +1,19 @@
+stream,criterion,observed,threshold,passed,basis,verdict,rule
+A,athletes_with_min_plays,79.0,150.0,false,≥ 100 tracked plays,INFEASIBLE,FEASIBLE: both · LIMITED: ≥ 1 position group qualifies (position-specific model)
+A,position_groups_with_min_athletes,0.0,3.0,false,≥ 30 such athletes per group,INFEASIBLE,FEASIBLE: both · LIMITED: ≥ 1 position group qualifies (position-specific model)
+B,share_plays_with_football,0.0,0.9,false,ball geometry,INFEASIBLE,"FEASIBLE: all · LIMITED: single-agent kinematic reachability only (no interaction, no causal claim)"
+B,share_plays_both_sides,0.2948204008731891,0.25,true,opponent state,INFEASIBLE,"FEASIBLE: all · LIMITED: single-agent kinematic reachability only (no interaction, no causal claim)"
+B,single_agent_basis,0.0,1.0,false,stream A not INFEASIBLE,INFEASIBLE,"FEASIBLE: all · LIMITED: single-agent kinematic reachability only (no interaction, no causal claim)"
+C,action_label_coverage,0.9517116300158694,0.5,true,best action field: route_ran,INFEASIBLE,FEASIBLE: all · LIMITED: contextual-bandit evaluation over vendor labels only (still needs the S5 and OPE-ESS gates) · never policy optimisation without interaction state
+C,athletes_with_action_variation,25.0,30.0,false,route_ran: ≥ 2 levels per athlete,INFEASIBLE,FEASIBLE: all · LIMITED: contextual-bandit evaluation over vendor labels only (still needs the S5 and OPE-ESS gates) · never policy optimisation without interaction state
+C,athletes_with_individual_outcome,58.0,30.0,true,best outcome field: cushion,INFEASIBLE,FEASIBLE: all · LIMITED: contextual-bandit evaluation over vendor labels only (still needs the S5 and OPE-ESS gates) · never policy optimisation without interaction state
+C,share_plays_with_football,0.0,0.9,false,attributable reward needs interaction state,INFEASIBLE,FEASIBLE: all · LIMITED: contextual-bandit evaluation over vendor labels only (still needs the S5 and OPE-ESS gates) · never policy optimisation without interaction state
+C,share_plays_both_sides,0.2948204008731891,0.25,true,opponent state,INFEASIBLE,FEASIBLE: all · LIMITED: contextual-bandit evaluation over vendor labels only (still needs the S5 and OPE-ESS gates) · never policy optimisation without interaction state
+D,median_tracked_per_play,1.0,22.0,false,11 offense + 11 defense,LIMITED,"FEASIBLE: full-team tracking · LIMITED: co-tracked rookie pairs (availability, not assignments)"
+D,share_plays_both_sides,0.2948204008731891,0.25,true,opponent state,LIMITED,"FEASIBLE: full-team tracking · LIMITED: co-tracked rookie pairs (availability, not assignments)"
+D,co_tracked_plays_best_pair,3298.0,500.0,true,best pair: OL × DB,LIMITED,"FEASIBLE: full-team tracking · LIMITED: co-tracked rookie pairs (availability, not assignments)"
+D,distinct_athlete_pairs_best_pair,104.0,30.0,true,best pair: OL × DB,LIMITED,"FEASIBLE: full-team tracking · LIMITED: co-tracked rookie pairs (availability, not assignments)"
+E,athletes_with_player_get_off,24.0,30.0,false,"positions: DL, LB",LIMITED,FEASIBLE: every configured outcome · LIMITED: some
+E,athletes_with_time_to_pressure,6.0,30.0,false,"positions: DL, LB",LIMITED,FEASIBLE: every configured outcome · LIMITED: some
+E,athletes_with_separation_at_pass_forward,36.0,30.0,true,"positions: WR, TE, RB",LIMITED,FEASIBLE: every configured outcome · LIMITED: some
+E,athletes_with_cushion,58.0,30.0,true,"positions: WR, TE, DB",LIMITED,FEASIBLE: every configured outcome · LIMITED: some

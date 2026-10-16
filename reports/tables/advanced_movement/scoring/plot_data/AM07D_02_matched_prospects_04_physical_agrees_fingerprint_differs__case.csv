@@ -1,0 +1,3 @@
+case,criterion,position_group,nfl_id_a,nfl_id_b,name_a,name_b,matched_on,contrast,value_a,value_b,contrast_size,fingerprint_distance,selected_using_nfl
+physical_agrees_fingerprint_differs,official times within 0.03 s and speed-development percentile within 10 points; largest fingerprint distance,OL,58303,58346,Caleb Rogers,Carson Vinson,"official_forty, official_ten, speed_development_pct",fingerprint distance,,,1.1137525356264788,1.1137525356264788,false
+physical_agrees_fingerprint_differs,official times within 0.03 s and speed-development percentile within 10 points; largest fingerprint distance,OL,56451,58994,Earl Bostick,Joshua Gray,"official_forty, official_ten, speed_development_pct",fingerprint distance,,,1.0967344340140084,1.0967344340140084,false

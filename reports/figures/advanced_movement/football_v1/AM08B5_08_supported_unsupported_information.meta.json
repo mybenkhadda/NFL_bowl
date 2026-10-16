@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B5_08_supported_unsupported_information",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "characteristics of the 08B.4 registry",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:43:00Z",
+  "seed": 20261011,
+  "source": "scouting_information_summary"
+}

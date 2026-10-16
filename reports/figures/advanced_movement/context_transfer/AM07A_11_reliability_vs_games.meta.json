@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07A_11_reliability_vs_games",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "athletes with enough later games (see points)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:36:36Z",
+  "seed": 20261011,
+  "source": "nfl_context_outcome_reliability"
+}

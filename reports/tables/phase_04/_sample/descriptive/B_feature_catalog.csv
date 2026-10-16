@@ -1,0 +1,25 @@
+feature,unit,family,definition
+peak_speed,yd/s,speed_peak,max derived speed over valid frames
+peak_speed_interior,yd/s,speed_interior,max speed over valid frames NOT in the SG filter boundary (edge distance < window // 2)
+p95_speed,yd/s,speed_quantile,95th percentile of speed (valid frames)
+path_smooth_yds,yd,path,Σ smoothed step length
+peak_a_tan,yd/s²,accel_peak,max signed tangential acceleration d|v|/dt
+peak_a_tan_interior,yd/s²,accel_interior,max a_tan over interior frames
+p95_a_tan,yd/s²,accel_quantile,95th percentile of a_tan
+peak_decel,yd/s²,decel_peak,max of −a_tan (strongest braking)
+peak_decel_interior,yd/s²,decel_interior,max −a_tan over interior frames
+p95_decel,yd/s²,decel_quantile,95th percentile of −a_tan
+peak_accel_mag,yd/s²,accel_mag_peak,max |vector acceleration|
+peak_accel_mag_interior,yd/s²,accel_mag_interior,max |a| over interior frames
+peak_abs_yaw_rate,deg/s,yaw_peak,max |yaw rate| (speed ≥ 1 yd/s)
+peak_abs_yaw_rate_interior,deg/s,yaw_interior,max |yaw rate| over interior frames
+p90_abs_yaw_rate,deg/s,yaw_quantile,90th percentile of |yaw rate|
+n_braking,events,event_count,number of primary-rule braking events
+n_acceleration,events,event_count,number of primary-rule acceleration events
+n_turn,events,event_count,number of primary-rule turn events
+n_reversal,events,event_count,number of primary-rule reversal events
+rate_braking_per_s,events/s,event_rate,primary-rule braking events per valid tracked second
+rate_acceleration_per_s,events/s,event_rate,primary-rule acceleration events per valid tracked second
+rate_turn_per_s,events/s,event_rate,primary-rule turn events per valid tracked second
+rate_reversal_per_s,events/s,event_rate,primary-rule reversal events per valid tracked second
+duration_valid_s,s,exposure,"valid-kinematics frames × nominal Δt (exposure; segments shorter than the SG window have no derivatives, so it can differ slightly between settings)"

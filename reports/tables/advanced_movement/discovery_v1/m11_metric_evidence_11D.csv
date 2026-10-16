@@ -1,0 +1,2 @@
+metric_id,track,position_group,n_athletes,icc,icc_lo,nfl_reliability,stopwatch_r2,filter_sensitivity_rho,nfl_comparison,cross_domain_rho,cross_domain_lo,cross_domain_hi,expected_sign,football_lo,football_hi,delta_rmse,delta_lo,delta_hi,beats_controls,execution_mode,config_hash,note
+nfl.movement_diversity,11D,ALL,399,,,,,,,,,,,,,,,,,full,adfe53ee38110026,NFL descriptor (Movement Vocabulary)

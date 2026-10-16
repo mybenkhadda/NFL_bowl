@@ -1,0 +1,5 @@
+item,status,note
+ball tracking,UNKNOWN,not used by Milestones 05–10; 08A found tracking holds the project athletes only
+opponent tracking,UNSUPPORTED,08A: nearest defender not recomputable (tracking holds project athletes only)
+vendor separation (FO01),LIMITED,08B registry frozen_exploratory; semantics inferred
+body orientation (vendor o),UNSUPPORTED,dropped by the 05A/09A reader; backpedal (moving opposite to facing) not identifiable

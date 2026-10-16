@@ -1,0 +1,49 @@
+domain,stratum,scenario,scenario_order,n_trajectories,n_athletes,share_trajectories_retained,share_athletes_retained
+combine,FORTY_YARD_DASH,all trajectories,0,793,418,1.0,1.0
+combine,FORTY_YARD_DASH,exclude reject,1,793,418,1.0,1.0
+combine,FORTY_YARD_DASH,tier A only,2,793,418,1.0,1.0
+combine,FORTY_YARD_DASH,tier A + no screening flag,3,761,414,0.9596469104665826,0.9904306220095693
+combine,SHORT_SHUTTLE,all trajectories,0,223,170,1.0,1.0
+combine,SHORT_SHUTTLE,exclude reject,1,223,170,1.0,1.0
+combine,SHORT_SHUTTLE,tier A only,2,222,170,0.9955156950672646,1.0
+combine,SHORT_SHUTTLE,tier A + no screening flag,3,211,164,0.9461883408071748,0.9647058823529412
+combine,SKILL_DRILLS_DB,all trajectories,0,1170,122,1.0,1.0
+combine,SKILL_DRILLS_DB,exclude reject,1,1170,122,1.0,1.0
+combine,SKILL_DRILLS_DB,tier A only,2,1170,122,1.0,1.0
+combine,SKILL_DRILLS_DB,tier A + no screening flag,3,1126,122,0.9623931623931624,1.0
+combine,SKILL_DRILLS_DL,all trajectories,0,1007,114,1.0,1.0
+combine,SKILL_DRILLS_DL,exclude reject,1,1007,114,1.0,1.0
+combine,SKILL_DRILLS_DL,tier A only,2,1007,114,1.0,1.0
+combine,SKILL_DRILLS_DL,tier A + no screening flag,3,966,114,0.9592850049652433,1.0
+combine,SKILL_DRILLS_LB,all trajectories,0,37,4,1.0,1.0
+combine,SKILL_DRILLS_LB,exclude reject,1,37,4,1.0,1.0
+combine,SKILL_DRILLS_LB,tier A only,2,37,4,1.0,1.0
+combine,SKILL_DRILLS_LB,tier A + no screening flag,3,33,4,0.8918918918918919,1.0
+combine,SKILL_DRILLS_OL,all trajectories,0,910,121,1.0,1.0
+combine,SKILL_DRILLS_OL,exclude reject,1,910,121,1.0,1.0
+combine,SKILL_DRILLS_OL,tier A only,2,910,121,1.0,1.0
+combine,SKILL_DRILLS_OL,tier A + no screening flag,3,874,121,0.9604395604395605,1.0
+combine,SKILL_DRILLS_TE,all trajectories,0,438,42,1.0,1.0
+combine,SKILL_DRILLS_TE,exclude reject,1,438,42,1.0,1.0
+combine,SKILL_DRILLS_TE,tier A only,2,438,42,1.0,1.0
+combine,SKILL_DRILLS_TE,tier A + no screening flag,3,420,42,0.958904109589041,1.0
+combine,SKILL_DRILLS_WR,all trajectories,0,1529,107,1.0,1.0
+combine,SKILL_DRILLS_WR,exclude reject,1,1529,107,1.0,1.0
+combine,SKILL_DRILLS_WR,tier A only,2,1529,107,1.0,1.0
+combine,SKILL_DRILLS_WR,tier A + no screening flag,3,1471,107,0.9620667102681492,1.0
+combine,THREE_CONE_DRILL,all trajectories,0,203,160,1.0,1.0
+combine,THREE_CONE_DRILL,exclude reject,1,203,160,1.0,1.0
+combine,THREE_CONE_DRILL,tier A only,2,203,160,1.0,1.0
+combine,THREE_CONE_DRILL,tier A + no screening flag,3,189,149,0.9310344827586207,0.93125
+combine,all,all trajectories,0,6310,510,1.0,1.0
+combine,all,exclude reject,1,6310,510,1.0,1.0
+combine,all,tier A only,2,6309,510,0.9998415213946117,1.0
+combine,all,tier A + no screening flag,3,6051,510,0.9589540412044374,1.0
+nfl,all,all trajectories,0,314944,497,1.0,1.0
+nfl,all,exclude reject,1,314638,497,0.9990283986994514,1.0
+nfl,all,tier A only,2,311984,497,0.9906015037593985,1.0
+nfl,all,tier A + no screening flag,3,307180,497,0.9753479983743142,1.0
+nfl,nfl_play,all trajectories,0,314944,497,1.0,1.0
+nfl,nfl_play,exclude reject,1,314638,497,0.9990283986994514,1.0
+nfl,nfl_play,tier A only,2,311984,497,0.9906015037593985,1.0
+nfl,nfl_play,tier A + no screening flag,3,307180,497,0.9753479983743142,1.0

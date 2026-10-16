@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_08_reliability_vs_stopwatch_redundancy",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with a repeat and official times",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T15:20:48Z",
+  "seed": 20261011,
+  "source": "fpca_component_gate"
+}

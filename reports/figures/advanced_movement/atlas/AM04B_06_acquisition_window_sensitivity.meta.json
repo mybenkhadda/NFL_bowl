@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM04B_06_acquisition_window_sensitivity",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "418 athletes (at most)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-12T01:36:42Z",
+  "seed": 20261011,
+  "source": "robust_truncation_stability, robust_probes"
+}

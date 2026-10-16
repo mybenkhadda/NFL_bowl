@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B0_02_registry_decision",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "definitions",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:05Z",
+  "seed": 20261011,
+  "source": "football_outcome_registry"
+}

@@ -1,0 +1,12 @@
+criterion,passed,detail
+registry_branch_allows_transfer,true,EXPLORATORY — source semantics inferred; definitions locked
+gate_b_passed_for_primary,true,FO01.S0: Gate B PASS
+athlete_held_out_predictions,true,one prediction per athlete and model: True; every athlete in one fold: True
+paired_common_cohort,true,9 models on 84 identical athletes
+folds_viable,true,every outer fold holds enough held-out athletes and ≥ 3 training athletes of each position
+no_nfl_predictor,true,"9 baseline predictors, all pre-draft; representations are the fold-fitted 06B blocks"
+baselines_included,true,M0 and M1 evaluated
+primary_comparison_is_the_registered_one,true,"registered ['M2', 'M1']"
+paired_uncertainty_calculated,true,95 % paired athlete bootstrap on the primary comparison
+permutation_complete,true,"modes: ['linkage', 'outcome']"
+evidence_label_explicit,true,exploratory association only — never a confirmed predictive claim

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06C_05_matched_stopwatch_player_comparisons",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "833 matched pairs",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:55:39Z",
+  "seed": 20261011,
+  "source": "transfer_matched_pair_predictions"
+}

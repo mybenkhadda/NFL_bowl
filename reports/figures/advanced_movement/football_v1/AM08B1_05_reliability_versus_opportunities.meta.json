@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B1_05_reliability_versus_opportunities",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes kept at each threshold",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:41Z",
+  "seed": 20261011,
+  "source": "football_reliability_vs_opportunities"
+}

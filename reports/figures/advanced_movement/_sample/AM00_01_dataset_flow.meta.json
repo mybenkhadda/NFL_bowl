@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM00_01_dataset_flow",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "60 athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T13:36:25Z",
+  "seed": 20261011,
+  "source": "dataset_audit"
+}

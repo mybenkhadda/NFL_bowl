@@ -1,0 +1,19 @@
+target_id,role,criterion,value,passed,blocking
+FO01.S0,primary,player_level_stability,"odd / even Spearman–Brown 0.742 (lower bound 0.516); reference 0.7, floor 0.5",true,true
+FO01.S0,primary,opportunity_support,91 linked athletes supporting every model family (needed 60),true,true
+FO01.S0,primary,position_coverage,"TE 24, WR 67",true,true
+FO01.S0,primary,exposure_independence,"ρ(value, log observations) = 0.089 (|ρ| ≤ 0.3)",true,false
+FO01.S0,primary,ranking_sensitivity,mean |percentile shift| between game halves 19.2,true,false
+FO01.S0,primary,definition_validity,"source class PROVISIONAL — recorded separation at pass forward, mean over recorded player-plays [yd] — an INTERACTION outcome (receiver, nearest defender, coverage, route, throw timing); NOT pure receiver ability",true,true
+FO12.T2,secondary,player_level_stability,"odd / even Spearman–Brown 0.59 (lower bound 0.362); reference 0.7, floor 0.5",false,true
+FO12.T2,secondary,opportunity_support,141 linked athletes supporting every model family (needed 60),true,true
+FO12.T2,secondary,position_coverage,"DB 68, DL 73",true,true
+FO12.T2,secondary,exposure_independence,"ρ(value, log observations) = 0.032 (|ρ| ≤ 0.3)",true,true
+FO12.T2,secondary,ranking_sensitivity,mean |percentile shift| between game halves 23.3,true,false
+FO12.T2,secondary,definition_validity,"source class PROVISIONAL — PARTICIPATION-CREDIT rate: credited tackles or assists per tracked snap — NOT tackle success probability; snaps on the field are exposure, not tackle opportunities",true,true
+FO13.K0,secondary,player_level_stability,"odd / even Spearman–Brown 0.642 (lower bound 0.437); reference 0.7, floor 0.5",false,true
+FO13.K0,secondary,opportunity_support,70 linked athletes supporting every model family (needed 60),true,true
+FO13.K0,secondary,position_coverage,DL 70,true,true
+FO13.K0,secondary,exposure_independence,"ρ(value, log observations) = 0.601 (|ρ| ≤ 0.3)",false,true
+FO13.K0,secondary,ranking_sensitivity,mean |percentile shift| between game halves 17.9,true,false
+FO13.K0,secondary,definition_validity,source class PROVISIONAL — sack credit per recorded pass-defence row — NOT a pass-rush win rate; that the player rushed the passer is not recorded,true,true

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_C_01_athlete_cloud",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "1 athlete (rule-chosen)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T00:38:35Z",
+  "seed": 20261015,
+  "source": "m11_envelope_hist"
+}

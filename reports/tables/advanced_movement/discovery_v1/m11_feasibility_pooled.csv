@@ -1,0 +1,64 @@
+family,demand_id,overlap_confidence,shared_quantity,n_linked_supported,n_combine_athletes,feasibility
+backpedal_transition,accel_low,none,"",142,183,UNSUPPORTED
+backpedal_transition,accel_mid,none,"",121,183,UNSUPPORTED
+backpedal_transition,braking,medium,deceleration of the backpedal,133,183,SUPPORTED
+backpedal_transition,reaccel_after_brake,medium,forward acceleration after a backward / lateral phase,116,183,SUPPORTED
+backpedal_transition,redirection,medium,change of direction of motion,108,183,SUPPORTED
+backpedal_transition,repeated_change,none,"",116,183,UNSUPPORTED
+backpedal_transition,speed_maintenance,none,"",116,183,UNSUPPORTED
+backpedal_transition,sustained_high,none,"",88,183,UNSUPPORTED
+backpedal_transition,transition_high,none,"",25,183,UNSUPPORTED
+forty,accel_low,high,band acceleration 2→4 / 4→6 yd/s from rest,322,418,SUPPORTED
+forty,accel_mid,low,band acceleration 4→6 / 6→8 yd/s,246,418,LIMITED
+forty,braking,none,"",283,418,UNSUPPORTED
+forty,reaccel_after_brake,none,"",205,418,UNSUPPORTED
+forty,redirection,none,"",183,418,UNSUPPORTED
+forty,repeated_change,none,"",229,418,UNSUPPORTED
+forty,speed_maintenance,none,"",250,418,UNSUPPORTED
+forty,sustained_high,low,top speed,150,418,LIMITED
+forty,transition_high,medium,band acceleration 6→8 yd/s,37,418,SUPPORTED
+gauntlet,accel_low,none,"",198,267,UNSUPPORTED
+gauntlet,accel_mid,none,"",156,267,UNSUPPORTED
+gauntlet,braking,none,"",190,267,UNSUPPORTED
+gauntlet,reaccel_after_brake,none,"",162,267,UNSUPPORTED
+gauntlet,redirection,none,"",155,267,UNSUPPORTED
+gauntlet,repeated_change,none,"",159,267,UNSUPPORTED
+gauntlet,speed_maintenance,medium,steady speed,175,267,SUPPORTED
+gauntlet,sustained_high,medium,speed held at high speed,155,267,SUPPORTED
+gauntlet,transition_high,none,"",43,267,UNSUPPORTED
+other,accel_low,unknown,"",386,510,UNKNOWN
+other,accel_mid,unknown,"",295,510,UNKNOWN
+other,braking,unknown,"",341,510,UNKNOWN
+other,reaccel_after_brake,unknown,"",243,510,UNKNOWN
+other,redirection,unknown,"",216,510,UNKNOWN
+other,repeated_change,unknown,"",271,510,UNKNOWN
+other,speed_maintenance,unknown,"",301,510,UNKNOWN
+other,sustained_high,unknown,"",175,510,UNKNOWN
+other,transition_high,unknown,"",44,510,UNKNOWN
+pass_rush,accel_low,high,launch acceleration from a stance over 2–5 yd,184,239,SUPPORTED
+pass_rush,accel_mid,none,"",137,239,UNSUPPORTED
+pass_rush,braking,none,"",148,239,UNSUPPORTED
+pass_rush,reaccel_after_brake,none,"",79,239,UNSUPPORTED
+pass_rush,redirection,low,lateral redirection,60,239,LIMITED
+pass_rush,repeated_change,low,repeated short accelerations,110,239,LIMITED
+pass_rush,speed_maintenance,none,"",124,239,UNSUPPORTED
+pass_rush,sustained_high,none,"",19,239,UNSUPPORTED
+pass_rush,transition_high,none,"",0,239,UNSUPPORTED
+short_shuttle,accel_low,medium,acceleration from low speed,131,170,SUPPORTED
+short_shuttle,accel_mid,none,"",98,170,UNSUPPORTED
+short_shuttle,braking,high,deceleration from ~5–7 yd/s to a near-stop,112,170,SUPPORTED
+short_shuttle,reaccel_after_brake,high,acceleration after a stop,77,170,SUPPORTED
+short_shuttle,redirection,low,heading change,66,170,LIMITED
+short_shuttle,repeated_change,medium,brake → accelerate sequence,90,170,SUPPORTED
+short_shuttle,speed_maintenance,none,"",97,170,UNSUPPORTED
+short_shuttle,sustained_high,none,"",51,170,UNSUPPORTED
+short_shuttle,transition_high,none,"",14,170,UNSUPPORTED
+three_cone,accel_low,low,acceleration from a stance,229,299,LIMITED
+three_cone,accel_mid,none,"",175,299,UNSUPPORTED
+three_cone,braking,medium,deceleration before a reversal,192,299,SUPPORTED
+three_cone,reaccel_after_brake,medium,acceleration after a reversal,118,299,SUPPORTED
+three_cone,redirection,medium,turn at speed (90°) and speed retention,98,299,SUPPORTED
+three_cone,repeated_change,medium,sequence of speed changes,150,299,SUPPORTED
+three_cone,speed_maintenance,none,"",167,299,UNSUPPORTED
+three_cone,sustained_high,none,"",57,299,UNSUPPORTED
+three_cone,transition_high,none,"",15,299,UNSUPPORTED

@@ -1,0 +1,17 @@
+bench,group,engine,format,season,repeats,ok,error,cold_s,warm_median_s,peak_rss_mb,peak_query_mb,rows_out,result_hash,results_identical
+q1_polars_csv,Q1 per-player aggregate (1 season),polars,csv,2023,3,true,"",0.301,0.306,554.6,514.4,156,7856a2f20460ecc5,true
+q1_duckdb_csv,Q1 per-player aggregate (1 season),duckdb,csv,2023,3,true,"",0.509,0.347,280.1,239.8,156,7856a2f20460ecc5,true
+q1_polars_bronze,Q1 per-player aggregate (1 season),polars,parquet-bronze,2023,3,true,"",0.026,0.025,228.2,188.2,156,7856a2f20460ecc5,true
+q1_duckdb_bronze,Q1 per-player aggregate (1 season),duckdb,parquet-bronze,2023,3,true,"",0.217,0.035,86.6,46.2,156,7856a2f20460ecc5,true
+q1_duckdb_silver,Q1 per-player aggregate (1 season),duckdb,parquet-silver,2023,3,true,"",0.202,0.03,86.8,46.6,156,7856a2f20460ecc5,true
+q2_polars_join,Q2 tracking JOIN players,polars,parquet-silver,2023,3,true,"",0.049,0.044,309.4,269.2,12,a2f83954a0b06176,true
+q2_duckdb_join,Q2 tracking JOIN players,duckdb,parquet-silver,2023,3,true,"",0.212,0.055,90.3,50.1,12,a2f83954a0b06176,true
+q3_polars_athlete,Q3 athlete-level 2-stage aggregate,polars,parquet-silver,2023,3,true,"",0.045,0.036,438.3,397.9,156,327590656ca54827,true
+q3_duckdb_athlete,Q3 athlete-level 2-stage aggregate,duckdb,parquet-silver,2023,3,true,"",0.236,0.062,97.8,57.7,156,327590656ca54827,true
+q4_polars_csv,Q4 single-play lookup,polars,csv,2023,3,true,"",0.371,0.442,565.2,506.3,62,c4107331cd8ab304,true
+q4_polars_bronze,Q4 single-play lookup,polars,parquet-bronze,2023,3,true,"",0.013,0.008,121.8,63.5,62,c4107331cd8ab304,true
+q4_polars_silver,Q4 single-play lookup,polars,parquet-silver (sorted),2023,3,true,"",0.011,0.007,91.3,32.7,62,c4107331cd8ab304,true
+q4_duckdb_silver,Q4 single-play lookup,duckdb,parquet-silver (sorted),2023,3,true,"",0.149,0.026,89.6,31.2,62,c4107331cd8ab304,true
+q5_polars_raw_all,Q5 one season from all seasons,polars,csv (semi-join on games),2023,3,true,"",1.05,1.082,1644.6,1604.5,1,25707ec040a000e5,true
+q5_polars_silver_pruned,Q5 one season from all seasons,polars,parquet-silver (hive pruned),2023,3,true,"",0.006,0.001,52.3,12.0,1,25707ec040a000e5,true
+q5_duckdb_silver_pruned,Q5 one season from all seasons,duckdb,parquet-silver (hive pruned),2023,3,true,"",0.197,0.016,81.1,41.0,1,25707ec040a000e5,true

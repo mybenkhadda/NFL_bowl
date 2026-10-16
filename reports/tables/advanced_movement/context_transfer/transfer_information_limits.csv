@@ -1,0 +1,35 @@
+topic,item,value,lower,upper,unit,note
+cohort,athletes,284.0,,,athletes,paired cohort of Milestone 06
+cohort,rmse_official_model,0.17942293889427366,,,target units,real M1 out-of-fold RMSE: the residual a candidate can still explain
+redundancy,M5: R² of the planted direction on the official design,0.9460811142831076,,,share,share of the representation's leading direction already explained by official testing
+null,M5: false-positive rate,0.02,0.007804426362159347,0.05028708724004507,rate,nominal 0.025 (one-sided)
+null,M5: SD of Δ RMSE with no signal,0.0009645791387792825,,,target units,sampling noise of the paired gain
+null,M5: mean Δ RMSE with no signal,-0.00026777823269956967,,,target units,cost of fitting useless predictors
+mde,M5 (conditional): effect f at 80% power,0.191304347826087,,,share of residual variance,""
+mde,M5 (conditional): Δ RMSE at 80% power,0.012056739519142034,,,target units,""
+mde,M5 (conditional): relative Δ RMSE at 80% power,0.06428179214975124,,,share of M1 RMSE,""
+mde,M5 (raw): effect f at 80% power,,,,share of residual variance,power stays below 80% up to f = 0.35: the effect grid does not reach it
+mde,M5 (raw): Δ RMSE at 80% power,,,,target units,""
+mde,M5 (raw): relative Δ RMSE at 80% power,,,,share of M1 RMSE,""
+observed_m06,M5: Δ RMSE,0.0002858370993310544,-0.0008463924421086427,0.0015475588047796046,target units,real Milestone 06 comparison (unchanged)
+observed_m06,M5: Δ RMSE in null SDs,0.5739449566898666,,,SD,distance of the observed gain from the simulated no-signal mean
+redundancy,M2: R² of the planted direction on the official design,0.8915149717356485,,,share,share of the representation's leading direction already explained by official testing
+null,M2: false-positive rate,0.04,0.020405631961019504,0.0769320685744264,rate,nominal 0.025 (one-sided)
+null,M2: SD of Δ RMSE with no signal,0.0003182471431181726,,,target units,sampling noise of the paired gain
+null,M2: mean Δ RMSE with no signal,-0.000017543601774459712,,,target units,cost of fitting useless predictors
+mde,M2 (conditional): effect f at 80% power,0.23461538461538464,,,share of residual variance,""
+mde,M2 (conditional): Δ RMSE at 80% power,0.012151855755190243,,,target units,""
+mde,M2 (conditional): relative Δ RMSE at 80% power,0.06731655056100763,,,share of M1 RMSE,""
+mde,M2 (raw): effect f at 80% power,,,,share of residual variance,power stays below 80% up to f = 0.35: the effect grid does not reach it
+mde,M2 (raw): Δ RMSE at 80% power,,,,target units,""
+mde,M2 (raw): relative Δ RMSE at 80% power,,,,share of M1 RMSE,""
+observed_m06,M2: Δ RMSE,0.00009718240553974189,-0.00018070073692695102,0.0003910020657102442,target units,real Milestone 06 comparison (unchanged)
+observed_m06,M2: Δ RMSE in null SDs,0.36049343975289405,,,SD,distance of the observed gain from the simulated no-signal mean
+reliability,"combine: speed development 4 → 8 yd/s (attempt ICC, 04A)",0.8241103566976787,,,reliability,read from persisted Milestone 04–07A tables
+reliability,"combine: tracked top speed p95 (attempt ICC, 04A)",0.9484514711067579,,,reliability,read from persisted Milestone 04–07A tables
+reliability,"nfl: O2.accel_sust05_mean (game halves, 05B)",0.9316490339648935,,,reliability,read from persisted Milestone 04–07A tables
+reliability,"nfl: context-conditioned C4 (cross-fitted game halves, 07A)",0.8292796720544017,,,reliability,read from persisted Milestone 04–07A tables
+attenuation,"combine: speed development 4 → 8 yd/s (attempt ICC, 04A) × nfl: O2.accel_sust05_mean (game halves, 05B): √(rel_x · rel_y)",0.8762314863652505,,,factor on a correlation,"classical approximation, NOT a ceiling on prediction (see transfer_power.attenuation)"
+attenuation,"combine: speed development 4 → 8 yd/s (attempt ICC, 04A) × nfl: context-conditioned C4 (cross-fitted game halves, 07A): √(rel_x · rel_y)",0.8266909739067477,,,factor on a correlation,"classical approximation, NOT a ceiling on prediction (see transfer_power.attenuation)"
+attenuation,"combine: tracked top speed p95 (attempt ICC, 04A) × nfl: O2.accel_sust05_mean (game halves, 05B): √(rel_x · rel_y)",0.9400127109880978,,,factor on a correlation,"classical approximation, NOT a ceiling on prediction (see transfer_power.attenuation)"
+attenuation,"combine: tracked top speed p95 (attempt ICC, 04A) × nfl: context-conditioned C4 (cross-fitted game halves, 07A): √(rel_x · rel_y)",0.8868661257027055,,,factor on a correlation,"classical approximation, NOT a ceiling on prediction (see transfer_power.attenuation)"

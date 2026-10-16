@@ -1,0 +1,34 @@
+%% Phase 01 data pipeline (nflbdb.data.pipeline steps in brackets)
+flowchart LR
+    RAW[("data/*.csv<br/>raw, read-only")]
+    subgraph DISC [Discovery - bounded]
+        ENV[env] --> INV[inventory<br/>byte sampling] --> SCH[schema<br/>offset samples]
+    end
+    subgraph BR [Bronze]
+        BZ[("typed Parquet mirror<br/>+ _src_file, _src_row<br/>manifest + SHA-256")]
+    end
+    subgraph QA [Quality]
+        PRO[profile<br/>SUMMARIZE] --> TQC[tracking_qc<br/>gaps, jumps, Δt]
+        TQC --> VAL[validate<br/>keys, FK, ranges]
+        VAL --> REL[relationships<br/>linkage, cardinality]
+    end
+    subgraph SV [Silver]
+        S1[("plays / player_play split<br/>type plan, dedup, quarantine")]
+        S2[("tracking: ts, frame_id,<br/>x_std/y_std, sorted,<br/>season / draft_year partitions")]
+    end
+    subgraph GD [Gold]
+        G1[("dims")]
+        G2[("facts: attempt,<br/>player x play")]
+        G3[("marts: athlete profiles,<br/>coverage, research base")]
+    end
+    CAT[("catalog/bdb27.duckdb<br/>views")]
+    ACC[access layer<br/>ResearchDataAccess]
+    RAW --> DISC
+    RAW -->|bronze, one full pass| BZ
+    BZ --> QA
+    VAL -->|critical failures stop| SV
+    BZ --> S1 --> S2
+    SV --> G1 & G2
+    G2 --> G3
+    SV & GD --> CAT --> ACC
+    GD --> BEN[benchmark] & FEA[feasibility]

@@ -1,0 +1,9 @@
+domain,stratum,scenario,scenario_order,n_trajectories,n_athletes,share_trajectories_retained,share_athletes_retained
+combine,all,all trajectories,0,6310,510,1.0,1.0
+combine,all,exclude reject,1,6310,510,1.0,1.0
+combine,all,tier A only,2,6309,510,0.9998415213946117,1.0
+combine,all,tier A + no screening flag,3,6051,510,0.9589540412044374,1.0
+nfl,all,all trajectories,0,314944,497,1.0,1.0
+nfl,all,exclude reject,1,314638,497,0.9990283986994514,1.0
+nfl,all,tier A only,2,311984,497,0.9906015037593985,1.0
+nfl,all,tier A + no screening flag,3,307180,497,0.9753479983743142,1.0

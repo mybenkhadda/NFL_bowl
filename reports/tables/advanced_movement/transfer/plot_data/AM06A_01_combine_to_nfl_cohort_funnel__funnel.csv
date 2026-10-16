@@ -1,0 +1,10 @@
+stage,stage_order,group_type,group,n_meeting_rule,n_cumulative,definition
+combine_roster,0,ALL,ALL,510,510,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,ALL,ALL,418,418,≥ 1 eligible tracked forty-yard attempt
+official_core,2,ALL,ALL,424,418,"official forty, 10-yard split and weight recorded"
+engineered_features,3,ALL,ALL,418,418,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,ALL,ALL,418,418,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,ALL,ALL,418,418,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,ALL,ALL,401,332,≥ 1 eligible regular-season NFL window
+target_exposure,7,ALL,ALL,336,284,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,ALL,ALL,284,284,all of the above and a consistent Combine ↔ NFL identity

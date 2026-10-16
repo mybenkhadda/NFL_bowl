@@ -1,0 +1,36 @@
+# Phase 01 configuration. Every value can be overridden by an environment variable
+# (shown in comments). Paths are relative to the project root unless absolute.
+# No machine-specific absolute paths belong in this file.
+
+[paths]
+data_root = "data"            # NFL_BDB_DATA_ROOT   — raw Kaggle CSVs (read-only)
+warehouse_root = "warehouse"  # NFL_BDB_WAREHOUSE   — bronze / silver / gold / catalog
+reports_root = "reports"      # NFL_BDB_REPORTS
+tmp_root = ".tmp"             # NFL_BDB_TMP         — DuckDB spill + atomic-write staging
+
+[resources]
+threads = 0                   # NFL_BDB_THREADS     — 0 = auto (logical cores - 1)
+duckdb_memory_fraction = 0.5  # fraction of TOTAL RAM given to DuckDB (never 100%)
+duckdb_memory_limit = ""      # NFL_BDB_DUCKDB_MEMORY e.g. "8GB" — overrides the fraction
+
+[parquet]
+compression = "zstd"
+compression_level = 3
+row_group_size = 500000       # rows; ~20-40 MB uncompressed for 12-col tracking rows
+
+[profiling]
+schema_sample_rows = 50000    # rows read per CSV for schema inference
+offset_sample_chunks = 20     # byte-offset chunks for bounded representative sampling
+offset_sample_lines = 2000    # lines per chunk
+tracking_sample_pct = 2.0     # % of trajectories (hash-sampled, whole trajectories kept)
+seed = 42
+
+[tracking]
+nominal_interval_ms = 100     # 10 Hz — VERIFY with tracking_qc.interval_distribution()
+max_speed_yds = 12.5          # flag threshold (≈25.6 mph; elite NFL top speed ≈ 11 yd/s)
+max_accel_yds2 = 15.0
+max_step_yds = 1.5            # max plausible displacement per 100 ms frame
+coord_tolerance_yds = 10.0    # allowed excursion outside the 120 x 53.3 field
+
+[silver]
+cluster_sort = true           # sort tracking by key within each partition (row-group pruning)

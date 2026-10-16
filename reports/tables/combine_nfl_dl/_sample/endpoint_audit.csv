@@ -1,0 +1,326 @@
+section,stratum,metric,value,n,note
+definition,all,vendor_definition_confirmed,0.0,,"configs/player_get_off_definition.json: status = 'unresolved'; schema_catalog: meaning = 'Timing metric: player get off', unit = 'seconds', evidence = 'inferred'"
+definition,field,source,0.0,,unknown
+definition,field,timing_origin,0.0,,unknown
+definition,field,timing_end,0.0,,unknown
+definition,field,lower_is_better,0.0,,unknown
+definition,field,valid_play_contexts,0.0,,unknown
+definition,field,censoring_or_cap,0.0,,unknown
+availability,all,n_non_null,33417.0,52591,player-plays
+availability,all,share_non_null,0.6354129033484817,52591,player-plays
+availability,season:2023,n_non_null,4865.0,7413,player-plays
+availability,season:2023,share_non_null,0.6562795089707271,7413,player-plays
+availability,season:2024,n_non_null,11165.0,17402,player-plays
+availability,season:2024,share_non_null,0.6415929203539823,17402,player-plays
+availability,season:2025,n_non_null,17387.0,27776,player-plays
+availability,season:2025,share_non_null,0.6259720622119815,27776,player-plays
+availability,lined_up_position:EDGE,n_non_null,20219.0,28882,player-plays
+availability,lined_up_position:EDGE,share_non_null,0.7000553978256353,28882,player-plays
+availability,lined_up_position:INTERIOR_LINE,n_non_null,13073.0,23028,player-plays
+availability,lined_up_position:INTERIOR_LINE,share_non_null,0.5677001910717387,23028,player-plays
+availability,lined_up_position:SLOT_CB,n_non_null,114.0,503,player-plays
+availability,lined_up_position:SLOT_CB,share_non_null,0.22664015904572565,503,player-plays
+availability,lined_up_position:MLB,n_non_null,0.0,85,player-plays
+availability,lined_up_position:MLB,share_non_null,0.0,85,player-plays
+availability,lined_up_position:OLB,n_non_null,0.0,51,player-plays
+availability,lined_up_position:OLB,share_non_null,0.0,51,player-plays
+availability,lined_up_position:CB,n_non_null,11.0,33,player-plays
+availability,lined_up_position:CB,share_non_null,0.3333333333333333,33,player-plays
+availability,lined_up_position:<null>,n_non_null,0.0,8,player-plays
+availability,lined_up_position:<null>,share_non_null,0.0,8,player-plays
+availability,lined_up_position:TE,n_non_null,0.0,1,player-plays
+availability,lined_up_position:TE,share_non_null,0.0,1,player-plays
+availability,pass_result:,n_non_null,8134.0,21788,player-plays
+availability,pass_result:,share_non_null,0.3733247659261979,21788,player-plays
+availability,pass_result:C,n_non_null,14354.0,17174,player-plays
+availability,pass_result:C,share_non_null,0.8357982997554443,17174,player-plays
+availability,pass_result:I,n_non_null,7443.0,9427,player-plays
+availability,pass_result:I,share_non_null,0.7895406810225947,9427,player-plays
+availability,pass_result:S,n_non_null,1622.0,1932,player-plays
+availability,pass_result:S,share_non_null,0.839544513457557,1932,player-plays
+availability,pass_result:R,n_non_null,1354.0,1655,player-plays
+availability,pass_result:R,share_non_null,0.8181268882175227,1655,player-plays
+availability,pass_result:IN,n_non_null,510.0,615,player-plays
+availability,pass_result:IN,share_non_null,0.8292682926829268,615,player-plays
+availability,blitzing:true,n_non_null,25294.0,27460,player-plays
+availability,blitzing:true,share_non_null,0.9211216314639475,27460,player-plays
+availability,blitzing:<null>,n_non_null,8104.0,23591,player-plays
+availability,blitzing:<null>,share_non_null,0.3435208342164385,23591,player-plays
+availability,blitzing:false,n_non_null,19.0,1540,player-plays
+availability,blitzing:false,share_non_null,0.012337662337662338,1540,player-plays
+availability,down:1,n_non_null,13860.0,23730,player-plays
+availability,down:1,share_non_null,0.584070796460177,23730,player-plays
+availability,down:2,n_non_null,11261.0,17209,player-plays
+availability,down:2,share_non_null,0.6543669010401534,17209,player-plays
+availability,down:3,n_non_null,7468.0,10175,player-plays
+availability,down:3,share_non_null,0.7339557739557739,10175,player-plays
+availability,down:4,n_non_null,828.0,1268,player-plays
+availability,down:4,share_non_null,0.6529968454258676,1268,player-plays
+availability,down:0,n_non_null,0.0,209,player-plays
+availability,down:0,share_non_null,0.0,209,player-plays
+availability,offense_formation:SHOTGUN,n_non_null,20224.0,27646,player-plays
+availability,offense_formation:SHOTGUN,share_non_null,0.7315343991897562,27646,player-plays
+availability,offense_formation:SINGLEBACK,n_non_null,6657.0,12988,player-plays
+availability,offense_formation:SINGLEBACK,share_non_null,0.512550046196489,12988,player-plays
+availability,offense_formation:EMPTY,n_non_null,2845.0,3441,player-plays
+availability,offense_formation:EMPTY,share_non_null,0.8267945364719558,3441,player-plays
+availability,offense_formation:I_FORM,n_non_null,1634.0,3427,player-plays
+availability,offense_formation:I_FORM,share_non_null,0.47680186752261455,3427,player-plays
+availability,offense_formation:PISTOL,n_non_null,1647.0,3203,player-plays
+availability,offense_formation:PISTOL,share_non_null,0.5142054324071184,3203,player-plays
+availability,offense_formation:<null>,n_non_null,56.0,903,player-plays
+availability,offense_formation:<null>,share_non_null,0.06201550387596899,903,player-plays
+availability,offense_formation:JUMBO,n_non_null,295.0,777,player-plays
+availability,offense_formation:JUMBO,share_non_null,0.37966537966537967,777,player-plays
+availability,offense_formation:WILDCAT,n_non_null,59.0,206,player-plays
+availability,offense_formation:WILDCAT,share_non_null,0.28640776699029125,206,player-plays
+availability,sack:recorded,n_non_null,25294.0,28970,player-plays
+availability,sack:recorded,share_non_null,0.8731101139109424,28970,player-plays
+availability,sack:not_recorded,n_non_null,8123.0,23621,player-plays
+availability,sack:not_recorded,share_non_null,0.3438889124084501,23621,player-plays
+availability,coverage_assignment:recorded,n_non_null,25297.0,29052,player-plays
+availability,coverage_assignment:recorded,share_non_null,0.870749001789894,29052,player-plays
+availability,coverage_assignment:not_recorded,n_non_null,8120.0,23539,player-plays
+availability,coverage_assignment:not_recorded,share_non_null,0.3449594290326692,23539,player-plays
+availability,time_to_pressure:recorded,n_non_null,2608.0,2704,player-plays
+availability,time_to_pressure:recorded,share_non_null,0.9644970414201184,2704,player-plays
+availability,time_to_pressure:not_recorded,n_non_null,30809.0,49887,player-plays
+availability,time_to_pressure:not_recorded,share_non_null,0.6175757211297532,49887,player-plays
+availability,nullified_by_penalty,n_non_null,0.0,2184,player-plays
+availability,nullified_by_penalty,share_non_null,0.0,2184,player-plays
+validity,all,n_endpoint_non_null,33417.0,52591,player-plays
+validity,all,n_other_alignment,125.0,33417,"endpoint present, alignment not EDGE / INTERIOR_LINE (excluded)"
+validity,all,n_nullified,0.0,33417,"endpoint present, play nullified by penalty (excluded)"
+validity,all,n_valid,33292.0,33417,valid observations kept
+validity,all,n_athletes_valid,98.0,,athletes
+distribution,all,mean,1.0112403881834766,33292,valid player-plays
+distribution,all,sd,0.2929901693268861,33292,valid player-plays
+distribution,all,min,0.00400000018998981,33292,valid player-plays
+distribution,all,p01,0.505999982357025,33292,valid player-plays
+distribution,all,p05,0.628000020980835,33292,valid player-plays
+distribution,all,p25,0.805000007152557,33292,valid player-plays
+distribution,all,p50,0.958999991416931,33292,valid player-plays
+distribution,all,p75,1.16100001335144,33292,valid player-plays
+distribution,all,p95,1.60699999332428,33292,valid player-plays
+distribution,all,p99,1.8840899479389202,33292,valid player-plays
+distribution,all,max,2.0,33292,valid player-plays
+distribution,alignment:EDGE,mean,0.9658069143864632,20219,valid player-plays
+distribution,alignment:EDGE,sd,0.28986625061725596,20219,valid player-plays
+distribution,alignment:EDGE,min,0.00400000018998981,20219,valid player-plays
+distribution,alignment:EDGE,p01,0.47735999882221186,20219,valid player-plays
+distribution,alignment:EDGE,p05,0.595000028610229,20219,valid player-plays
+distribution,alignment:EDGE,p25,0.760999977588654,20219,valid player-plays
+distribution,alignment:EDGE,p50,0.907000005245209,20219,valid player-plays
+distribution,alignment:EDGE,p75,1.11899995803833,20219,valid player-plays
+distribution,alignment:EDGE,p95,1.5500999569892835,20219,valid player-plays
+distribution,alignment:EDGE,p99,1.84800004959106,20219,valid player-plays
+distribution,alignment:EDGE,max,1.99800002574921,20219,valid player-plays
+distribution,alignment:INTERIOR_LINE,mean,1.0815088351123998,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,sd,0.2837871577935393,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,min,0.0240000002086163,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p01,0.601999998092651,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p05,0.717000007629395,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p25,0.885999977588654,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p50,1.02499997615814,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p75,1.21700000762939,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p95,1.67900002002716,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,p99,1.92499995231628,13073,valid player-plays
+distribution,alignment:INTERIOR_LINE,max,2.0,13073,valid player-plays
+distribution,season:2023,mean,0.9930396037907785,4848,valid player-plays
+distribution,season:2023,sd,0.285926277179137,4848,valid player-plays
+distribution,season:2023,min,0.328999996185303,4848,valid player-plays
+distribution,season:2023,p01,0.519999980926514,4848,valid player-plays
+distribution,season:2023,p05,0.6273499906063077,4848,valid player-plays
+distribution,season:2023,p25,0.788999974727631,4848,valid player-plays
+distribution,season:2023,p50,0.940999984741211,4848,valid player-plays
+distribution,season:2023,p75,1.13800001144409,4848,valid player-plays
+distribution,season:2023,p95,1.567999958992,4848,valid player-plays
+distribution,season:2023,p99,1.8495300018787408,4848,valid player-plays
+distribution,season:2023,max,1.99500000476837,4848,valid player-plays
+distribution,season:2024,mean,0.9936074801958219,11123,valid player-plays
+distribution,season:2024,sd,0.2968585581750793,11123,valid player-plays
+distribution,season:2024,min,0.135000005364418,11123,valid player-plays
+distribution,season:2024,p01,0.479000002145767,11123,valid player-plays
+distribution,season:2024,p05,0.602999985218048,11123,valid player-plays
+distribution,season:2024,p25,0.783999979496002,11123,valid player-plays
+distribution,season:2024,p50,0.944000005722046,11123,valid player-plays
+distribution,season:2024,p75,1.14600002765656,11123,valid player-plays
+distribution,season:2024,p95,1.5988999843597436,11123,valid player-plays
+distribution,season:2024,p99,1.8837799596786535,11123,valid player-plays
+distribution,season:2024,max,1.99899995326996,11123,valid player-plays
+distribution,season:2025,mean,1.0276579297966906,17321,valid player-plays
+distribution,season:2025,sd,0.2914968114255102,17321,valid player-plays
+distribution,season:2025,min,0.00400000018998981,17321,valid player-plays
+distribution,season:2025,p01,0.527999997138977,17321,valid player-plays
+distribution,season:2025,p05,0.646000027656555,17321,valid player-plays
+distribution,season:2025,p25,0.823000013828278,17321,valid player-plays
+distribution,season:2025,p50,0.973999977111816,17321,valid player-plays
+distribution,season:2025,p75,1.17799997329712,17321,valid player-plays
+distribution,season:2025,p95,1.62100005149841,17321,valid player-plays
+distribution,season:2025,p99,1.8927999973297114,17321,valid player-plays
+distribution,season:2025,max,2.0,17321,valid player-plays
+distribution,pass_result:,mean,1.1669998761215097,8049,valid player-plays
+distribution,pass_result:,sd,0.31282844696325157,8049,valid player-plays
+distribution,pass_result:,min,0.135000005364418,8049,valid player-plays
+distribution,pass_result:,p01,0.5749599885940552,8049,valid player-plays
+distribution,pass_result:,p05,0.7183999896049499,8049,valid player-plays
+distribution,pass_result:,p25,0.939999997615814,8049,valid player-plays
+distribution,pass_result:,p50,1.12600004673004,8049,valid player-plays
+distribution,pass_result:,p75,1.36099994182587,8049,valid player-plays
+distribution,pass_result:,p95,1.76999998092651,8049,valid player-plays
+distribution,pass_result:,p99,1.94599997997284,8049,valid player-plays
+distribution,pass_result:,max,2.0,8049,valid player-plays
+distribution,pass_result:C,mean,0.9685722050280849,14348,valid player-plays
+distribution,pass_result:C,sd,0.2689702417246608,14348,valid player-plays
+distribution,pass_result:C,min,0.00400000018998981,14348,valid player-plays
+distribution,pass_result:C,p01,0.504999995231628,14348,valid player-plays
+distribution,pass_result:C,p05,0.617999970912933,14348,valid player-plays
+distribution,pass_result:C,p25,0.783999979496002,14348,valid player-plays
+distribution,pass_result:C,p50,0.922999978065491,14348,valid player-plays
+distribution,pass_result:C,p75,1.09924998879433,14348,valid player-plays
+distribution,pass_result:C,p95,1.5056500256061556,14348,valid player-plays
+distribution,pass_result:C,p99,1.840180034637459,14348,valid player-plays
+distribution,pass_result:C,max,1.99800002574921,14348,valid player-plays
+distribution,pass_result:I,mean,0.9537556156140289,7435,valid player-plays
+distribution,pass_result:I,sd,0.2650199231516515,7435,valid player-plays
+distribution,pass_result:I,min,0.0240000002086163,7435,valid player-plays
+distribution,pass_result:I,p01,0.48834000110626197,7435,valid player-plays
+distribution,pass_result:I,p05,0.607699984312058,7435,valid player-plays
+distribution,pass_result:I,p25,0.774999976158142,7435,valid player-plays
+distribution,pass_result:I,p50,0.91100001335144,7435,valid player-plays
+distribution,pass_result:I,p75,1.08000004291534,7435,valid player-plays
+distribution,pass_result:I,p95,1.4842999815940812,7435,valid player-plays
+distribution,pass_result:I,p99,1.8279799890518174,7435,valid player-plays
+distribution,pass_result:I,max,2.0,7435,valid player-plays
+distribution,pass_result:IN,mean,0.9648156863217261,510,valid player-plays
+distribution,pass_result:IN,sd,0.26746351561014836,510,valid player-plays
+distribution,pass_result:IN,min,0.326999992132187,510,valid player-plays
+distribution,pass_result:IN,p01,0.4778000092506412,510,valid player-plays
+distribution,pass_result:IN,p05,0.633000016212463,510,valid player-plays
+distribution,pass_result:IN,p25,0.7797499895095827,510,valid player-plays
+distribution,pass_result:IN,p50,0.922999978065491,510,valid player-plays
+distribution,pass_result:IN,p75,1.1087499856948824,510,valid player-plays
+distribution,pass_result:IN,p95,1.475100034475324,510,valid player-plays
+distribution,pass_result:IN,p99,1.8146800076961542,510,valid player-plays
+distribution,pass_result:IN,max,1.93599998950958,510,valid player-plays
+distribution,pass_result:R,mean,0.9658396088080593,1328,valid player-plays
+distribution,pass_result:R,sd,0.27652227568169435,1328,valid player-plays
+distribution,pass_result:R,min,0.34400001168251,1328,valid player-plays
+distribution,pass_result:R,p01,0.4654000031948088,1328,valid player-plays
+distribution,pass_result:R,p05,0.6046999841928483,1328,valid player-plays
+distribution,pass_result:R,p25,0.773749992251396,1328,valid player-plays
+distribution,pass_result:R,p50,0.919000029563904,1328,valid player-plays
+distribution,pass_result:R,p75,1.1032500267028775,1328,valid player-plays
+distribution,pass_result:R,p95,1.508600008487703,1328,valid player-plays
+distribution,pass_result:R,p99,1.854979982376099,1328,valid player-plays
+distribution,pass_result:R,max,1.98599994182587,1328,valid player-plays
+distribution,pass_result:S,mean,0.9310080148876816,1622,valid player-plays
+distribution,pass_result:S,sd,0.2628865571688377,1622,valid player-plays
+distribution,pass_result:S,min,0.308999985456467,1622,valid player-plays
+distribution,pass_result:S,p01,0.4808900028467176,1622,valid player-plays
+distribution,pass_result:S,p05,0.5880999982357026,1622,valid player-plays
+distribution,pass_result:S,p25,0.754000008106232,1622,valid player-plays
+distribution,pass_result:S,p50,0.897000014781952,1622,valid player-plays
+distribution,pass_result:S,p75,1.05400002002716,1622,valid player-plays
+distribution,pass_result:S,p95,1.4259000003337896,1622,valid player-plays
+distribution,pass_result:S,p99,1.8022199928760483,1622,valid player-plays
+distribution,pass_result:S,max,1.99300003051758,1622,valid player-plays
+distribution,blitzing:<null>,mean,1.1667084427735561,8019,valid player-plays
+distribution,blitzing:<null>,sd,0.31280020543707904,8019,valid player-plays
+distribution,blitzing:<null>,min,0.135000005364418,8019,valid player-plays
+distribution,blitzing:<null>,p01,0.575999975204468,8019,valid player-plays
+distribution,blitzing:<null>,p05,0.717999994754791,8019,valid player-plays
+distribution,blitzing:<null>,p25,0.939999997615814,8019,valid player-plays
+distribution,blitzing:<null>,p50,1.12600004673004,8019,valid player-plays
+distribution,blitzing:<null>,p75,1.36000001430511,8019,valid player-plays
+distribution,blitzing:<null>,p95,1.76999998092651,8019,valid player-plays
+distribution,blitzing:<null>,p99,1.94599997997284,8019,valid player-plays
+distribution,blitzing:<null>,max,2.0,8019,valid player-plays
+distribution,blitzing:true,mean,0.9616292615606975,25255,valid player-plays
+distribution,blitzing:true,sd,0.26795613892364895,25255,valid player-plays
+distribution,blitzing:true,min,0.00400000018998981,25255,valid player-plays
+distribution,blitzing:true,p01,0.495999991893768,25255,valid player-plays
+distribution,blitzing:true,p05,0.612999975681305,25255,valid player-plays
+distribution,blitzing:true,p25,0.778999984264374,25255,valid player-plays
+distribution,blitzing:true,p50,0.916999995708466,25255,valid player-plays
+distribution,blitzing:true,p75,1.09200000762939,25255,valid player-plays
+distribution,blitzing:true,p95,1.49600005149841,25255,valid player-plays
+distribution,blitzing:true,p99,1.8334599661827076,25255,valid player-plays
+distribution,blitzing:true,max,2.0,25255,valid player-plays
+distribution,down:1,mean,1.0747357479809678,13805,valid player-plays
+distribution,down:1,sd,0.307456134948962,13805,valid player-plays
+distribution,down:1,min,0.216000005602837,13805,valid player-plays
+distribution,down:1,p01,0.52700001001358,13805,valid player-plays
+distribution,down:1,p05,0.657999992370605,13805,valid player-plays
+distribution,down:1,p25,0.855000019073486,13805,valid player-plays
+distribution,down:1,p50,1.02300000190735,13805,valid player-plays
+distribution,down:1,p75,1.24500000476837,13805,valid player-plays
+distribution,down:1,p95,1.6937999963760393,13805,valid player-plays
+distribution,down:1,p99,1.92200005054474,13805,valid player-plays
+distribution,down:1,max,1.99899995326996,13805,valid player-plays
+distribution,down:2,mean,1.0047117268884973,11222,valid player-plays
+distribution,down:2,sd,0.2819061405819323,11222,valid player-plays
+distribution,down:2,min,0.00400000018998981,11222,valid player-plays
+distribution,down:2,p01,0.5152099829912185,11222,valid player-plays
+distribution,down:2,p05,0.633000016212463,11222,valid player-plays
+distribution,down:2,p25,0.809000015258789,11222,valid player-plays
+distribution,down:2,p50,0.955999970436096,11222,valid player-plays
+distribution,down:2,p75,1.14999997615814,11222,valid player-plays
+distribution,down:2,p95,1.58399999141693,11222,valid player-plays
+distribution,down:2,p99,1.8687899732589717,11222,valid player-plays
+distribution,down:2,max,2.0,11222,valid player-plays
+distribution,down:3,mean,0.9087064521943009,7440,valid player-plays
+distribution,down:3,sd,0.2496713683815633,7440,valid player-plays
+distribution,down:3,min,0.0240000002086163,7440,valid player-plays
+distribution,down:3,p01,0.474000006914139,7440,valid player-plays
+distribution,down:3,p05,0.5839499920606612,7440,valid player-plays
+distribution,down:3,p25,0.745000004768372,7440,valid player-plays
+distribution,down:3,p50,0.869000017642975,7440,valid player-plays
+distribution,down:3,p75,1.02224996685982,7440,valid player-plays
+distribution,down:3,p95,1.3910500288009668,7440,valid player-plays
+distribution,down:3,p99,1.77999997138977,7440,valid player-plays
+distribution,down:3,max,1.99500000476837,7440,valid player-plays
+distribution,down:4,mean,0.9622266655257254,825,valid player-plays
+distribution,down:4,sd,0.2723698421008474,825,valid player-plays
+distribution,down:4,min,0.397000014781952,825,valid player-plays
+distribution,down:4,p01,0.5036799812316891,825,valid player-plays
+distribution,down:4,p05,0.625999987125397,825,valid player-plays
+distribution,down:4,p25,0.769999980926514,825,valid player-plays
+distribution,down:4,p50,0.91100001335144,825,valid player-plays
+distribution,down:4,p75,1.10000002384186,825,valid player-plays
+distribution,down:4,p95,1.4961999893188518,825,valid player-plays
+distribution,down:4,p99,1.8097999906539888,825,valid player-plays
+distribution,down:4,max,1.99300003051758,825,valid player-plays
+boundary,all,max_value,2.0,33292,largest value observed [s]
+boundary,all,share_at_max,0.00006007449237053947,33292,within 0.001 s of the maximum; a spike here means a cap or a censoring window
+boundary,all,share_top_5pct_of_range,0.008680764147542954,33292,value ≥ 0.95 · max
+boundary,all,share_below_low,0.00006007449237053947,33292,value < 0.1 s
+boundary,all,n_distinct_values,1630.0,33292,""
+boundary,all,share_on_1_decimal_grid,0.011203892827105611,33292,numeric resolution of the delivered value
+boundary,all,share_on_2_decimal_grid,0.1006247747206536,33292,numeric resolution of the delivered value
+boundary,all,share_on_3_decimal_grid,1.0,33292,numeric resolution of the delivered value
+boundary,alignment:EDGE,share_at_max,0.0,20219,""
+boundary,alignment:EDGE,share_below_low,0.00004945843018942579,20219,""
+boundary,alignment:INTERIOR_LINE,share_at_max,0.00015298707259236595,13073,""
+boundary,alignment:INTERIOR_LINE,share_below_low,0.00007649353629618297,13073,""
+alignment,athletes,n_mostly_EDGE,39.0,98,≥ 90 % of observations
+alignment,athletes,n_mostly_INTERIOR_LINE,36.0,98,≥ 90 % of observations
+alignment,athletes,n_mixed,23.0,98,""
+alignment,within_athlete,mean_difference_s,-0.04729267869744076,44,"EDGE − INTERIOR_LINE, athletes with ≥ 10 observations in each alignment; athlete bootstrap"
+alignment,within_athlete,mean_difference_ci_lower,-0.07055808448553189,44,"EDGE − INTERIOR_LINE, athletes with ≥ 10 observations in each alignment; athlete bootstrap"
+alignment,within_athlete,mean_difference_ci_upper,-0.016718776803081415,44,"EDGE − INTERIOR_LINE, athletes with ≥ 10 observations in each alignment; athlete bootstrap"
+direction_evidence,sack,mean_value_when_true,0.8963973693941769,380,plays with sack > 0
+direction_evidence,sack,mean_value_when_false,1.0125663588671157,32912,plays without sack > 0
+direction_evidence,sack,athlete_partial_spearman,-0.42138860495603925,81,"athlete mean get-off vs athlete rate of 'sack > 0', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,sack,athlete_partial_spearman_ci_lower,-0.5867779615619986,81,"athlete mean get-off vs athlete rate of 'sack > 0', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,sack,athlete_partial_spearman_ci_upper,-0.22224888796055992,81,"athlete mean get-off vs athlete rate of 'sack > 0', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,time_to_pressure,mean_value_when_true,0.8881850999861544,2604,plays with pressure timed
+direction_evidence,time_to_pressure,mean_value_when_false,1.0216821234045996,30688,plays without pressure timed
+direction_evidence,time_to_pressure,athlete_partial_spearman,-0.48116729629800015,81,"athlete mean get-off vs athlete rate of 'pressure timed', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,time_to_pressure,athlete_partial_spearman_ci_lower,-0.6338709815636839,81,"athlete mean get-off vs athlete rate of 'pressure timed', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,time_to_pressure,athlete_partial_spearman_ci_upper,-0.29235873676698837,81,"athlete mean get-off vs athlete rate of 'pressure timed', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,unblocked_pressure,mean_value_when_true,1.0095431035191849,232,plays with unblocked pressure
+direction_evidence,unblocked_pressure,mean_value_when_false,1.0112522989530506,33060,plays without unblocked pressure
+direction_evidence,unblocked_pressure,athlete_partial_spearman,-0.1629794315706455,81,"athlete mean get-off vs athlete rate of 'unblocked pressure', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,unblocked_pressure,athlete_partial_spearman_ci_lower,-0.3694659961777374,81,"athlete mean get-off vs athlete rate of 'unblocked pressure', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"
+direction_evidence,unblocked_pressure,athlete_partial_spearman_ci_upper,0.05884465247187805,81,"athlete mean get-off vs athlete rate of 'unblocked pressure', given the athlete's alignment share; athletes with ≥ 50 observations; Fisher interval. Evidence about direction only"

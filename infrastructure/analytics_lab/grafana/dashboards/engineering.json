@@ -1,0 +1,172 @@
+{
+  "uid": "nfl-lab-engineering",
+  "title": "NFL Lab · Data Engineering",
+  "description": "Warehouse storage, freshness, pipeline runs, benchmarks and query durations. Real measurements only: values come from lab_monitoring.sqlite (written by `python -m nflbdb.lab.build`) and the Superset metadata DB.",
+  "tags": ["nfl-lab", "engineering"],
+  "timezone": "utc",
+  "editable": false,
+  "graphTooltip": 1,
+  "schemaVersion": 39,
+  "version": 1,
+  "refresh": "",
+  "time": { "from": "now-30d", "to": "now" },
+  "templating": { "list": [] },
+  "annotations": { "list": [] },
+  "panels": [
+    {
+      "id": 1, "type": "text", "title": "", "gridPos": { "x": 0, "y": 0, "w": 24, "h": 3 },
+      "options": { "mode": "markdown", "content": "**Engineering monitor.** Snapshot tables are refreshed each time `python -m nflbdb.lab.build` runs (no live agent). Step history comes from `reports/tables/pipeline_run_log`; ages are measured *at export time*. Query-duration panels read Superset's own logs. Panels stay empty rather than showing placeholder values." }
+    },
+    {
+      "id": 2, "type": "stat", "title": "Warehouse size (bronze + silver + gold)", "gridPos": { "x": 0, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT SUM(bytes) AS value FROM storage_layer WHERE layer IN ('bronze','silver','gold')",
+        "queryText": "SELECT SUM(bytes) AS value FROM storage_layer WHERE layer IN ('bronze','silver','gold')", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "bytes", "color": { "mode": "fixed", "fixedColor": "#2a78d6" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 3, "type": "stat", "title": "Gold layer size", "gridPos": { "x": 4, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT bytes AS value FROM storage_layer WHERE layer = 'gold'",
+        "queryText": "SELECT bytes AS value FROM storage_layer WHERE layer = 'gold'", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "bytes", "color": { "mode": "fixed", "fixedColor": "#1baf7a" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 4, "type": "stat", "title": "Last successful pipeline step", "gridPos": { "x": 8, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT MAX(time) * 1000 AS value FROM pipeline_step WHERE status LIKE 'OK%'",
+        "queryText": "SELECT MAX(time) * 1000 AS value FROM pipeline_step WHERE status LIKE 'OK%'", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "dateTimeFromNow", "color": { "mode": "fixed", "fixedColor": "#0ca30c" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 5, "type": "stat", "title": "Failed steps (time range)", "gridPos": { "x": 12, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT COUNT(*) AS value FROM pipeline_step WHERE status = 'FAILED' AND time >= $__unixEpochFrom() AND time <= $__unixEpochTo()",
+        "queryText": "SELECT COUNT(*) AS value FROM pipeline_step WHERE status = 'FAILED' AND time >= $__unixEpochFrom() AND time <= $__unixEpochTo()", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "none", "thresholds": { "mode": "absolute", "steps": [ { "color": "#0ca30c", "value": null }, { "color": "#d03b3b", "value": 1 } ] }, "color": { "mode": "thresholds" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 6, "type": "stat", "title": "Last lab build duration", "gridPos": { "x": 16, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT seconds AS value FROM lab_build ORDER BY time DESC LIMIT 1",
+        "queryText": "SELECT seconds AS value FROM lab_build ORDER BY time DESC LIMIT 1", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "s", "decimals": 1, "color": { "mode": "fixed", "fixedColor": "#eda100" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 7, "type": "stat", "title": "Oldest gold file (age at export)", "gridPos": { "x": 20, "y": 3, "w": 4, "h": 4 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT MAX(age_hours) AS value FROM dataset_file WHERE layer = 'gold' AND dataset NOT LIKE 'phase_%'",
+        "queryText": "SELECT MAX(age_hours) AS value FROM dataset_file WHERE layer = 'gold' AND dataset NOT LIKE 'phase_%'", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "h", "decimals": 1, "thresholds": { "mode": "absolute", "steps": [ { "color": "#0ca30c", "value": null }, { "color": "#fab219", "value": 168 }, { "color": "#d03b3b", "value": 720 } ] }, "color": { "mode": "thresholds" } }, "overrides": [] },
+      "options": { "reduceOptions": { "calcs": ["lastNotNull"], "values": false }, "colorMode": "value", "graphMode": "none", "textMode": "value" }
+    },
+    {
+      "id": 8, "type": "bargauge", "title": "Storage by layer", "gridPos": { "x": 0, "y": 7, "w": 8, "h": 9 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT layer, bytes FROM storage_layer ORDER BY bytes DESC",
+        "queryText": "SELECT layer, bytes FROM storage_layer ORDER BY bytes DESC", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "bytes", "color": { "mode": "fixed", "fixedColor": "#2a78d6" } }, "overrides": [] },
+      "options": { "orientation": "horizontal", "displayMode": "basic", "showUnfilled": true, "valueMode": "text",
+        "reduceOptions": { "calcs": [], "fields": "/^bytes$/", "values": true } }
+    },
+    {
+      "id": 9, "type": "table", "title": "Dataset sizes and freshness", "gridPos": { "x": 8, "y": 7, "w": 16, "h": 9 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT layer, dataset, COUNT(*) AS files, SUM(rows) AS rows, SUM(bytes) AS bytes, MAX(age_hours) AS age_hours, datetime(MAX(modified), 'unixepoch') AS last_modified_utc FROM dataset_file GROUP BY layer, dataset ORDER BY layer, dataset",
+        "queryText": "SELECT layer, dataset, COUNT(*) AS files, SUM(rows) AS rows, SUM(bytes) AS bytes, MAX(age_hours) AS age_hours, datetime(MAX(modified), 'unixepoch') AS last_modified_utc FROM dataset_file GROUP BY layer, dataset ORDER BY layer, dataset", "timeColumns": [] }],
+      "fieldConfig": { "defaults": {}, "overrides": [
+        { "matcher": { "id": "byName", "options": "bytes" }, "properties": [ { "id": "unit", "value": "bytes" } ] },
+        { "matcher": { "id": "byName", "options": "rows" }, "properties": [ { "id": "unit", "value": "short" } ] },
+        { "matcher": { "id": "byName", "options": "age_hours" }, "properties": [ { "id": "unit", "value": "h" }, { "id": "decimals", "value": 1 } ] }
+      ] },
+      "options": { "showHeader": true, "cellHeight": "sm" }
+    },
+    {
+      "id": 10, "type": "timeseries", "title": "Pipeline step duration", "gridPos": { "x": 0, "y": 16, "w": 12, "h": 9 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "time series",
+        "rawQueryText": "SELECT time, step_name, seconds FROM pipeline_step WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time",
+        "queryText": "SELECT time, step_name, seconds FROM pipeline_step WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time", "timeColumns": ["time"] }],
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "drawStyle": "points", "pointSize": 7, "showPoints": "always" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } }
+    },
+    {
+      "id": 11, "type": "timeseries", "title": "Peak process memory per step (RSS)", "gridPos": { "x": 12, "y": 16, "w": 12, "h": 9 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "time series",
+        "rawQueryText": "SELECT time, step_name, rss_peak_mb FROM pipeline_step WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time",
+        "queryText": "SELECT time, step_name, rss_peak_mb FROM pipeline_step WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time", "timeColumns": ["time"] }],
+      "fieldConfig": { "defaults": { "unit": "decmbytes", "custom": { "drawStyle": "points", "pointSize": 7, "showPoints": "always" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } }
+    },
+    {
+      "id": 12, "type": "barchart", "title": "Query benchmarks — warm median (Phase 01)", "gridPos": { "x": 0, "y": 25, "w": 12, "h": 10 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT bench AS query, warm_median_s FROM benchmark WHERE ok IN (1, 'true', 'True') ORDER BY warm_median_s DESC",
+        "queryText": "SELECT bench AS query, warm_median_s FROM benchmark WHERE ok IN (1, 'true', 'True') ORDER BY warm_median_s DESC", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "s", "color": { "mode": "fixed", "fixedColor": "#4a3aa7" } }, "overrides": [] },
+      "options": { "orientation": "horizontal", "xField": "query", "showValue": "auto", "legend": { "showLegend": false } }
+    },
+    {
+      "id": 13, "type": "barchart", "title": "Gold build time per table (last build)", "gridPos": { "x": 12, "y": 25, "w": 12, "h": 10 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT \"table\" AS gold_table, seconds FROM gold_build ORDER BY seconds DESC",
+        "queryText": "SELECT \"table\" AS gold_table, seconds FROM gold_build ORDER BY seconds DESC", "timeColumns": [] }],
+      "fieldConfig": { "defaults": { "unit": "s", "color": { "mode": "fixed", "fixedColor": "#1baf7a" } }, "overrides": [] },
+      "options": { "orientation": "horizontal", "xField": "gold_table", "showValue": "auto", "legend": { "showLegend": false } }
+    },
+    {
+      "id": 14, "type": "timeseries", "title": "Lab build duration", "gridPos": { "x": 0, "y": 35, "w": 8, "h": 8 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "time series",
+        "rawQueryText": "SELECT time, seconds FROM lab_build WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time",
+        "queryText": "SELECT time, seconds FROM lab_build WHERE time >= $__unixEpochFrom() AND time <= $__unixEpochTo() ORDER BY time", "timeColumns": ["time"] }],
+      "fieldConfig": { "defaults": { "unit": "s", "custom": { "drawStyle": "points", "pointSize": 8, "showPoints": "always" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "hidden", "placement": "bottom" }, "tooltip": { "mode": "single" } }
+    },
+    {
+      "id": 15, "type": "table", "title": "Failed / warned operations", "gridPos": { "x": 8, "y": 35, "w": 16, "h": 8 },
+      "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" },
+      "targets": [{ "refId": "A", "datasource": { "type": "frser-sqlite-datasource", "uid": "nfl-lab-sqlite" }, "queryType": "table",
+        "rawQueryText": "SELECT datetime(time, 'unixepoch') AS started_utc, step, status, seconds, error FROM pipeline_step WHERE status <> 'OK' ORDER BY time DESC LIMIT 100",
+        "queryText": "SELECT datetime(time, 'unixepoch') AS started_utc, step, status, seconds, error FROM pipeline_step WHERE status <> 'OK' ORDER BY time DESC LIMIT 100", "timeColumns": [] }],
+      "fieldConfig": { "defaults": {}, "overrides": [
+        { "matcher": { "id": "byName", "options": "status" }, "properties": [ { "id": "custom.cellOptions", "value": { "type": "color-text" } },
+          { "id": "mappings", "value": [ { "type": "value", "options": { "FAILED": { "color": "#d03b3b" }, "OK_WITH_WARNINGS": { "color": "#fab219" } } } ] } ] }
+      ] },
+      "options": { "showHeader": true, "cellHeight": "sm" }
+    },
+    {
+      "id": 16, "type": "timeseries", "title": "Superset request durations (from Superset logs)", "gridPos": { "x": 0, "y": 43, "w": 12, "h": 9 },
+      "datasource": { "type": "grafana-postgresql-datasource", "uid": "superset-meta" },
+      "targets": [{ "refId": "A", "datasource": { "type": "grafana-postgresql-datasource", "uid": "superset-meta" }, "editorMode": "code", "format": "time_series", "rawQuery": true,
+        "rawSql": "SELECT dttm AS \"time\", action AS metric, duration_ms FROM logs WHERE $__timeFilter(dttm) AND duration_ms IS NOT NULL AND (action ILIKE '%data%' OR action ILIKE '%explore_json%' OR action ILIKE '%sql_json%') ORDER BY 1" }],
+      "fieldConfig": { "defaults": { "unit": "ms", "custom": { "drawStyle": "points", "pointSize": 5, "showPoints": "always" } }, "overrides": [] },
+      "options": { "legend": { "displayMode": "list", "placement": "bottom" }, "tooltip": { "mode": "multi" } },
+      "description": "Durations Superset logs for chart-data / SQL Lab requests. If empty, list the logged actions with: SELECT action, count(*) FROM logs GROUP BY 1."
+    },
+    {
+      "id": 17, "type": "table", "title": "SQL Lab queries (slowest first)", "gridPos": { "x": 12, "y": 43, "w": 12, "h": 9 },
+      "datasource": { "type": "grafana-postgresql-datasource", "uid": "superset-meta" },
+      "targets": [{ "refId": "A", "datasource": { "type": "grafana-postgresql-datasource", "uid": "superset-meta" }, "editorMode": "code", "format": "table", "rawQuery": true,
+        "rawSql": "SELECT to_timestamp(start_time / 1000.0) AS started, round((end_time - start_time)::numeric, 0) AS duration_ms, status, rows, left(sql, 120) AS sql FROM query WHERE start_time IS NOT NULL AND end_time IS NOT NULL AND to_timestamp(start_time / 1000.0) BETWEEN $__timeFrom() AND $__timeTo() ORDER BY duration_ms DESC LIMIT 100" }],
+      "fieldConfig": { "defaults": {}, "overrides": [ { "matcher": { "id": "byName", "options": "duration_ms" }, "properties": [ { "id": "unit", "value": "ms" } ] } ] },
+      "options": { "showHeader": true, "cellHeight": "sm" }
+    }
+  ]
+}

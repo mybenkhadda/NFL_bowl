@@ -1,0 +1,16 @@
+position_group,objective,order
+DB,prediction_delta_rmse_median,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+DB,repeatability_median_icc,gauntlet > forty > pass_rush > short_shuttle > three_cone > backpedal_transition
+DB,coverage_supported_demand_position_cells,backpedal_transition > gauntlet > forty > short_shuttle > three_cone > pass_rush
+DL,prediction_delta_rmse_median,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+DL,repeatability_median_icc,gauntlet > forty > pass_rush > short_shuttle > three_cone > backpedal_transition
+DL,coverage_supported_demand_position_cells,three_cone > backpedal_transition > forty > short_shuttle > pass_rush > gauntlet
+OL,prediction_delta_rmse_median,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+OL,repeatability_median_icc,gauntlet > forty > pass_rush > short_shuttle > three_cone > backpedal_transition
+OL,coverage_supported_demand_position_cells,short_shuttle > three_cone > forty > pass_rush > gauntlet > backpedal_transition
+TE,prediction_delta_rmse_median,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+TE,repeatability_median_icc,gauntlet > forty > pass_rush > short_shuttle > three_cone > backpedal_transition
+TE,coverage_supported_demand_position_cells,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+WR,prediction_delta_rmse_median,forty > short_shuttle > three_cone > gauntlet > backpedal_transition > pass_rush
+WR,repeatability_median_icc,gauntlet > forty > pass_rush > short_shuttle > three_cone > backpedal_transition
+WR,coverage_supported_demand_position_cells,gauntlet > forty > short_shuttle > three_cone > backpedal_transition > pass_rush

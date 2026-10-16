@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07A_01_raw_distributions",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "401 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:33:46Z",
+  "seed": 20261011,
+  "source": "nfl_play_movement (05A)"
+}

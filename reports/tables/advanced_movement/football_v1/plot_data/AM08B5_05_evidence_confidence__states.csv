@@ -1,0 +1,11 @@
+position_group,state,len
+WR,supported,366
+OL,supported,377
+DL,supported,374
+OL,not_observed,107
+WR,not_observed,62
+DL,not_observed,98
+TE,not_observed,32
+TE,supported,136
+DB,supported,398
+DB,not_observed,90

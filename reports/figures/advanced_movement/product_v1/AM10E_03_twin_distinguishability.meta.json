@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_03_twin_distinguishability",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "3,266 pairs (not independent)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:42Z",
+  "seed": 20261011,
+  "source": "twin_summary"
+}

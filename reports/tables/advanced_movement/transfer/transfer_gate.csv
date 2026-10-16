@@ -1,0 +1,6 @@
+criterion,passed,detail
+target_registry_frozen,true,13 checks of the registry
+athlete_linkage_valid,true,every critical identity check passed
+evaluation_folds_viable,true,registry: 5 folds over 284 primary-cohort athletes
+common_cohort_documented,true,284 athletes support every model M0–M7 (minimum 40)
+representation_leakage_resolved,true,"35 saved fit(s) reusable, 11 descriptive-only (refitted on training athletes in 06B)"

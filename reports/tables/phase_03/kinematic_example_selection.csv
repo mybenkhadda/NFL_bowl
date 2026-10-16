@@ -1,0 +1,4 @@
+drill,event_id,nfl_id,attempt,draft_year,max_speed,drill_median_max_speed,n_tier_a,criterion
+FORTY_YARD_DASH,20250227100100_1740696478641_000,58326,1,2025,10.603507,10.603507,793,"tier A; |max_speed − drill median| minimal; ties by nfl_id, event_id, attempt"
+SHORT_SHUTTLE,20240301100500_1709344335579_000,57244,2,2024,6.039517,6.0404553,222,"tier A; |max_speed − drill median| minimal; ties by nfl_id, event_id, attempt"
+THREE_CONE_DRILL,20250302100900_1740944374501_000,58852,1,2025,6.7968836,6.7968836,203,"tier A; |max_speed − drill median| minimal; ties by nfl_id, event_id, attempt"

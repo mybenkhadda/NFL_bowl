@@ -1,0 +1,43 @@
+family,term,coef,n
+forty,intercept,4.188178375515562,424
+forty,forty_z (within position),0.38835416930436467,424
+forty,draft_year (centred),0.8955392968917297,424
+forty,pos=DL,0.7131583950530233,424
+forty,pos=OL,7.793348920348112,424
+forty,pos=TE,6.86583718495963,424
+forty,pos=WR,-0.4839623526593979,424
+short_shuttle,intercept,-1.2037673889741742,424
+short_shuttle,forty_z (within position),0.008038303611511961,424
+short_shuttle,draft_year (centred),0.17867213895077874,424
+short_shuttle,pos=DL,0.5904636677253546,424
+short_shuttle,pos=OL,1.2676446648780022,424
+short_shuttle,pos=TE,1.2924643819324988,424
+short_shuttle,pos=WR,0.29753999540160947,424
+three_cone,intercept,-1.4472956522022586,424
+three_cone,forty_z (within position),0.06886038145058727,424
+three_cone,draft_year (centred),0.3658724893660245,424
+three_cone,pos=DL,4.378312837369,424
+three_cone,pos=OL,12.70983906166302,424
+three_cone,pos=TE,1.2653798223722823,424
+three_cone,pos=WR,0.255695311903497,424
+gauntlet,intercept,3.5157540262617055,424
+gauntlet,forty_z (within position),-0.01688744849707491,424
+gauntlet,draft_year (centred),-0.0014017249273380278,424
+gauntlet,pos=DL,-14.589264763769497,424
+gauntlet,pos=OL,-14.599135611627318,424
+gauntlet,pos=TE,-0.018875678147000544,424
+gauntlet,pos=WR,8.169069848720504,424
+backpedal_transition,intercept,23.137923380965546,424
+backpedal_transition,forty_z (within position),-6.567848061982398,424
+backpedal_transition,draft_year (centred),-0.05129243552885592,424
+backpedal_transition,pos=DL,-24.225213930933666,424
+backpedal_transition,pos=OL,-43.12294048307469,424
+backpedal_transition,pos=TE,-43.48533306023258,424
+backpedal_transition,pos=WR,-41.71592791765709,424
+pass_rush,intercept,-10.010632713829168,424
+pass_rush,forty_z (within position),0.0008866855820766564,424
+pass_rush,draft_year (centred),0.008606057071510019,424
+pass_rush,pos=DL,20.732760119339773,424
+pass_rush,pos=OL,20.742675884374023,424
+pass_rush,pos=TE,-2.022956572487726,424
+pass_rush,pos=WR,-2.7594092512512876,424

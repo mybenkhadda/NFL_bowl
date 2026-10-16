@@ -1,0 +1,34 @@
+study_section,name,value,unit,provenance,rationale
+audit,seasons,None,seasons,execution,subset = smoke run in the _sample namespace
+audit,season_types,"('REG',)",games.season_type,established,"REG only, as in the Phase 03 NFL windows (PlayWindowConfig)"
+audit,state_fields,"('down', 'yards_to_go', 'yardline_number', 'quarter', 'game_clock', 'pre_snap_home_team_win_probability', 'offense_formation', 'receiver_alignment', 'team_coverage_man_zone', 'team_coverage_type', 'in_motion_at_ball_snap', 'lined_up_position', 'cushion')",columns,established,player_play columns (schema_catalog.csv) with a state role (audit §2.1)
+audit,action_fields,"('route_ran', 'coverage_assignment', 'coverage_assignment_at_snap', 'blitzing')",columns,established,"player_play columns with an action role (audit §2.2); vendor labels, never inferred intent"
+audit,outcome_fields,"('expected_points_added', 'home_team_win_probability_added', 'player_get_off', 'time_to_pressure', 'time_to_pressure_allowed', 'pressure_allowed', 'peak_pressure_probability_allowed', 'separation_at_pass_forward', 'target', 'rec_yards', 'yards_after_catch', 'expected_yards_after_catch', 'tackle', 'sack')",columns,established,player_play columns with an outcome role (audit §2.3)
+audit,min_obs_per_athlete,20,player-plays,proposed,smallest per-athlete sample for a stable median; the census value is exported; the cut can be changed without recomputation
+audit,exposure_thresholds,"(25, 50, 100, 200, 400)",tracked plays,proposed,grid for the exposure curve; Phase 04 M2 decides the reliability-based minimum
+audit,min_level_count,20,plays,proposed,an athlete 'uses' an action level only with repeated evidence
+audit,max_players_hist,12,athletes,execution,histogram display cap
+streams,min_plays_envelope,100,tracked plays,proposed,placeholder until Phase 04 M2 reliability-vs-plays; the census value is exported; the cut can be changed without recomputation
+streams,min_athletes_twin,150,athletes,proposed,grouped 5-fold CV keeps ≥ 30 test athletes per fold
+streams,min_athletes_per_position,30,athletes,proposed,clusters needed for a cluster-bootstrap interval
+streams,min_positions_twin,3,position groups,proposed,"a twin covering < 3 groups is position-specific, not general"
+streams,min_share_ball,0.9,share of plays,proposed,ball geometry needed on almost every play for interaction counterfactuals and reward shaping
+streams,min_share_both_sides,0.25,share of plays,proposed,the census value is exported; the cut can be changed without recomputation
+streams,min_action_coverage,0.5,share,proposed,the census value is exported; the cut can be changed without recomputation
+streams,min_athletes_varying,30,athletes,proposed,positivity / overlap proxy for any policy evaluation
+streams,min_pair_plays,500,plays,proposed,the census value is exported; the cut can be changed without recomputation
+streams,min_distinct_pairs,30,athlete pairs,proposed,matchup results must not rest on a handful of pairs
+streams,full_team_tracked,22,athletes,established,11 offense + 11 defense
+streams,min_athletes_outcome,30,athletes,proposed,clusters needed for a cluster-bootstrap interval
+streams,outcome_positions,"(('player_get_off', ('DL', 'LB')), ('time_to_pressure', ('DL', 'LB')), ('separation_at_pass_forward', ('WR', 'TE', 'RB')), ('cushion', ('WR', 'TE', 'DB')))",field → positions,proposed,vendor field applicability (verify in P0 coverage)
+streams,action_positions,"(('route_ran', ('WR', 'TE', 'RB')), ('coverage_assignment', ('DB', 'LB')), ('coverage_assignment_at_snap', ('DB', 'LB')), ('blitzing', ('DB', 'LB', 'DL')))",field → positions,proposed,vendor field applicability (verify in P0 coverage)
+frame,min_plays_grid,"(0, 50, 100, 200, 400)",tracked plays,proposed,"grid, not a cut: the minimum comes from the S2 reliability curve"
+frame,outcome_obs_grid,"(20, 50, 100, 200)",non-null player-plays,proposed,grid for per-athlete outcome volume
+frame,min_attempts_repeat,2,attempts,established,Phase 04 eligibility: ≥ 2 attempts for repeatability / ICC
+frame,official_results,"(('FORTY_YARD_DASH', ('forty', 'ten_yd_split')), ('SHORT_SHUTTLE', ('short_shuttle',)), ('THREE_CONE_DRILL', ('three_cone',)))",drill → combine_results columns,established,official measurements matching a tracked drill (baseline model b of E05-02)
+frame,relevant_pairs,"(('OL', 'DL'), ('WR', 'DB'), ('TE', 'DB'))",offense × defense groups,proposed,pairs that interact by role (P0 review: the P0 rule picked OL × DB by count alone)
+frame,play_type_field,pass_result,column,established,silver.plays column used for the play-type census
+frame,alpha,0.05,probability,established,two-sided type-I error of the planning calculation
+frame,power,0.8,probability,established,conventional planning power
+frame,figure_min_plays,100,tracked plays,execution,threshold displayed in figure P0b_01
+frame,figure_max_drills,14,drills,execution,display cap

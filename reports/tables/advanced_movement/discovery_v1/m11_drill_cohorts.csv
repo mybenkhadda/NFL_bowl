@@ -1,0 +1,5 @@
+target,families,n_common,status
+nfl.band_4_6,"forty, three_cone, gauntlet",43,computed
+nfl.brake_decel,"forty, three_cone, gauntlet",43,computed
+nfl.reaccel_mean,"forty, three_cone, gauntlet",39,computed
+nfl.accel_low_mean,"forty, three_cone, gauntlet",45,computed

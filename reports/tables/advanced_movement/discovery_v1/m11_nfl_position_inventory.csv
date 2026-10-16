@@ -1,0 +1,6 @@
+position_group,n_athletes,n_games,n_seasons,n_eligible_plays,first_season,last_season,n_brake_reaccel_pairs,n_pairs_with_turn,n_athletes_pairs
+DB,96,687,3,63914,2023,2025,7093,472,90
+DL,98,718,3,50363,2023,2025,3921,79,94
+OL,91,714,3,82806,2023,2025,590,1,74
+TE,33,496,3,8124,2023,2025,1371,74,30
+WR,83,753,3,36836,2023,2025,5021,376,82

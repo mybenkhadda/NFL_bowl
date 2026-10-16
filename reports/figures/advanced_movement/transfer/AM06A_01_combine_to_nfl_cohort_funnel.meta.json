@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06A_01_combine_to_nfl_cohort_funnel",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "510 Combine athletes, 284 in the primary cohort",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:10:20Z",
+  "seed": 20261011,
+  "source": "transfer_cohort_manifest (notebook 06A)"
+}

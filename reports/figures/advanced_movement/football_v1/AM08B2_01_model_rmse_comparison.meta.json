@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B2_01_model_rmse_comparison",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "84 athletes (TE 20 \u00b7 WR 64)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:55:53Z",
+  "seed": 20261011,
+  "source": "football_transfer_* tables"
+}

@@ -1,0 +1,5 @@
+candidate,n_folds,min_heldout,max_heldout,min_position_train,smallest_cell,viable,selected,reason
+registry,5,54,59,15,TE outside fold 0,true,true,size rules met (note: TE|2025 absent from fold 4)
+new_5,5,56,57,16,TE outside fold 0,true,false,size rules met
+new_4,4,71,71,15,TE outside fold 0,true,false,size rules met
+new_3,3,94,95,13,TE outside fold 0,true,false,size rules met

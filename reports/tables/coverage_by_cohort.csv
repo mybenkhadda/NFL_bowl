@@ -1,0 +1,4 @@
+cohort,n_combine_athletes,n_with_combine_tracking,n_with_nfl_tracking,n_matched_tracking_both,n_with_career_outcomes,median_nfl_plays_if_tracked,match_rate
+2023,160,160,158,158,160,573.5,0.988
+2024,177,177,175,175,177,381.0,0.989
+2025,173,173,164,164,173,224.0,0.948

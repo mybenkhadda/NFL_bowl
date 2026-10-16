@@ -1,0 +1,6 @@
+method,representation,repeat,outer_fold,objective,embedding_dim,n_parameters,n_fit_athletes,n_dev_athletes,n_fit_sequences,n_dev_sequences,n_heldout_athletes,n_heldout_sequences,n_heldout_embedded,support_lo,support_hi,n_support,n_eval_support,scale,noise_sd,epochs_run,best_epoch,best_dev_loss,stopped_early,train_seconds,device
+TCNB_A_s1,A_speed_by_distance,0,0,reconstruction+consistency,8,32761,248,86,474,161,84,158,158,0.0,40.0,81,81,0.6410644627558503,0.002118431968375325,138,113,0.09745533764362335,true,174.47961360006593,cpu
+TCNB_A_s1,A_speed_by_distance,0,1,reconstruction+consistency,8,32761,251,83,475,156,84,162,162,0.0,40.0,81,81,0.6316390963671769,0.0021201636566328523,89,64,0.10300914943218231,true,108.3831825000234,cpu
+TCNB_A_s1,A_speed_by_distance,0,2,reconstruction+consistency,8,32761,245,89,465,165,84,163,163,0.0,40.0,81,81,0.6309904737909503,0.0021242042625670833,84,59,0.08930887281894684,true,103.28773440001532,cpu
+TCNB_A_s1,A_speed_by_distance,0,3,reconstruction+consistency,8,32761,253,82,482,154,83,157,157,0.0,40.0,81,81,0.6259637268354276,0.002133728547983484,200,200,0.09038309752941132,false,213.9644139999291,cpu
+TCNB_A_s1,A_speed_by_distance,0,4,reconstruction+consistency,8,32761,255,80,488,152,83,153,153,0.0,40.0,81,81,0.6380305971882912,0.0021230498037287313,132,107,0.09065879881381989,true,80.13347939995583,cpu

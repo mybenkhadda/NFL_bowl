@@ -1,0 +1,8 @@
+grid_id,variable,unit,lo,hi,step,n_points,support_rule
+speed,speed,yd/s,0.0,11.5,0.5,23,"NFL bin ≥ 40 frames over ≥ 2 games; Combine bin mid-speed inside the monotone rising phase, bracketing frames ≤ 1.0 yd/s apart (rising_phase_interp_v2)"
+speed_shared,speed,yd/s,1.0,7.0,0.5,12,longest contiguous run of bins with share_both ≥ 0.6 among 401 linked athletes
+tangential_accel,a_tan,yd/s²,-8.0,8.0,0.25,64,same edges as m11_envelope_hist; values outside are clipped into the edge bins (as in Milestone 11)
+time_from_onset,t,s,0.0,4.0,0.1,41,"forty only, onset recorded (first speed < 1.0 yd/s); NaN after the recording ends"
+curvature,a_n / v²,1/yd,,,,0,NOT gridded: lateral acceleration is not in the NFL histograms; used only by 12F windows where heading is valid
+heading_change,Δheading,deg,0.0,180.0,45.0,4,09A redirection episodes with valid heading; Combine transitions with turn speed ≥ 1 yd/s (Milestone 11)
+distance,path distance,yd,0.0,40.0,5.0,8,"forty only, from onset; reported for orientation (12A phase analysis)"

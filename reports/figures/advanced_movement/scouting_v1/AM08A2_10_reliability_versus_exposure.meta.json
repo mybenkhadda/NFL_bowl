@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_10_reliability_versus_exposure",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "273 supported athletes over all denominators",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:06Z",
+  "seed": 20261011,
+  "source": "football_outcome_reliability_exposure"
+}

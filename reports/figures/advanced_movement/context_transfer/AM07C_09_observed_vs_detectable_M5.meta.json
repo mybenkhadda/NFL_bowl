@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07C_09_observed_vs_detectable_M5",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "284 athletes \u00b7 6800 synthetic replicates",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:00:56Z",
+  "seed": 20261011,
+  "source": "transfer_planted_signal_recovery + transfer_paired_comparisons (06B)"
+}

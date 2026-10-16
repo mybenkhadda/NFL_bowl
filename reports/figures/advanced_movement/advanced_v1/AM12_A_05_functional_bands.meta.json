@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM12_A_05_functional_bands",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-15T01:20:25Z",
+  "seed": 20261015,
+  "source": "m12c freeze + m11_envelope_hist"
+}

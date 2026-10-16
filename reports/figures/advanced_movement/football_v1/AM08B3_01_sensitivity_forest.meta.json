@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B3_01_sensitivity_forest",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes per analysis (annotated)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:31:35Z",
+  "seed": 20261011,
+  "source": "football_transfer_sensitivity_comparisons"
+}

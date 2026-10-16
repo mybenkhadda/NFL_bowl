@@ -1,0 +1,25 @@
+kind,name,path,built_at,rows,version,grain,key
+datasets,athlete,warehouse/gold/phase_lab/athlete.parquet,2026-10-08T01:38:47Z,510,1,one row per athlete,nfl_id
+datasets,availability,warehouse/gold/phase_lab/availability.parquet,2026-10-08T01:57:12Z,10,1,one row per optional input,dataset
+datasets,combine_athlete_drill,warehouse/gold/phase_lab/combine_athlete_drill.parquet,2026-10-08T01:38:47Z,4986,1,one row per athlete × drill,"nfl_id, drill_type, drill_name"
+datasets,combine_attempt,warehouse/gold/phase_lab/combine_attempt.parquet,2026-10-08T01:38:47Z,6310,1,one row per athlete × drill attempt,"event_id, nfl_id, attempt"
+datasets,coverage_matrix,warehouse/gold/phase_lab/coverage_matrix.parquet,2026-10-08T01:44:35Z,90,1,one row per position group × cohort × source,"position_group, cohort, source"
+datasets,drill_participation,warehouse/gold/phase_lab/drill_participation.parquet,2026-10-08T01:38:47Z,187,1,one row per drill × position group × cohort,"drill_type, drill_name, position_group, cohort"
+datasets,kpi_snapshot,warehouse/gold/phase_lab/kpi_snapshot.parquet,2026-10-08T01:57:12Z,1,1,single row (snapshot = 'current'),snapshot
+datasets,linkage_funnel,warehouse/gold/phase_lab/linkage_funnel.parquet,2026-10-08T01:44:35Z,105,1,one row per position group × cohort × stage,"position_group, cohort, stage_order"
+datasets,nfl_athlete_season,warehouse/gold/phase_lab/nfl_athlete_season.parquet,2026-10-08T01:44:36Z,922,1,one row per athlete × season,"nfl_id, season"
+datasets,nfl_game,warehouse/gold/phase_lab/nfl_game.parquet,2026-10-08T01:44:35Z,1002,1,one row per game,game_id
+datasets,nfl_play,warehouse/gold/phase_lab/nfl_play.parquet,2026-10-08T01:44:35Z,114565,1,one row per tracked play,"game_id, play_id"
+datasets,nfl_player_play,warehouse/gold/phase_lab/nfl_player_play,2026-10-08T01:44:36Z,314944,1,one row per tracked athlete × play,"game_id, play_id, nfl_id"
+datasets,nfl_speed_distribution,warehouse/gold/phase_lab/nfl_speed_distribution.parquet,2026-10-08T01:44:36Z,1202,1,one row per season × position × metric × 0.25-unit bin,"season, position_group, metric, bin_start"
+datasets,quality_affected,warehouse/gold/phase_lab/quality_affected.parquet,2026-10-08T01:44:36Z,0,1,one row per tracking domain (empty until Phase 02 flags exist),domain
+datasets,quality_check,warehouse/gold/phase_lab/quality_check.parquet,2026-10-08T01:44:36Z,62,1,one row per saved data-quality check,check_seq
+datasets,quality_run_history,warehouse/gold/phase_lab/quality_run_history.parquet,2026-10-08T01:57:12Z,22,1,one row per logged quality/validation step execution,"run_id, step, started_at"
+datasets,research_by_position,warehouse/gold/phase_lab/research_by_position.parquet,2026-10-08T01:44:36Z,15,1,one row per hypothesis × position group,"hypothesis, position_group"
+datasets,research_drill,warehouse/gold/phase_lab/research_drill.parquet,2026-10-08T01:44:36Z,30,1,one row per hypothesis × matched drill,"hypothesis, drill_name"
+datasets,research_hypothesis,warehouse/gold/phase_lab/research_hypothesis.parquet,2026-10-08T01:44:36Z,5,1,one row per hypothesis,hypothesis
+datasets,season_volume,warehouse/gold/phase_lab/season_volume.parquet,2026-10-08T01:44:35Z,9,1,one row per season × season_type,"season, season_type"
+datasets,test_availability,warehouse/gold/phase_lab/test_availability.parquet,2026-10-08T01:44:35Z,195,1,one row per position group × cohort × traditional test,"position_group, cohort, test_name"
+datasets,tracking_consistency,warehouse/gold/phase_lab/tracking_consistency.parquet,2026-10-08T01:44:36Z,2,1,one row per domain,domain
+datasets,tracking_interval,warehouse/gold/phase_lab/tracking_interval.parquet,2026-10-08T01:44:36Z,2,1,one row per domain × capped sampling interval,"domain, dt_ms_capped"
+datasets,tracking_partition,warehouse/gold/phase_lab/tracking_partition.parquet,2026-10-08T01:44:35Z,6,1,one row per silver tracking Parquet file,file

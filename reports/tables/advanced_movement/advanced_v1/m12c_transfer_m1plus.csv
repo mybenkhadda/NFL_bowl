@@ -1,0 +1,2 @@
+target,note,model,reference,n_athletes,rmse_ref,rmse_model,delta_rmse,delta_lo,delta_hi,delta_pct,spearman_ref,spearman_model,r2_ref,r2_model,p_boot_le0,verdict
+nfl.q90_shared,M1 with official agility times,M3+,M1+,246,0.1726322923037478,0.17345643801760088,-0.0008241457138530861,-0.0018100642454424386,0.0001959691940498869,-0.47739950785279245,0.9600518315354185,0.9599526825640892,0.9631018063432406,0.9627486618055907,0.934,inconclusive

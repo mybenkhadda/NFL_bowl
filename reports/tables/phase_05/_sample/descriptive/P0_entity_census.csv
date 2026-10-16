@@ -1,0 +1,4 @@
+season,season_type,in_population,n_rows,n_football_rows,n_player_rows,n_games,n_plays,n_plays_with_football,share_plays_with_football,n_tracked_player_plays,n_athletes,n_in_player_play,share_in_player_play
+2023,POST,false,114085,0,114085,13,1109,0,0.0,1558,31,1535,0.9852374839537869
+2023,PRE,false,728894,0,728894,49,5386,0,0.0,10207,150,10207,1.0
+2023,REG,true,2822464,0,2822464,271,25195,0,0.0,39146,122,38720,0.989117662085526

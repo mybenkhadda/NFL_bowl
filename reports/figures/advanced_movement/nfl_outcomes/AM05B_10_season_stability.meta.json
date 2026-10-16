@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05B_10_season_stability",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "up to 176 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:06:17Z",
+  "seed": 20261011,
+  "source": "nfl_outcome_reliability"
+}

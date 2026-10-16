@@ -1,0 +1,5 @@
+hypothesis,feature,target_id,control,n_athletes,r,ci_lower,ci_upper,expected_sign,status
+H1,tracked top speed p95 [yd/s],C0:O1.speed_p90_mean,position,284,0.455372066108821,0.3706061777430459,0.5353321122312391,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H1,tracked top speed p95 [yd/s],C0:O1.speed_p90_mean,official,284,0.1468961695571295,0.03645010648333681,0.26134357374724304,+,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H1,official forty [s],C0:O1.speed_p90_mean,position,284,-0.45215843852628046,-0.5368976851111894,-0.3560689786065034,−,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"
+H1,official forty [s],C0:O1.speed_p90_mean,official,284,,,,−,"DESCRIPTIVE, in-sample · EXPLORATORY (Milestone 07B)"

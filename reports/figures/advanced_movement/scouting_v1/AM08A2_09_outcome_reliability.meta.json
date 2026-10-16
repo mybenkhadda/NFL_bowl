@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_09_outcome_reliability",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "273 supported athletes over all denominators",
+  "note": "dashed = 0.7, dotted = 0.5; halves are whole games",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:05Z",
+  "seed": 20261011,
+  "source": "football_outcome_reliability"
+}

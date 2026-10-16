@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09B_02_similarity_heatmap",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "418 prospects with a supported comparison",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:08:34Z",
+  "seed": 20261011,
+  "source": "movement_matching_summary"
+}

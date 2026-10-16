@@ -1,0 +1,10 @@
+demand_id,label,registry_text_analogue,forty_analogue_v2,forty_can_measure,class_rule_v2,class_v1_bug,engine_version
+accel_low,acceleration from low speed,"acc_2_4, acc_4_6","acc_2_4, acc_4_6",true,direct / partial by start state,"",10.2
+accel_mid,acceleration from intermediate speed,"acc_4_6, acc_6_8","acc_4_6, acc_6_8",true,direct / partial by start state,"",10.2
+transition_high,transition into high-speed running,acc_6_8,acc_6_8,true,direct / partial by start state,"",10.2
+sustained_high,sustained high-speed running,top_speed,top_speed,true,direct / partial by start state,"",10.2
+speed_maintenance,speed maintenance,none,none,false,not_measured (structural: the timed forty contains no such phase),10.1 read the placeholder text 'none' as a dimension → 'unavailable (data limitation)',10.2
+braking,braking and deceleration,none,none,false,not_measured (structural: the timed forty contains no such phase),10.1 read the placeholder text 'none' as a dimension → 'unavailable (data limitation)',10.2
+reaccel_after_brake,acceleration following deceleration,none,none,false,not_measured (structural: the timed forty contains no such phase),10.1 read the placeholder text 'none' as a dimension → 'unavailable (data limitation)',10.2
+redirection,directional redirection,none,none,false,not_measured (structural: the timed forty contains no such phase),10.1 read the placeholder text 'none' as a dimension → 'unavailable (data limitation)',10.2
+repeated_change,repeated speed-change sequence,none,none,false,not_measured (structural: the timed forty contains no such phase),10.1 read the placeholder text 'none' as a dimension → 'unavailable (data limitation)',10.2

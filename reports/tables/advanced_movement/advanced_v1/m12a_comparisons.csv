@@ -1,0 +1,13 @@
+track,experiment,comparison,metric,better,estimate,lo,hi,n_athletes,cohort,evaluation_target,training_regime,primary,verdict,source_table,run_mode
+12A,1,fof: A2 vs A0,Δ MSE of the NFL function,positive,-0.00019210646442814616,-0.0007022563255100198,0.0002789010157986464,310,"",cross_domain_physical_transfer,"",true,inconclusive,m12a_compare,full
+12A,1,fof: A0 vs M1,Δ MSE of the NFL function,positive,-0.00006119986223772356,-0.0006655906608540926,0.0005050422952527547,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,fof: A1 vs M1,Δ MSE of the NFL function,positive,0.00016014084898256786,-0.0006905623944459038,0.0009591620720347724,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,fof: A2 vs M1,Δ MSE of the NFL function,positive,-0.0002533063266658697,-0.000744877308060226,0.00019855732244202453,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,fof: A4 vs M1,Δ MSE of the NFL function,positive,-0.0005430980892367487,-0.0009022799308883486,-0.0002046156046227526,310,"",cross_domain_physical_transfer,"",false,reversed,m12a_compare,full
+12A,1,fof: A2 vs A1,Δ MSE of the NFL function,positive,-0.0004134471756484376,-0.0011606519905140846,0.0002722343133609554,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,fof: CTRL_shuffled vs M1,Δ MSE of the NFL function,positive,-0.000050556666271961426,-0.0009576931119600121,0.000906852066013184,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,fof: CTRL_random vs M1,Δ MSE of the NFL function,positive,-0.0007261360304987169,-0.001231536612550182,-0.00025942439126403936,310,"",cross_domain_physical_transfer,"",false,reversed,m12a_compare,full
+12A,1,pointwise: A2 vs A0,Δ MSE of the NFL function,positive,-0.0003964873341187128,-0.0009850605177872066,0.00018219276397426343,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,pointwise: A0 vs M1,Δ MSE of the NFL function,positive,-0.00024102243237584392,-0.0009101901377552644,0.0003291393094684557,310,"",cross_domain_physical_transfer,"",false,inconclusive,m12a_compare,full
+12A,1,pointwise: A2 vs M1,Δ MSE of the NFL function,positive,-0.0006375097664945567,-0.0012388561419940268,-0.00011255207854610133,310,"",cross_domain_physical_transfer,"",false,reversed,m12a_compare,full
+12A,1,hierarchical pooling vs raw (attempt 1 → attempt 2),Δ MSE repeat prediction,positive,0.0,0.0,0.0,276,"",measurement_reliability,"",false,inconclusive,m12a_hierarchical_repeat,full

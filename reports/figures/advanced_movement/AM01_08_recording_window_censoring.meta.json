@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM01_08_recording_window_censoring",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "793 sequences",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T13:41:19Z",
+  "seed": 20261011,
+  "source": "sequence_summary"
+}

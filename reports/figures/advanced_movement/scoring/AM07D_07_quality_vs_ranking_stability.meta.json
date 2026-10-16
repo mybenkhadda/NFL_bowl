@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_07_quality_vs_ranking_stability",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "athletes with a repeat",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:07Z",
+  "seed": 20261011,
+  "source": "atlas_attempt_features + combine_measurement_confidence"
+}

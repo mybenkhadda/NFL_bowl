@@ -1,0 +1,18 @@
+target_id,label,unit,source,demands,statistic,condition,combine_match,higher_is
+nfl.band_2_4,acceleration through 2 → 4 yd/s,yd/s²,episodes,"accel_low, accel_mid, transition_high, reaccel_after_brake",median,accelerating episodes whose trace crosses 2 and 4 yd/s (first-crossing rule),forty.band_2_4_mean_accel,faster speed build-up
+nfl.band_4_6,acceleration through 4 → 6 yd/s,yd/s²,episodes,"accel_low, accel_mid, transition_high, reaccel_after_brake",median,"same rule, 4 → 6 yd/s",forty.band_4_6_mean_accel,faster speed build-up
+nfl.band_6_8,acceleration through 6 → 8 yd/s,yd/s²,episodes,"accel_low, accel_mid, transition_high, reaccel_after_brake",median,"same rule, 6 → 8 yd/s",forty.band_6_8_mean_accel,faster speed build-up
+nfl.accel_low_mean,mean acceleration from low speed,yd/s²,episodes,accel_low,median,accel_low episodes (start < 2 yd/s),forty.early_accel,harder acceleration from a near-standstill
+nfl.accel_low_peak05,peak 0.5-s speed gain from low speed,yd/s²,episodes,accel_low,median,accel_low episodes,forty.early_accel,harder acceleration
+nfl.transition_high_mean,acceleration into high-speed running,yd/s²,episodes,transition_high,median,"transition_high episodes (start ≥ 5 yd/s, reach 7.5 yd/s)",forty.band_6_8_mean_accel,harder late acceleration
+nfl.vmax_p90,observed high-speed peak (90th percentile),yd/s,episodes,sustained_high,p90,sustained_high episodes,forty.v_max_obs,higher observed speed (not a maximum)
+nfl.brake_decel,mean deceleration while braking,yd/s²,episodes,braking,median,braking episodes from ≥ 4 yd/s with a drop ≥ 2 yd/s,short_shuttle.decel_mean,harder braking
+nfl.brake_peak05,peak 0.5-s deceleration,yd/s²,episodes,braking,median,braking episodes,short_shuttle.decel_peak,harder braking
+nfl.brake_distance_matched,braking distance from 4–7 yd/s,yd,episodes,braking,median,braking episodes starting at 4–7 yd/s (entry-speed matched),short_shuttle.braking_distance_yd,longer stopping path
+nfl.reaccel_mean,re-acceleration after braking,yd/s²,episodes,reaccel_after_brake,median,accelerating episode starting ≤ 1 s after a braking episode,short_shuttle.exit_accel,harder re-acceleration
+nfl.redirect_retention,speed retained through a redirection,fraction,episodes,redirection,median,"redirection episodes (|Δheading| ≥ 45°, valid heading, ≥ 3 yd/s)",three_cone.transition_cost_index,more speed kept
+nfl.redirect_retention_90,speed retained through a ≥ 90° redirection,fraction,episodes,redirection,median,redirection episodes with |Δheading| ≥ 90°,three_cone.transition_cost_index,more speed kept
+nfl.brake_to_burst,Brake-to-Burst latency,s,pairs,"",median,"braking end → start of the following re-acceleration (same player-play, ≤ 1 s)",short_shuttle.brake_to_burst_s,slower re-start
+nfl.pair_tci,Transition Cost Index of brake → re-acceleration,fraction,pairs,"",median,(entry − speed 0.5 s into the re-acceleration) / entry,short_shuttle.transition_cost_index,more speed lost
+nfl.pair_tci_turn90,Transition Cost Index with an observed ≥ 90° turn,fraction,pairs,"",median,pairs overlapping a redirection episode with |Δheading| ≥ 90°,three_cone.transition_cost_index,more speed lost
+nfl.broad_accel_sust05,"season-average sustained acceleration (Milestone 05 primary, broad)",yd/s²,plays,"",median,every eligible player-play (no speed-state matching),none,harder acceleration

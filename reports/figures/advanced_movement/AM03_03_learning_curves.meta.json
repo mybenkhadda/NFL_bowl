@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM03_03_learning_curves",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "30 fold models",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T23:49:33Z",
+  "seed": 20261011,
+  "source": "tcn_a_training_history, tcn_b_training_history"
+}

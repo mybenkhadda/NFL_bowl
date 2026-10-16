@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B4_04_matched_stopwatch_athletes",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "matched pairs per characteristic (annotated)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:41:50Z",
+  "seed": 20261011,
+  "source": "movement_matched_distinguishability"
+}

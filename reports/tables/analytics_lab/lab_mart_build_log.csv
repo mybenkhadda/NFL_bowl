@@ -1,0 +1,25 @@
+mart,action,reason
+athlete,reused,current
+combine_attempt,reused,current
+combine_athlete_drill,reused,current
+drill_participation,reused,current
+test_availability,reused,current
+coverage_matrix,reused,current
+linkage_funnel,reused,current
+season_volume,reused,current
+tracking_partition,reused,current
+nfl_game,reused,current
+nfl_play,reused,current
+nfl_player_play,reused,current
+nfl_athlete_season,reused,current
+nfl_speed_distribution,reused,current
+quality_check,reused,current
+quality_run_history,built,inputs or parameters changed
+tracking_interval,reused,current
+tracking_consistency,reused,current
+quality_affected,reused,current
+research_hypothesis,reused,current
+research_by_position,reused,current
+research_drill,reused,current
+kpi_snapshot,built,forced
+availability,built,forced

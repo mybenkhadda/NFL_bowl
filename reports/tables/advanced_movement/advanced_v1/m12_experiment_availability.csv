@@ -1,0 +1,7 @@
+track,eligible_athletes,repeat_observations,repeat_unit,supported_positions,linked_athletes,missing_variables,expected_scale,existing_artifacts,new_computation,feasibility
+12C,267,7592,NFL games (distribution splits),"DB, DL, OL, WR",267,"play context (down, alignment) is not in the histograms",≈ athletes × 23 × 64 histogram cells,"m11_envelope_hist, m11_envelopes, 09A episodes","quantile curves, game-split reliability, ladder M0–M6",ready
+12B,297,594,forty attempts,"DB, DL, OL, WR",297,only 1–3 attempts per athlete,small,"m11_attempt_features, m11_repeatability","variance components, RC, SIMEX, EM, synthetic grid",ready
+12A,310,586,forty attempts,"DB, DL, OL, WR",310,"",small,"m12_combine_curves, m11_envelope_hist","splines, FPCA, function-on-function, elastic alignment",gated_on_upstream
+12D,510,2086,drill families,"DB, DL, OL, TE, WR",401,drill participation depends on position,small,"m11_attempt_features, m11_athlete_features",missing-data factor models,ready
+12E,267,6365,NFL games,"DB, DL, OL, WR",267,Combine forty has few frames per speed bin,athletes² × bins² for Sinkhorn (bounded),"m12_combine_hist, m11_envelope_hist","Sinkhorn / sliced / conditional OT, bootstrap",ready
+12F,510,793,Combine attempts,"DB, DL, OL, TE, WR",401,"",≤ 200k windows × 48 × 6 float32 ≈ 0.23 GB,m11 representation code; NFL windows NOT yet extracted,one tracking scan for windows + encoder training,ready

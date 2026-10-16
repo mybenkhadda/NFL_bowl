@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06C_03_exposure_sensitivity",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "each rule on its own eligible athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:55:29Z",
+  "seed": 20261011,
+  "source": "transfer_paired_comparisons_sens"
+}

@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07D_02_matched_prospects_03_repeatable_fingerprint_difference",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "2 athletes (illustration)",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:02:16Z",
+  "seed": 20261011,
+  "source": "combine percentile tables + sequence_frames"
+}

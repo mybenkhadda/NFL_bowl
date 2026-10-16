@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_08_sack_opportunity_structure",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "eligible DL player-plays",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:40:02Z",
+  "seed": 20261011,
+  "source": "football_outcome_structure"
+}

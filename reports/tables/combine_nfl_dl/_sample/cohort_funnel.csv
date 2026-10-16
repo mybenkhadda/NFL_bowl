@@ -1,0 +1,61 @@
+stage,definition,cohort,n_athletes
+01_combine_dl,DL athletes with a Combine results row,ALL,118
+01_combine_dl,DL athletes with a Combine results row,2023,37
+01_combine_dl,DL athletes with a Combine results row,2024,37
+01_combine_dl,DL athletes with a Combine results row,2025,44
+02_nfl_tracking_any,… with ≥ 1 tracked NFL play (any season type),ALL,115
+02_nfl_tracking_any,… with ≥ 1 tracked NFL play (any season type),2023,36
+02_nfl_tracking_any,… with ≥ 1 tracked NFL play (any season type),2024,36
+02_nfl_tracking_any,… with ≥ 1 tracked NFL play (any season type),2025,43
+03_getoff_any,… with ≥ 1 valid regular-season get-off observation,ALL,98
+03_getoff_any,… with ≥ 1 valid regular-season get-off observation,2023,32
+03_getoff_any,… with ≥ 1 valid regular-season get-off observation,2024,29
+03_getoff_any,… with ≥ 1 valid regular-season get-off observation,2025,37
+04_getoff_ge_20,… with ≥ 20 valid observations,ALL,93
+04_getoff_ge_20,… with ≥ 20 valid observations,2023,32
+04_getoff_ge_20,… with ≥ 20 valid observations,2024,26
+04_getoff_ge_20,… with ≥ 20 valid observations,2025,35
+05_getoff_ge_50,… with ≥ 50 valid observations,ALL,81
+05_getoff_ge_50,… with ≥ 50 valid observations,2023,29
+05_getoff_ge_50,… with ≥ 50 valid observations,2024,25
+05_getoff_ge_50,… with ≥ 50 valid observations,2025,27
+06_getoff_ge_100,… with ≥ 100 valid observations,ALL,69
+06_getoff_ge_100,… with ≥ 100 valid observations,2023,25
+06_getoff_ge_100,… with ≥ 100 valid observations,2024,23
+06_getoff_ge_100,… with ≥ 100 valid observations,2025,21
+07_getoff_ge_200,… with ≥ 200 valid observations,ALL,49
+07_getoff_ge_200,… with ≥ 200 valid observations,2023,19
+07_getoff_ge_200,… with ≥ 200 valid observations,2024,20
+07_getoff_ge_200,… with ≥ 200 valid observations,2025,10
+08_officials,≥ 50 observations AND official forty + 10-yard split,ALL,65
+08_officials,≥ 50 observations AND official forty + 10-yard split,2023,25
+08_officials,≥ 50 observations AND official forty + 10-yard split,2024,24
+08_officials,≥ 50 observations AND official forty + 10-yard split,2025,16
+09_tracking_p95_speed,… AND tracked `p95_speed` (cumulative),ALL,64
+09_tracking_p95_speed,… AND tracked `p95_speed` (cumulative),2023,25
+09_tracking_p95_speed,… AND tracked `p95_speed` (cumulative),2024,23
+09_tracking_p95_speed,… AND tracked `p95_speed` (cumulative),2025,16
+10_tracking_accel_v4_7,… AND tracked `accel_v4_7` (cumulative),ALL,64
+10_tracking_accel_v4_7,… AND tracked `accel_v4_7` (cumulative),2023,25
+10_tracking_accel_v4_7,… AND tracked `accel_v4_7` (cumulative),2024,23
+10_tracking_accel_v4_7,… AND tracked `accel_v4_7` (cumulative),2025,16
+11_tracking_model_tau_s,… AND tracked `model_tau_s` (cumulative),ALL,64
+11_tracking_model_tau_s,… AND tracked `model_tau_s` (cumulative),2023,25
+11_tracking_model_tau_s,… AND tracked `model_tau_s` (cumulative),2024,23
+11_tracking_model_tau_s,… AND tracked `model_tau_s` (cumulative),2025,16
+12_primary_population,primary modelling population (identical athletes for every model),ALL,64
+12_primary_population,primary modelling population (identical athletes for every model),2023,25
+12_primary_population,primary modelling population (identical athletes for every model),2024,23
+12_primary_population,primary modelling population (identical athletes for every model),2025,16
+13_population_at_20,"same predictors, ≥ 20 observations (sensitivity)",ALL,74
+13_population_at_20,"same predictors, ≥ 20 observations (sensitivity)",2023,28
+13_population_at_20,"same predictors, ≥ 20 observations (sensitivity)",2024,24
+13_population_at_20,"same predictors, ≥ 20 observations (sensitivity)",2025,22
+14_population_at_100,"same predictors, ≥ 100 observations (sensitivity)",ALL,53
+14_population_at_100,"same predictors, ≥ 100 observations (sensitivity)",2023,21
+14_population_at_100,"same predictors, ≥ 100 observations (sensitivity)",2024,21
+14_population_at_100,"same predictors, ≥ 100 observations (sensitivity)",2025,11
+15_population_at_200,"same predictors, ≥ 200 observations (sensitivity)",ALL,37
+15_population_at_200,"same predictors, ≥ 200 observations (sensitivity)",2023,15
+15_population_at_200,"same predictors, ≥ 200 observations (sensitivity)",2024,19
+15_population_at_200,"same predictors, ≥ 200 observations (sensitivity)",2025,3

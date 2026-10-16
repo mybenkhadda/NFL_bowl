@@ -1,0 +1,30 @@
+{
+  "stages": {
+    "TCN_A": {
+      "key": "8d7749931d0a13b2",
+      "methods": [
+        "TCNA_A",
+        "TCNA_B",
+        "TCNA_C"
+      ],
+      "saved_at": "2026-10-11T23:09:45Z"
+    },
+    "TCN_B": {
+      "key": "81025dfd1e759c15",
+      "methods": [
+        "TCNB_A",
+        "TCNB_B",
+        "TCNB_C"
+      ],
+      "saved_at": "2026-10-11T23:39:03Z"
+    },
+    "TCN_E16": {
+      "key": "78206f25ffe06a9d",
+      "methods": [
+        "TCNA_A_E16",
+        "TCNB_A_E16"
+      ],
+      "saved_at": "2026-10-11T23:49:26Z"
+    }
+  }
+}

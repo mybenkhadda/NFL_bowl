@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM01_04_same_official_forty_different_run",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "3 pairs",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T13:41:13Z",
+  "seed": 20261011,
+  "source": "sequence_frames + athlete_registry"
+}

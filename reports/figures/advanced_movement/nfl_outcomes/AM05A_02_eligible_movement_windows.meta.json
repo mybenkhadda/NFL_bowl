@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM05A_02_eligible_movement_windows",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "242043 windows, 401 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T09:02:04Z",
+  "seed": 20261011,
+  "source": "nfl_window_funnel, nfl_play_movement"
+}

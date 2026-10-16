@@ -1,0 +1,8 @@
+aspect,finding,evidence
+point_estimate,Δ RMSE -0.0007 (-0.18 % of the reference error),M2 versus M1 on 84 held-out athletes
+statistical_evidence,interval includes 0,"95 % athlete bootstrap [-0.0093, +0.0082]; linkage permutation p 0.345"
+practical_importance,below the 2% margin,"heuristic margin of Milestone 06; a scouting use would need a decision study, not an error ratio"
+cohort_limitations,84 athletes (TE 20 · WR 64); 2 of 8 sensitivity analyses have a positive point estimate,one linked cohort; subgroup rows are scored from the pooled fit; no independent TE model
+detectability,M2: smallest detectable planted share not reached in the grid (max power 0.60); M5: smallest detectable planted share not reached in the grid (max power 0.29),"planted-signal simulation on the real cohort, folds and collinearity (08B.3)"
+measurement_reliability,odd / even reliability of the outcome 0.74,an unreliable outcome attenuates every association; the ceiling is shown in the attenuation table
+outcome_validity,source class PROVISIONAL,an interaction outcome with inferred semantics supports an exploratory association at most

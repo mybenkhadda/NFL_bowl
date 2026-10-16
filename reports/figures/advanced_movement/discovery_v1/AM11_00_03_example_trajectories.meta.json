@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM11_00_03_example_trajectories",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "3 attempts",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T16:56:47Z",
+  "seed": 20261011,
+  "source": "combine_frame_kinematics"
+}

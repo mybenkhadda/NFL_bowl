@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM01_03_same_athlete_repeated_attempts",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "4 athletes",
+  "note": "",
+  "run_mode": "smoke",
+  "saved_at": "2026-10-11T13:37:40Z",
+  "seed": 20261011,
+  "source": "sequence_frames"
+}

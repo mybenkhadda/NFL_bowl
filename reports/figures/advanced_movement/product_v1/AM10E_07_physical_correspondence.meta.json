@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_07_physical_correspondence",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "prospects per cell annotated",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:52Z",
+  "seed": 20261011,
+  "source": "movement_matching_summary"
+}

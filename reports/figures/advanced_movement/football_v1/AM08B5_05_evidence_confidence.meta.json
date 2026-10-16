@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B5_05_evidence_confidence",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "510 athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:42:54Z",
+  "seed": 20261011,
+  "source": "combine_measurement_confidence + scouting_evidence_states"
+}

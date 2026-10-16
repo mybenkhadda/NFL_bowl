@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM06A_09_fold_population_balance",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "284 primary-cohort athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T11:10:37Z",
+  "seed": 20261011,
+  "source": "transfer_outer_folds"
+}

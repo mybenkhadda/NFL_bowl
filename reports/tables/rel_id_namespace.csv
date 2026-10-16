@@ -1,0 +1,7 @@
+source,n_ids,min_id,max_id,median_id
+players,510,55867,59278,57290.0
+combine_results,510,55867,59278,57290.0
+combine_tracking,510,55867,59278,57290.0
+game_tracking,497,55867,59278,57282.0
+player_play,497,55867,59278,57282.0
+player_career_successes,510,55867,59278,57290.0

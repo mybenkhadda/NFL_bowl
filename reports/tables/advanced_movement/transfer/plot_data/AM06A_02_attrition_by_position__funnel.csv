@@ -1,0 +1,46 @@
+stage,stage_order,group_type,group,n_meeting_rule,n_cumulative,definition
+combine_roster,0,position_group,DB,122,122,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,position_group,DB,102,102,≥ 1 eligible tracked forty-yard attempt
+official_core,2,position_group,DB,104,102,"official forty, 10-yard split and weight recorded"
+engineered_features,3,position_group,DB,102,102,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,position_group,DB,102,102,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,position_group,DB,102,102,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,position_group,DB,96,81,≥ 1 eligible regular-season NFL window
+target_exposure,7,position_group,DB,78,67,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,position_group,DB,67,67,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,position_group,DL,118,118,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,position_group,DL,93,93,≥ 1 eligible tracked forty-yard attempt
+official_core,2,position_group,DL,94,93,"official forty, 10-yard split and weight recorded"
+engineered_features,3,position_group,DL,93,93,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,position_group,DL,93,93,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,position_group,DL,93,93,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,position_group,DL,98,77,≥ 1 eligible regular-season NFL window
+target_exposure,7,position_group,DL,88,70,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,position_group,DL,70,70,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,position_group,OL,121,121,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,position_group,OL,95,95,≥ 1 eligible tracked forty-yard attempt
+official_core,2,position_group,OL,95,95,"official forty, 10-yard split and weight recorded"
+engineered_features,3,position_group,OL,95,95,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,position_group,OL,95,95,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,position_group,OL,95,95,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,position_group,OL,91,73,≥ 1 eligible regular-season NFL window
+target_exposure,7,position_group,OL,77,63,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,position_group,OL,63,63,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,position_group,TE,42,42,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,position_group,TE,34,34,≥ 1 eligible tracked forty-yard attempt
+official_core,2,position_group,TE,34,34,"official forty, 10-yard split and weight recorded"
+engineered_features,3,position_group,TE,34,34,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,position_group,TE,34,34,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,position_group,TE,34,34,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,position_group,TE,33,28,≥ 1 eligible regular-season NFL window
+target_exposure,7,position_group,TE,23,20,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,position_group,TE,20,20,all of the above and a consistent Combine ↔ NFL identity
+combine_roster,0,position_group,WR,107,107,athlete of the Combine registry (results row or tracked sequence)
+tracked_forty,1,position_group,WR,94,94,≥ 1 eligible tracked forty-yard attempt
+official_core,2,position_group,WR,97,94,"official forty, 10-yard split and weight recorded"
+engineered_features,3,position_group,WR,94,94,frozen engineered features and the speed control measured on ≥ 1 attempt
+fpca_input,4,position_group,WR,94,94,≥ 1 attempt with a speed-by-distance curve (FPCA input)
+tcn_input,5,position_group,WR,94,94,≥ 1 attempt with a speed-by-distance curve (TCN-B input; same input as FPCA)
+nfl_tracking,6,position_group,WR,83,73,≥ 1 eligible regular-season NFL window
+target_exposure,7,position_group,WR,70,64,exposure requirement of the frozen PRIMARY target met
+primary_cohort,8,position_group,WR,64,64,all of the above and a consistent Combine ↔ NFL identity

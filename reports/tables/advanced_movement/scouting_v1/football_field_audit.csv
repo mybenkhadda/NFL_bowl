@@ -1,0 +1,21 @@
+source_table,field,present,dtype,n_rows,n_observed,observed_share,n_distinct,examples,used_by
+player_career_successes,career_defensive_snaps,true,Int64,,,,,"",FO16
+player_career_successes,career_games_active,true,Int64,,,,,"",FO16
+player_career_successes,career_offensive_snaps,true,Int64,,,,,"",FO16
+player_play,coverage_assignment,true,String,251089,68633,0.27334132518748333,21,"NO_ASSIGNMENT (27,877) | MAN (10,172) | CURL_FLAT_LEFT (2,818) | DEEP_THIRD_RIGHT (2,765) | CURL_FLAT_RIGHT (2,653)",FO14 FO15
+player_play,coverage_assignment_at_snap,true,String,251089,68124,0.27131415553847443,21,"NO_ASSIGNMENT (27,603) | MAN (10,154) | CURL_FLAT_LEFT (2,918) | CURL_FLAT_RIGHT (2,773) | DEEP_THIRD_RIGHT (2,745)",FO15
+player_play,cushion,true,Float64,251089,83693,0.3333200578281008,1441,min 0.5 · median 6.07 · max 19.9,FO03
+player_play,pass_result,false,"",,,,,"",FO02 FO04 FO05 FO07 FO08 FO09 FO11 FO13 FO15
+player_play,peak_pressure_probability_allowed,true,Float64,251089,46705,0.18600974156573963,1536,min 0.0192 · median 0.188 · max 1,FO11
+player_play,player_get_off,true,Float64,251089,33937,0.13515924632301693,1632,min 0.004 · median 0.961 · max 2,FO05
+player_play,pressure_allowed,true,Boolean,251089,49055,0.1953689727546806,3,"false (44,923) | true (4,132)",FO09 FO10
+player_play,quick_pressure,true,Boolean,251089,2945,0.011728908872949433,3,"false (1,984) | true (961)",FO06 FO08
+player_play,route_ran,true,String,251089,42870,0.17073627279570192,13,"GO (7,686) | HITCH (7,030) | CROSS (5,456) | IN (4,599) | OUT (4,105)",FO01 FO04
+player_play,sack,true,Float64,251089,68393,0.27238548881074043,4,"0.0 (67,962) | 1.0 (335) | 0.5 (96)",FO13
+player_play,separation_at_pass_forward,true,Float64,251089,37536,0.1494928093225908,26094,min 0.128 · median 2.67 · max 22.8,FO01 FO14
+player_play,tackle,true,Int64,251089,9453,0.037648005288961284,3,"1 (5,783) | 0 (3,670)",FO12
+player_play,target,true,Boolean,251089,248856,0.9911067390447212,3,"false (241,013) | true (7,843)",FO01 FO02
+player_play,time_to_pressure,true,Float64,251089,2955,0.011768735388647053,77,min 0.8 · median 2.8 · max 9.6,FO06
+player_play,time_to_pressure_allowed,true,Float64,251089,4129,0.016444368331547776,77,min 0.9 · median 2.8 · max 10.7,FO10
+player_play,time_to_qb_hurry,true,Float64,251089,3012,0.011995746528123494,78,min 0.4 · median 2.8 · max 9.6,FO07
+player_play,yards_after_catch,true,Float64,251089,5045,0.020092477169449875,62,min -8 · median 3 · max 76,FO02

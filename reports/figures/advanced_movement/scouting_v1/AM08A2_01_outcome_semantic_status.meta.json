@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08A2_01_outcome_semantic_status",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "3 outcomes",
+  "note": "green = pass, red = fail, grey = measurement without a pass / fail rule; square = blocking check",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T18:39:55Z",
+  "seed": 20261011,
+  "source": "football_outcome_semantics_audit"
+}

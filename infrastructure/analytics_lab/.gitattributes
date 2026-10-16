@@ -1,0 +1,6 @@
+# Shell scripts run inside Linux containers: CRLF line endings would break them.
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf

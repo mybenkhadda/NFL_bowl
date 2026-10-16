@@ -1,0 +1,3 @@
+case,criterion,position_group,nfl_id_a,nfl_id_b,name_a,name_b,matched_on,contrast,value_a,value_b,contrast_size,fingerprint_distance,selected_using_nfl
+high_versus_low_recording_confidence,"same position, official forty within 0.03 s, evidence tier low vs high (closest forty first)",OL,57141,55987,Troy Fautanu,Jon Gaines,official_forty,evidence_tier,,,0.0,0.3964781387983256,false
+high_versus_low_recording_confidence,"same position, official forty within 0.03 s, evidence tier low vs high (closest forty first)",DB,57143,58293,Quinyon Mitchell,Caleb Ransaw,official_forty,evidence_tier,,,0.0,0.3950196976200733,false

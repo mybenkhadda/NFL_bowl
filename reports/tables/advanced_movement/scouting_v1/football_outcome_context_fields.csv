@@ -1,0 +1,11 @@
+field,source,present,observed_share,interpretation,known_pre_snap,observed_after_outcome,available_pre_draft,leakage_as_predictor,changes_estimand
+position_group,gold.dim_athlete,true,1.0,roster position group of the athlete,yes,false,true,none (the Combine position is known at the draft),no: defines the comparison population
+lined_up_position,player_play,true,0.990778498035473,alignment of the player on the play,yes,false,false,future NFL role: forbidden in a pre-draft model,yes: an alignment-adjusted value compares players inside an NFL role the team chose
+route_ran,player_play,true,0.17661324640663023,route label of the player (an assignment label),partly (play design; labelled after the play),true,false,future NFL usage: forbidden in a pre-draft model,"yes: a route-adjusted value removes route mix, which is partly a property of the player"
+target,player_play,true,0.990782629532769,the pass was thrown to the player,no,true,false,"outcome-dependent (the quarterback chooses the open receiver): never a predictor, never a filter of the primary target",yes: conditioning on it selects plays on the outcome
+cushion,player_play,true,0.3451246266159319,pre-snap distance to the defender across,yes,false,false,future NFL context: forbidden in a pre-draft model,yes: adjusts for how the defence chose to play the receiver
+play_class,nfl_play_movement (from pass_result),true,1.0,pass · sack_or_scramble · no_pass (empty code INFERRED),no,true,false,play result: forbidden,yes when used as a filter: selects plays by their result
+team_coverage_man_zone,player_play,false,,coverage family of the defence,no (labelled after the play),true,false,future NFL context: forbidden,yes: separation against man and against zone are different quantities
+coverage_assignment,player_play,true,0.2833132955714481,assignment label of a defender (NO_ASSIGNMENT is a vendor token),partly,true,false,future NFL role: forbidden,yes: reading NO_ASSIGNMENT as 'rushed the passer' is an inference
+season,silver.games,true,1.0,NFL season of the game,yes,false,false,not a predictor; the draft cohort (known at the draft) is the allowed counterpart,no: used for coverage and stability reporting
+game_id,silver.games,true,1.0,game: the unit of every reliability split,yes,false,false,not a predictor,no

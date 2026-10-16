@@ -1,0 +1,28 @@
+view,layer,table,files,rows,bytes,size,n_columns,grain,pk,path
+bronze_combine_results,bronze,combine_results,1,510,21423,20.9 KB,20,"","",warehouse/bronze/combine_results
+bronze_combine_tracking,bronze,combine_tracking,1,463189,15003278,14.3 MB,16,"","",warehouse/bronze/combine_tracking
+bronze_game_tracking,bronze,game_tracking,3,22654290,444181755,423.6 MB,15,"","",warehouse/bronze/game_tracking
+bronze_games,bronze,games,1,1002,10983,10.7 KB,9,"","",warehouse/bronze/games
+bronze_player_career_successes,bronze,player_career_successes,1,510,11000,10.7 KB,11,"","",warehouse/bronze/player_career_successes
+bronze_player_play,bronze,player_play,1,314197,22168930,21.1 MB,66,"","",warehouse/bronze/player_play
+bronze_players,bronze,players,1,510,17054,16.7 KB,12,"","",warehouse/bronze/players
+silver_combine_results,silver,combine_results,1,510,15661,15.3 KB,20,"","",warehouse/silver/combine_results
+silver_combine_tracking,silver,combine_tracking,3,463189,15274515,14.6 MB,18,"","",warehouse/silver/combine_tracking
+silver_game_tracking,silver,game_tracking,3,22654290,558515592,532.6 MB,23,"","",warehouse/silver/game_tracking
+silver_games,silver,games,1,1002,9065,8.9 KB,10,"","",warehouse/silver/games
+silver_player_career_successes,silver,player_career_successes,1,510,7238,7.1 KB,11,"","",warehouse/silver/player_career_successes
+silver_player_play,silver,player_play,1,314197,3446960,3.3 MB,39,"","",warehouse/silver/player_play
+silver_players,silver,players,1,510,15381,15.0 KB,13,"","",warehouse/silver/players
+silver_plays,silver,plays,1,114954,7500110,7.2 MB,34,"","",warehouse/silver/plays
+gold_dim_athlete,gold,dim_athlete,1,510,14602,14.3 KB,21,one row per athlete (any source),nfl_id,warehouse/gold/dim_athlete
+gold_dim_combine_drill,gold,dim_combine_drill,1,62,4073,4.0 KB,9,one row per drill,"drill_type, drill_name",warehouse/gold/dim_combine_drill
+gold_dim_game,gold,dim_game,1,1002,6824,6.7 KB,8,one row per game,game_id,warehouse/gold/dim_game
+gold_dim_play,gold,dim_play,1,114954,7500110,7.2 MB,34,one row per play,"game_id, play_id",warehouse/gold/dim_play
+gold_dim_position,gold,dim_position,1,39,926,926.0 B,3,"one row per (source, position code)","source, position",warehouse/gold/dim_position
+gold_dim_season,gold,dim_season,1,9,1022,"1,022.0 B",6,one row per season × season_type,"season, season_type",warehouse/gold/dim_season
+gold_fact_combine_attempt,gold,fact_combine_attempt,1,6310,311117,303.8 KB,17,one row per athlete × drill attempt,"event_id, nfl_id, attempt",warehouse/gold/fact_combine_attempt
+gold_fact_nfl_play_participation,gold,fact_nfl_play_participation,3,314944,9244671,8.8 MB,16,one row per player × play (tracked),"game_id, play_id, nfl_id",warehouse/gold/fact_nfl_play_participation
+gold_mart_athlete_combine_profile,gold,mart_athlete_combine_profile,1,4986,137751,134.5 KB,10,one row per athlete × drill,"nfl_id, drill_type, drill_name",warehouse/gold/mart_athlete_combine_profile
+gold_mart_athlete_nfl_profile,gold,mart_athlete_nfl_profile,1,922,25888,25.3 KB,12,one row per athlete × season,"nfl_id, season",warehouse/gold/mart_athlete_nfl_profile
+gold_mart_athlete_research_base,gold,mart_athlete_research_base,1,510,39577,38.6 KB,43,one row per athlete,nfl_id,warehouse/gold/mart_athlete_research_base
+gold_mart_combine_nfl_coverage,gold,mart_combine_nfl_coverage,1,15,1562,1.5 KB,8,one row per position group × cohort,"position_group, cohort",warehouse/gold/mart_combine_nfl_coverage

@@ -1,0 +1,15 @@
+table,grain,pk,rows,pk_unique,bytes,seconds,built_at
+dim_athlete,one row per athlete (any source),nfl_id,510,true,14602,0.27,2026-10-08T00:28:43Z
+dim_game,one row per game,game_id,1002,true,6824,0.02,2026-10-08T00:28:43Z
+dim_play,one row per play,"game_id, play_id",114954,true,7500110,0.29,2026-10-08T00:28:44Z
+dim_season,one row per season × season_type,"season, season_type",9,true,1022,0.12,2026-10-08T00:28:44Z
+dim_position,"one row per (source, position code)","source, position",39,true,926,0.06,2026-10-08T00:28:44Z
+fact_combine_attempt,one row per athlete × drill attempt,"event_id, nfl_id, attempt",6310,true,311117,0.16,2026-10-08T00:28:44Z
+dim_combine_drill,one row per drill,"drill_type, drill_name",62,true,4073,0.09,2026-10-08T00:28:44Z
+fact_nfl_play_participation/season=2023,one row per player × play (tracked),"game_id, play_id, nfl_id",50911,true,1568212,1.5,2026-10-08T00:28:46Z
+fact_nfl_play_participation/season=2024,one row per player × play (tracked),"game_id, play_id, nfl_id",108720,true,3215710,3.35,2026-10-08T00:28:49Z
+fact_nfl_play_participation/season=2025,one row per player × play (tracked),"game_id, play_id, nfl_id",155313,true,4460749,5.8,2026-10-08T00:28:55Z
+mart_athlete_combine_profile,one row per athlete × drill,"nfl_id, drill_type, drill_name",4986,true,137751,0.04,2026-10-08T00:28:55Z
+mart_athlete_nfl_profile,one row per athlete × season,"nfl_id, season",922,true,25888,0.08,2026-10-08T00:28:55Z
+mart_combine_nfl_coverage,one row per position group × cohort,"position_group, cohort",15,true,1562,0.03,2026-10-08T00:28:55Z
+mart_athlete_research_base,one row per athlete,nfl_id,510,true,39577,0.21,2026-10-08T00:28:55Z

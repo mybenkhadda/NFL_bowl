@@ -1,0 +1,24 @@
+area,built_at,description,kind,name,path,rows,study
+descriptive,2026-10-11T02:08:18Z,Speed and tangential acceleration of deterministic example attempts under each setting.,table,B_example_signals,reports/tables/phase_04/descriptive/B_example_signals.parquet,780,B
+descriptive,2026-10-11T02:08:18Z,Feature definitions used by Phase 04 validation.,table,B_feature_catalog,reports/tables/phase_04/descriptive/B_feature_catalog.parquet,24,B
+reliability,2026-10-11T02:15:00Z,ICC(1) of repeated Combine attempts under each SG setting.,table,B_repeatability_by_setting,reports/tables/phase_04/reliability/B_repeatability_by_setting.parquet,4128,B
+statistical,2026-10-11T02:15:00Z,Long-format statistical results (one row per estimate).,table,B_results,reports/tables/phase_04/statistical/B_results.parquet,11445,B
+statistical,2026-10-11T02:15:00Z,Athlete-level Spearman vs primary by cohort / position (extreme SG windows).,table,B_robustness_facets,reports/tables/phase_04/statistical/B_robustness_facets.parquet,9888,B
+statistical,2026-10-11T02:15:00Z,Each SG setting vs the primary: agreement at trajectory and athlete level.,table,B_smoothing_agreement,reports/tables/phase_04/statistical/B_smoothing_agreement.parquet,8496,B
+statistical,2026-10-11T02:15:00Z,Share of variance due to the SG setting (all settings jointly).,table,B_variance_share,reports/tables/phase_04/statistical/B_variance_share.parquet,2832,B
+descriptive,2026-10-11T02:08:18Z,Frame-level derived − vendor speed by speed band under each SG setting.,table,B_vendor_residual_by_setting,reports/tables/phase_04/descriptive/B_vendor_residual_by_setting.parquet,48,B
+statistical,2026-10-11T02:15:41Z,Per-unit count / rate stability of each configuration vs the reference configuration.,table,C1_count_stability,reports/tables/phase_04/statistical/C1_count_stability.parquet,2200,C1
+statistical,2026-10-11T02:15:41Z,Event-level matching of each configuration against the reference configuration.,table,C1_event_agreement,reports/tables/phase_04/statistical/C1_event_agreement.parquet,976,C1
+descriptive,2026-10-11T02:15:41Z,Exposure-normalised event rates by domain × drill × event type × rule × SG setting.,table,C1_event_rates,reports/tables/phase_04/descriptive/C1_event_rates.parquet,2640,C1
+statistical,2026-10-11T02:15:42Z,Long-format statistical results (one row per estimate).,table,C1_results,reports/tables/phase_04/statistical/C1_results.parquet,4716,C1
+descriptive,2026-10-11T02:15:50Z,Every Phase 04 parameter with unit and provenance (established / proposed / execution).,table,P04_thresholds,reports/tables/phase_04/descriptive/P04_thresholds.parquet,41,P04
+descriptive,2026-10-11T02:07:53Z,Athletes retained per stratum × drill under cumulative quality-filter scenarios.,table,Q_athlete_eligibility,reports/tables/phase_04/descriptive/Q_athlete_eligibility.parquet,236,Q
+statistical,2026-10-11T02:07:53Z,Structural vs signal flags: 2×2 counts and Cohen's κ (athlete-cluster bootstrap CI).,table,Q_flag_agreement,reports/tables/phase_04/statistical/Q_flag_agreement.parquet,12,Q
+descriptive,2026-10-11T02:07:53Z,"Share of trajectories flagged, by domain × facet level (athlete-cluster bootstrap CI).",table,Q_flag_rates,reports/tables/phase_04/descriptive/Q_flag_rates.parquet,112,Q
+statistical,2026-10-11T02:07:53Z,Long-format statistical results (one row per estimate).,table,Q_results,reports/tables/phase_04/statistical/Q_results.parquet,115,Q
+reliability,2026-10-11T02:15:52Z,Roll-up per domain × feature over the primary strata (worst status).,table,V_feature_status_summary,reports/tables/phase_04/reliability/V_feature_status_summary.parquet,46,V
+reliability,2026-10-11T02:15:52Z,"Feature × domain × drill: criterion values, states and proposed status.",table,V_feature_validation_registry,reports/tables/phase_04/reliability/V_feature_validation_registry.parquet,1357,V
+statistical,2026-10-11T02:15:52Z,Long-format statistical results (one row per estimate).,table,V_results,reports/tables/phase_04/statistical/V_results.parquet,1357,V
+movement_events,2026-10-11T02:08:18Z,Detected events for every SG setting × threshold rule (Study B → read by C1).,dataset,events_by_smoothing,warehouse/gold/phase_04/movement_events/events_by_smoothing.parquet,427901,B
+quality,2026-10-11T02:08:17Z,Long table: trajectory × SG setting × feature value (Study B).,dataset,trajectory_features_by_smoothing,warehouse/gold/phase_04/quality/trajectory_features_by_smoothing.parquet,1322496,B
+quality,2026-10-11T02:07:53Z,One row per trajectory: structural / signal / boundary screening flags (Study Q).,dataset,trajectory_quality_flags,warehouse/gold/phase_04/quality/trajectory_quality_flags.parquet,13776,Q

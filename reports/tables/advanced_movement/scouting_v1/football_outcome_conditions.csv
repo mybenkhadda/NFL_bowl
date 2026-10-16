@@ -1,0 +1,10 @@
+outcome_id,condition_field,condition_value,n_rows,n_obs,obs_share
+FO01.separation_at_pass_forward,target,false,34996,29665,0.847668304949137
+FO01.separation_at_pass_forward,target,true,7733,7733,1.0
+FO01.separation_at_pass_forward,target,‹null›,2231,0,0.0
+FO06.time_to_pressure,quick_pressure,‹null›,47669,9,0.00018880194675785101
+FO06.time_to_pressure,quick_pressure,false,1890,1890,1.0
+FO06.time_to_pressure,quick_pressure,true,804,804,1.0
+FO10.time_to_pressure_allowed,pressure_allowed,false,44582,0,0.0
+FO10.time_to_pressure_allowed,pressure_allowed,‹null›,34120,0,0.0
+FO10.time_to_pressure_allowed,pressure_allowed,true,4104,4101,0.9992690058479532

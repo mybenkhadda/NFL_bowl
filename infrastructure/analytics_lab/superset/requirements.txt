@@ -1,0 +1,8 @@
+# Installed into the Superset image venv (see Dockerfile).
+# duckdb: keep equal to (or newer than) the host DuckDB that writes the serving snapshot
+#         (host conda env `nfl`: 1.5.6). Newer DuckDB reads older storage, never the reverse.
+duckdb==1.5.6
+# SQLAlchemy dialect `duckdb:///` used by Superset.
+duckdb-engine==0.17.0
+# PostgreSQL metadata database driver (not in lean images).
+psycopg2-binary==2.9.10

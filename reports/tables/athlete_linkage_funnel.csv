@@ -1,0 +1,8 @@
+stage,n_athletes
+Combine results,510
++ Combine tracking,510
++ NFL game tracking,497
+Combine tracking (any),510
+Combine tracking ∧ NFL tracking,497
+NFL tracking (any),497
+NFL tracking ∧ career outcomes,497

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B6_02_scouting_intelligence_diagram",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "claims C01\u2013C20",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:44:28Z",
+  "seed": 20261011,
+  "source": "final_evidence_registry"
+}

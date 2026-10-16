@@ -1,0 +1,26 @@
+area,built_at,description,kind,name,path,rows,study
+descriptive,2026-10-09T02:03:12Z,"Affected counts of each failed check by facet (entity_type, season, snap tag …).",table,A0_dq_failure_breakdown,reports/tables/phase_03/descriptive/A0_dq_failure_breakdown.parquet,26,A0
+descriptive,2026-10-09T02:03:12Z,Deterministic example keys per failed check.,table,A0_dq_failure_examples,reports/tables/phase_03/descriptive/A0_dq_failure_examples.parquet,70,A0
+descriptive,2026-10-09T02:03:12Z,One row per failed / warned Phase 01 check with exact affected counts and a diagnosis.,table,A0_dq_failures,reports/tables/phase_03/descriptive/A0_dq_failures.parquet,7,A0
+descriptive,2026-10-08T16:04:22Z,Signals of the A1 example trajectories (figure redraws without tracking reads).,table,A1_example_signals,reports/tables/phase_03/descriptive/A1_example_signals.parquet,186,A
+descriptive,2026-10-08T16:04:22Z,Deterministic representative good / poor trajectories (+ selection rule).,table,A1_examples,reports/tables/phase_03/descriptive/A1_examples.parquet,4,A
+descriptive,2026-10-08T16:04:22Z,Frame share with |a| above extreme_accel_yds2 by domain × tier (frames available).,table,A1_extreme_accel_by_tier,reports/tables/phase_03/descriptive/A1_extreme_accel_by_tier.parquet,5,A
+descriptive,2026-10-08T16:04:22Z,Research sample retained under each quality-filter scenario.,table,A1_filter_funnel,reports/tables/phase_03/descriptive/A1_filter_funnel.parquet,48,A
+descriptive,2026-10-08T16:04:22Z,Distribution of every quality metric (and duration) by domain × tier.,table,A1_metric_by_tier,reports/tables/phase_03/descriptive/A1_metric_by_tier.parquet,37,A
+descriptive,2026-10-08T16:04:22Z,Tier and screening-flag proportions by facet with Wilson and athlete-cluster bootstrap CIs.,table,A1_proportions,reports/tables/phase_03/descriptive/A1_proportions.parquet,533,A
+descriptive,2026-10-08T16:04:22Z,How often each tier rule / screening flag fires per domain × stratum.,table,A1_reason_matrix,reports/tables/phase_03/descriptive/A1_reason_matrix.parquet,49,A
+descriptive,2026-10-08T16:04:22Z,Empirical screening thresholds per domain × stratum × metric.,table,A1_screen_thresholds,reports/tables/phase_03/descriptive/A1_screen_thresholds.parquet,69,A
+descriptive,2026-10-08T16:04:22Z,Highest-disagreement trajectories: vendor vs derived speed over time.,table,A2_example_signals,reports/tables/phase_03/descriptive/A2_example_signals.parquet,311,A
+descriptive,2026-10-08T16:04:22Z,"2-D histogram counts (non-zero cells): vendor vs derived speed, and Bland–Altman (mean, diff).",table,A2_hist2d,reports/tables/phase_03/descriptive/A2_hist2d.parquet,10536,A
+descriptive,2026-10-08T16:04:22Z,Residual quantiles by Bland–Altman mean-speed bin (0.25 yd/s).,table,A2_residual_by_speed,reports/tables/phase_03/descriptive/A2_residual_by_speed.parquet,91,A
+descriptive,2026-10-08T16:04:22Z,"Derived − vendor speed error by domain × facet × level (frame grain, athlete CIs).",table,A2_vendor_error_summary,reports/tables/phase_03/descriptive/A2_vendor_error_summary.parquet,45,A
+descriptive,2026-10-09T02:03:41Z,Share of trajectories whose peak lies in the SG filter boundary vs the expected share.,table,A3_boundary_peak_share,reports/tables/phase_03/descriptive/A3_boundary_peak_share.parquet,50,A3
+descriptive,2026-10-09T02:03:41Z,"Sampling regularity, missing frames and heading consistency by domain × cohort × stratum.",table,A3_sampling_irregularity,reports/tables/phase_03/descriptive/A3_sampling_irregularity.parquet,28,A3
+descriptive,2026-10-09T02:03:41Z,Quantiles of every signal metric by domain × stratum × tier.,table,A3_signal_metric_summary,reports/tables/phase_03/descriptive/A3_signal_metric_summary.parquet,460,A3
+statistical,2026-10-09T02:03:41Z,Long-format statistical results (one row per estimate).,table,A3_signal_results,reports/tables/phase_03/statistical/A3_signal_results.parquet,118,A3
+statistical,2026-10-09T02:03:41Z,AUC of each quality predictor for each 'unreliable signal' target (athlete-cluster CI).,table,A3_tier_discrimination,reports/tables/phase_03/statistical/A3_tier_discrimination.parquet,72,A3
+statistical,2026-10-08T16:04:22Z,Long-format statistical results (one row per estimate).,table,A_quality_results,reports/tables/phase_03/statistical/A_quality_results.parquet,181,A
+descriptive,2026-10-08T16:01:13Z,Study parameters with provenance (established / proposed / execution).,table,studies_thresholds,reports/tables/phase_03/descriptive/studies_thresholds.parquet,15,A
+quality,2026-10-08T16:04:22Z,Per-trajectory vendor error + acceleration outliers (frames available only).,dataset,trajectory_frame_diagnostics,warehouse/gold/phase_03/quality/trajectory_frame_diagnostics.parquet,13776,A
+quality,2026-10-08T16:04:22Z,"One row per trajectory: quality dimensions, percentile ranks, screening flags.",dataset,trajectory_quality_dimensions,warehouse/gold/phase_03/quality/trajectory_quality_dimensions.parquet,321254,A
+quality,2026-10-09T02:03:41Z,One row per trajectory: derivative-signal reliability metrics (Study A3).,dataset,trajectory_signal_reliability,warehouse/gold/phase_03/quality/trajectory_signal_reliability.parquet,13776,A3

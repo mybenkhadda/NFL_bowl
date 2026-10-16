@@ -1,0 +1,8 @@
+context_var,source,n_episodes_labelled,share_labelled,n_levels,status
+side,nfl_play_movement (Phase 03 windows),486626,1.0,3,observed
+lined_up_position,nfl_play_movement (Phase 03 windows),481473,0.98941075898123,16,observed
+play_class,nfl_play_movement (grouping of the vendor pass_result; empty code INFERRED as no_pass),486626,1.0,3,observed
+down,nfl_play_movement,481473,0.98941075898123,5,observed
+season,silver.games,486626,1.0,3,observed
+route_label,silver.player_play.route_ran,132075,0.2714096657391919,12,observed
+coverage_label,silver.player_play.coverage_assignment,188501,0.3873631906227781,20,observed

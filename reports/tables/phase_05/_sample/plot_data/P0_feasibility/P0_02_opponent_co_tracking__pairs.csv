@@ -1,0 +1,7 @@
+off_position,def_position,n_plays,n_pair_plays,n_games,n_distinct_pairs,n_pairs_min_obs,n_off_athletes,n_def_athletes,median_plays_per_pair,max_plays_per_pair
+OL,DB,3298,3736,88,104,66,21,25,30.0,124
+OL,DL,2765,2874,99,137,51,23,29,16.0,118
+TE,DB,270,296,32,34,6,9,21,5.0,32
+TE,DL,217,235,36,41,1,9,19,4.0,35
+WR,DB,1843,2073,112,157,41,28,26,9.0,46
+WR,DL,1346,1497,119,181,22,30,29,5.0,43

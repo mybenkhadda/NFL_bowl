@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09D_01_case_similar_movement_nfl_observed-1",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "two athletes, every recorded attempt",
+  "note": "Similar movement, observed NFL movement shown",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:12:31Z",
+  "seed": 20261011,
+  "source": "scouting_cases + stopwatch_twin_differences + sequence_frames"
+}

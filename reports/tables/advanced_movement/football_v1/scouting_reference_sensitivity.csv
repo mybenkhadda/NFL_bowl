@@ -1,0 +1,58 @@
+feature_id,reference_kind,position_group,alternative,n_scored,n_reference_alternative,mean_abs_shift,max_abs_shift
+cmb_forty,position,DB,all positions pooled,104,424,22.844475689404934,43.76814223512337
+cmb_forty,position,DL,all positions pooled,94,424,15.44675192394749,32.64502207948616
+cmb_forty,position,OL,all positions pooled,95,424,34.83738828202581,67.99652432969215
+cmb_forty,position,TE,all positions pooled,34,424,18.50701018476203,33.40732519422864
+cmb_forty,position,WR,all positions pooled,97,424,26.694709200544644,45.18576152499514
+F2.forty.p95_speed,position,DB,all positions pooled,95,401,23.181519884499277,43.60152250951569
+F2.forty.p95_speed,position,DL,all positions pooled,93,401,14.961930357364766,32.81849140589387
+F2.forty.p95_speed,position,OL,all positions pooled,93,401,33.727509184029174,63.94229480063282
+F2.forty.p95_speed,position,TE,all positions pooled,34,401,16.974648154699757,31.322429221064986
+F2.forty.p95_speed,position,WR,all positions pooled,86,401,28.05486284289277,49.83616540045236
+F6.forty.time_v4_to_v8_s,position,DB,all positions pooled,95,401,23.79314870717942,43.795773723585775
+F6.forty.time_v4_to_v8_s,position,DL,all positions pooled,93,401,13.298381978917893,29.482744751025656
+F6.forty.time_v4_to_v8_s,position,OL,all positions pooled,93,401,34.542675569141664,64.84594964202398
+F6.forty.time_v4_to_v8_s,position,TE,all positions pooled,34,401,15.22922796814193,27.889834237934572
+F6.forty.time_v4_to_v8_s,position,WR,all positions pooled,86,401,26.275408018622986,44.35278083860118
+cmb_forty,draft_cohort,DB,draft cohort 2023 only,104,34,8.173076923076923,18.38235294117647
+cmb_forty,draft_cohort,DB,draft cohort 2024 only,104,41,1.803110116899986,5.347091932457786
+cmb_forty,draft_cohort,DB,draft cohort 2025 only,104,29,9.963527851458887,16.810344827586206
+cmb_forty,draft_cohort,DL,draft cohort 2023 only,94,33,7.022922754022799,15.457769181173433
+cmb_forty,draft_cohort,DL,draft cohort 2024 only,94,32,3.1295976686283398,7.67952127659575
+cmb_forty,draft_cohort,DL,draft cohort 2025 only,94,29,5.011629540594123,15.058694057226703
+cmb_forty,draft_cohort,OL,draft cohort 2023 only,95,30,5.717451523545708,11.05263157894737
+cmb_forty,draft_cohort,OL,draft cohort 2024 only,95,37,3.1167178258590993,8.677098150782356
+cmb_forty,draft_cohort,OL,draft cohort 2025 only,95,28,3.0880490700435277,7.7631578947368425
+cmb_forty,draft_cohort,TE,draft cohort 2024 only,34,11,17.914438502673796,33.15508021390374
+cmb_forty,draft_cohort,TE,draft cohort 2025 only,34,14,16.281512605042018,27.3109243697479
+cmb_forty,draft_cohort,WR,draft cohort 2023 only,97,35,9.394500706010962,16.70103092783505
+cmb_forty,draft_cohort,WR,draft cohort 2024 only,97,29,6.691868753687775,14.521862779950226
+cmb_forty,draft_cohort,WR,draft cohort 2025 only,97,33,4.621944817502264,9.887535145267108
+F2.forty.p95_speed,draft_cohort,DB,draft cohort 2023 only,95,33,5.187945941408545,12.583732057416263
+F2.forty.p95_speed,draft_cohort,DB,draft cohort 2024 only,95,34,7.745804138830049,15.170278637770899
+F2.forty.p95_speed,draft_cohort,DB,draft cohort 2025 only,95,28,12.330827067669173,25.6390977443609
+F2.forty.p95_speed,draft_cohort,DL,draft cohort 2023 only,93,33,6.393802751763208,14.516129032258064
+F2.forty.p95_speed,draft_cohort,DL,draft cohort 2024 only,93,31,4.150768875014452,11.29032258064516
+F2.forty.p95_speed,draft_cohort,DL,draft cohort 2025 only,93,29,3.234178956307487,10.622914349276982
+F2.forty.p95_speed,draft_cohort,OL,draft cohort 2023 only,93,30,3.985431841831426,10.0
+F2.forty.p95_speed,draft_cohort,OL,draft cohort 2024 only,93,35,2.058702079513733,4.869431643625191
+F2.forty.p95_speed,draft_cohort,OL,draft cohort 2025 only,93,28,3.649472275903078,12.019969278033795
+F2.forty.p95_speed,draft_cohort,TE,draft cohort 2024 only,34,11,16.262975778546714,30.88235294117647
+F2.forty.p95_speed,draft_cohort,TE,draft cohort 2025 only,34,14,12.605042016806722,21.218487394957982
+F2.forty.p95_speed,draft_cohort,WR,draft cohort 2023 only,86,33,3.2736778274906984,8.36856941508104
+F2.forty.p95_speed,draft_cohort,WR,draft cohort 2024 only,86,22,4.815870986774177,11.04651162790698
+F2.forty.p95_speed,draft_cohort,WR,draft cohort 2025 only,86,31,4.89584605453689,10.108777194298582
+F6.forty.time_v4_to_v8_s,draft_cohort,DB,draft cohort 2023 only,95,33,2.7197179551750184,7.703349282296649
+F6.forty.time_v4_to_v8_s,draft_cohort,DB,draft cohort 2024 only,95,34,7.144859051653904,14.055727554179569
+F6.forty.time_v4_to_v8_s,draft_cohort,DB,draft cohort 2025 only,95,28,7.009101701622479,13.909774436090224
+F6.forty.time_v4_to_v8_s,draft_cohort,DL,draft cohort 2023 only,93,33,5.175585196396854,12.365591397849471
+F6.forty.time_v4_to_v8_s,draft_cohort,DL,draft cohort 2024 only,93,31,6.1510001156203025,17.741935483870975
+F6.forty.time_v4_to_v8_s,draft_cohort,DL,draft cohort 2025 only,93,29,10.473205991523834,22.673340748980337
+F6.forty.time_v4_to_v8_s,draft_cohort,OL,draft cohort 2023 only,93,30,2.9379118973291707,8.494623655913976
+F6.forty.time_v4_to_v8_s,draft_cohort,OL,draft cohort 2024 only,93,35,3.130997803214244,8.648233486943163
+F6.forty.time_v4_to_v8_s,draft_cohort,OL,draft cohort 2025 only,93,28,4.552136498026197,15.668202764976954
+F6.forty.time_v4_to_v8_s,draft_cohort,TE,draft cohort 2024 only,34,11,30.080213903743317,51.470588235294116
+F6.forty.time_v4_to_v8_s,draft_cohort,TE,draft cohort 2025 only,34,14,19.327731092436974,41.386554621848745
+F6.forty.time_v4_to_v8_s,draft_cohort,WR,draft cohort 2023 only,86,33,5.120294344199156,11.43410852713179
+F6.forty.time_v4_to_v8_s,draft_cohort,WR,draft cohort 2024 only,86,22,13.636363636363633,23.83720930232559
+F6.forty.time_v4_to_v8_s,draft_cohort,WR,draft cohort 2025 only,86,31,14.092621992707478,25.300075018754697

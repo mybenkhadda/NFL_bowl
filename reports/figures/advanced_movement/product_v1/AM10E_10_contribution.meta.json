@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM10E_10_contribution",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "see figure",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T14:25:56Z",
+  "seed": 20261011,
+  "source": "mart overview"
+}

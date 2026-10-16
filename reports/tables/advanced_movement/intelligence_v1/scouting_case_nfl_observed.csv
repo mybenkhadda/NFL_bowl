@@ -1,0 +1,5 @@
+case_id,nfl_id,name,outcome_id,value,unit,n_windows
+similar_movement_nfl_observed-1,56571,Caleb Murphy,O2.accel_sust05_mean,3.633369480330725,yd/s²,161
+similar_movement_nfl_observed-1,57160,Braden Fiske,O2.accel_sust05_mean,3.1431041498810264,yd/s²,1144
+similar_movement_nfl_observed-2,57150,Tyler Guyton,O2.accel_sust05_mean,2.6877467060439946,yd/s²,1240
+similar_movement_nfl_observed-2,58946,Joe Huber,O2.accel_sust05_mean,2.6860354565085927,yd/s²,75

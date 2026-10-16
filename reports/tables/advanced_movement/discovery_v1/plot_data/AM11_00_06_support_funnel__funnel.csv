@@ -1,0 +1,7 @@
+stage,n_athletes
+01 Combine athletes (registry),510
+02 ≥ 1 usable tracked attempt (any drill),510
+03 … and a non-forty tracked drill,510
+04 … linked to NFL episodes (any drill),399
+05 … with ≥ 10 episodes of some demand,386
+06 non-forty drill AND ≥ min episodes,386

@@ -1,0 +1,13 @@
+season,off_position,def_position,n_plays,n_pair_plays,n_games,n_distinct_pairs,n_pairs_min_obs,n_off_athletes,n_def_athletes,median_plays_per_pair,max_plays_per_pair,football_relevant
+2023,OL,DL,2765,2874,99,137,51,23,29,16.0,118,true
+2023,TE,DB,270,296,32,34,6,9,21,5.0,32,true
+2023,WR,DB,1843,2073,112,157,41,28,26,9.0,46,true
+2024,OL,DL,8686,13756,201,582,288,49,57,19.0,118,true
+2024,TE,DB,1311,1775,131,214,25,20,51,5.0,58,true
+2024,WR,DB,5585,8923,198,628,190,54,57,10.0,79,true
+2025,OL,DL,17309,34909,258,1328,740,81,90,23.0,125,true
+2025,TE,DB,2577,3900,175,372,69,27,74,6.0,58,true
+2025,WR,DB,8282,16559,245,1055,348,66,77,13.0,79,true
+ALL,OL,DL,28760,51539,558,1845,994,89,98,22.0,260,true
+ALL,TE,DB,4158,5971,338,562,104,30,83,6.0,92,true
+ALL,WR,DB,15710,27555,555,1666,551,82,89,12.0,135,true

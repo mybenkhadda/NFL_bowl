@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B1_06_reliability_by_position",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with enough observations in each half",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T21:49:44Z",
+  "seed": 20261011,
+  "source": "football_reliability_game_splits"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM08B4_03_speed_development_curves",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "102 DB athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T23:41:50Z",
+  "seed": 20261011,
+  "source": "sequence_frames + movement_official_adjusted_values"
+}

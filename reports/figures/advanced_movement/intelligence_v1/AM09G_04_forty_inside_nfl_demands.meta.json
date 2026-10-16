@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM09G_04_forty_inside_nfl_demands",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "prospects per cell annotated",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-14T13:20:49Z",
+  "seed": 20261011,
+  "source": "movement_matching_summary"
+}

@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM02_12_representation_comparison",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "athletes with a repeat",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-11T15:20:56Z",
+  "seed": 20261011,
+  "source": "fpca_representation_summary, fpca_component_gate"
+}

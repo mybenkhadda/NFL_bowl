@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07C_01_power_vs_effect",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "284 athletes \u00b7 6800 synthetic replicates",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T16:00:47Z",
+  "seed": 20261011,
+  "source": "transfer_power_scenarios"
+}

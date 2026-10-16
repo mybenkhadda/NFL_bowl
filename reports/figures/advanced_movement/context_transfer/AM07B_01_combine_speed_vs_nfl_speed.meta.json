@@ -1,0 +1,16 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07B_01_combine_speed_vs_nfl_speed",
+  "formats": [
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "n": "paired Milestone 06 cohort (284 athletes); each outcome on its eligible athletes",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:41:30Z",
+  "seed": 20261011,
+  "source": "atlas_attempt_features + nfl_play_movement"
+}

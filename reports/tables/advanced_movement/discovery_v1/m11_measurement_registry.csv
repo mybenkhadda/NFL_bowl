@@ -1,0 +1,10 @@
+quantity,unit,combine_definition,nfl_definition,comparability,state
+band_accel_2_4 / 4_6 / 6_8,yd/s²,forty: first crossings of lo and hi in the recorded trace,accelerating episode: same first-crossing rule,"same rule, 10 Hz both sides; Combine passes the band once from rest, NFL from any start inside an accelerating run",SUPPORTED
+band_accel_8_10,yd/s²,forty: same rule (often censored: recordings end near the peak),envelope at 9 yd/s (episodes hold no 8→10 band),different estimator on the NFL side (envelope) — LIMITED,LIMITED
+top speed,yd/s,forty: largest tracked speed (may be censored),sustained_high: 90th percentile of episode peaks,game speed is rarely maximal,LIMITED
+sprint A0 / Vmax ↔ envelope A0 / V0,yd/s² · yd/s,phase-plane fit a = A0 − (A0/V0) v on the rising forty,linear fit to the per-speed-bin 95th percentile of game a_tan,same functional form; one maximal effort vs an observed upper tail,SUPPORTED
+deceleration,yd/s²,shuttle / cone: mean −a_tan over the braking run (a_tan ≤ −1),braking episode: −(speed change / duration),"Combine: run-mean of frames; NFL: episode mean — same threshold, close definitions",SUPPORTED
+Brake-to-Burst latency,s,braking end → first a_tan ≥ 1.5,braking end → start of the following accelerating run (a_tan ≥ 1),"burst threshold differs (1.5 vs 1.0 yd/s²) — declared, kept",LIMITED
+Transition Cost Index,fraction,(v_entry − v 0.5 s after the speed minimum) / v_entry,(v_entry − v 0.5 s into the re-acceleration) / v_entry,"anchor differs (minimum vs re-acceleration start, ≤ 1 s apart)",LIMITED
+turn angle,deg,angle between mean velocity before / after (valid through a stop),"integrated yaw of a redirection episode (≥ 3 yd/s, valid heading)",Combine reversals pass through a stop; NFL turns are at speed,LIMITED
+lateral acceleration,yd/s²,(vx·ay − vy·ax)/|v| above 1 yd/s,not persisted in the 09A episodes,Combine only,UNSUPPORTED

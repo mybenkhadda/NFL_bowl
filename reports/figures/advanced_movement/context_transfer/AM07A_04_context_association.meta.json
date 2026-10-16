@@ -1,0 +1,15 @@
+{
+  "experiment": "advanced_movement",
+  "experiment_version": "1",
+  "figure": "AM07A_04_context_association",
+  "formats": [
+    "png",
+    "svg"
+  ],
+  "n": "241,760 windows",
+  "note": "",
+  "run_mode": "full",
+  "saved_at": "2026-10-13T15:33:55Z",
+  "seed": 20261011,
+  "source": "nfl_context_variance_decomposition"
+}
