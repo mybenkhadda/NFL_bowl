@@ -30,9 +30,12 @@ Milestone 13 (notebook ``M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb``):
     m13_reporting     Part J/K unified comparison, declared outcome rule, evidence matrix, caveats, reports
     m13_figures       navy / cyan theme + M13 figure types
 
+Milestone 14 (notebook ``M14_CROSS_SPORT_ATHLETIC_INTELLIGENCE_COLAB.ipynb``): subpackage ``nflbowl.lab.m14`` — metric
+registry, event detection, cross-sport metrics, reliability / novelty, Hidden Braking Advantage, transfer, reports.
+
 Modules are imported explicitly (``from nflbowl.lab import audit``); importing the package loads nothing heavy.
 """
 
-__all__ = ["ablations", "audit", "biomech", "config", "domain_matching", "environment", "figures", "geometry", "handoff", "interpret", "m13_config", "m13_figures",
+__all__ = ["ablations", "audit", "biomech", "config", "domain_matching", "environment", "figures", "geometry", "handoff", "interpret", "m13_config", "m13_figures", "m14",
            "m13_reporting", "position_models", "registry", "reliability", "retrieval_lab", "robustness", "scouting_value", "stats", "store", "synthesis",
            "target_audit", "transfer_fairness", "transfer_lab"]

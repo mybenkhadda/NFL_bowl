@@ -1,6 +1,6 @@
 # nflbowl — implementation state
 
-_Updated 2026-10-16 (fourth session: unified Milestone 12 Colab notebook + `nflbowl.research`, package 0.3.0). Authored by static analysis only: no script, test, notebook or training was executed in any session._
+_Updated 2026-10-17 (seventh session: M14 cross-sport movement intelligence, `nflbowl.lab.m14`, package 0.6.0). Authored by static analysis only: no script, test, notebook or training was executed in any session._
 
 ## Existing architecture (unchanged)
 
@@ -129,6 +129,30 @@ Session 6 (M13 NFL outcome transfer, package 0.5.0). All authoring was static; n
   - The target-construction scope is documented as not strictly inductive.
 - **Unverified:** everything in session 6. Details are in `docs/nflbowl/M13_EXECUTION_GUIDE.md` § 6.
 
+Session 7 (M14 cross-sport movement intelligence, package 0.6.0). All authoring was static; nothing was executed.
+
+- **Goal:** test whether reliable, interpretable cross-sport movement metrics improve held-out prediction of `nfl.q90_shared` beyond M1, on the M13 strict common cohort. The metrics are event-based braking, cornering, cutting, re-acceleration and acceleration–speed profiles, plus a Hidden Braking Advantage stopwatch-twin study. Notebook: `notebooks/nflbowl/M14_CROSS_SPORT_ATHLETIC_INTELLIGENCE_COLAB.ipynb` (Parts A–O). RUN_DIR: `MyDrive/NFLBowl/experimental_lab/m14_cross_sport_athletic_intelligence_v1/`.
+- **Created** in `src/nflbowl/lab/m14/`:
+  - `config`: M14Config with no training switch; `cfg.m13()` adapter; M14Run with the M14 layout and `write_status`.
+  - `registry`: 25 MetricSpecs and their availability / blocking.
+  - `events`: segmentation and cut-event detection.
+  - `metrics`: sprint profile, envelope, SPARC, the one-pass `extract`, cached full / perturbed extraction, sequence and athlete tables.
+  - `reliability`: ICC, matched-k, split-half, sensitivity, coverage, measurement status.
+  - `novelty`: OOF novelty, redundancy clusters, train-fold residual blocks.
+  - `transfer`: outcome-free train-fold quality selection, the model set, integration with the official ladder, evaluation, positions, statuses, permutation null.
+  - `scouting`: braking signature, twins, contrast, hidden variation, case studies, evidence table.
+  - `reporting`: white HTML / Markdown reports.
+  - `figures`: event anatomy, twin profiles, status matrix.
+- **Created** outside the package:
+  - Tests: `tests/nflbowl/test_nflbowl_m14.py`.
+  - Docs: `docs/nflbowl/M14_RESEARCH_SPEC.md`.
+- **Modified:** version 0.5.0 → 0.6.0 (`pyproject.toml`, `nflbowl.__version__`); `nflbowl.lab.__init__` docstring and `__all__`. `api.py`, the ladder and the M12 / M13 modules are unchanged.
+- **Decisions:**
+  - Blocked: contextual multi-player metrics (no synchronised x / y) and lateral recovery (no orientation). The COD residual is blocked when the official agility columns are absent.
+  - The combo encoder F4 is pre-declared, not chosen on outcomes.
+  - The M14 run refits M1 / M1+F0 / M1+combo and must reproduce the official ladder before any comparison.
+  - Movement archetypes (a P2 item) were not implemented.
+
 ## Installation
 
 - Colab / Kaggle: `%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` then `%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` (restart the session if nflbowl was already imported). Torch is never installed.
@@ -167,6 +191,8 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
 - Session 5, all of it unverified: every `nflbowl.lab` module, the lab notebook, `transfer_predictions`, and the polars / matplotlib API details listed in `docs/nflbowl/M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md` § 6.
 
 ## Pending work / exact next steps
+
+0000. Session 7 (user, Colab): run `M14_CROSS_SPORT_ATHLETIC_INTELLIGENCE_COLAB.ipynb` with the defaults. Send back what `docs/NEXT_SESSION.md` lists. Locally: `pytest tests/nflbowl/test_nflbowl_m14.py -q`.
 
 000. Session 6 (user, Colab): run `M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb` with the defaults (no training). Send back `manifests/stages.json`, `logs/*_traceback.txt`, `tables/handoff/checkpoint_inventory.csv`, `tables/transfer/common_cohort_audit.csv` and the final report. Locally: `pytest tests/nflbowl/test_nflbowl_m13.py -q`.
 
