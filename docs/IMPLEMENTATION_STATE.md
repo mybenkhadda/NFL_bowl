@@ -103,6 +103,32 @@ Session 5 (comprehensive experimental lab, package 0.4.0). All authoring was sta
   - Gates follow declared rules, and missing evidence is `not_evaluated`.
 - **Not found in the repo:** `M12_UNIFIED_COLAB_RESEARCH_CLEAN_GPU.ipynb` and `M12_NEXT_STEP_INDUCTIVE_GPU_COLAB.ipynb` (Drive-only). Their outputs are discovered generically.
 
+Session 6 (M13 NFL outcome transfer, package 0.5.0). All authoring was static; nothing was executed.
+
+- **Goal:** answer whether Combine tracking improves held-out prediction of `nfl.q90_shared` beyond M1, under athlete-disjoint validation, reusing the M12 inductive encoders. Notebook: `notebooks/nflbowl/M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb` (Parts A–K). RUN_DIR: `MyDrive/NFLBowl/experimental_lab/m13_outcome_transfer_v1/`.
+- **Created** in `src/nflbowl/lab/`:
+  - `m13_config`: M13Config with two-opt-in training; M13Run with the M13 layout, per-table provenance and a signature-checked cache.
+  - `handoff`: read-only discovery and adoption of checkpoints and embeddings; a validity inventory checking bundle, science, regime, fold, architecture and load; M12 reconciliation; F1 fold validity; prerequisites; cached sequence metrics.
+  - `target_audit`: target provenance, attrition, overlap and position variance.
+  - `transfer_fairness`: POS / MEAN baselines, the M1 reproducibility assertion, alignment validation, the `ladder_all` and `strict_common` cohorts, metrics including within-position R² and skill vs POS, and a fold-stratified paired bootstrap with Holm / BH.
+  - `reliability`: unclamped ICC(1,1) with variance components; M12 SB diagnosis; matched-k curves; train-fold-only selection blocks; stability; train-standardised interactions.
+  - `position_models`: centred, standardised, position-specific and partially pooled variants.
+  - `domain_matching`: CEM on sequence covariates over frozen embeddings.
+  - `scouting_value`: retrieval-vs-transfer records, help / hurt analysis, forty twins, leave-own-fold-out intervals and profiles.
+  - `m13_reporting`: unified comparison, the declared A / B / C / D / inconclusive rule, evidence rows, caveats, MD + navy HTML.
+  - `m13_figures`: navy / cyan theme over the shared figure library plus new figure types.
+- **Created** outside the package:
+  - Tests: `tests/nflbowl/test_nflbowl_m13.py`.
+  - Docs: `docs/nflbowl/M13_RESEARCH_PLAN.md`, `M13_EXPERIMENT_MATRIX.md`, `M13_EXECUTION_GUIDE.md`.
+- **Modified:** `nflbowl.lab.__init__` (module list); version 0.4.0 → 0.5.0 (`pyproject.toml`, `nflbowl.__version__`). `api.py` and the research code are unchanged.
+- **Decisions:**
+  - M13 uses its own experiment: M12 checkpoints are copied in, and the M12 directories are never written.
+  - Encoders missing a fold are excluded; there is no transductive fallback.
+  - Claims are made on the strict common cohort only.
+  - The M12 published numbers live only in `M12_REPORTED`, which is used for reconciliation.
+  - The target-construction scope is documented as not strictly inductive.
+- **Unverified:** everything in session 6. Details are in `docs/nflbowl/M13_EXECUTION_GUIDE.md` § 6.
+
 ## Installation
 
 - Colab / Kaggle: `%pip install -q "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` then `%pip install -q --upgrade --force-reinstall --no-deps "git+https://github.com/mybenkhadda/NFL_bowl.git@main"` (restart the session if nflbowl was already imported). Torch is never installed.
@@ -141,6 +167,8 @@ The bundle builder never changes athlete ids, fold assignments (it copies `nfl_i
 - Session 5, all of it unverified: every `nflbowl.lab` module, the lab notebook, `transfer_predictions`, and the polars / matplotlib API details listed in `docs/nflbowl/M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md` § 6.
 
 ## Pending work / exact next steps
+
+000. Session 6 (user, Colab): run `M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb` with the defaults (no training). Send back `manifests/stages.json`, `logs/*_traceback.txt`, `tables/handoff/checkpoint_inventory.csv`, `tables/transfer/common_cohort_audit.csv` and the final report. Locally: `pytest tests/nflbowl/test_nflbowl_m13.py -q`.
 
 00. Session 5 (user, Colab): run the lab notebook in `pilot` mode with `run_training=False`. Send back `manifests/stages.json` and every `logs/*_traceback.txt`. Locally: `pytest tests/nflbowl/test_nflbowl_lab.py -q`.
 

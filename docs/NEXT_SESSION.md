@@ -1,34 +1,36 @@
-# Next session: M12 comprehensive experimental lab (start here)
+# Next session: M13 NFL outcome transfer (start here)
 
-**Rules:** code authoring only; the user runs everything. Read this file, then only the module you need to fix.
+**Rules:** code authoring only; the user runs everything in Colab. Read this file, then only the module that failed.
 
-**State (2026-10-16, end of session 5):**
-- Package 0.4.0. New: `src/nflbowl/lab/` and `notebooks/nflbowl/M12_COMPREHENSIVE_EXPERIMENTAL_LAB_COLAB.ipynb` (Parts A–K).
-- API additions: `Experiment.derived`, `folds_by_athlete`, `splits(f)`, `transfer_predictions()`.
-- Docs: `docs/nflbowl/M12_EXPERIMENTAL_LAB_API_AUDIT.md`, `M12_EXPERIMENT_MATRIX.md`, `M12_EXPERIMENTAL_LAB_EXECUTION_GUIDE.md`.
-- **Never executed:** anything from sessions 1–5.
+**State (2026-10-17, end of session 6):**
+- Package 0.5.0.
+- New notebook `notebooks/nflbowl/M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb` (Parts A–K).
+- New modules in `src/nflbowl/lab/`: `m13_config`, `handoff`, `target_audit`, `transfer_fairness`, `reliability`, `position_models`, `domain_matching`, `scouting_value`, `m13_reporting`, `m13_figures`.
+- Tests: `tests/nflbowl/test_nflbowl_m13.py`.
+- Docs: `docs/nflbowl/M13_RESEARCH_PLAN.md`, `M13_EXPERIMENT_MATRIX.md`, `M13_EXECUTION_GUIDE.md`.
+- **Never executed:** anything from sessions 1–6.
+- No change to `api.py` or the ladder. The POS / MEAN baselines are built on `Experiment._ladder_inputs` plus `ae.oof_ladder`.
 
-**Map** (`src/nflbowl/lab/`):
-- `config`: CFG → LabConfig.
-- `store`: LabRun, `run_stage`, `table`, `figure`, `data_file`.
-- `registry`: SPECS and status.
-- `environment`: setup, adoption, training plan.
-- `audit` (B), `geometry` (C), `retrieval_lab` (D/G3–G5), `transfer_lab` (E), `ablations` (F), `robustness` (G1/G2), `biomech` (H), `interpret` (I), `synthesis` (J/K).
-- `figures`, `stats`.
-
-**Notebook stage ids:** SETUP, A2, P2, B1–B4, D2, C1/C3, C4, D1, D3/D4, D5, E2, E5/E7, E_perm, F1, G3, G4, G5, G1, G2, H1, I1, J1, K.
+**Map:**
+- **A** — `handoff`: adopt M12 checkpoints and embeddings read-only, build the inventory, run F1 validity, reconcile.
+- **B** — `target_audit`.
+- **C/D** — `transfer_fairness`: long table → `validate_alignment` → `cohorts` (strict_common = claims) → `wide` / `paired_comparisons`.
+- **E** — `reliability`: ICC, matched-k curves, train-fold selection blocks, interactions.
+- **F** — `position_models`.
+- **G** — `domain_matching` (CEM on frozen embeddings).
+- **H/I** — `scouting_value`.
+- **J/K** — `m13_reporting` (declared outcome rule), `m13_figures` (navy theme, HTML helpers).
 
 **Waiting on the user (Colab):**
-1. Setup 2 must print `nflbowl 0.4.0`.
-2. First pass: `run_mode='pilot'`, `run_training=False`.
-3. Send back the failing cells, `logs/<stage>_traceback.txt`, `manifests/stages.json`, and the P2 adoption table, to confirm whether `f4_main_clean` shares the science hash.
-4. Locally: `pytest tests/nflbowl/test_nflbowl_lab.py -q`.
+1. Setup 2 prints `nflbowl 0.5.0`.
+2. Run all with the defaults (`run_training=False`).
+3. Send back `manifests/stages.json`, every `logs/*_traceback.txt`, `tables/handoff/checkpoint_inventory.csv`, `tables/transfer/common_cohort_audit.csv` and the final report.
+4. Locally: `pytest tests/nflbowl/test_nflbowl_m13.py -q`.
 
-**Likely next failures:**
-- Polars details: `unpivot` / `pivot`, `replace_strict(default=)`, `rank('ordinal')` UInt arithmetic, `concat_list().list.eval`.
-- Frames built from lists of dicts with missing keys.
-- The `violinplot` orientation fallback.
-- `ae._alpha` private-call signature in `interpret`.
-- Ladder runtime when `transfer_predictions(models=[])`.
+**Likely next failures:** see `docs/nflbowl/M13_EXECUTION_GUIDE.md` § 6 (polars pivot / over / list APIs, Styler `map`, private `ae._alpha` / `_fit_predict`, runtime of E1 / G1).
 
-**Fix strategy:** each section is isolated by `run_stage`. Fix the module, reinstall from `@main`, restart, and rerun with the same `experiment_name`. Saved artifacts are reused.
+**Open scientific points to check once results exist:**
+- Is the strict cohort large enough? Compare `COH_DESC` with the ladder rows.
+- F1 validity verdict.
+- Which estimator is frozen. Supply `freeze_json` to B1.
+- Whether E2 curves are estimable (Combine attempts per drill).

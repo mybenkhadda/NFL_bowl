@@ -17,8 +17,22 @@ Orchestration and analysis on top of ``nflbowl.Experiment`` and the unchanged re
     synthesis     Part J/K gates, integrated comparison, final report
     figures       the visual identity shared by every section
 
+Milestone 13 (notebook ``M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb``):
+
+    m13_config        M13Config (resolve), M13Run (M13 layout, provenance, signature-checked cache)
+    handoff           Part A   environment, read-only adoption of M12 checkpoints / embeddings, inventory, reconciliation, F1 validity
+    target_audit      Part B   frozen-target provenance, attrition flow, overlap matrix, position structure
+    transfer_fairness Part C/D ladder + POS / MEAN baselines, alignment validation, cohorts, metrics, paired bootstrap
+    reliability       Part E   ICC audit, equal-observation curves, train-fold-only selection ladders, stability, interactions
+    position_models   Part F   centred / standardised / position-specific / partially pooled models
+    domain_matching   Part G   coarsened exact matching of frozen embeddings, domain AUC / MMD² / retrieval sensitivity
+    scouting_value    Part H/I retrieval-vs-transfer records, help / hurt analysis, intervals, athlete profiles
+    m13_reporting     Part J/K unified comparison, declared outcome rule, evidence matrix, caveats, reports
+    m13_figures       navy / cyan theme + M13 figure types
+
 Modules are imported explicitly (``from nflbowl.lab import audit``); importing the package loads nothing heavy.
 """
 
-__all__ = ["ablations", "audit", "biomech", "config", "environment", "figures", "geometry", "interpret", "registry", "retrieval_lab", "robustness", "stats",
-           "store", "synthesis", "transfer_lab"]
+__all__ = ["ablations", "audit", "biomech", "config", "domain_matching", "environment", "figures", "geometry", "handoff", "interpret", "m13_config", "m13_figures",
+           "m13_reporting", "position_models", "registry", "reliability", "retrieval_lab", "robustness", "scouting_value", "stats", "store", "synthesis",
+           "target_audit", "transfer_fairness", "transfer_lab"]
