@@ -1,6 +1,48 @@
 # M15–M18 session handoff (start here in a fresh session)
 
-**Updated:** 2026-10-20, session 4. Every task T01–T17 is authored. Claude has executed nothing.
+**Updated:** 2026-10-20, session 5 (M16 laboratory). Every task T01–T17 is authored. Claude has executed nothing.
+
+## Session 5 — M16 laboratory (read with `M16_EXPERIMENTS_AND_VALIDATION.md`)
+
+**Notebook to run for M16:** `notebooks/research/M16_VERIFIED_BASELINES_CROSS_DOMAIN_VALIDATION_COLAB.ipynb` (sections 00–11). It contains every session-4 M16 step, so it replaces `notebooks/nflbowl/M16_…` (that file is kept, not deleted).
+
+**New modules** (`src/nflbowl/lab/m16/`):
+- `cohort` (E16.A9)
+- `target_registry`
+- `target_audit` (E16.A7)
+- `context_matching` (E16.A8)
+- `representation_audit` (E16.B4)
+- `controlled_retrieval` (E16.B5)
+- `repeatability` (E16.B6)
+- `features` (E16.C0)
+- `ladder` (E16.C4–C5)
+- `evaluation`
+- `positions` (E16.C6)
+- `hypotheses` (E16-C1–C3)
+- `profiles`
+- `reporting`
+
+**Modified:**
+- `lab/status.py`: adds `BLOCKED_INSUFFICIENT_OVERLAP`, plus `EXPLORATORY` and `BLOCKED` gate states. Additive change.
+- `m16/config.py`: Track A–C keys, `legacy_m15_dirs`, `force_steps`, `reuse(step)`, new families and folders.
+- `m16/gates.py`: adds `g16_extended`. `g16` is unchanged.
+- `m16/pipeline.py`: new `run_*` steps and signature caches.
+- `m16/plots.py`: about 25 new figures.
+- `m16/__init__.py`.
+
+**New tests:** `tests/nflbowl/test_nflbowl_m16_lab.py`. Unexecuted.
+
+**Step IDs in run order:**
+E16.open → A9 → A1 → A0-x → A2 → A3 → A7 → A8 → B4 → B1 → B3 → B5 → B6 → C0 → A4 → A6 → C4 → C5 → C6 → C7 → G16 → G16x → E16.report.
+
+**M17 / M18 contract is unchanged:** `m16_gate`, `leakage_verdict`, `analysis_frame`, `target_freeze_m16.json` and `athlete_targets` keep their schemas. New laboratory outputs use new names, for example `analysis_frame_lab` and `m16_gate_extended`.
+
+**Blockers:**
+- E15.C2: `M15Config` lacks `dropout_rates`. Fixing it changes the M15 fingerprint; the decision is the user's.
+- Representations without G15 GO are `exploratory_screen` only.
+- Without a persisted official OOF record, G16-B is EXPLORATORY.
+
+**Next (Claude):** fix the modules named in returned tracebacks. Then fill the narrative from `reports/markdown/m16_research_report.md` and the SEND BACK tables only.
 
 ## Rules (binding)
 
@@ -18,21 +60,21 @@ Do 10 Hz Combine movement measurements give reliable, independently predictive i
 | Milestone | Tasks | Code | Notebook |
 |---|---|---|---|
 | M15 | T01, T02, T03, T07, T08 | `src/nflbowl/lab/m15/` | `notebooks/nflbowl/M15_SPECTRAL_TEMPORAL_REPRESENTATION_LAB_COLAB.ipynb` |
-| M16 | T04, T06, T09, T10 | `src/nflbowl/lab/m16/` | `notebooks/nflbowl/M16_VERIFIED_BASELINES_CROSS_DOMAIN_VALIDATION_COLAB.ipynb` |
+| M16 | T04, T06, T09, T10 + laboratory (E16.A7–A9, B4–B6, C0–C7) | `src/nflbowl/lab/m16/` | `notebooks/research/M16_VERIFIED_BASELINES_CROSS_DOMAIN_VALIDATION_COLAB.ipynb` (supersedes `notebooks/nflbowl/M16_…`) |
 | M17 | T05, T12, T13, T14 | `src/nflbowl/lab/m17/` | `notebooks/nflbowl/M17_CONTEXT_AWARE_ATHLETIC_SIGNATURES_COLAB.ipynb` |
 | M18 | T15, T16, T17 | `src/nflbowl/lab/m18/` | `notebooks/nflbowl/M18_NFL_SCOUTING_VALUE_COLAB.ipynb` |
 | Shared | — | `src/nflbowl/lab/status.py` (statuses, `run_step`, `gate_row`); `src/nflbowl/lab/learners.py` (ENet / LightGBM / CatBoost, `oof_generic`) | — |
 
 T11, the full encoder grid, needs no code. It is a configuration change in M15 Setup 3: `architectures`, `latent_dims` = (8, 16, 32, 64), and three `train_seeds`.
 
-**Tests (synthetic, unexecuted):** `tests/nflbowl/test_nflbowl_m15.py`, `test_nflbowl_m16.py`, `test_nflbowl_m17.py`, `test_nflbowl_m18.py`.
+**Tests (synthetic, unexecuted):** `tests/nflbowl/test_nflbowl_m15.py`, `test_nflbowl_m16.py`, `test_nflbowl_m16_lab.py`, `test_nflbowl_m17.py`, `test_nflbowl_m18.py`.
 
 ## Execution order (Colab)
 
 1. **M15.** Run all.
    - With `run_training` and `allow_new_training` False, only PCA is fitted. Learned rows are NOT_RUN, and G15 for them stays NOT_EVALUATED.
    - For a GPU session, set both opt-ins.
-2. **M16.** Run all. Main outputs: M1 verification, targets T1–T6 and their freeze, baselines, MDE, retrieval, leakage audit, G16.
+2. **M16.** Run all of `notebooks/research/M16_…`. Main outputs: M1 verification, targets T1–T6 and their freeze, target laboratory, context support, provenance registry, controlled retrieval, repeatability, ladder B0–B7 with controls, hypotheses, baselines, MDE, leakage audit, G16 and G16 extended, research report.
 3. **M17.** Run all. Tracks C and D are BLOCKED unless a G15-GO representation passed the M16 leakage audit.
 4. **M18.** Run all. It pre-registers once. Rungs are blocked or eligible strictly from the gate tables.
 

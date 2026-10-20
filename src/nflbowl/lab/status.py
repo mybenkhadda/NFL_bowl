@@ -8,12 +8,14 @@ Every experiment step ends in exactly one status; nothing is silently skipped:
     BLOCKED_MISSING_INPUT         a required file, column or optional package is absent (the reason names it)
     BLOCKED_PROVENANCE            an artifact exists but cannot be shown to be fold-safe / compatible
     BLOCKED_INSUFFICIENT_SAMPLE   too few athletes / trials / linked athletes for a meaningful estimate
+    BLOCKED_INSUFFICIENT_OVERLAP  the compared movement contexts (Combine vs NFL) lack common support: no extrapolated match
     FAILED_VALIDATION             a scientific or data-contract check failed (the run continues; the result is unusable)
     FAILED                        an unexpected exception (traceback in ``logs/``)
     NOT_RUN                       disabled by configuration, or a prerequisite step did not complete
 
 Scientific gates use their own default ``NOT_EVALUATED``: a gate becomes PASS / FAIL only from computed tables, never
-from code, configuration or cached metadata alone (``gate_row``).
+from code, configuration or cached metadata alone (``gate_row``). ``EXPLORATORY`` (evidence exists but cannot support a
+PASS, e.g. a representation without G15 GO) and ``BLOCKED`` (an input of the gate is blocked) are gate states too.
 
 ``run_step`` wraps ``LabRun.run_stage`` (stage ledger ``manifests/stages.json``, tracebacks in ``logs/``) and additionally
 records the status above in ``manifests/<ledger>_status.json`` so a later Colab session sees exactly what is missing.
@@ -36,19 +38,22 @@ CACHED = "CACHED"
 BLOCKED_MISSING_INPUT = "BLOCKED_MISSING_INPUT"
 BLOCKED_PROVENANCE = "BLOCKED_PROVENANCE"
 BLOCKED_INSUFFICIENT_SAMPLE = "BLOCKED_INSUFFICIENT_SAMPLE"
+BLOCKED_INSUFFICIENT_OVERLAP = "BLOCKED_INSUFFICIENT_OVERLAP"
 FAILED_VALIDATION = "FAILED_VALIDATION"
 FAILED = "FAILED"
 NOT_RUN = "NOT_RUN"
-STEP_STATUSES = (READY, COMPLETED, CACHED, BLOCKED_MISSING_INPUT, BLOCKED_PROVENANCE, BLOCKED_INSUFFICIENT_SAMPLE, FAILED_VALIDATION, FAILED,
-                 NOT_RUN)
-BLOCKED = (BLOCKED_MISSING_INPUT, BLOCKED_PROVENANCE, BLOCKED_INSUFFICIENT_SAMPLE)
+STEP_STATUSES = (READY, COMPLETED, CACHED, BLOCKED_MISSING_INPUT, BLOCKED_PROVENANCE, BLOCKED_INSUFFICIENT_SAMPLE, BLOCKED_INSUFFICIENT_OVERLAP,
+                 FAILED_VALIDATION, FAILED, NOT_RUN)
+BLOCKED = (BLOCKED_MISSING_INPUT, BLOCKED_PROVENANCE, BLOCKED_INSUFFICIENT_SAMPLE, BLOCKED_INSUFFICIENT_OVERLAP)
 DONE = (COMPLETED, CACHED)
 
 # gate statuses (scientific decisions)
 NOT_EVALUATED = "NOT_EVALUATED"
 PASS = "PASS"
 FAIL = "FAIL"
-GATE_STATUSES = (NOT_EVALUATED, PASS, FAIL, *BLOCKED)
+EXPLORATORY = "EXPLORATORY"
+BLOCKED_GATE = "BLOCKED"
+GATE_STATUSES = (NOT_EVALUATED, PASS, FAIL, EXPLORATORY, BLOCKED_GATE, *BLOCKED)
 
 
 class ResearchBlocked(StageSkipped):
@@ -174,6 +179,6 @@ def gate_row(criterion: str, value: float | None, threshold: float | None, passe
     return {"criterion": criterion, "value": value, "ci_lo": ci_lo, "ci_hi": ci_hi, "threshold": threshold, "status": status, "note": note}
 
 
-__all__ = ["BLOCKED", "BLOCKED_INSUFFICIENT_SAMPLE", "BLOCKED_MISSING_INPUT", "BLOCKED_PROVENANCE", "CACHED", "COMPLETED", "DONE", "FAIL", "FAILED",
-           "FAILED_VALIDATION", "GATE_STATUSES", "NOT_EVALUATED", "NOT_RUN", "PASS", "READY", "STEP_STATUSES", "ResearchBlocked", "StatusLedger",
-           "ValidationFailed", "gate_row", "run_step"]
+__all__ = ["BLOCKED", "BLOCKED_GATE", "BLOCKED_INSUFFICIENT_OVERLAP", "BLOCKED_INSUFFICIENT_SAMPLE", "BLOCKED_MISSING_INPUT", "BLOCKED_PROVENANCE", "CACHED",
+           "COMPLETED", "DONE", "EXPLORATORY", "FAIL", "FAILED", "FAILED_VALIDATION", "GATE_STATUSES", "NOT_EVALUATED", "NOT_RUN", "PASS", "READY",
+           "STEP_STATUSES", "ResearchBlocked", "StatusLedger", "ValidationFailed", "gate_row", "run_step"]

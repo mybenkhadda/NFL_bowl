@@ -24,14 +24,19 @@ from ..status import StatusLedger
 
 TRANSFORM_VERSION = "m16_v1"
 READ_ONLY_PREFIXES = ("m12_", "m13_", "m14_", "m15_")
-M16_LAYOUT = ("config", "manifests", "logs", "datasets/cached", "features/targets", "predictions", "checkpoints", "tables/cohort", "tables/baselines",
-              "tables/target", "tables/registry", "tables/retrieval", "tables/detectability", "tables/synthesis", "figures/png", "figures/svg",
-              "figures/pdf", "figures/data", "reports/markdown", "reports/html", "diagnostics", "exports")
-M16_FAMILIES = ("cohort", "baselines", "target", "registry", "retrieval", "detectability", "synthesis")
+M16_LAYOUT = ("config", "manifests", "logs", "datasets/cached", "features/targets", "features/context", "features/athlete", "predictions", "models",
+              "checkpoints", "retrieval", "tables/cohort", "tables/baselines", "tables/target", "tables/exploration", "tables/context",
+              "tables/representation", "tables/features", "tables/registry", "tables/retrieval", "tables/ladder", "tables/controls", "tables/positions",
+              "tables/hypotheses", "tables/detectability", "tables/synthesis", "figures/png", "figures/svg", "figures/pdf", "figures/data",
+              "reports/markdown", "reports/html", "diagnostics", "exports")
+M16_FAMILIES = ("cohort", "baselines", "target", "exploration", "context", "representation", "features", "registry", "retrieval", "ladder", "controls",
+                "positions", "hypotheses", "detectability", "synthesis")
+LEARNERS16 = ("enet", "lightgbm", "catboost", "pooled")
+AGGREGATIONS = ("mean", "median", "trimmed_mean", "quantiles", "icc_weighted")
 IO_KEYS = frozenset({"experiment_name", "bundle_dir", "drive_root", "stage_dir", "m12_run_dir", "m13_run_dir", "m14_run_dir", "m15_run_dir",
-                     "extra_oof_sources", "exploratory_target_path", "device", "resume", "reuse_artifacts", "save_tables", "save_figures",
-                     "save_processed_data", "save_reports", "save_models", "overwrite_figures", "csv_max_rows", "figure_formats", "figure_dpi", "git_ref",
-                     "notes"})
+                     "legacy_m15_dirs", "legacy_split_manifests", "extra_oof_sources", "exploratory_target_path", "device", "resume", "reuse_artifacts",
+                     "force_steps", "save_tables", "save_figures", "save_processed_data", "save_reports", "save_models", "overwrite_figures",
+                     "csv_max_rows", "figure_formats", "figure_dpi", "git_ref", "notes"})
 
 
 @dataclass(frozen=True)
@@ -47,6 +52,8 @@ class M16Config:
     m14_run_dir: str = "/content/drive/MyDrive/NFLBowl/experimental_lab/m14_cross_sport_athletic_intelligence_v1"
     m14_experiment_name: str = "m14_cross_sport_athletic_intelligence_v1"
     m15_run_dir: str = "/content/drive/MyDrive/NFLBowl/experimental_lab/m15_spectral_temporal_v1"
+    legacy_m15_dirs: tuple[str, ...] = ()                   # exploratory STFT / LSTM notebook folders (read only; provenance audit only)
+    legacy_split_manifests: tuple[str, ...] = ()
     extra_oof_sources: tuple[str, ...] = ()                 # further experiment directories holding evaluation/records/transfer_oof__*.parquet
     device: str = "auto"
     precision: str = "fp32"
@@ -78,8 +85,41 @@ class M16Config:
     task_targets_in_ladder: str = "eligible"                # "eligible" (G16-A PASS) or "all"
     # ---- T10 retrieval
     allow_descriptive: bool = False                         # also test GO_DESCRIPTIVE representations (labelled)
+    # ---- Track A extension — target laboratory (E16.A7) and context common support (E16.A8)
+    min_windows_grid: tuple[int, ...] = (5, 10, 20, 40)      # sensitivity of window targets to the minimum-exposure rule
+    min_events_grid: tuple[int, ...] = (2, 3, 5, 8)
+    subsample_fractions: tuple[float, ...] = (0.25, 0.5, 0.75)
+    subsample_reps: int = 20
+    uncertainty_boot: int = 200                             # within-athlete bootstrap of each athlete's target statistic
+    context_covariates: tuple[str, ...] = ("entry_speed", "max_atan", "valid_s", "braking_frac", "max_abs_an")
+    context_bins: int = 4                                   # quantile bins per covariate (pooled Combine + NFL edges)
+    min_support_share: float = 0.5                          # share of a drill's Combine rows inside common support
+    min_support_athletes: int = 30                          # athletes with supported rows in BOTH domains
+    # ---- Track B extension — provenance registry (E16.B4), controlled retrieval (E16.B5), repeatability (E16.B6)
+    representation_archs: tuple[str, ...] = ("pca", "stft_ae", "lstm_ae")
+    ladder_dim: int = 32                                    # pre-declared latent dimension for B3–B5 (M15 default; never chosen on outcomes)
+    retrieval_arms: tuple[str, ...] = ("unaligned", "procrustes", "infonce")
+    retrieval_scopes: tuple[str, ...] = ("all", "forty", "three_cone", "short_shuttle")
+    twin_forty_s: float = 0.03                              # stopwatch twins (M09 rule)
+    twin_height_in: float = 1.0                             # physical-profile twins: same position, |Δheight| and |Δweight| within these
+    twin_weight_lb: float = 10.0
+    damage_threshold: float = 0.02                          # repeat-AUC drop that makes an alignment destructive (G17 damage rule)
+    impostors_per_query: int = 20                           # impostor similarities kept per query for the distribution plots
+    # ---- Track C — Combine-only features (E16.C0) and the incremental ladder (E16.C1–C7)
+    primary_aggregation: str = "mean"                       # official ladder convention (se.embedding_block: athlete-mean embedding)
+    sensitivity_aggregations: tuple[str, ...] = ("median", "trimmed_mean", "icc_weighted")
+    trim_share: float = 0.1
+    embedding_k: int = 8                                    # train-fold PCA dims of an embedding block (official convention)
+    reduced_dims: tuple[int, ...] = (2, 4)                  # negative control: fewer latent dimensions
+    n_shuffle: int = 20                                     # within-position shuffled-embedding refits per rung
+    position_min_n: int = 60                                # separate within-position models only from this many athletes
+    pooling_alphas: tuple[float, ...] = (0.3, 1.0, 3.0, 10.0, 30.0, 100.0)
+    hypothesis_min_athletes: int = 100
+    max_censored_share: float = 0.5                         # E16-C2: above this share of censored events the test is not run
+    practical_margin_pct: float = 2.0
     resume: bool = True
     reuse_artifacts: bool = True
+    force_steps: tuple[str, ...] = ()                       # step ids recomputed even when a valid cache exists (e.g. ("E16.B5",))
     save_tables: bool = True
     save_figures: bool = True
     save_processed_data: bool = True
@@ -105,7 +145,12 @@ class M16Config:
         return [p for p in cands if (p / "config" / "experiment.json").is_file()]
 
     def read_only_dirs(self) -> list[Path]:
-        return [Path(p) for p in (self.m12_run_dir, self.m13_run_dir, self.m14_run_dir, self.m15_run_dir, *self.extra_oof_sources) if p]
+        return [Path(p) for p in (self.m12_run_dir, self.m13_run_dir, self.m14_run_dir, self.m15_run_dir, *self.legacy_m15_dirs, *self.extra_oof_sources)
+                if p]
+
+    def reuse(self, step: str) -> bool:
+        """True when cached artifacts of ``step`` may be reloaded (global switch and not listed in ``force_steps``)."""
+        return bool(self.reuse_artifacts) and step not in self.force_steps
 
     def fingerprint(self) -> str:
         return stable_hash({"transform_version": TRANSFORM_VERSION, **{k: v for k, v in asdict(self).items() if k not in IO_KEYS}}, 16)
@@ -164,11 +209,25 @@ def resolve(cfg: Mapping[str, Any] | None = None) -> M16Config:
         raise ValueError("reliability_split must be 'season', 'game' or 'random'")
     if c.task_targets_in_ladder not in ("eligible", "all"):
         raise ValueError("task_targets_in_ladder must be 'eligible' or 'all'")
-    bad_l = [x for x in c.learners if x not in ("enet", "lightgbm", "catboost")]
+    bad_l = [x for x in c.learners if x not in LEARNERS16]
     if bad_l:
-        raise ValueError(f"unknown learner(s) {bad_l}; allowed enet, lightgbm, catboost")
+        raise ValueError(f"unknown learner(s) {bad_l}; allowed {LEARNERS16}")
     if not 0.0 < c.detect_reliability <= 1.0 or c.detect_reps < 5:
         raise ValueError("detect_reliability in (0, 1] and detect_reps ≥ 5")
+    bad_a = [a for a in (c.primary_aggregation, *c.sensitivity_aggregations) if a not in AGGREGATIONS]
+    if bad_a:
+        raise ValueError(f"unknown aggregation(s) {bad_a}; allowed {AGGREGATIONS}")
+    if c.primary_aggregation in c.sensitivity_aggregations:
+        raise ValueError("the primary aggregation is pre-declared and must not be repeated among the sensitivity aggregations")
+    bad_arms = [a for a in c.retrieval_arms if a not in ("unaligned", "procrustes", "infonce")]
+    if bad_arms or "unaligned" not in c.retrieval_arms:
+        raise ValueError("retrieval_arms ⊂ {unaligned, procrustes, infonce} and must contain 'unaligned' (the reference arm)")
+    if not 0.0 <= c.trim_share < 0.5 or not 0.0 < c.min_support_share <= 1.0:
+        raise ValueError("trim_share in [0, 0.5) and min_support_share in (0, 1]")
+    if c.context_bins < 2 or c.n_shuffle < 5 or c.subsample_reps < 5 or c.uncertainty_boot < 50:
+        raise ValueError("context_bins ≥ 2, n_shuffle ≥ 5, subsample_reps ≥ 5, uncertainty_boot ≥ 50")
+    if any(k >= c.embedding_k for k in c.reduced_dims) or c.embedding_k < 1:
+        raise ValueError("reduced_dims must all be smaller than embedding_k (they are the reduced-dimension negative control)")
     if not 0.0 < c.reproduction_tol <= 1e-4:
         raise ValueError("reproduction_tol must lie in (0, 1e-4]: a looser tolerance is not a reproduction (record a mismatch instead)")
     return c
@@ -228,4 +287,4 @@ class M16Run(M13Run):
         return "\n".join(lines)
 
 
-__all__ = ["M16Config", "M16Run", "M16_FAMILIES", "M16_LAYOUT", "TRANSFORM_VERSION", "resolve"]
+__all__ = ["AGGREGATIONS", "LEARNERS16", "M16Config", "M16Run", "M16_FAMILIES", "M16_LAYOUT", "TRANSFORM_VERSION", "resolve"]
