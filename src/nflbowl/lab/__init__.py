@@ -33,9 +33,13 @@ Milestone 13 (notebook ``M13_NFL_OUTCOME_TRANSFER_RESEARCH_COLAB.ipynb``):
 Milestone 14 (notebook ``M14_CROSS_SPORT_ATHLETIC_INTELLIGENCE_COLAB.ipynb``): subpackage ``nflbowl.lab.m14`` — metric
 registry, event detection, cross-sport metrics, reliability / novelty, Hidden Braking Advantage, transfer, reports.
 
+Milestones 15–18 (``docs/research/M15_M18_*.md``): ``status`` (shared step / gate status vocabulary and guarded step
+runner), subpackages ``nflbowl.lab.m15`` (T01: config, sequence-store adapter, legacy provenance audit) and
+``nflbowl.lab.m16`` (T04: official M1 contract + reproducibility verification, target registry).
+
 Modules are imported explicitly (``from nflbowl.lab import audit``); importing the package loads nothing heavy.
 """
 
-__all__ = ["ablations", "audit", "biomech", "config", "domain_matching", "environment", "figures", "geometry", "handoff", "interpret", "m13_config", "m13_figures", "m14",
+__all__ = ["ablations", "audit", "biomech", "config", "domain_matching", "environment", "figures", "geometry", "handoff", "interpret", "m13_config", "m13_figures", "m14", "m15", "m16", "status",
            "m13_reporting", "position_models", "registry", "reliability", "retrieval_lab", "robustness", "scouting_value", "stats", "store", "synthesis",
            "target_audit", "transfer_fairness", "transfer_lab"]
