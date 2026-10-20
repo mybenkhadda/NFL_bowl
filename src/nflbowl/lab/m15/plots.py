@@ -301,5 +301,186 @@ def spectrogram_gallery(bundle: Any, index: Any, cfg: Any, per_kind: int = 1, ma
     return fig, {"spectrograms": pl.concat(parts) if parts else pl.DataFrame()}
 
 
-__all__ = ["DOMAIN_COLOR", "PALETTE", "audit_status_bar", "centroid_vs_length", "contrast_waterfall", "icc_forest", "kind_heatmap", "psd_by_domain",
-           "signal_panel", "spectrogram_gallery", "valid_frames_hist"]
+# ====================================================================== B–E (encoders)
+def training_curves(curves: Any) -> tuple[Any, dict[str, Any]]:
+    """Validation loss vs step per architecture (median over folds and seeds; shaded min–max)."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    fig, ax = plt.subplots(figsize=(10, 4.8), facecolor="white")
+    agg = curves.group_by("arch", "d", "step").agg(pl.col("val_loss").median().alias("med"), pl.col("val_loss").min().alias("lo"),
+                                                   pl.col("val_loss").max().alias("hi")).sort("arch", "d", "step")
+    for k, ((arch, d), g) in enumerate(agg.group_by("arch", "d", maintain_order=True)):
+        c = PALETTE[k % len(PALETTE)]
+        ax.plot(g["step"], g["med"], color=c, linewidth=2, label=f"{arch} d{d}")
+        ax.fill_between(g["step"].to_numpy(), g["lo"].to_numpy(), g["hi"].to_numpy(), color=c, alpha=0.12, linewidth=0)
+    ax.set_yscale("log")
+    _style(ax)
+    ax.set_xlabel("optimiser step", color=INK)
+    ax.set_ylabel("masked validation loss (scaled units; STFT: log-magnitude)", color=INK)
+    ax.set_title("Training curves — validation athletes only (median over folds / seeds, range shaded)", fontsize=11, color=INK, loc="left")
+    ax.legend(frameon=False, fontsize=7, ncol=3)
+    fig.tight_layout()
+    return fig, {"curves": agg}
+
+
+def preservation_matrix(summary: Any, metrics: tuple[str, ...] = ("rmse_speed", "rmse_atan", "peak_speed_err", "event_f1", "brake_onset_err_s")) -> tuple[Any, dict[str, Any]]:
+    """Architecture × metric matrix of held-out medians (per domain), values printed; each column scaled separately."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    s = summary.with_columns((pl.col("arch") + " d" + pl.col("d").cast(pl.String) + " · " + pl.col("domain")).alias("row"))
+    s = s.group_by("row").agg([pl.col(m).median() for m in metrics if m in s.columns]).sort("row")
+    mets = [m for m in metrics if m in s.columns]
+    M = s.select(mets).to_numpy().astype(float)
+    Mn = (M - np.nanmin(M, 0)) / np.where(np.nanmax(M, 0) - np.nanmin(M, 0) > 0, np.nanmax(M, 0) - np.nanmin(M, 0), 1)
+    fig, ax = plt.subplots(figsize=(1.6 * len(mets) + 3, 0.45 * s.height + 1.5), facecolor="white")
+    ax.imshow(Mn, cmap="Blues", aspect="auto", vmin=0, vmax=1)
+    for i in range(M.shape[0]):
+        for j in range(M.shape[1]):
+            if np.isfinite(M[i, j]):
+                ax.text(j, i, f"{M[i, j]:.3g}", ha="center", va="center", fontsize=7, color=INK)
+    ax.set_xticks(range(len(mets)))
+    ax.set_xticklabels(mets, rotation=30, ha="right", fontsize=8)
+    ax.set_yticks(range(s.height))
+    ax.set_yticklabels(s["row"].to_list(), fontsize=7)
+    ax.set_title("Held-out preservation (medians; event_f1 higher = better, others lower = better)", fontsize=10, color=INK, loc="left")
+    fig.tight_layout()
+    return fig, {"matrix": s}
+
+
+def reconstruction_overlay(x6: np.ndarray, m: np.ndarray, recons: dict[str, np.ndarray], title: str) -> tuple[Any, dict[str, Any]]:
+    """Original vs reconstructions of ONE sequence (speed and a_tan, physical units; invalid frames are gaps)."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    from ..m14.events import physical
+
+    po = physical(x6, m)
+    t = np.arange(x6.shape[0]) * 0.1
+    fig, axes = plt.subplots(2, 1, figsize=(10, 5), sharex=True, facecolor="white")
+    parts = [pl.DataFrame({"series": ["original"] * t.size, "t_s": t, "speed": po["speed"][0], "a_tan": po["a_tan"][0]})]
+    for ax, ch, lab in zip(axes, ("speed", "a_tan"), ("speed (yd/s)", "a_tan (yd/s²)"), strict=True):
+        ax.plot(t, po[ch][0], color=INK, linewidth=2.2, label="original")
+    for k, (name, r) in enumerate(recons.items()):
+        xr = np.array(x6, dtype=np.float32, copy=True)
+        xr[:, :4] = r
+        pr = physical(xr, m)
+        for ax, ch in zip(axes, ("speed", "a_tan"), strict=True):
+            ax.plot(t, pr[ch][0], color=PALETTE[k % len(PALETTE)], linewidth=1.5, label=name)
+        parts.append(pl.DataFrame({"series": [name] * t.size, "t_s": t, "speed": pr["speed"][0], "a_tan": pr["a_tan"][0]}))
+    for ax, lab in zip(axes, ("speed (yd/s)", "a_tan (yd/s²)"), strict=True):
+        _style(ax)
+        ax.set_ylabel(lab, color=INK, fontsize=8)
+    axes[0].legend(frameon=False, fontsize=7, ncol=4)
+    axes[1].set_xlabel("time (s, nominal 10 Hz)", color=INK)
+    axes[0].set_title(title, fontsize=10, color=INK, loc="left")
+    fig.tight_layout()
+    return fig, {"traces": pl.concat(parts)}
+
+
+def latent_icc_strip(icc: Any) -> tuple[Any, dict[str, Any]]:
+    """Per-dimension ICC(1,1) by representation and drill (each dot one dimension × fold); lines at 0.4 / 0.6."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    d = icc.filter(pl.col("enough") & pl.col("icc1").is_finite()).with_columns((pl.col("arch") + " d" + pl.col("d").cast(pl.String)).alias("rep"))
+    reps = sorted(set(d["rep"].to_list()))
+    kinds = sorted(set(d["kind"].to_list()))
+    fig, ax = plt.subplots(figsize=(max(8, 1.6 * len(reps)), 4.8), facecolor="white")
+    rng = np.random.default_rng(0)
+    for k, kd in enumerate(kinds):
+        for i, r in enumerate(reps):
+            v = d.filter((pl.col("rep") == r) & (pl.col("kind") == kd))["icc1"].to_numpy()
+            x = i + (k - (len(kinds) - 1) / 2) * 0.22 + rng.uniform(-0.05, 0.05, v.size)
+            ax.scatter(x, v, s=8, color=PALETTE[k % len(PALETTE)], alpha=0.6, label=kd if i == 0 else None)
+    for ref in (0.4, 0.6):
+        ax.axhline(ref, color=INK_2, linestyle="--", linewidth=0.8)
+    ax.set_xticks(range(len(reps)))
+    ax.set_xticklabels(reps, rotation=20, fontsize=8)
+    _style(ax)
+    ax.set_ylabel("ICC(1,1) per latent dimension", color=INK)
+    ax.set_title("Latent repeatability across Combine attempts (held-out athletes)", fontsize=11, color=INK, loc="left")
+    ax.legend(frameon=False, fontsize=8)
+    fig.tight_layout()
+    return fig, {"icc": d}
+
+
+def projection_scatter(proj: Any, color_by: str, use: str = "pc") -> tuple[Any, dict[str, Any]]:
+    """PCA / UMAP projection coloured by domain, position or kind (DESCRIPTIVE: not evidence of predictive value)."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    xk, yk = ("umap1", "umap2") if use == "umap" and "umap1" in proj.columns else ("pc1", "pc2")
+    levels = sorted(set(proj[color_by].fill_null("?").to_list()))[:8]
+    fig, ax = plt.subplots(figsize=(7.5, 6), facecolor="white")
+    for k, lv in enumerate(levels):
+        g = proj.filter(pl.col(color_by).fill_null("?") == lv)
+        ax.scatter(g[xk], g[yk], s=5, alpha=0.4, color=PALETTE[k], label=f"{lv} (n = {g.height})", edgecolor="none")
+    _style(ax)
+    ax.set_xlabel(xk, color=INK)
+    ax.set_ylabel(yk, color=INK)
+    rep = f"{proj['arch'][0]} d{proj['d'][0]} fold {proj['fold'][0]}" if "arch" in proj.columns else ""
+    ax.set_title(f"{use.upper()} of held-out embeddings by {color_by} — {rep} (descriptive)", fontsize=10, color=INK, loc="left")
+    ax.legend(frameon=False, fontsize=7, markerscale=3)
+    fig.tight_layout()
+    return fig, {"points": proj.select("idx", "nfl_id", "domain", "kind", "position_group", xk, yk)}
+
+
+def retrieval_bars(summary: Any, chance: Any, pool: str = "same_position") -> tuple[Any, dict[str, Any]]:
+    """Top-1 and MRR per representation × arm in one pool with uniform chance and (all pool) position-only expectation."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    s = summary.filter(pl.col("pool") == pool).sort("rep", "arm")
+    labels = [f"{r} · {a}" for r, a in zip(s["rep"].to_list(), s["arm"].to_list(), strict=True)]
+    fig, axes = plt.subplots(1, 2, figsize=(13, max(3.5, 0.32 * s.height + 1.5)), facecolor="white", sharey=True)
+    y = np.arange(s.height)
+    for ax, met, ch in zip(axes, ("top1", "mrr"), ("chance_top1", "chance_mrr"), strict=True):
+        ax.barh(y, s[met].to_numpy(), color=PALETTE[0], height=0.6)
+        ax.scatter(s[ch].to_numpy(), y, marker="|", s=200, color=INK, label="uniform chance (same pool)")
+        if met == "top1" and pool == "all" and chance is not None and chance.height and "position_only_top1_all_pool" in chance.columns:
+            ax.axvline(float(chance["position_only_top1_all_pool"].median()), color=PALETTE[1], linestyle="--", label="position-only expectation")
+        _style(ax)
+        ax.set_xlabel(met, color=INK)
+        ax.legend(frameon=False, fontsize=7, loc="lower right")
+    axes[0].set_yticks(y)
+    axes[0].set_yticklabels(labels, fontsize=7)
+    axes[0].set_title(f"Cross-domain retrieval — pool '{pool}' (held-out athletes, 5 folds)", fontsize=10, color=INK, loc="left")
+    fig.tight_layout()
+    return fig, {"summary": s}
+
+
+def gate_matrix(gate: Any, prefix: str = "G15") -> tuple[Any, dict[str, Any]]:
+    """Criterion × representation status matrix (PASS / FAIL / NOT_EVALUATED written in every cell)."""
+    import matplotlib.pyplot as plt
+    import polars as pl
+
+    key = [c for c in ("arch", "d", "target_id", "signature", "family") if c in gate.columns]
+    g = gate.with_columns(pl.concat_str([pl.col(k).cast(pl.String) for k in key], separator=" ").alias("_rep")) if key else gate.with_columns(pl.lit("all").alias("_rep"))
+    reps = list(dict.fromkeys(g["_rep"].to_list()))
+    crits = list(dict.fromkeys(g["criterion"].to_list()))
+    col = {"PASS": "#0ca30c", "FAIL": "#d03b3b", "GO": "#0ca30c", "NO_GO": "#d03b3b"}
+    fig, ax = plt.subplots(figsize=(1.9 * len(reps) + 3, 0.5 * len(crits) + 1.5), facecolor="white")
+    for j, r in enumerate(reps):
+        for i, c in enumerate(crits):
+            v = g.filter((pl.col("_rep") == r) & (pl.col("criterion") == c))
+            st = v["status"][0] if v.height else "—"
+            ax.add_patch(plt.Rectangle((j - 0.45, i - 0.4), 0.9, 0.8, color=col.get(st, "#e1e0d9"), alpha=0.35))
+            ax.text(j, i, st, ha="center", va="center", fontsize=7, color=INK)
+    ax.set_xlim(-0.6, len(reps) - 0.4)
+    ax.set_ylim(len(crits) - 0.5, -0.5)
+    ax.set_xticks(range(len(reps)))
+    ax.set_xticklabels(reps, rotation=20, fontsize=8)
+    ax.set_yticks(range(len(crits)))
+    ax.set_yticklabels(crits, fontsize=8)
+    ax.set_title(f"{prefix} gate — computed from saved tables (status written in each cell)", fontsize=10, color=INK, loc="left")
+    for s in ax.spines.values():
+        s.set_visible(False)
+    fig.tight_layout()
+    return fig, {"gate": gate}
+
+
+__all__ = ["DOMAIN_COLOR", "PALETTE", "audit_status_bar", "centroid_vs_length", "contrast_waterfall", "gate_matrix", "icc_forest", "kind_heatmap",
+           "latent_icc_strip", "preservation_matrix", "projection_scatter", "psd_by_domain", "reconstruction_overlay", "retrieval_bars", "signal_panel",
+           "spectrogram_gallery", "training_curves", "valid_frames_hist"]

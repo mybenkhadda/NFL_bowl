@@ -1,32 +1,24 @@
 """``nflbowl.lab.m15`` — Milestone 15: spectral & temporal representation science.
 
 Notebook: ``notebooks/nflbowl/M15_SPECTRAL_TEMPORAL_REPRESENTATION_LAB_COLAB.ipynb``.
-Specification: ``docs/research/M15_M18_*.md`` (experiment IDs E15.00–E15.E3, gate G15).
+Specification: ``docs/research/M15_M18_*.md`` (experiment IDs E15.00–E15.E3, gate G15). Authored, not executed.
 
-Implemented (task T01; authored, not executed):
+    config        M15Config / resolve / M15Run (layout, read-only guards, fingerprint, config snapshots, status, hand-off)   [T01]
+    optional      lazy optional imports (missing package → BLOCKED_MISSING_INPUT for the dependent step only)              [T01]
+    data          E15.00 sequence-store adapter: audit, fold assignments, sequence index, counts, game key                  [T01]
+    legacy        provenance audit of the exploratory STFT / LSTM artifacts, assert_fold_safe, adopt                         [T01]
+    signals       E15.A1/A2 time-domain features, validity, length-matched crops, matched domain contrasts                    [T02]
+    spectral      E15.A3/A4 Welch / STFT / CWT, resolution-artifact test, reliability, sensitivity, measurement status       [T03]
+    models        E15.B1 PCA, STFT-CNN-AE, BiLSTM / BiGRU-AE, TCN-AE (m11 ConvEncoder), masked TCN; equal-budget widths     [T07]
+    training      fold-safe, resumable, budget-matched training; embedding export with roles and provenance                 [T07]
+    preservation  E15.C1/C2 valid-frame physical errors, event preservation (M14 detector), band errors, robustness          [T08]
+    latent        E15.D1–D3 geometry, probes, per-dimension ICC, repeat AUC, seed stability, interpretation, projections    [T08]
+    transfer      E15.E1–E3 retrieval pools / arms, Procrustes, InfoNCE heads, position-only chance, damage check           [T08]
+    gates         G15 decisions from the saved tables                                                                        [T08]
+    pipeline      notebook orchestration of B–E and G15; plots: every figure returns (figure, source data)
 
-    config     M15Config / resolve / M15Run (layout, read-only guards, fingerprint, config snapshots, status, hand-off)
-    optional   lazy optional imports (missing package → BLOCKED_MISSING_INPUT for the dependent step only)
-    data       E15.00 M12 sequence-store adapter: open_m15_bundle, audit_bundle, fold_assignments, sequence_index,
-               counts_tables, game_key, prepare_m15_data, physical_rows, athlete_weighted_rows
-    legacy     provenance audit of the exploratory STFT / LSTM artifacts (verified_fold_safe ·
-               verified_exploratory_only · unknown_provenance), assert_fold_safe, adopt (copy + sidecar)
-    plots      figures returning (figure, source data): audit_status_bar, valid_frames_hist, signal_panel (T01);
-               contrast_waterfall, kind_heatmap (T02); centroid_vs_length, psd_by_domain, spectrogram_gallery, icc_forest (T03)
-
-Task T02 (E15.A1–A2):
-    signals    per-sequence time-domain features on valid frames, validity tables, length-matched Combine crops,
-               four-step matched domain contrast (raw → athlete-weighted → length-matched → CEM), kind profiles; run_a1/run_a2
-
-Task T03 (E15.A3–A4):
-    spectral   NumPy Welch / STFT / Morlet CWT, spectral features (DC excluded), ramp and white-noise surrogates,
-               resolution-artifact test, length-matched domain contrast, ICC reliability, NFL split-half, M14 perturbation
-               sensitivity, measurement status (M14 rule); run_a3/run_a4
-
-Shared status vocabulary and step runner: ``nflbowl.lab.status``.
-Planned next (T07/T08): models, training, preservation, latent, transfer, gates.
-
-Modules are imported explicitly; importing the package loads nothing heavy.
+Shared status vocabulary and step runner: ``nflbowl.lab.status``. Modules are imported explicitly.
 """
 
-__all__ = ["config", "data", "legacy", "optional", "plots", "signals", "spectral"]
+__all__ = ["config", "data", "gates", "latent", "legacy", "models", "optional", "pipeline", "plots", "preservation", "signals", "spectral", "training",
+           "transfer"]

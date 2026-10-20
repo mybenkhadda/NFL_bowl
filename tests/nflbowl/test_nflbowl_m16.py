@@ -137,6 +137,87 @@ def test_target_registry(tmp_path, arrays):
         T.assert_same_target("nfl.q90_shared", "nfl_speed_q90_median")
 
 
+# ====================================================================== T06 / T09 / T10
+def test_window_and_event_targets():
+    from nflbowl.lab.m16 import targets as TG
+
+    rng = np.random.default_rng(0)
+    rows = []
+    for i in range(30):
+        for k in range(24):
+            rows.append({"idx": i * 100 + k, "nfl_id": i, "position_group": "WR" if i % 2 else "DB", "kind": ("a", "b")[k % 2], "fold": i % 5, "n_valid": 40,
+                         "max_speed": 6 + 0.05 * i + rng.normal(0, 0.1), "accel_band_0": 2.0 + rng.normal(0, 0.1), "accel_band_1": np.nan, "ends_at_max": False})
+    w = pl.DataFrame(rows)
+    t = TG.window_targets(w, TG.TargetConfig(min_windows=20, min_windows_kind=5, min_events=5))
+    assert t.height == 30 and t["t16_high_speed"].is_not_null().all() and t["t16_accel_v4_6"].is_null().all()
+    ev = pl.DataFrame({"nfl_id": [1] * 6 + [2] * 3, "complete": [True] * 9, "propulsion_censored": [False] * 9, "turn_dir": [1] * 9,
+                       "max_controlled_decel": [3.0] * 9, "first_step_explosiveness": [2.0] * 9, "turn_speed_retention": [0.5] * 9})
+    e = TG.event_targets(ev, TG.TargetConfig(min_events=5))
+    r = {row["nfl_id"]: row for row in e.iter_rows(named=True)}
+    assert r[1]["t16_braking"] == pytest.approx(3.0) and r[2]["t16_braking"] is None       # athlete 2 below the minimum exposure
+
+
+def test_split_half_reliability_recovers_trait():
+    from nflbowl.lab.m16.target_reliability import split_half
+
+    rng = np.random.default_rng(1)
+    trait = rng.normal(size=300)
+    a, b = trait + 0.5 * rng.normal(size=300), trait + 0.5 * rng.normal(size=300)
+    r = split_half(a, b, np.array(["X"] * 300), 200, 0)
+    assert 0.85 < r["reliability"] < 0.95 and r["rel_lo"] < r["reliability"] < r["rel_hi"]
+
+
+def test_enet_and_oof_generic_fold_safe():
+    from nflbowl.lab import learners as LR
+
+    rng = np.random.default_rng(2)
+    n = 150
+    x1, x2 = rng.normal(size=n), rng.normal(size=n)
+    y = 2 * x1 + 0.1 * rng.normal(size=n)
+    df = pl.DataFrame({"nfl_id": np.arange(n), "position_group": ["A"] * n, "fold": np.arange(n) % 5, "x1": x1, "x2": x2, "y": y})
+    oof, log = LR.oof_generic(df, "y", ["x1", "x2"], LR.enet_learner(), 0)
+    assert oof.height == n and len(log) == 5
+    assert float(np.sqrt(np.mean((oof["y"] - oof["pred"]).to_numpy() ** 2))) < 0.5
+    b0, b = LR.enet_fit(np.column_stack([x1, x2]), y, 0.0, 0.5, np.array([True, True]))
+    assert b[0] == pytest.approx(2.0, abs=0.05)
+
+
+def test_detectability_power_increases_with_signal():
+    from nflbowl.lab.m16 import detectability as DT
+
+    rng = np.random.default_rng(3)
+    n = 200
+    df = pl.DataFrame({"nfl_id": np.arange(n), "position_group": ["A", "B"] * (n // 2), "fold": np.arange(n) % 5, "height": rng.normal(73, 2, n),
+                       "weight": rng.normal(210, 20, n), "t": rng.normal(size=n)})
+    p = DT.simulate(df, "t", ["height", "weight"], fractions=(0.0, 0.3), reliability=1.0, n_rep=6, n_boot=100, seed=0)
+    pw = dict(zip(p["planted_fraction"].to_list(), p["power"].to_list(), strict=True))
+    assert pw[0.3] >= pw[0.0]
+    assert DT.mde(p)["max_power_in_grid"][0] == pytest.approx(max(pw.values()))
+
+
+def test_baselines_guard_and_precise_null():
+    from nflbowl.lab.m16 import baselines as BL
+
+    with pytest.raises(S.ValidationFailed):
+        BL.assert_no_nfl_predictors(["height", "t16_high_speed"])
+    p = pl.DataFrame({"model": ["a", "b"], "delta_lo": [-0.001, 0.01], "delta_hi": [0.001, 0.02], "rmse_ref": [0.5, 0.5]})
+    out = BL.precise_null(p, 0.02)
+    assert out["precise_null"].to_list() == [True, False]
+
+
+def test_g16_rules():
+    from nflbowl.lab.m16 import gates as GT
+
+    ga = pl.DataFrame({"target_id": ["T0", "T1", "T3"], "status": [S.NOT_EVALUATED, S.PASS, S.FAIL]})
+    gb = pl.DataFrame({"criterion": ["G16-B overall"], "status": [S.PASS], "note": [""]})
+    st = pl.DataFrame({"model": ["M1+simple"], "reference": ["M1"], "status": ["inconclusive"]})
+    pa = pl.DataFrame({"model": ["M1+simple"], "reference": ["M1"], "precise_null": [True]})
+    g = GT.g16(ga, gb, st, pa, None, None)
+    got = dict(zip(g["criterion"].to_list(), g["status"].to_list(), strict=True))
+    assert got["G16-A target reliability"] == S.PASS and got["G16-B M1 reproducibility"] == S.PASS
+    assert got["G16-C incremental information"] == "PRECISE_NULL" and got["G16-D cross-domain similarity"] == S.NOT_EVALUATED
+
+
 # ====================================================================== gate
 def test_gate_g16b_never_passes_without_evidence():
     base = {"tolerance": 1e-8, "max_abs_pred_diff_internal": 0.0, "internal_ok": True, "checks_ok": True, "verdict": V.REPRODUCED_INTERNAL_ONLY}

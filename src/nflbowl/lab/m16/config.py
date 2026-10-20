@@ -64,6 +64,20 @@ class M16Config:
     plausible_ranges: dict[str, tuple[float, float]] = field(default_factory=lambda: {
         "height": (64.0, 84.0), "weight": (150.0, 400.0), "forty": (4.0, 6.2), "ten": (1.3, 2.2), "draft_year": (2000.0, 2030.0)})
     n_boot: int = 2000
+    # ---- T06 targets / reliability / detectability
+    target_min_windows: int = 20
+    target_min_windows_kind: int = 5
+    target_min_events: int = 5
+    reliability_split: str = "season"                       # season → game → random (labelled)
+    detect_fractions: tuple[float, ...] = (0.01, 0.02, 0.05, 0.1)
+    detect_reliability: float = 0.7
+    detect_reps: int = 50
+    # ---- T09 baselines
+    learners: tuple[str, ...] = ("enet",)                   # + "lightgbm", "catboost" (optional packages)
+    min_coverage: float = 0.5
+    task_targets_in_ladder: str = "eligible"                # "eligible" (G16-A PASS) or "all"
+    # ---- T10 retrieval
+    allow_descriptive: bool = False                         # also test GO_DESCRIPTIVE representations (labelled)
     resume: bool = True
     reuse_artifacts: bool = True
     save_tables: bool = True
@@ -146,6 +160,15 @@ def resolve(cfg: Mapping[str, Any] | None = None) -> M16Config:
         raise ValueError(f"official_target must stay {TRANSFER_TARGET!r} (the frozen ladder target); other targets get their own IDs in m16.targets")
     if c.exploratory_target == c.official_target:
         raise ValueError("the exploratory target must be distinct from the official target")
+    if c.reliability_split not in ("season", "game", "random"):
+        raise ValueError("reliability_split must be 'season', 'game' or 'random'")
+    if c.task_targets_in_ladder not in ("eligible", "all"):
+        raise ValueError("task_targets_in_ladder must be 'eligible' or 'all'")
+    bad_l = [x for x in c.learners if x not in ("enet", "lightgbm", "catboost")]
+    if bad_l:
+        raise ValueError(f"unknown learner(s) {bad_l}; allowed enet, lightgbm, catboost")
+    if not 0.0 < c.detect_reliability <= 1.0 or c.detect_reps < 5:
+        raise ValueError("detect_reliability in (0, 1] and detect_reps ≥ 5")
     if not 0.0 < c.reproduction_tol <= 1e-4:
         raise ValueError("reproduction_tol must lie in (0, 1e-4]: a looser tolerance is not a reproduction (record a mismatch instead)")
     return c

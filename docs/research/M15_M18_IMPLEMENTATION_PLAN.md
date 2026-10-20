@@ -1,6 +1,11 @@
 # M15–M18 implementation plan
 
-> **Implementation status (2026-10-20, session 2).** T01 and T04 are authored and have not been executed. Session 2 also added three things this plan did not list:
+> **Implementation status (2026-10-20, session 4).** Tasks T01–T17 are authored and have not been executed. The current module and notebook map is in `M15_M18_SESSION_HANDOFF.md`, and it supersedes the per-module file lists in § 1–2 where they differ. The differences:
+> - M17 uses `events.py` / `contexts.py` / `censoring.py`, where the plan names `event_diagnostics.py` / `context.py`.
+> - M18 uses `ladder.py` / `evidence.py`, and `robustness.py` holds the controls.
+> - The shared `nflbowl/lab/learners.py` holds the non-ridge learners.
+>
+> **Earlier note (session 2).** T01 and T04 are authored and have not been executed. Session 2 also added three things this plan did not list:
 > - a shared `nflbowl/lab/status.py` (explicit step and gate statuses)
 > - `m15/plots.py` and `m16/plots.py`
 > - `m16/targets.py`, which holds the T0 and T0x target registry and was brought forward from T06

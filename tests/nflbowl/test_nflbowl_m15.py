@@ -324,6 +324,89 @@ def test_spectral_steps_on_synthetic_bundle(tmp_path, bundle_dir):
     assert rel.height and "icc1" in rel.columns
 
 
+# ====================================================================== T07 / T08 — encoders, preservation, retrieval, G15
+def test_pca_encoder_masked_roundtrip(arrays):
+    from nflbowl.lab.m15.models import PCAEncoder
+
+    X, M, *_ = arrays
+    p = PCAEncoder(4).fit(X, M)
+    z = p.encode(X, M)
+    r = p.reconstruct(X, M)
+    assert z.shape == (X.shape[0], 4) and r.shape == (X.shape[0], X.shape[1], 4)
+    q = PCAEncoder.from_state(p.state())
+    assert np.allclose(q.encode(X, M), z)
+    X2 = X.copy()
+    X2[~M] = 99.0                                                              # values on invalid frames must not matter
+    assert np.allclose(p.encode(X2, M), z)
+
+
+def test_roles_are_athlete_disjoint(tmp_path, bundle_dir):
+    from nflbowl.lab.m15 import training as TR
+
+    cfg = _cfg(tmp_path, bundle_dir)
+    d = D.prepare_m15_data(cfg, None)
+    for f in range(5):
+        role = TR.roles(d, f, cfg, 1)
+        ids = d.index["nfl_id"].to_numpy()
+        assert not set(ids[role == TR.HELD]) & set(ids[role != TR.HELD])
+        assert set(d.index["fold"].to_numpy()[role == TR.HELD].tolist()) <= {f}
+        assert (role == TR.VAL).any()
+
+
+def test_degrade_and_truncate_keep_only_original_valid():
+    from nflbowl.lab.m15 import preservation as PR
+
+    m = np.zeros((3, 20), bool)
+    m[:, 2:18] = True
+    d = PR.degrade(m, 0.25, np.random.default_rng(0))
+    assert not (d & ~m).any() and (d.sum(1) <= m.sum(1)).all() and (d.sum(1) < m.sum(1)).all()
+    t = PR.truncate(m, 5)
+    assert (t.sum(1) == 5).all() and not (t & ~m).any()
+
+
+def test_retrieval_scoring_and_chance():
+    from nflbowl.lab.m15 import transfer as T
+
+    rng = np.random.default_rng(0)
+    ids = np.arange(40)
+    pos = np.array(["A", "B"] * 20)
+    C = rng.normal(size=(40, 6))
+    rows = T.score_queries(C, C + 0.01 * rng.normal(size=C.shape), ids, pos, {"all": T.pool_members(ids, pos, "all"),
+                                                                            "same_position": T.pool_members(ids, pos, "same_position")}, {"arm": "x"})
+    assert all(r["rank"] == 1 for r in rows)                                    # near-identical gallery → perfect retrieval
+    pc = T.position_chance(ids, pos)
+    assert pc["position_only_top1_all_pool"] == pytest.approx(1 / 20)
+    lo, hi = T.binomial_interval(7, 80)
+    assert 0.03 < lo < 7 / 80 < hi < 0.2
+    rd = T.prototype_reading()
+    assert rd["position_only_expected_balanced"] == pytest.approx(5 / 80)
+
+
+def test_procrustes_recovers_rotation():
+    from nflbowl.lab.m15 import transfer as T
+
+    rng = np.random.default_rng(1)
+    A = rng.normal(size=(200, 5))
+    Q, _ = np.linalg.qr(rng.normal(size=(5, 5)))
+    B = A @ Q + 3.0
+    f = T.procrustes_map(A, B)
+    assert np.allclose(f(A), B, atol=1e-6)
+
+
+def test_g15_decision_rules():
+    from nflbowl.lab.m15 import gates as GG
+
+    paired = pl.DataFrame({"arch": ["lstm_ae"] * 3, "d": [32] * 3, "metric": ["rmse_speed", "rmse_atan", "event_f1"], "hi": [0.0, 0.01, 0.0],
+                           "ref_mean": [0.5, 0.5, None], "mean_diff": [-0.01, 0.0, -0.01]})
+    summ = pl.DataFrame({"arch": ["lstm_ae"], "d": [32], "brake_onset_err_s": [0.1]})
+    icc = pl.DataFrame({"arch": ["lstm_ae"], "d": [32], "kind": ["forty"], "median_dim_icc": [0.7], "share_dims_ge_0_6": [0.5]})
+    geom = pl.DataFrame({"arch": ["lstm_ae"], "d": [32], "effective_rank_over_d": [0.5], "collapsed_dim_share": [0.0]})
+    g = GG.g15(paired, summ, icc, geom, None, None, ["lstm_ae"], [32])
+    dec = g.filter(pl.col("criterion") == "G15 decision")["status"][0]
+    assert dec == "GO_DESCRIPTIVE_PENDING"                                      # seed stability not evaluated → never GO
+    assert GG.advancing(g) == []
+
+
 def test_legacy_adopt_copies(tmp_path, bundle_dir):
     b, fold_of = _official(bundle_dir)
     d = tmp_path / "legacy_adopt"
