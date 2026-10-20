@@ -1,0 +1,25 @@
+# Files pushed from this repository to Google Drive by tools/upload_to_drive.py.
+#
+# Every entry: `source` = glob relative to the repository root (``**`` recursive); `dest` = folder relative to
+# `drive_root` (created when missing). Matching files keep their name. An unchanged file (same MD5) is skipped; a changed
+# one is replaced in place (same Drive file, so Colab links stay valid). Nothing on Drive is ever deleted.
+#
+# The Python package is NOT uploaded: the notebooks install it from GitHub at a pinned commit (git push first).
+# Experiment outputs (experimental_lab/…) are written by Colab and never touched by this script.
+
+drive_root: NFLBowl                  # folder under "My Drive" (the notebooks use /content/drive/MyDrive/NFLBowl)
+
+entries:
+  # Colab notebooks — open them from Drive with "Open with → Google Colaboratory"
+  - source: notebooks/research/*.ipynb
+    dest: notebooks/research
+  - source: notebooks/nflbowl/M1[5-8]_*.ipynb
+    dest: notebooks/nflbowl
+
+  # research documentation (hand-off, gates, experiment matrix, M16 laboratory)
+  - source: docs/research/*.md
+    dest: docs/research
+
+exclude:                             # globs relative to the repository root, applied after `entries`
+  - "**/.ipynb_checkpoints/**"
+  - "**/*-checkpoint.ipynb"

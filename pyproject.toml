@@ -30,6 +30,8 @@ dev = ["pytest>=8", "ipykernel"]
 lab = ["umap-learn>=0.5", "markdown>=3.5"]
 # optional extras of the M15–M18 notebooks (each missing package blocks only the steps that need it)
 m15 = ["scipy", "scikit-learn", "statsmodels", "PyWavelets", "umap-learn>=0.5", "lightgbm", "catboost", "POT", "ipywidgets"]
+# tools/upload_to_drive.py, Google Drive API backend only (the Drive for Desktop backend needs nothing)
+drive = ["google-api-python-client>=2.100", "google-auth-oauthlib>=1.0"]
 all = ["torch>=2.1", "pytest>=8", "ipykernel"]
 
 [tool.setuptools.packages.find]
