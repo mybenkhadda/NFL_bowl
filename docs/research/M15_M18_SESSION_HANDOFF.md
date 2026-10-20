@@ -1,6 +1,6 @@
 # M15–M18 session handoff (start here in a fresh session)
 
-**Updated:** 2026-10-20, session 2 (T01 + T04 implemented). Nothing has been executed by Claude.
+**Updated:** 2026-10-20, session 3 (T02 + T03 implemented on top of T01 + T04). Nothing has been executed by Claude.
 
 ## Rules (binding)
 
@@ -20,7 +20,37 @@ Do 10 Hz Combine movement measurements give reliable, independently predictive i
 | T01 M15 config, sequence-store adapter, legacy provenance | **authored, not executed** | `src/nflbowl/lab/m15/{config,data,legacy,optional,plots}.py`, notebook sections B–G |
 | T04 official M1 verification | **authored, not executed** | `src/nflbowl/lab/m16/{config,targets,m1_verification,plots}.py`, M16 notebook |
 | Shared status vocabulary | authored | `src/nflbowl/lab/status.py` |
-| T02, T03, T05–T17 | not started | `M15_M18_IMPLEMENTATION_PLAN.md` § 3 |
+| T02 E15.A1–A2 signal analytics | **authored, not executed** | `src/nflbowl/lab/m15/signals.py`; M15 notebook § E15.A1, E15.A2 |
+| T03 E15.A3–A4 spectral + artifact test | **authored, not executed** | `src/nflbowl/lab/m15/spectral.py`; M15 notebook § E15.A3, E15.A4 |
+| T05–T17 | not started | `M15_M18_IMPLEMENTATION_PLAN.md` § 3 |
+
+### Session 3 additions
+
+**New file:** `src/nflbowl/lab/m15/signals.py`.
+- `features_from_arrays` computes 14 per-sequence features on valid frames. Derivatives use only frame pairs inside one gap-free segment.
+- Also: `feature_table`, `validity_tables`.
+- `crop_masks` and `length_matched_combine` build NFL-distributed, gap-free Combine crops.
+- `domain_contrast_steps` runs four steps (raw → athlete_weighted → length_matched → cem). It uses `domain_matching.cem` and `stats.cluster_bootstrap_diff`.
+- Also: `kind_profile`, `kind_contrast`, `run_a1`, `run_a2`.
+- Definitions fixed here: braking frame = a_tan ≤ −1 yd/s²; entry speed = mean of the first 10 valid frames.
+
+**New file:** `src/nflbowl/lab/m15/spectral.py` (NumPy only).
+- Estimators: `welch_psd` (Hann, 50 % overlap, never padded), `spectral_features` (DC excluded), `stft_mag`, `cwt_morlet`.
+- Surrogates: `ramp_surrogate`, `noise_surrogate`. Phase-randomised and reversed surrogates are deliberately not used, because they preserve the PSD.
+- Tests and reliability: `artifact_test` (rho_len, pinned_share, AUC vs ramp and vs noise → estimable), `length_matched_spectral`, `domain_contrast`, `reliability` (ICC per Combine drill; NFL ICC after kind-centring), `nfl_split_reliability`, `perturbation_sensitivity` (reuses `m14.metrics.perturbation`), `measurement_status` (M14 rule; no evidence → `not_evaluated`).
+- Orchestrators: `run_a3`, `run_a4`.
+
+**Extended:** `m15/plots.py` gains `contrast_waterfall`, `kind_heatmap`, `centroid_vs_length`, `psd_by_domain`, `icc_forest` and `spectrogram_gallery`.
+
+**Tests:** `tests/nflbowl/test_nflbowl_m15.py` gains 7 tests. They cover feature physics, the masked frames rule, matched contrasts, cache hits, Welch peak and resolution, the ramp-detrend identity, the status rule, and an end-to-end run on the synthetic bundle.
+
+**Notebook:** the M15 notebook gains sections E15.A1–A4. They write 10 figure families with source data.
+
+**Session 3 risks (unverified):**
+- `cluster_bootstrap_diff` over about 500 athletes × 6 metrics × 4 steps at 500 replicates. Runtime unmeasured.
+- `spectral_table` loops over about 77k rows × 8 configurations. Python cost unmeasured; the features are cached after the first run.
+- `run_a3` recomputes surrogates (6,000 rows) each session.
+- The NFL split-half uses a season split when there are ≥ 2 seasons, otherwise random halves. It is labelled in the table.
 
 ## Files created or changed in session 2
 
@@ -118,8 +148,12 @@ Do 10 Hz Combine movement measurements give reliable, independently predictive i
 
 ## Next task IDs
 
-- **T02:** M15 E15.A1–A2 signal analytics, `m15/signals.py`.
-- **T03:** E15.A3–A4 spectral features and the resolution-artifact test, `m15/spectral.py`.
-- **T06:** M16 NFL task targets T1–T6, reliability, MDE.
-- **T05:** M17 event diagnosis (needs the M14 outputs).
-- **T07–T08:** encoders and evaluation. They need a GPU session after T02.
+- **T06:** M16 NFL task targets T1–T6, target reliability, MDE (`m16/targets.py` extension, `target_reliability.py`, `detectability.py`). CPU only; on the critical path.
+- **T07:** M15 encoder benchmark (`m15/models.py`, `training.py`). Covers PCA, STFT-AE, LSTM-AE and GRU-AE, plus TCN through `m11.representation.ConvEncoder`. Masked loss, equal budget, two training opt-ins. Needs a GPU.
+- **T08:** M15 preservation, latent stability, retrieval and G15.
+- **T05:** M17 event diagnosis. It needs the M14 outputs.
+
+**Additional send-back after the session-3 notebook run:**
+- `tables/signal/domain_contrast_steps.csv`, `tables/signal/cem_balance.csv`
+- `tables/spectral/artifact_test.csv`, `tables/spectral/measurement_status.csv`
+- the centroid-vs-length figure

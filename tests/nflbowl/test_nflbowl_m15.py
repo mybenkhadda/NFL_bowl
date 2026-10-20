@@ -210,6 +210,120 @@ def test_legacy_fingerprint_mismatch_is_unknown(tmp_path, bundle_dir):
     assert r.provenance == LG.UNKNOWN_PROVENANCE and any("recorded bundle" in x for x in r.reasons)
 
 
+# ====================================================================== T02 — signals
+def _scaled(speed, a_tan, valid=None, dt=0.1):
+    """(1, L, 6) scaled array + (1, L) mask from physical speed / a_tan."""
+    L = len(speed)
+    x = np.zeros((1, L, 6), np.float32)
+    x[0, :, 0] = np.asarray(speed) / 10.0
+    x[0, :, 1] = np.asarray(a_tan) / 5.0
+    x[0, :, 4] = dt / 0.1
+    x[0, :, 5] = 1.0
+    m = np.ones((1, L), bool) if valid is None else np.asarray(valid, bool)[None]
+    return x, m
+
+
+def test_features_from_arrays_physics():
+    from nflbowl.lab.m15 import signals as SG
+
+    t = np.arange(30) * 0.1
+    sp = 2.0 + 2.0 * t                                                        # constant +2 yd/s² acceleration
+    x, m = _scaled(sp, np.full(30, 2.0))
+    f = SG.features_from_arrays(x, m, 0.15)
+    assert f["max_speed"][0] == pytest.approx(sp.max(), rel=1e-5)
+    assert f["braking_frac"][0] == 0.0 and f["accel_frac"][0] == 1.0
+    assert f["jerk_rms"][0] == pytest.approx(0.0, abs=1e-4)                  # constant a_tan
+    assert f["deriv_rmse"][0] == pytest.approx(0.0, abs=1e-3)                # Δv/Δt agrees with a_tan
+    assert f["entry_speed"][0] == pytest.approx(sp[:10].mean(), rel=1e-5)
+    valid = np.ones(30, bool)
+    valid[10:15] = False
+    x2, m2 = _scaled(sp, np.full(30, -2.0), valid)
+    f2 = SG.features_from_arrays(x2, m2, 0.15)
+    assert f2["n_valid"][0] == 25 and f2["braking_frac"][0] == 1.0
+    assert f2["max_speed"][0] == pytest.approx(sp[valid].max(), rel=1e-5)    # invalid frames never enter a statistic
+    empty = SG.features_from_arrays(x2, np.zeros((1, 30), bool), 0.15)
+    assert np.isnan(empty["max_speed"][0]) and empty["n_valid"][0] == 0
+
+
+def test_signals_steps_on_synthetic_bundle(tmp_path, bundle_dir):
+    from nflbowl.lab.m15 import signals as SG
+
+    cfg = _cfg(tmp_path, bundle_dir, n_boot_screen=100)
+    run = C.M15Run(cfg.run_dir, cfg)
+    d = D.prepare_m15_data(cfg, run)
+    ctx = {"outputs": []}
+    feat = SG.run_a1(d, cfg, run, ctx)
+    assert feat.height == d.index.height and {"max_speed", "braking_frac", "entry_speed"} <= set(feat.columns)
+    crop, audit = SG.length_matched_combine(d, feat, cfg, 0)
+    assert (audit["kept_valid"] <= audit["original_valid"]).all()
+    steps, bal = SG.domain_contrast_steps(feat, crop, n_boot=100, seed=0)
+    assert set(steps["step"].to_list()) == set(SG.STEPS)
+    raw = steps.filter((pl.col("metric") == "max_speed") & (pl.col("step") == "raw"))
+    assert raw["share_of_raw_remaining"][0] == pytest.approx(1.0)
+    assert "smd_entry_speed_after" in bal
+    ctx2 = {"outputs": []}
+    SG.run_a1(d, cfg, run, ctx2)
+    assert ctx2.get("cache") == "hit"                                          # cached on the second call
+
+
+# ====================================================================== T03 — spectral
+def test_welch_peak_and_features():
+    from nflbowl.lab.m15 import spectral as SP
+
+    fs, n = 10.0, 64
+    t = np.arange(n) / fs
+    seg = 3.0 + np.sin(2 * np.pi * 2.5 * t)                                   # 2.5 Hz sits on a bin for nperseg 32 (Δf 0.3125)
+    freqs, psd, nw = SP.welch_psd(seg, fs, 32, "linear")
+    assert nw == 3 and freqs[1] == pytest.approx(10 / 32)
+    feats = SP.spectral_features(freqs, psd, ((0, 0.5), (0.5, 1.5), (1.5, 3.0), (3.0, 5.0)))
+    assert feats["peak_freq"] == pytest.approx(2.5)
+    assert feats["band_2"] > 0.9                                              # power in 1.5–3 Hz
+    assert SP.welch_psd(seg[:20], fs, 32) is None                             # too short → no estimate, never padded
+    rng = np.random.default_rng(0)
+    white = SP.spectral_features(*SP.welch_psd(rng.normal(size=640), fs, 32, "linear")[:2], ((0, 5.0),))
+    assert white["entropy"] > 0.9 and white["flatness"] > 0.5
+    assert SP._auc(np.arange(50.0), np.arange(50.0) + 100) == pytest.approx(1.0)
+    assert SP._auc(np.arange(50.0), np.arange(50.0)) == pytest.approx(0.5)
+
+
+def test_ramp_surrogate_is_flat_after_linear_detrend():
+    from nflbowl.lab.m15 import spectral as SP
+
+    rng = np.random.default_rng(1)
+    ramp = SP.ramp_surrogate(np.linspace(1, 8, 40) + rng.normal(0, 0.1, 40), rng)
+    _, psd, _ = SP.welch_psd(ramp, 10.0, 16, "linear")
+    assert psd.max() < 1e-20
+
+
+def test_measurement_status_rule():
+    from nflbowl.lab.m15 import spectral as SP
+
+    keys = {"channel": ["speed"] * 4, "nperseg": [32] * 4, "detrend": ["linear"] * 4, "feature": ["a", "b", "c", "d"]}
+    art = pl.DataFrame({**keys, "domain": ["combine"] * 4, "estimable": [True, True, False, True], "rho_len": [0.1] * 4, "pinned_share": [None] * 4},
+                       schema_overrides={"pinned_share": pl.Float64})
+    rel = pl.DataFrame({**keys, "domain": ["combine"] * 4, "scope": ["forty"] * 4, "icc1": [0.7, 0.5, 0.9, 0.3], "icc_lo": [0.5, 0.3, 0.8, 0.1],
+                        "icc_hi": [0.8, 0.6, 0.95, 0.5], "n_athletes": [100] * 4})
+    sens = pl.DataFrame({**keys, "perturbation": ["noise_0.05"] * 4, "spearman": [0.9, 0.9, 0.9, 0.9]})
+    st = SP.measurement_status(art, rel, sens, None)
+    got = dict(zip(st["feature"].to_list(), st["measurement_status"].to_list(), strict=True))
+    assert got == {"a": "validated", "b": "exploratory", "c": "invalid", "d": "invalid"}
+
+
+def test_spectral_steps_on_synthetic_bundle(tmp_path, bundle_dir):
+    from nflbowl.lab.m15 import spectral as SP
+
+    cfg = _cfg(tmp_path, bundle_dir, welch_nperseg=[8], stft_nperseg=8, stft_hop=2, n_boot_screen=100)
+    run = C.M15Run(cfg.run_dir, cfg)
+    d = D.prepare_m15_data(cfg, run)
+    tab = SP.spectral_table(d.bundle, d.index["idx"].to_numpy(), cfg)
+    assert set(tab["channel"].unique().to_list()) == {"speed", "a_tan"} and (tab["seg_len"] >= 1).all()
+    dom = dict(zip(d.index["idx"].to_list(), d.index["domain"].to_list(), strict=True))
+    art = SP.artifact_test(tab, None, None, dom, cfg)
+    assert {"rho_len", "estimable"} <= set(art.columns)
+    rel = SP.reliability(tab.join(d.index.select("idx", "domain", "kind", "nfl_id"), on="idx"), cfg, 100, 0, min_athletes=10)
+    assert rel.height and "icc1" in rel.columns
+
+
 def test_legacy_adopt_copies(tmp_path, bundle_dir):
     b, fold_of = _official(bundle_dir)
     d = tmp_path / "legacy_adopt"
